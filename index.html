@@ -117,4 +117,119 @@
   </div>
 </section>
 
-<section class=
+<section class="destination-edge alt fade-in">
+  <div class="dest-edge-content">
+    <div class="dest-text-block">
+      <span class="dest-chip">Culture-Focused</span>
+      <h3>Armenia — Culture, History & Story-Led Travel</h3>
+      <p>
+        Designed for travelers who value heritage, monasteries, landscapes and meaningful local encounters —
+        curated with warm hosting and comfortable pacing.
+      </p>
+    </div>
+  </div>
+  <div class="dest-edge-image">
+    <img src="images/armenia-banner.jpg" alt="Armenia Mountains and Monastery" loading="lazy">
+  </div>
+</section>
+
+<section class="destination-edge fade-in">
+  <div class="dest-edge-content">
+    <div class="dest-text-block">
+      <span class="dest-chip">City + Countryside</span>
+      <h3>Azerbaijan — Modern Energy Meets Countryside Heritage</h3>
+      <p>
+        Our itineraries blend Baku’s contemporary skyline with historic towns, scenic mountains and light-adventure
+        experiences across the countryside.
+      </p>
+    </div>
+  </div>
+  <div class="dest-edge-image">
+    <img src="images/azerbaijan-banner.jpg" alt="Baku and Countryside" loading="lazy">
+  </div>
+</section>
+
+<section class="destination-edge alt fade-in">
+  <div class="dest-edge-content">
+    <div class="dest-text-block">
+      <span class="dest-chip">Growing Portfolio</span>
+      <h3>Central Asia — A Carefully Growing Portfolio</h3>
+      <p>
+        Gradually developed through on-ground testing and partner feedback — focusing on Almaty, Tashkent
+        and emerging Silk-Route circuits introduced responsibly.
+      </p>
+    </div>
+  </div>
+  <div class="dest-edge-image">
+    <img src="images/central-asia-banner.jpg" alt="Central Asia Scenic Valley" loading="lazy">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap fade-in">
+  <div class="container cta-box">
+    <h2>Let’s Build Meaningful Travel Together</h2>
+    <p>We work as an extension of your team — with ownership, clarity and trust.</p>
+    <a href="#contact" class="btn-primary">Get In Touch</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section soft-bg fade-in">
+  <div class="container about-grid">
+    <div class="text-block">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> contact@caravancompass.com</p>
+      <p><strong>Website:</strong> www.caravancompass.com</p>
+      <p><strong>Phone:</strong> +XX-XXXX-XXXXXX</p>
+    </div>
+
+    <div class="image-frame tall"><p>Add Office / Team Image</p></div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL FOOTER -->
+<footer class="pro-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <img src="images/Blue Minimalist Air Plane Travel Logo.png" alt="Caravan Compass" class="footer-logo">
+      <p>People-driven Destination Management for the CIS & Caucasus Region.</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>contact@caravancompass.com</p>
+      <p>+XX-XXXX-XXXXXX</p>
+      <p>www.caravancompass.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © Caravan Compass — All Rights Reserved
+  </div>
+</footer>
+
+<!-- Fade-in observer -->
+<script>
+const els = document.querySelectorAll('.fade-in');
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  });
+},{threshold:.25});
+els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
