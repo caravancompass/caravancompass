@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caravan Compass — Where Dreams Find Direction</title>
-  <link href="styles.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Caravan Compass — Where Dreams Find Direction</title>
+<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Header -->
-<header class="header">
+<!-- NAVBAR -->
+<header class="nav-wrap">
   <div class="container nav">
-    <img src="logo.png" class="logo" alt="Caravan Compass Logo">
+    <img src="logo.png" class="logo">
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -23,103 +23,108 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <h1>Where Dreams Find Direction</h1>
-      <p class="lead">
-        A young, team-led Destination Management Company specializing in the CIS & Caucasus region — known for people-driven partnerships and reliable on-ground operations.
+      <p class="subtitle">
+        A young, people-driven Destination Management Company delivering reliable, honest and well-crafted travel experiences across the CIS & Caucasus region.
       </p>
-      <button class="btn-primary">Partner With Us</button>
+      <a class="btn-primary" href="#contact">Partner With Us</a>
     </div>
 
-    <!-- Replace with hero image -->
-    <div class="image-box">
-      <p>Add Hero Image Here</p>
+    <div class="hero-img">
+      <p>Hero Image Placeholder</p>
     </div>
   </div>
 
-  <div class="curve"></div>
+  <div class="curve-divider"></div>
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 <section id="about" class="section">
-  <div class="container two-col">
-    <div class="image-box tall">
-      <p>Add About Image</p>
-    </div>
+  <div class="container about-grid">
+    <div class="image-frame tall"><p>Add About Image</p></div>
 
-    <div>
-      <h2>About Caravan Compass</h2>
+    <div class="text-block">
+      <h2>A Young, Team-Led Destination Management Company</h2>
       <p>
-        We operate as a hands-on, team-led DMC where every itinerary is managed by real people who stay involved from planning to execution — ensuring clarity, flexibility, and smooth delivery on the ground.
+        At Caravan Compass, every itinerary is managed by real people who stay involved from planning to execution. Our working style is collaborative, practical and grounded in on-the-ground experience — not just brochures.
       </p>
       <p>
-        Our focus is simple: to design honest, well-planned travel programs that partners can sell with confidence.
+        We design programs that partners can sell with confidence, knowing that what is promised is exactly what is delivered.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="section alt">
+<!-- SERVICES -->
+<section id="services" class="section gradient-section">
   <div class="container">
-    <h2>What We Do</h2>
+    <h2 class="center">What We Do</h2>
 
     <div class="card-grid">
       <div class="card">
         <h3>FIT & Leisure Travel</h3>
-        <p>Custom programs designed around comfort, routes, and seasonality.</p>
+        <p>Custom itineraries built around comfort, routing and seasonality.</p>
       </div>
 
       <div class="card">
         <h3>Small Groups & Fixed Departures</h3>
-        <p>Experience-focused itineraries with smooth operations.</p>
+        <p>Experience-focused programs with dependable operations.</p>
       </div>
 
       <div class="card">
         <h3>MICE & Incentives</h3>
-        <p>Corporate support, on-ground logistics and coordination.</p>
+        <p>Corporate coordination, logistics and ground handling.</p>
       </div>
 
       <div class="card">
-        <h3>Ground Handling</h3>
-        <p>Transport, guiding, assistance & 24×7 partner support.</p>
+        <h3>Transport, Guides & Assistance</h3>
+        <p>Reliable partners, 24×7 support and on-ground presence.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Destinations -->
+<!-- DESTINATIONS -->
 <section id="destinations" class="section">
   <div class="container">
-    <h2>CIS & Caucasus Specialists</h2>
+    <h2 class="center">CIS & Caucasus Specialists</h2>
 
-    <div class="card-grid img-cards">
+    <div class="image-card-grid">
 
-      <div class="image-card">
-        <div class="image-slot"><p>Add Georgia Image</p></div>
-        <h3>Georgia</h3>
-        <p>Tbilisi • Kazbegi • Kakheti • Batumi • Kutaisi</p>
+      <div class="dest-card">
+        <div class="photo-slot"><p>Georgia Image</p></div>
+        <div class="dest-info">
+          <h3>Georgia</h3>
+          <p>Tbilisi · Kazbegi · Kakheti · Batumi · Kutaisi</p>
+        </div>
       </div>
 
-      <div class="image-card">
-        <div class="image-slot"><p>Add Armenia Image</p></div>
-        <h3>Armenia</h3>
-        <p>Yerevan • Dilijan • Lake Sevan • Tatev</p>
+      <div class="dest-card">
+        <div class="photo-slot"><p>Armenia Image</p></div>
+        <div class="dest-info">
+          <h3>Armenia</h3>
+          <p>Yerevan · Dilijan · Lake Sevan · Tatev</p>
+        </div>
       </div>
 
-      <div class="image-card">
-        <div class="image-slot"><p>Add Azerbaijan Image</p></div>
-        <h3>Azerbaijan</h3>
-        <p>Baku • Gabala • Sheki • Absheron</p>
+      <div class="dest-card">
+        <div class="photo-slot"><p>Azerbaijan Image</p></div>
+        <div class="dest-info">
+          <h3>Azerbaijan</h3>
+          <p>Baku · Gabala · Sheki · Absheron</p>
+        </div>
       </div>
 
-      <div class="image-card">
-        <div class="image-slot"><p>Add Central Asia Image</p></div>
-        <h3>Central Asia</h3>
-        <p>Almaty • Tashkent (expanding portfolio)</p>
+      <div class="dest-card">
+        <div class="photo-slot"><p>Central Asia Image</p></div>
+        <div class="dest-info">
+          <h3>Central Asia</h3>
+          <p>Almaty · Tashkent (growing portfolio)</p>
+        </div>
       </div>
 
     </div>
@@ -127,31 +132,29 @@
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta-wrap">
   <div class="container cta-box">
     <h2>Let’s Build Meaningful Travel Together</h2>
-    <p>We work as an extension of your team — with ownership, clarity, and trust.</p>
+    <p>We work as an extension of your team — with ownership, clarity and trust.</p>
     <a href="#contact" class="btn-primary">Get In Touch</a>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section alt">
-  <div class="container two-col">
-    <div>
+<!-- CONTACT -->
+<section id="contact" class="section soft-bg">
+  <div class="container about-grid">
+    <div class="text-block">
       <h2>Contact Us</h2>
-      <p><strong>Email:</strong> contact@caravancompass.com</p>
+      <p><strong>Email:</strong> ops@caravancompass.com</p>
       <p><strong>Website:</strong> www.caravancompass.com</p>
-      <p><strong>Phone:</strong> +XX-XXXX-XXXXXX</p>
+      <p><strong>Phone:</strong> +91 75208 16288</p>
     </div>
 
-    <div class="image-box tall">
-      <p>Add Office / Team Image</p>
-    </div>
+    <div class1="image-frame tall"><p>Add Office / Team Image</p></div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="footer">
   <p>© Caravan Compass — Where Dreams Find Direction</p>
 </footer>
