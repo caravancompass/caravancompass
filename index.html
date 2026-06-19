@@ -3,21 +3,123 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+ 
 <title>Caravan Compass — Destination Management Company | Georgia, Armenia, Azerbaijan, Central Asia</title>
-
+ 
 <meta name="description"
-  content="Caravan Compass is a young, people-driven Destination Management Company specializing in Georgia, Armenia, Azerbaijan and Central Asia — providing reliable ground operations and itinerary support for B2B travel partners.">
-
-<!-- Canonical URL -->
+  content="Caravan Compass is a B2B Destination Management Company specializing in Georgia, Armenia, Azerbaijan and Central Asia — providing reliable ground operations and itinerary support for tour operators, OTAs and travel agencies.">
+ 
 <link rel="canonical" href="https://www.caravancompass.com/" />
-
-<!-- Styles -->
 <link rel="stylesheet" href="styles.css" />
-
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+ 
+<style>
+/* ── PARTNER ACCESS BUTTON in nav ── */
+.btn-partner{
+  background:transparent;
+  color:#0B3D91;
+  border:1.5px solid #0B3D91;
+  border-radius:10px;
+  padding:8px 14px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:background .15s, color .15s;
+}
+.btn-partner:hover{
+  background:#0B3D91;
+  color:#fff;
+}
+.btn-partner-dot{
+  width:7px;height:7px;
+  background:#b5712a;
+  border-radius:50%;
+  flex-shrink:0;
+}
+ 
+/* ── B2B TRADE STRIP ── */
+.trade-strip{
+  background:#0B3D91;
+  padding:60px 0;
+}
+.trade-strip-inner{
+  width:88%;max-width:1180px;margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:center;
+}
+.trade-strip h2{
+  font-family:Montserrat,sans-serif;
+  font-size:26px;font-weight:700;
+  color:#fff;
+  line-height:1.3;
+  margin-bottom:12px;
+}
+.trade-strip p{
+  font-size:14px;
+  color:rgba(255,255,255,.7);
+  line-height:1.75;
+  margin-bottom:0;
+}
+.trade-strip-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.trade-strip-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  padding:18px 18px;
+  text-decoration:none;
+  display:block;
+  transition:background .15s, border-color .15s;
+}
+.trade-strip-card:hover{
+  background:rgba(255,255,255,.14);
+  border-color:rgba(255,255,255,.3);
+}
+.trade-strip-card-icon{
+  font-size:18px;margin-bottom:8px;
+}
+.trade-strip-card-title{
+  font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;
+}
+.trade-strip-card-desc{
+  font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.5;
+}
+.trade-strip-cta{
+  grid-column:1 / -1;
+  background:#b5712a;
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  padding:13px 20px;
+  font-size:13px;font-weight:700;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+  text-align:center;
+  font-family:inherit;
+  letter-spacing:.02em;
+  transition:background .15s;
+}
+.trade-strip-cta:hover{background:#d4944a;}
+ 
+@media(max-width:860px){
+  .trade-strip-inner{grid-template-columns:1fr;}
+  .trade-strip-cards{grid-template-columns:1fr 1fr;}
+  .btn-partner{font-size:12px;padding:7px 11px;}
+}
+@media(max-width:480px){
+  .trade-strip-cards{grid-template-columns:1fr;}
+}
+</style>
+ 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,10 +145,9 @@
 }
 </script>
 </head>
-
-
+ 
 <body>
-
+ 
 <!-- NAVBAR -->
 <header class="nav-wrap">
   <div class="container nav">
@@ -55,43 +156,46 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#destinations">Destinations</a>
+      <a href="partners.html" class="btn-partner">
+        <span class="btn-partner-dot"></span>
+        Partner Access
+      </a>
       <a href="#contact" class="btn-primary">Contact</a>
     </nav>
   </div>
 </header>
-
-<!-- HERO (supports full-bleed mode if enabled) -->
+ 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div>
-    <h1>Caravan Compass — Destination Management Company</h1>
-<p class="subtitle">
-  A young, people-driven DMC delivering reliable, honest and well-crafted travel programs across Georgia, Armenia, Azerbaijan and Central Asia.
-</p>
-<p class="subtitle small">
-  <em>Where Dreams Find Direction</em>
-</p>
-
+      <h1>Caravan Compass — Destination Management Company</h1>
+      <p class="subtitle">
+        A people-driven DMC delivering reliable, honest and well-crafted travel programs across Georgia, Armenia, Azerbaijan and Central Asia.
+      </p>
+      <p class="subtitle small">
+        <em>Where Dreams Find Direction</em>
+      </p>
       <a class="btn-primary" href="#contact">Partner With Us</a>
     </div>
-
+ 
     <div class="hero-img fade-in">
       <img src="images/kazbegi.jpg" alt="Kazbegi mountains and Gergeti Trinity Church">
     </div>
   </div>
-
+ 
   <div class="curve-divider"></div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about" class="section fade-in">
   <div class="container about-grid">
     <div class="image-frame tall">
       <img src="images/about us.png" alt="Travel planning workspace at Caravan Compass">
     </div>
-
+ 
     <div class="text-block">
-      <h2>A Young, Team-Led Destination Management Company</h2>
+      <h2>A Team-Led Destination Management Company</h2>
       <p>
         At Caravan Compass, every itinerary is managed by real people who stay involved from planning to execution. Our working style is collaborative, practical and grounded in on-the-ground experience — not just brochures.
       </p>
@@ -101,36 +205,36 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- SERVICES -->
 <section id="services" class="section gradient-section fade-in">
   <div class="container">
     <h2 class="center">What We Do</h2>
-
+ 
     <div class="card-grid">
       <div class="card">
-        <h3>FIT & Leisure Travel</h3>
+        <h3>FIT &amp; Leisure Travel</h3>
         <p>Custom itineraries built around comfort, routing and seasonality.</p>
       </div>
-
+ 
       <div class="card">
-        <h3>Small Groups & Fixed Departures</h3>
+        <h3>Small Groups &amp; Fixed Departures</h3>
         <p>Experience-focused programs with dependable operations.</p>
       </div>
-
+ 
       <div class="card">
-        <h3>MICE & Incentives</h3>
+        <h3>MICE &amp; Incentives</h3>
         <p>Corporate coordination, logistics and ground handling.</p>
       </div>
-
+ 
       <div class="card">
-        <h3>Transport, Guides & Assistance</h3>
+        <h3>Transport, Guides &amp; Assistance</h3>
         <p>Reliable partners, 24×7 support and on-ground presence.</p>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- DESTINATIONS INTRO -->
 <section id="destinations" class="section soft-bg fade-in">
   <div class="container">
@@ -141,101 +245,110 @@
     </p>
   </div>
 </section>
-
-<!-- FRAMED DESTINATION BANNERS -->
-
+ 
 <!-- GEORGIA -->
 <section class="dest-section fade-in">
   <div class="container dest-flex">
-
     <div class="dest-text">
-      <h3>Georgia — Our Core Destination & Operational Base</h3>
+      <h3>Georgia — Our Core Destination &amp; Operational Base</h3>
       <p>
         From historic towns and wine valleys to mountain routes and coastal extensions, our Georgia programs
         balance comfort, authenticity and realistic day-to-day travel flow.
       </p>
     </div>
-
     <div class="dest-image-frame">
       <img src="images/tbilisi_eve.jpeg" alt="Georgia Landscape" loading="lazy">
     </div>
-
   </div>
 </section>
-
-
+ 
 <!-- ARMENIA -->
 <section class="dest-section alt fade-in">
   <div class="container dest-flex reverse">
-
     <div class="dest-text">
       <span class="dest-chip">Culture-Focused</span>
-      <h3>Armenia — Culture, History & Story-Led Travel</h3>
+      <h3>Armenia — Culture, History &amp; Story-Led Travel</h3>
       <p>
         Designed for travelers who value heritage, monasteries, landscapes and meaningful local encounters —
         curated with warm hosting and comfortable pacing.
       </p>
     </div>
-
     <div class="dest-image-frame">
       <img src="images/Garni.jpg" alt="Armenia Mountains and Monastery" loading="lazy">
     </div>
-
   </div>
 </section>
-
-
+ 
 <!-- AZERBAIJAN -->
 <section class="dest-section fade-in">
   <div class="container dest-flex">
-
     <div class="dest-text">
       <span class="dest-chip">City + Countryside</span>
       <h3>Azerbaijan — Modern Energy Meets Countryside Heritage</h3>
       <p>
-        Our itineraries blend Baku’s contemporary skyline with historic towns, scenic mountains and light-adventure
+        Our itineraries blend Baku's contemporary skyline with historic towns, scenic mountains and light-adventure
         experiences across the countryside.
       </p>
     </div>
-
     <div class="dest-image-frame">
       <img src="images/Baku_flame_towers.jpg" alt="Baku and Countryside" loading="lazy">
     </div>
-
   </div>
 </section>
-
-
+ 
 <!-- CENTRAL ASIA -->
 <section class="dest-section alt fade-in">
   <div class="container dest-flex reverse">
-
     <div class="dest-text">
       <span class="dest-chip">Growing Portfolio</span>
       <h3>Central Asia — A Carefully Growing Portfolio</h3>
       <p>
-        Gradually developed through on-ground testing and partner feedback — focusing on Almaty, Tashkent
-        and emerging Silk-Route circuits introduced responsibly.
+        Gradually developed through on-ground testing and partner feedback — focusing on Almaty
+        and emerging Silk Route circuits introduced responsibly.
       </p>
     </div>
-
     <div class="dest-image-frame">
       <img src="images/Ascension_almaty.jfif" alt="Central Asia Scenic Valley" loading="lazy">
     </div>
-
   </div>
 </section>
-
-
+ 
+<!-- B2B TRADE STRIP -->
+<section class="trade-strip fade-in">
+  <div class="trade-strip-inner">
+    <div>
+      <h2>Trade Partners &amp; Tour Operators</h2>
+      <p>
+        We work exclusively B2B — with tour operators, OTAs and travel agencies across India. Operator decks, readymade itineraries, and a 4-hour RFQ response are available through our Partner Access portal.
+      </p>
+    </div>
+    <div class="trade-strip-cards">
+      <a href="partners.html" class="trade-strip-card">
+        <div class="trade-strip-card-icon">📋</div>
+        <div class="trade-strip-card-title">Operator Decks</div>
+        <div class="trade-strip-card-desc">Georgia · Azerbaijan · Armenia · Almaty</div>
+      </a>
+      <a href="partners.html" class="trade-strip-card">
+        <div class="trade-strip-card-icon">🗺</div>
+        <div class="trade-strip-card-title">Readymade Itineraries</div>
+        <div class="trade-strip-card-desc">Pre-built programs ready to quote</div>
+      </a>
+      <a href="partners.html#quote" class="trade-strip-cta">
+        Access Partner Portal — Request a Quote →
+      </a>
+    </div>
+  </div>
+</section>
+ 
 <!-- CTA -->
 <section class="cta-wrap fade-in">
   <div class="container cta-box">
-    <h2>Let’s Build Meaningful Travel Together</h2>
+    <h2>Let's Build Meaningful Travel Together</h2>
     <p>We work as an extension of your team — with ownership, clarity and trust.</p>
     <a href="#contact" class="btn-primary">Get In Touch</a>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact" class="section soft-bg fade-in">
   <div class="container about-grid">
@@ -245,64 +358,59 @@
       <p><strong>Website:</strong> www.caravancompass.com</p>
       <p><strong>Phone:</strong> +91 75208 16288</p>
     </div>
-
+ 
     <div class="image-frame tall">
-      <img src="images/CONTACT.png" alt="Central Asia Scenic Valley" loading="lazy">
+      <img src="images/CONTACT.png" alt="Contact Caravan Compass" loading="lazy">
     </div>
   </div>
 </section>
-
+ 
 <!-- PROFESSIONAL FOOTER -->
 <footer class="pro-footer">
   <div class="container footer-grid">
-
+ 
     <div class="footer-brand">
       <img src="images/Blue Minimalist Air Plane Travel Logo.png" alt="Caravan Compass" class="footer-logo">
-      <p>People-driven Destination Management for the CIS & Caucasus Region.</p>
+      <p>People-driven Destination Management for the Caucasus &amp; Central Asia Region.</p>
     </div>
-
+ 
     <div>
       <h4>Company</h4>
       <ul>
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">What We Do</a></li>
         <li><a href="#destinations">Destinations</a></li>
+        <li><a href="partners.html">Partner Access</a></li>
         <li><a href="https://www.instagram.com/caravancompass/">Instagram</a></li>
-<li><a href="https://www.linkedin.com/company/caravancompass/">LinkedIn</a></li>
-
+        <li><a href="https://www.linkedin.com/company/caravancompass/">LinkedIn</a></li>
       </ul>
     </div>
-
+ 
     <div>
       <h4>Contact</h4>
       <p>ops@caravancompass.com</p>
       <p>+91 75208 16288</p>
       <p>www.caravancompass.com</p>
-      <p>Sector 44, Noida, 201303, Uttar Pradesh, India</p>
+      <p>Noida, Uttar Pradesh, India</p>
     </div>
-
+ 
   </div>
-
+ 
   <div class="footer-bottom">
     © Caravan Compass — All Rights Reserved
   </div>
 </footer>
-
+ 
 <!-- Fade-in observer -->
 <script>
 const els = document.querySelectorAll('.fade-in');
-
-const io = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-    }
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
   });
-},{threshold:.25});
-
-els.forEach(el=>io.observe(el));
+}, { threshold: .2 });
+els.forEach(el => io.observe(el));
 </script>
-
-
+ 
 </body>
 </html>
