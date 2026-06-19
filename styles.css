@@ -1,9 +1,9 @@
 :root{
-  --primary:#1E88E5;
-  --navy:#0B3D91;
-  --sky:#6EC7FF;
-  --bg:#F4F7FF;
-  --text:#2B2B2B;
+  --primary:#7CA06D;      /* Sage Green from olive variant.png */
+  --navy:#213624;         /* Deep Forest Green from olive variant.png */
+  --sky:#A4C297;          /* Soft Moss Accent */
+  --bg:#F7F9F6;           /* Organic Light Gray-Green */
+  --text:#2B2C2B;
 }
 
 body{
@@ -18,7 +18,7 @@ h1,h2,h3{font-family:Montserrat;color:var(--navy);}
 .center{text-align:center}
 
 /* NAVBAR */
-.nav-wrap{background:white;border-bottom:1px solid #E6ECF5;}
+.nav-wrap{background:white;border-bottom:1px solid #EAEFE9;}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
 .logo{height:60px;}
 nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
@@ -28,20 +28,20 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
   background:linear-gradient(135deg,var(--primary),var(--navy));
   color:#fff;border-radius:14px;padding:11px 18px;
   text-decoration:none;font-weight:600;display:inline-block;
-  box-shadow:0 10px 26px rgba(20,80,180,.25);
+  box-shadow:0 10px 26px rgba(33,54,36,.22);
   transition:transform .15s ease, box-shadow .2s ease;
 }
 .btn-primary:hover{
   transform:translateY(-2px);
-  box-shadow:0 14px 32px rgba(20,80,180,.28);
+  box-shadow:0 14px 32px rgba(33,54,36,.26);
 }
 
 /* HERO */
 .hero{
   position:relative;
   background:
-    radial-gradient(1200px 380px at -10% -10%, #CFE6FF, transparent),
-    linear-gradient(135deg,#E9F2FF,#ffffff);
+    radial-gradient(1200px 380px at -10% -10%, #E2EFE0, transparent),
+    linear-gradient(135deg,#F0F6EE,#ffffff);
   padding:90px 0 60px;
 }
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
@@ -60,7 +60,7 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 }
 
 .curve-divider{
-  height:95px;background:#F6F9FF;border-radius:110% 110% 0 0;margin-top:50px;
+  height:95px;background:#F2F6F1;border-radius:110% 110% 0 0;margin-top:50px;
 }
 
 /* Optional full-bleed hero mode */
@@ -77,7 +77,7 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 
 /* SECTIONS */
 .section{padding:80px 0;}
-.soft-bg{background:#F6F8FF;}
+.soft-bg{background:#F2F6F1;}
 
 .about-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;
@@ -85,13 +85,13 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 
 .text-block{
   background:#ffffff;border-radius:22px;padding:28px;
-  border:1px solid #E6ECF5;
-  box-shadow:0 14px 32px rgba(0,0,0,.06);
+  border:1px solid #EAEFE9;
+  box-shadow:0 14px 32px rgba(0,0,0,.04);
 }
 
 .image-frame{
-  background:#DDE9FF;
-  border:1px dashed #6EC7FF;
+  background:#EAF0E8;
+  border:1px dashed #A4C297;
   border-radius:26px;
   display:flex;
   align-items:center;
@@ -111,8 +111,8 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 /* SERVICES */
 .gradient-section{
   background:
-    radial-gradient(1000px 340px at 90% -10%, #D4EAFF, transparent),
-    linear-gradient(135deg,#EBF3FF,#ffffff);
+    radial-gradient(1000px 340px at 90% -10%, #E5EFE2, transparent),
+    linear-gradient(135deg,#EEF5EC,#ffffff);
 }
 .card-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -120,28 +120,28 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 }
 .card{
   background:white;border-radius:20px;padding:20px;
-  border:1px solid #DDE5F5;
-  box-shadow:0 16px 36px rgba(12,55,140,.12);
+  border:1px solid #E1EAE0;
+  box-shadow:0 16px 36px rgba(33,54,36,.08);
 }
 
 /* CTA */
 .cta-wrap{padding:90px 0;background:linear-gradient(135deg,var(--sky),#ffffff);}
 .cta-box{
   background:white;border-radius:28px;text-align:center;
-  padding:40px;box-shadow:0 22px 48px rgba(0,0,0,.12);
+  padding:40px;box-shadow:0 22px 48px rgba(0,0,0,.08);
 }
 
 /* ---------- DESTINATION – FRAMED LAYOUT ---------- */
 
-.intro-text{max-width:760px;margin:6px auto 26px;color:#4A5066;}
+.intro-text{max-width:760px;margin:6px auto 26px;color:#4A504A;}
 
 .dest-section{
   padding:70px 0;
-  background:linear-gradient(135deg,#EEF3FF,#ffffff);
-  border-top:1px solid #E3E9F6;
+  background:linear-gradient(135deg,#EFF5ED,#ffffff);
+  border-top:1px solid #E2EAE0;
 }
 .dest-section.alt{
-  background:linear-gradient(135deg,#ffffff,#F3F7FF);
+  background:linear-gradient(135deg,#ffffff,#F0F5EE);
 }
 
 .dest-flex{
@@ -160,8 +160,8 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 }
 
 .dest-image-frame{
-  background:#DDE9FF;
-  border:1px dashed #6EC7FF;
+  background:#EAF0E8;
+  border:1px dashed #A4C297;
   border-radius:24px;
   height:260px;
   overflow:hidden;
@@ -179,15 +179,15 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
   border-radius:14px;
   font-size:12px;
   font-weight:600;
-  background:#E8F0FF;
-  color:#0B3D91;
-  border:1px solid #D6E6FF;
+  background:#EBF3E8;
+  color:var(--navy);
+  border:1px solid #D9E6D5;
   margin-bottom:8px;
 }
 
 /* ------- Footer ------- */
 
-.pro-footer{background:#0B3D91;color:#FFFFFF;margin-top:40px;}
+.pro-footer{background:var(--navy);color:#FFFFFF;margin-top:40px;}
 .footer-grid{
   padding:50px 0;display:grid;
   grid-template-columns:2fr 1fr 1fr;gap:40px;
@@ -198,11 +198,11 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 .pro-footer h4{margin-bottom:8px;font-weight:700;}
 .pro-footer ul{list-style:none;padding:0;margin:0;}
 .pro-footer li{margin-bottom:6px;}
-.pro-footer a{color:#E6EEFF;text-decoration:none;}
+.pro-footer a{color:#EBF5EA;text-decoration:none;}
 .pro-footer a:hover{text-decoration:underline;}
 
 .footer-bottom{
-  border-top:1px solid rgba(255,255,255,.18);
+  border-top:1px solid rgba(255,255,255,.12);
   text-align:center;padding:14px 0;opacity:.9;
 }
 
@@ -250,9 +250,9 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
     margin: 0; 
     font-size: 13px; 
     padding: 8px 14px;
-    background: #F4F7FF;
+    background: var(--bg);
     border-radius: 10px;
-    color: #0B3D91;
+    color: var(--navy);
     font-weight: 600;
   }
   nav a.btn-primary {
@@ -262,5 +262,4 @@ nav a{text-decoration:none;color:#2A2A2A;margin-left:18px;font-weight:500}
 
   .footer-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
   .footer-brand { display: flex; flex-direction: column; align-items: center; }
-
 }
