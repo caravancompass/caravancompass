@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armenia — B2B Operator Brief | Caravan Compass DMC</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --ink-black:#1c1714;
+  --terracotta:#a3492f;
+  --terracotta-light:#cc6b48;
+  --terracotta-pale:#f7e9e2;
+  --apricot:#c98a3e;
+  --sand:#f6f0e6;
+  --ink:#1c1a17;
+  --ink-mid:#3e3935;
+  --ink-soft:#716a63;
+  --border:#e2d8c9;
+  --white:#ffffff;
+  --caution:#8a5a1e;
+  --caution-pale:#fbf0dc;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--sand);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* ── COVER ── */
+.cover{
+  min-height:100vh;
+  background:var(--ink-black);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:0;
+  page-break-after:always;
+  position:relative;
+  overflow:hidden;
+}
+
+.cover-glow{
+  position:absolute;
+  top:-10%; right:-8%;
+  width:58%;
+  height:68%;
+  background:radial-gradient(circle at 65% 30%, rgba(163,73,47,.35) 0%, transparent 65%);
+  pointer-events:none;
+}
+
+.cover-gold-bar{
+  height:4px;
+  background:linear-gradient(90deg, var(--terracotta) 0%, var(--apricot) 100%);
+  width:100%;
+}
+
+.cover-body{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:64px 72px;
+  position:relative;
+  z-index:2;
+}
+
+.cover-eyebrow{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--terracotta-light);
+  margin-bottom:28px;
+}
+
+.cover-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:56px;
+  font-weight:700;
+  color:var(--white);
+  line-height:1.1;
+  margin-bottom:8px;
+}
+
+.cover-sub{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  color:rgba(255,255,255,.6);
+  margin-bottom:48px;
+}
+
+.cover-divider{
+  width:64px;
+  height:2px;
+  background:var(--terracotta);
+  margin-bottom:32px;
+}
+
+.cover-desc{
+  font-size:15px;
+  color:rgba(255,255,255,.75);
+  max-width:530px;
+  line-height:1.75;
+  margin-bottom:40px;
+}
+
+.cover-visa-flag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(201,138,62,.15);
+  border:1px solid rgba(201,138,62,.4);
+  border-radius:8px;
+  padding:10px 16px;
+  margin-bottom:32px;
+  max-width:530px;
+}
+
+.cover-visa-flag-text{
+  font-size:12px;
+  color:rgba(255,255,255,.85);
+  line-height:1.5;
+}
+
+.cover-visa-flag-text strong{
+  color:var(--apricot);
+  font-weight:700;
+}
+
+.cover-pills{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.cover-pill{
+  padding:6px 14px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:20px;
+  font-size:11px;
+  font-weight:600;
+  color:rgba(255,255,255,.8);
+  letter-spacing:.04em;
+}
+
+.cover-footer{
+  padding:28px 72px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  z-index:2;
+}
+
+.cover-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;
+  color:var(--white);
+  font-weight:600;
+}
+
+.cover-brand span{ color:var(--terracotta-light); }
+
+.cover-contact{
+  font-size:11px;
+  color:rgba(255,255,255,.55);
+  text-align:right;
+  line-height:1.8;
+}
+
+/* ── INNER PAGES ── */
+.page{
+  max-width:860px;
+  margin:0 auto;
+  padding:64px 56px;
+  background:var(--white);
+  border-left:1px solid var(--border);
+  border-right:1px solid var(--border);
+}
+
+.section-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:32px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+
+.section-num{
+  width:36px;
+  height:36px;
+  background:var(--ink-black);
+  color:var(--white);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+  flex-shrink:0;
+}
+
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:26px;
+  font-weight:600;
+  color:var(--ink-black);
+}
+
+.section-sub{
+  font-size:12px;
+  color:var(--ink-soft);
+  margin-top:2px;
+}
+
+.page-sep{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:40px 0;
+}
+
+/* ── INTRO / ABOUT ── */
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:32px;
+}
+
+.intro-card{
+  background:var(--terracotta-pale);
+  border:1px solid #ecc8b5;
+  border-radius:10px;
+  padding:20px 22px;
+}
+
+.intro-card-label{
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--terracotta);
+  margin-bottom:6px;
+}
+
+.intro-card-value{
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.4;
+}
+
+.facts-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-bottom:32px;
+}
+
+.fact-box{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 20px;
+  border-top:3px solid var(--ink-black);
+}
+
+.fact-value{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:24px;
+  font-weight:700;
+  color:var(--ink-black);
+  line-height:1.1;
+  margin-bottom:4px;
+}
+
+.fact-label{
+  font-size:11px;
+  color:var(--ink-soft);
+  line-height:1.4;
+}
+
+p{ color:var(--ink-mid); margin-bottom:14px; line-height:1.75; }
+p:last-child{ margin-bottom:0; }
+strong{ color:var(--ink); font-weight:600; }
+
+/* ── VISA PATHWAY DIAGRAM ── */
+.visa-box{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:24px;
+}
+
+.visa-box-head{
+  background:var(--ink-black);
+  padding:16px 22px;
+}
+
+.visa-box-head-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px;
+  color:var(--white);
+  font-weight:600;
+}
+
+.visa-box-head-sub{
+  font-size:11px;
+  color:rgba(255,255,255,.5);
+  margin-top:2px;
+}
+
+.visa-paths{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.visa-path{
+  padding:20px 22px;
+  border-right:1px solid var(--border);
+}
+
+.visa-path:last-child{ border-right:none; }
+
+.visa-path-label{
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--terracotta);
+  margin-bottom:8px;
+}
+
+.visa-path-title{
+  font-weight:700;
+  font-size:14px;
+  color:var(--ink-black);
+  margin-bottom:8px;
+}
+
+.visa-path ul{
+  margin:0;
+  padding-left:18px;
+  font-size:12.5px;
+  color:var(--ink-mid);
+  line-height:1.7;
+}
+
+.visa-path li{ margin-bottom:4px; }
+
+.visa-box-foot{
+  background:var(--caution-pale);
+  border-top:1px solid #ecd9ad;
+  padding:14px 22px;
+  font-size:12px;
+  color:var(--caution);
+}
+
+/* ── REGION CARDS ── */
+.regions{ display:flex; flex-direction:column; gap:16px; margin-bottom:28px; }
+
+.region{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:0;
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.region-label{
+  background:var(--ink-black);
+  padding:18px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.region-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:16px;
+  font-weight:600;
+  color:var(--white);
+  margin-bottom:4px;
+}
+
+.region-tag{
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+}
+
+.region-body{ padding:16px 20px; background:var(--white); }
+
+.region-drive{
+  font-size:10px;
+  font-weight:700;
+  color:var(--terracotta);
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  margin-bottom:5px;
+}
+
+.region-desc{ font-size:13px; color:var(--ink-mid); line-height:1.6; margin:0; }
+
+.region-tags{ display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+
+.rtag{
+  font-size:10px;
+  font-weight:600;
+  background:#f4f0ec;
+  color:var(--ink-black);
+  border:1px solid #ddd3c5;
+  padding:2px 8px;
+  border-radius:6px;
+}
+
+/* ── ITINERARY BOXES ── */
+.itin-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:28px; }
+
+.itin-card{ border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+
+.itin-head{ background:var(--ink-black); padding:14px 16px; }
+
+.itin-duration{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--white);
+}
+
+.itin-type{
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.55);
+  margin-top:2px;
+}
+
+.itin-body{ padding:14px 16px; background:var(--white); }
+
+.itin-days{ list-style:none; padding:0; margin:0; }
+
+.itin-days li{
+  font-size:12px;
+  color:var(--ink-mid);
+  padding:4px 0;
+  border-bottom:1px solid #f3eee3;
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+}
+
+.itin-days li:last-child{ border-bottom:none; }
+
+.day-num{
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  color:var(--terracotta);
+  min-width:30px;
+  margin-top:2px;
+}
+
+.itin-footer{
+  background:var(--terracotta-pale);
+  padding:10px 16px;
+  font-size:11px;
+  color:var(--terracotta);
+  font-weight:600;
+  border-top:1px solid #ecc8b5;
+}
+
+/* ── MICE ── */
+.mice-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px; }
+
+.mice-card{ border:1px solid var(--border); border-radius:10px; padding:20px; background:var(--white); }
+
+.mice-card-title{
+  font-weight:700;
+  color:var(--ink-black);
+  font-size:14px;
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.mice-icon{
+  width:24px;
+  height:24px;
+  background:var(--ink-black);
+  color:var(--white);
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  flex-shrink:0;
+}
+
+.mice-card p{ font-size:12.5px; margin-bottom:0; }
+
+/* ── RATE TABLE ── */
+.rate-table{ width:100%; border-collapse:collapse; margin-bottom:24px; font-size:13px; }
+
+.rate-table th{
+  background:var(--ink-black);
+  color:var(--white);
+  padding:10px 14px;
+  text-align:left;
+  font-weight:600;
+  font-size:11px;
+  letter-spacing:.04em;
+}
+
+.rate-table th:first-child{ border-radius:8px 0 0 0; }
+.rate-table th:last-child{ border-radius:0 8px 0 0; }
+
+.rate-table td{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  color:var(--ink-mid);
+  vertical-align:top;
+}
+
+.rate-table tr:last-child td{ border-bottom:none; }
+.rate-table tr:nth-child(even) td{ background:#fbf7f0; }
+
+.rate-incl{ font-size:11px; color:var(--ink-soft); margin-top:3px; }
+.rate-price{ font-weight:700; color:var(--terracotta); font-size:14px; }
+
+/* ── PROCESS ── */
+.process-steps{ display:flex; flex-direction:column; gap:0; margin-bottom:28px; }
+
+.step{ display:grid; grid-template-columns:48px 1fr; gap:0; }
+
+.step-line{ display:flex; flex-direction:column; align-items:center; }
+
+.step-dot{
+  width:32px;
+  height:32px;
+  background:var(--ink-black);
+  color:var(--white);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+  flex-shrink:0;
+}
+
+.step-connector{
+  width:2px;
+  flex:1;
+  background:var(--border);
+  margin:4px 0;
+  min-height:16px;
+}
+
+.step:last-child .step-connector{ display:none; }
+
+.step-content{ padding:4px 0 24px 16px; }
+
+.step-title{ font-weight:700; color:var(--ink-black); margin-bottom:4px; font-size:14px; }
+
+.step-desc{ font-size:13px; color:var(--ink-soft); margin:0; }
+
+/* ── POLICY TABLE ── */
+.policy-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px; }
+
+.policy-card{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 20px;
+}
+
+.policy-label{
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--ink-soft);
+  margin-bottom:8px;
+}
+
+.policy-val{ font-size:13px; color:var(--ink-mid); line-height:1.5; }
+
+/* ── HIGHLIGHT BOX ── */
+.highlight{
+  background:var(--terracotta-pale);
+  border:1px solid #ecc8b5;
+  border-left:4px solid var(--terracotta);
+  border-radius:8px;
+  padding:16px 20px;
+  margin-bottom:24px;
+}
+
+.highlight p{ font-size:13px; color:var(--ink-mid); margin:0; }
+
+/* ── CAUTION BOX ── */
+.caution{
+  background:var(--caution-pale);
+  border:1px solid #ecd9ad;
+  border-left:4px solid var(--apricot);
+  border-radius:8px;
+  padding:16px 20px;
+  margin-bottom:24px;
+}
+
+.caution p{ font-size:13px; color:var(--ink-mid); margin:0; }
+
+.caution-label{
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--caution);
+  margin-bottom:6px;
+}
+
+/* ── CTA FOOTER ── */
+.cta-section{
+  background:var(--ink-black);
+  padding:48px 56px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  max-width:860px;
+  margin:0 auto;
+}
+
+.cta-text h2{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:28px;
+  color:var(--white);
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+.cta-text p{ font-size:14px; color:rgba(255,255,255,.7); margin:0; }
+
+.cta-details{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  padding:24px;
+}
+
+.cta-item{ display:flex; align-items:flex-start; gap:12px; margin-bottom:16px; }
+.cta-item:last-child{ margin-bottom:0; }
+
+.cta-icon{
+  width:32px;
+  height:32px;
+  background:var(--terracotta);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  flex-shrink:0;
+}
+
+.cta-item-label{
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.45);
+  margin-bottom:2px;
+}
+
+.cta-item-value{ font-size:13px; color:var(--white); font-weight:500; }
+
+/* ── PAGE HEADER STRIP ── */
+.page-header{
+  background:var(--ink-black);
+  padding:12px 56px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:860px;
+  margin:0 auto;
+}
+
+.page-header-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:13px;
+  color:rgba(255,255,255,.6);
+}
+
+.page-header-title{
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--terracotta-light);
+}
+
+/* ── SEASONAL TABLE ── */
+.season-table{ width:100%; border-collapse:collapse; margin-bottom:24px; font-size:12px; }
+
+.season-table th{
+  background:var(--ink-black);
+  color:var(--white);
+  padding:9px 12px;
+  font-weight:600;
+  font-size:11px;
+  text-align:left;
+}
+
+.season-table td{ padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+
+.season-table tr:nth-child(even) td{ background:#fbf7f0; }
+
+.srating{ display:inline-block; font-weight:700; font-size:11px; padding:2px 8px; border-radius:4px; }
+.s-best{ background:#f0d4c0; color:#7c3a1c; }
+.s-good{ background:#ece4d3; color:#6b5a3a; }
+.s-ok{ background:#e9e2d4; color:#5c5444; }
+
+/* ── PRINT ── */
+@media print{
+  body{ background:white; font-size:11px; }
+  .cover{ min-height:100vh; }
+  .page{ max-width:100%; border:none; }
+  .page-header{ max-width:100%; }
+  .cta-section{ max-width:100%; }
+  .page-break{ page-break-before:always; }
+  a{ color:inherit; text-decoration:none; }
+}
+
+@media(max-width:640px){
+  .cover-body{ padding:40px 28px; }
+  .cover-footer{ padding:20px 28px; flex-direction:column; gap:12px; text-align:left; }
+  .cover-title{ font-size:36px; }
+  .page{ padding:32px 20px; }
+  .page-header{ padding:10px 20px; }
+  .intro-grid,.facts-grid{ grid-template-columns:1fr; }
+  .itin-grid{ grid-template-columns:1fr; }
+  .mice-grid{ grid-template-columns:1fr; }
+  .policy-grid{ grid-template-columns:1fr; }
+  .region{ grid-template-columns:1fr; }
+  .visa-paths{ grid-template-columns:1fr; }
+  .visa-path{ border-right:none; border-bottom:1px solid var(--border); }
+  .visa-path:last-child{ border-bottom:none; }
+  .cta-section{ grid-template-columns:1fr; padding:32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-gold-bar"></div>
+  <div class="cover-glow"></div>
+
+  <div class="cover-body">
+    <div class="cover-eyebrow">B2B Operator Reference Document — For Trade Use Only</div>
+    <div class="cover-title">Armenia</div>
+    <div class="cover-sub">Ground Operations &amp; Program Guide</div>
+    <div class="cover-divider"></div>
+    <div class="cover-desc">
+      A ground reference for tour operators, OTAs, and travel agencies building
+      Armenia programs — standalone or as a Caucasus extension from Georgia.
+      Covers visa pathway, regional excursions, sample itineraries, rate
+      frameworks, and booking process.
+    </div>
+    <div class="cover-visa-flag">
+      <div class="cover-visa-flag-text">
+        <strong>Visa note:</strong> Indian passport holders face a conditional e-visa process, not a standard one. See Section 2 before quoting any Armenia program — this affects timelines.
+      </div>
+    </div>
+    <div class="cover-pills">
+      <span class="cover-pill">FIT · 1–6 Pax</span>
+      <span class="cover-pill">Groups · 7–40 Pax</span>
+      <span class="cover-pill">MICE &amp; Incentives</span>
+      <span class="cover-pill">4-Hour RFQ Response</span>
+      <span class="cover-pill">Land-Only Pricing</span>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="cover-contact">
+      ops@caravancompass.com &nbsp;·&nbsp; +91 75208 16288<br>
+      caravancompass.com &nbsp;·&nbsp; Corporate Office: India &nbsp;·&nbsp; Operations: Caucasus &amp; Central Asia
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 1 — ABOUT CC ════════════════════════════════════ -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-title">About Caravan Compass</div>
+      <div class="section-sub">Who we are and how we work in Armenia</div>
+    </div>
+  </div>
+
+  <p>
+    Caravan Compass is a B2B-only Destination Management Company with its corporate office in India and an operational network across the Caucasus and Central Asia — Georgia, Azerbaijan, Armenia, and Almaty (Kazakhstan). We provide ground services exclusively to tour operators, OTAs, and travel agencies. We do not sell directly to consumers.
+  </p>
+
+  <p>
+    Armenia is one of our three core Caucasus destinations alongside Georgia and Azerbaijan, and it sells most often as an extension of a Georgia program — Tbilisi to Yerevan is a single overland day. It carries the most operationally complex visa pathway of any country in our portfolio, covered in full in Section 2 below, and we manage that complexity directly so operators don't have to.
+  </p>
+
+  <div class="intro-grid">
+    <div class="intro-card">
+      <div class="intro-card-label">Corporate Office</div>
+      <div class="intro-card-value">India<br><span style="font-weight:400;font-size:12px;color:#716a63">Operational network across the Caucasus &amp; Central Asia</span></div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-label">Response Time</div>
+      <div class="intro-card-value">Within 4 Hours<br><span style="font-weight:400;font-size:12px;color:#716a63">Detailed quotation on land-only basis</span></div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-label">Client Type</div>
+      <div class="intro-card-value">B2B Trade Only<br><span style="font-weight:400;font-size:12px;color:#716a63">Tour operators, OTAs, travel agencies</span></div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-label">Guide Policy</div>
+      <div class="intro-card-value">7+ Pax: Professional Guide Throughout<br><span style="font-weight:400;font-size:12px;color:#716a63">English-speaking licensed guide, full program duration</span></div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>What we quote:</strong> Land-only pricing direct to trade. Hotels, guides, transport, excursions, airport transfers, and — uniquely for Armenia — visa facilitation including invitation letters where required (see Section 2). Flight arrangements are not included. Armenia quotes can be issued standalone or combined into a single quote with Georgia as a two-country Caucasus circuit.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-title">Visa Pathway for Indian Passport Holders</div>
+      <div class="section-sub">The single most important section in this document — read before quoting</div>
+    </div>
+  </div>
+
+  <p>
+    Unlike Georgia (e-visa), Azerbaijan (ASAN e-visa), and Kazakhstan (visa-free), Armenia does not offer a straightforward e-visa for Indian citizens. Since November 2024, Indian, Egyptian, and Iraqi nationals face a <strong>conditional e-visa process</strong> with two distinct pathways. Most Indian leisure travellers do not qualify for the simpler path, which is the real source of the approval inconsistency operators have heard about — it is not random, but it does mean every Armenia booking needs to be assessed individually before we can confirm timelines.
+  </p>
+
+  <div class="visa-box">
+    <div class="visa-box-head">
+      <div class="visa-box-head-title">Two Pathways to an Armenian E-Visa</div>
+      <div class="visa-box-head-sub">Indian, Egyptian, and Iraqi nationals only — all other conditions (passport validity, photo, fee) apply as standard</div>
+    </div>
+    <div class="visa-paths">
+      <div class="visa-path">
+        <div class="visa-path-label">Path A — Qualifying Permit</div>
+        <div class="visa-path-title">Faster, fewer documents</div>
+        <ul>
+          <li>Applicant holds a valid visa or residence permit from the US, UK, EU/Schengen area, or a GCC country (UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain)</li>
+          <li>Permit must have at least 6 months' validity remaining</li>
+          <li>Plus mandatory travel health insurance</li>
+          <li>Typical processing: around 3 working days</li>
+        </ul>
+      </div>
+      <div class="visa-path">
+        <div class="visa-path-label">Path B — Document Bundle</div>
+        <div class="visa-path-title">For travellers without a qualifying permit</div>
+        <ul>
+          <li>Return flight ticket</li>
+          <li>Invitation letter from an Armenian entity or individual</li>
+          <li>Proof of financial resources (bank statement)</li>
+          <li>Mandatory travel health insurance</li>
+          <li><strong>All four required together</strong> — incomplete bundles are a common cause of rejection</li>
+        </ul>
+      </div>
+    </div>
+    <div class="visa-box-foot">
+      <strong>Most Indian leisure clients fall into Path B</strong>, since few hold a qualifying US/EU/GCC permit. This is the operational bottleneck behind "inconsistent approvals" — it isn't inconsistency in adjudication, it's that most applicants are missing one piece of a four-document bundle.
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>How Caravan Compass handles this:</strong> For any client without a qualifying third-country permit, we issue the invitation letter directly as the inviting Armenian-network entity, as part of our standard Armenia service — operators do not need to source this separately. We also pre-check the full Path B document bundle before submission to reduce rejection risk. This is built into our standard process and timeline (see Section 9).</p>
+  </div>
+
+  <div class="caution">
+    <div class="caution-label">Time-Sensitive — Read Before Quoting</div>
+    <p>A separate, unrelated temporary measure allows Indian citizens holding a valid US/EU/Schengen/GCC residence permit to enter Armenia fully visa-free for up to 180 days — but only between 1 January and 1 July 2026. This window closes shortly and should not be relied on for any new bookings going forward; quote all Armenia programs on the standard e-visa pathway above regardless of what an operator may have read about the visa-free measure.</p>
+  </div>
+
+  <p style="font-size:12px;color:var(--ink-soft);">
+    The Embassy of Armenia in New Delhi states plainly that visa processing takes 10 working days for embassy applications and that <strong>"in case of rejection, the Embassy does not provide any clarifications or comments."</strong> We build buffer into every Armenia timeline accordingly and always recommend applying at least 3–4 weeks ahead of travel, not the bare minimum.
+  </p>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 3 — AT A GLANCE / REGIONS ══════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-title">Armenia — At a Glance</div>
+      <div class="section-sub">Key facts for operators building product</div>
+    </div>
+  </div>
+
+  <div class="facts-grid">
+    <div class="fact-box">
+      <div class="fact-value">Conditional E-Visa</div>
+      <div class="fact-label">Indian nationals — see Section 2. Not visa-on-arrival; not straightforward e-visa.</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">4–5 hrs</div>
+      <div class="fact-label">Drive time Tbilisi to Yerevan (private car), plus border crossing time</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">One of First</div>
+      <div class="fact-label">Nations to adopt Christianity as a state religion, in the early 4th century AD</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">25–30 min</div>
+      <div class="fact-label">Drive time, Zvartnots International Airport to central Yerevan</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">1 hour</div>
+      <div class="fact-label">Drive time Yerevan to Garni / Geghard / Khor Virap region (each, approx.)</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">3.5–4.5 hrs</div>
+      <div class="fact-label">Drive time Yerevan to Tatev (one-way) — overnight in Goris recommended</div>
+    </div>
+  </div>
+
+  <p>
+    Yerevan anchors every Armenia program — one of the world's oldest continuously inhabited cities, with a walkable, café-dense centre built around the Cascade complex and views of Mount Ararat across the Turkish border on clear days. Most of Armenia's signature sites sit within a 1–1.5 hour radius of the capital, which makes day-trip logistics considerably easier than Georgia's more spread-out circuit.
+  </p>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-title">Regional Breakdown</div>
+      <div class="section-sub">What each area offers and who it suits</div>
+    </div>
+  </div>
+
+  <div class="regions">
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Yerevan</div>
+        <div class="region-tag">City Base</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">Gateway city · All programs begin here</div>
+        <p class="region-desc">The Cascade (a tiered stone monument doubling as an open-air contemporary art space), Republic Square, the Vernissage crafts market, and the Matenadaran manuscript museum anchor a city day. Mount Ararat views from the Cascade or Victory Park are a defining photo opportunity on clear days, though the mountain itself sits across the closed Turkish border. Typically 1.5–2 days for the city alone.</p>
+        <div class="region-tags">
+          <span class="rtag">The Cascade</span>
+          <span class="rtag">Republic Square</span>
+          <span class="rtag">Matenadaran</span>
+          <span class="rtag">Vernissage Market</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Garni &amp; Geghard</div>
+        <div class="region-tag">Half / Full Day</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">~1 hour from Yerevan · Half-day to full-day combo</div>
+        <p class="region-desc">Garni Temple is the only standing pre-Christian Hellenistic temple in Armenia and the former Soviet Union — a striking exception in a country defined by early Christian heritage. Geghard Monastery, a UNESCO World Heritage Site partly carved directly into the cliff face, sits close by. The two combine naturally into a single half-day or full-day excursion, often with lavash bread-making demonstrations en route.</p>
+        <div class="region-tags">
+          <span class="rtag">Garni Temple (Hellenistic)</span>
+          <span class="rtag">Geghard Monastery (UNESCO)</span>
+          <span class="rtag">Symphony of Stones</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Khor Virap</div>
+        <div class="region-tag">Half Day</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">~1 hour from Yerevan · Half day</div>
+        <p class="region-desc">A monastery on the Ararat plain, close to the closed Turkish-Armenian border, offering what is widely considered the single best Mount Ararat view available to visitors. Easily paired with Echmiadzin (the seat of the Armenian Apostolic Church) and Zvartnots Cathedral ruins on the same half-day, since all three sit in a similar direction from Yerevan.</p>
+        <div class="region-tags">
+          <span class="rtag">Mount Ararat Views</span>
+          <span class="rtag">Echmiadzin</span>
+          <span class="rtag">Zvartnots Cathedral</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Lake Sevan &amp; Dilijan</div>
+        <div class="region-tag">Full Day</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">~1.5–2 hours from Yerevan · Full day</div>
+        <p class="region-desc">Lake Sevan is one of the largest high-altitude lakes in the world, with the Sevanavank monastery complex on its shore. Dilijan, sometimes called "Armenia's Switzerland," adds a forested mountain-town contrast nearby. This combination sits directly on the Tbilisi–Yerevan overland route, making it a natural stop for two-country itineraries rather than a dedicated round-trip.</p>
+        <div class="region-tags">
+          <span class="rtag">Lake Sevan</span>
+          <span class="rtag">Sevanavank Monastery</span>
+          <span class="rtag">Dilijan</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Tatev &amp; Syunik</div>
+        <div class="region-tag">Overnight</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">3.5–4.5 hours from Yerevan (one-way) · Overnight recommended</div>
+        <p class="region-desc">The Wings of Tatev — the world's longest reversible aerial tramway — carries visitors over the Vorotan Gorge to the 9th-century Tatev Monastery. Given the drive distance, we strongly recommend an overnight in Goris rather than a single exhausting day trip; this also opens up the Khndzoresk cave village and Vorotan gorge viewpoints without rushing. We set this expectation clearly with operators and their clients at the quoting stage.</p>
+        <div class="region-tags">
+          <span class="rtag">Wings of Tatev</span>
+          <span class="rtag">Tatev Monastery</span>
+          <span class="rtag">Khndzoresk</span>
+          <span class="rtag">Overnight in Goris</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 5 — SEASONALITY ════════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-title">Seasonality Guide</div>
+      <div class="section-sub">When to send which client type</div>
+    </div>
+  </div>
+
+  <table class="season-table">
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Conditions</th>
+        <th>Rating</th>
+        <th>Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>April–May</strong></td>
+        <td>Mild spring, occasional rain, mountain regions greening up. Tatev route fully open.</td>
+        <td><span class="srating s-good">Good</span></td>
+        <td>City + regional programs; visa lead time matters most for spring group travel</td>
+      </tr>
+      <tr>
+        <td><strong>June–August</strong></td>
+        <td>Warm and dry, Yerevan can run hot (30°C+), Dilijan and Tatev noticeably cooler.</td>
+        <td><span class="srating s-best">Best</span></td>
+        <td>All client types. Full regional circuit including Tatev overnight.</td>
+      </tr>
+      <tr>
+        <td><strong>September–October</strong></td>
+        <td>Cooling temperatures, clear skies — among the best windows for Ararat visibility from Khor Virap and the Cascade.</td>
+        <td><span class="srating s-best">Best</span></td>
+        <td>Premium FIT and group programs, photography-focused clients</td>
+      </tr>
+      <tr>
+        <td><strong>November</strong></td>
+        <td>Cooling fast, early mountain snow possible on the Tatev road.</td>
+        <td><span class="srating s-good">Good</span></td>
+        <td>City and near-Yerevan programs; confirm Tatev road conditions case by case</td>
+      </tr>
+      <tr>
+        <td><strong>December–March</strong></td>
+        <td>Cold, occasional snow in Yerevan; mountain routes (Tatev, Dilijan pass) weather-dependent.</td>
+        <td><span class="srating s-ok">Variable</span></td>
+        <td>City-focused programs; confirm regional access before confirming itinerary</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight">
+    <p><strong>Operator note:</strong> Armenia runs comfortably year-round for the Yerevan-centred circuit (Garni, Geghard, Khor Virap), but the Tatev and Dilijan/Sevan routes are genuinely weather-affected in winter, similar to Almaty's regional excursions. We confirm road conditions before locking in any itinerary involving these routes between November and March.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">06</div>
+    <div>
+      <div class="section-title">Sample Itineraries</div>
+      <div class="section-sub">Standard circuit structures — all customisable</div>
+    </div>
+  </div>
+
+  <div class="itin-grid">
+
+    <div class="itin-card">
+      <div class="itin-head">
+        <div class="itin-duration">4 Days</div>
+        <div class="itin-type">Essential Armenia — FIT &amp; Small Groups</div>
+      </div>
+      <div class="itin-body">
+        <ul class="itin-days">
+          <li><span class="day-num">D1</span>Yerevan arrival · leisure, hotel check-in, Cascade evening walk</li>
+          <li><span class="day-num">D2</span>Yerevan full day: Republic Square, Matenadaran, Vernissage market</li>
+          <li><span class="day-num">D3</span>Garni Temple + Geghard Monastery full day, lavash demonstration</li>
+          <li><span class="day-num">D4</span>Khor Virap + Echmiadzin half day · departure transfer</li>
+        </ul>
+      </div>
+      <div class="itin-footer">Standalone Yerevan-centred circuit</div>
+    </div>
+
+    <div class="itin-card">
+      <div class="itin-head">
+        <div class="itin-duration">6 Days</div>
+        <div class="itin-type">Armenia + Tatev — Complete Circuit</div>
+      </div>
+      <div class="itin-body">
+        <ul class="itin-days">
+          <li><span class="day-num">D1</span>Yerevan arrival · leisure, Cascade evening walk</li>
+          <li><span class="day-num">D2</span>Yerevan full day: Republic Square, Matenadaran, Vernissage</li>
+          <li><span class="day-num">D3</span>Garni + Geghard full day</li>
+          <li><span class="day-num">D4</span>Drive to Goris via Noravank, overnight in Goris</li>
+          <li><span class="day-num">D5</span>Wings of Tatev + Tatev Monastery + Khndzoresk · return Yerevan</li>
+          <li><span class="day-num">D6</span>Khor Virap + Echmiadzin half day · departure</li>
+        </ul>
+      </div>
+      <div class="itin-footer">Full circuit · City + heritage + Tatev overnight</div>
+    </div>
+
+    <div class="itin-card">
+      <div class="itin-head">
+        <div class="itin-duration">9 Days</div>
+        <div class="itin-type">Georgia + Armenia — Two-Country Circuit</div>
+      </div>
+      <div class="itin-body">
+        <ul class="itin-days">
+          <li><span class="day-num">D1–2</span>Tbilisi: Old Town, Sulphur Baths, Supra</li>
+          <li><span class="day-num">D3</span>Mtskheta → Kazbegi day trip</li>
+          <li><span class="day-num">D4</span>Kakheti wine region day</li>
+          <li><span class="day-num">D5</span>Overland Tbilisi → Yerevan (via Lake Sevan, Dilijan)</li>
+          <li><span class="day-num">D6</span>Yerevan city day: Cascade, Republic Square, Matenadaran</li>
+          <li><span class="day-num">D7</span>Garni + Geghard full day</li>
+          <li><span class="day-num">D8</span>Khor Virap + Echmiadzin half day</li>
+          <li><span class="day-num">D9</span>Departure from Yerevan (or return overland to Tbilisi)</li>
+        </ul>
+      </div>
+      <div class="itin-footer">Our most-requested Armenia structure</div>
+    </div>
+
+  </div>
+
+  <div class="highlight">
+    <p><strong>On itinerary logic:</strong> Armenia's geography compresses well — most signature sites sit within 1–1.5 hours of Yerevan, so a 4-day standalone program covers genuine breadth without exhausting drive time. Tatev is the one exception and is always quoted as an overnight, never a single-day round trip, regardless of how it's requested. The Georgia + Armenia combination remains our most-booked Armenia structure given the single-day overland connection between Tbilisi and Yerevan.</p>
+  </div>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 7 — MICE ════════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div>
+      <div class="section-title">MICE &amp; Incentive Programs</div>
+      <div class="section-sub">Corporate groups, conferences, and incentive travel</div>
+    </div>
+  </div>
+
+  <p>Yerevan's compact, walkable centre and a genuine depth of heritage sites within a tight radius make it efficient for shorter corporate programs where time on the ground is limited. The visa pathway requires more lead time than Georgia or Azerbaijan for MICE groups, so we ask operators to flag Armenia-inclusive group programs to us as early as possible — ideally 4–6 weeks ahead for groups above 15 pax.</p>
+
+  <div class="mice-grid">
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🏛</div>
+        Geghard Cave Monastery Evening
+      </div>
+      <p>A private evening visit to Geghard Monastery, partly carved into the cliff face, paired with a traditional dinner nearby and a cappella choral performance — the monastery's acoustics are well known among visiting musicians. A strong differentiator for incentive groups wanting something beyond a standard gala dinner.</p>
+    </div>
+
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🍇</div>
+        Areni Wine Region Day
+      </div>
+      <p>Armenia's wine country around Areni — home to some of the oldest known winemaking evidence in the world — offers winery visits, tastings, and a working lunch format well suited to smaller leadership groups. Often combined with Noravank Monastery en route.</p>
+    </div>
+
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🚡</div>
+        Wings of Tatev Team Day
+      </div>
+      <p>The cable car crossing and Tatev Monastery visit make a strong full-day offsite for groups willing to commit to the drive distance — best run as an overnight in Goris rather than a single exhausting day, with a structured team activity built around the gorge crossing itself.</p>
+    </div>
+
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🏙</div>
+        Yerevan City &amp; Cascade Challenge
+      </div>
+      <p>A structured team activity through Republic Square, the Vernissage market, and the Cascade's tiered art installations — photo challenges, local interaction tasks, and a debrief at the top of the Cascade with city views. Works well as a lighter arrival-day activity.</p>
+    </div>
+  </div>
+
+  <table class="rate-table">
+    <thead>
+      <tr>
+        <th>Group Size</th>
+        <th>Service Level</th>
+        <th>Guide / Driver</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1–6 pax</strong><div class="rate-incl">FIT / Leisure</div></td>
+        <td>English-speaking driver-guide + private vehicle (up to 7-seater)</td>
+        <td>Driver-guide throughout</td>
+        <td>Standard FIT setup</td>
+      </tr>
+      <tr>
+        <td><strong>7–12 pax</strong><div class="rate-incl">Small Group</div></td>
+        <td>Professional English-speaking guide + minibus (up to 15-seat)</td>
+        <td><strong>Full guide included</strong></td>
+        <td>Licensed guide from Day 1</td>
+      </tr>
+      <tr>
+        <td><strong>13–25 pax</strong><div class="rate-incl">Group</div></td>
+        <td>Professional guide + coach</td>
+        <td><strong>Full guide throughout</strong></td>
+        <td>Guide joins Day 1 to departure</td>
+      </tr>
+      <tr>
+        <td><strong>26–40 pax</strong><div class="rate-incl">Large Group / MICE</div></td>
+        <td>Lead guide + assistant guide + coach</td>
+        <td><strong>Full guide team</strong></td>
+        <td>Full operational coordination; recommend 6+ weeks lead time for visa processing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 8 — RATE FRAMEWORK ═════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div>
+      <div class="section-title">Rate Framework</div>
+      <div class="section-sub">Indicative pricing — all programs quoted individually</div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Important:</strong> All pricing below is indicative only and excludes visa fees, which are paid directly to the Armenian e-visa system or embassy. Every program is quoted individually based on your dates, pax count, hotel preference, and inclusions. Contact ops@caravancompass.com with RFQ details for a binding quotation within 4 hours.</p>
+  </div>
+
+  <table class="rate-table">
+    <thead>
+      <tr>
+        <th>Program</th>
+        <th>Duration</th>
+        <th>Hotel Tier</th>
+        <th>Indicative Range (USD pp)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Essential Armenia</strong><div class="rate-incl">City + Garni/Geghard + Khor Virap</div></td>
+        <td>4 Days / 3 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$300–$400</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Essential Armenia</strong><div class="rate-incl">City + Garni/Geghard + Khor Virap</div></td>
+        <td>4 Days / 3 Nights</td>
+        <td>5-Star</td>
+        <td><span class="rate-price">$480–$620</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Armenia + Tatev</strong><div class="rate-incl">Complete circuit</div></td>
+        <td>6 Days / 5 Nights</td>
+        <td>4-Star (standard, Goris overnight included)</td>
+        <td><span class="rate-price">$460–$580</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Georgia + Armenia</strong><div class="rate-incl">Two-country circuit</div></td>
+        <td>9 Days / 8 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$760–$920</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Groups (15–30 pax)</strong><div class="rate-incl">Any of the above circuits</div></td>
+        <td>6 Days / 5 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$390–$480 pp</span><div class="rate-incl">Includes professional English-speaking guide throughout</div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">
+    All rates are land-only, per person on twin/double share basis. Single supplement available on request. Rates include: accommodation with breakfast, all ground transfers, licensed guides, specified excursions, and applicable entrance fees. Exclude: flights, visa fees, personal expenses, tips, and any items not listed in the confirmed program. Visa facilitation service (invitation letter, document review) is included in the program cost — see Section 2.
+  </p>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">09</div>
+    <div>
+      <div class="section-title">Hotels We Work With</div>
+      <div class="section-sub">Contracted properties in Yerevan</div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Note for operators:</strong> Our Yerevan hotel contracting is in active build-out, in line with Armenia's place in our core three Caucasus destinations. Refer to our current supplier sheet (shared on request) for verified property names and confirmed rates by category — this section will be finalised as contracting closes.</p>
+  </div>
+
+  <p style="font-size:12px;color:var(--ink-soft);">We work across 4-star and 5-star categories in Yerevan city centre, plus guesthouse-tier accommodation in Goris for the Tatev overnight extension. Hotel availability and rates vary by season; we confirm current contracted rates in each individual quotation.</p>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 10 — BOOKING PROCESS ═══════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div>
+      <div class="section-title">How to Work With Us</div>
+      <div class="section-sub">Booking process, payment terms, and policies</div>
+    </div>
+  </div>
+
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">1</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Send Your RFQ</div>
+        <p class="step-desc">Email ops@caravancompass.com with: dates, pax count, star preference, and — for Armenia specifically — confirm whether any traveller holds a qualifying US/EU/Schengen/GCC visa or residence permit, so we can route the correct visa pathway from the outset.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">2</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Receive Detailed Quotation Within 4 Hours</div>
+        <p class="step-desc">We respond with a day-by-day program, itemised cost breakdown, hotel options, and a clear note on which visa pathway applies to the travellers in question and the realistic processing timeline for that pathway.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">3</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Confirm with 30% Deposit</div>
+        <p class="step-desc">On your client's confirmation, a 30% deposit secures the booking. For Armenia specifically, we begin visa facilitation (including invitation letter issuance for Path B travellers) immediately on deposit, given the longer lead time required.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">4</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Balance 21 Days Before Departure</div>
+        <p class="step-desc">Remaining 70% is due 21 days before the program start date. By this point, visa documentation should be finalised or in its final processing stage; we flag any delays proactively rather than waiting to be asked.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">5</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Execution &amp; On-Ground Support</div>
+        <p class="step-desc">Your clients land with a driver or guide waiting. For FIT groups (1–6 pax), an English-speaking driver-guide handles the program. For 7 pax and above, a professional English-speaking licensed guide accompanies the group from Day 1 to departure. Our operations line is available throughout active programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="caution">
+    <div class="caution-label">Lead Time — Armenia Specific</div>
+    <p>Given the visa pathway, we recommend a minimum of 3–4 weeks between booking confirmation and travel date for Armenia programs — longer than the 2-week minimum that works for Georgia or Azerbaijan. We will always try to accommodate shorter timelines, but we'll tell you plainly at RFQ stage if a requested date is genuinely tight for visa processing.</p>
+  </div>
+
+  <div class="policy-grid">
+    <div class="policy-card">
+      <div class="policy-label">Payment Terms</div>
+      <div class="policy-val">30% on confirmation<br>70% balance 21 days prior to departure<br>Payment to our Indian bank account (INR/USD accepted). These terms apply unless otherwise specified in the quote.</div>
+    </div>
+    <div class="policy-card">
+      <div class="policy-label">Cancellation Policy</div>
+      <div class="policy-val">30+ days: full refund of deposit<br>15–29 days: 50% of total program cost<br>Under 14 days: 100% of total<br><span style="font-size:11px;color:var(--ink-soft)">Applies unless otherwise stated in the confirmed quote. Visa fees and facilitation costs already incurred are non-refundable.</span></div>
+    </div>
+    <div class="policy-card">
+      <div class="policy-label">Amendment Policy</div>
+      <div class="policy-val">Program changes accepted up to 14 days before departure at no charge, subject to hotel availability. Visa documentation already submitted cannot be amended once filed.</div>
+    </div>
+    <div class="policy-card">
+      <div class="policy-label">Pricing Validity</div>
+      <div class="policy-val">Quoted rates valid 14 days from quotation date. Rates may vary for peak season (June–Oct) and holidays.</div>
+    </div>
+  </div>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">11</div>
+    <div>
+      <div class="section-title">Frequently Asked by Operators</div>
+      <div class="section-sub">Honest answers to common pre-booking questions</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;">
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Can you guarantee visa approval for our clients?</div>
+      <p style="margin:0;font-size:13px;">No — and any operator who tells you they can guarantee an Armenian visa approval isn't being straight with you. What we can guarantee is a complete, correctly assembled document bundle and an invitation letter where needed, which removes the most common cause of rejection. The Armenian Embassy does not give rejection reasons, so we focus entirely on getting the application right the first time rather than promising an outcome we don't control.</p>
+    </div>
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Is it worth selling Armenia given the visa complexity, or should we stick to Georgia?</div>
+      <p style="margin:0;font-size:13px;">That depends on your client base and risk appetite. For clients already booking a Georgia program, adding Armenia as a 2–3 day extension carries low incremental visa risk since we handle the documentation as part of the combined booking, and the overland connection is straightforward. For Armenia as a completely standalone product to a client with no other Caucasus travel, we'd suggest building in the longer lead time as a non-negotiable part of the sales conversation up front.</p>
+    </div>
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">What happens if a client misses a flight or arrives late?</div>
+      <p style="margin:0;font-size:13px;">Standard hotel cancellation policies apply in cases of no-show or late arrival. However, if we are informed 24–48 hours in advance, we will request the hotel to shift dates (subject to availability; alteration charges may apply). For tours and excursions, changes can be made if communicated at least 24 hours in advance.</p>
+    </div>
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Can you provide references from other Indian operators?</div>
+      <p style="margin:0;font-size:13px;">Caravan Compass is a newly established DMC — we are transparent about this. What we offer instead is direct visibility: a discovery call with our founder, and for first-time bookings, terms structured to reduce your risk while our track record builds. Our supplier relationships in Armenia — hotels, guides, transport, and our visa facilitation process — are established and we'll walk you through exactly how each piece works.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ CTA SECTION ════════════════════════════════════════════ -->
+<div class="cta-section">
+  <div class="cta-text">
+    <h2>Ready to build your Armenia program?</h2>
+    <p>Send us an RFQ — dates, pax count, hotel preference, and any qualifying visa/residence permits your travellers hold. We'll respond within 4 hours with a detailed land-only quotation and a clear visa pathway.</p>
+  </div>
+  <div class="cta-details">
+    <div class="cta-item">
+      <div class="cta-icon">✉</div>
+      <div>
+        <div class="cta-item-label">Primary Contact</div>
+        <div class="cta-item-value">ops@caravancompass.com</div>
+      </div>
+    </div>
+    <div class="cta-item">
+      <div class="cta-icon">☎</div>
+      <div>
+        <div class="cta-item-label">Phone / WhatsApp</div>
+        <div class="cta-item-value">+91 75208 16288</div>
+      </div>
+    </div>
+    <div class="cta-item">
+      <div class="cta-icon">🌐</div>
+      <div>
+        <div class="cta-item-label">Website</div>
+        <div class="cta-item-value">caravancompass.com</div>
+      </div>
+    </div>
+    <div class="cta-item">
+      <div class="cta-icon">📍</div>
+      <div>
+        <div class="cta-item-label">Operational Base</div>
+        <div class="cta-item-value">Corporate: India · Operations: Caucasus &amp; Central Asia</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-header" style="border-top:1px solid #2a2420;">
+  <div style="font-size:11px;color:rgba(255,255,255,.4);padding:4px 0;">This document is for trade use only. Not for distribution to end consumers. © Caravan Compass DMC 2026. All rates and visa information indicative — confirmed on individual quotation. Visa policy is subject to change without notice; always reconfirm with us before final client communication.</div>
+  <div style="font-size:11px;color:rgba(255,255,255,.4);">ops@caravancompass.com · caravancompass.com</div>
+</div>
+
+</body>
+</html>

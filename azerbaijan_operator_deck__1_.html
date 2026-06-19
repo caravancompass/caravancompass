@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azerbaijan — B2B Operator Brief | Caravan Compass DMC</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --ink-black:#171312;
+  --char:#231d1a;
+  --flame:#c2410c;
+  --flame-light:#e8743a;
+  --flame-pale:#fdf0e6;
+  --copper:#9c6b3f;
+  --sand:#f7f2ea;
+  --ink:#1a1814;
+  --ink-mid:#3d3830;
+  --ink-soft:#6b6460;
+  --border:#e3dccf;
+  --white:#ffffff;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--sand);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* ── COVER ── */
+.cover{
+  min-height:100vh;
+  background:var(--ink-black);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:0;
+  page-break-after:always;
+  position:relative;
+  overflow:hidden;
+}
+
+.cover-flame-glow{
+  position:absolute;
+  top:-10%; right:-10%;
+  width:60%;
+  height:70%;
+  background:radial-gradient(circle at 70% 30%, rgba(194,65,12,.35) 0%, transparent 65%);
+  pointer-events:none;
+}
+
+.cover-gold-bar{
+  height:4px;
+  background:linear-gradient(90deg, var(--flame) 0%, var(--copper) 100%);
+  width:100%;
+}
+
+.cover-body{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:64px 72px;
+  position:relative;
+  z-index:2;
+}
+
+.cover-eyebrow{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--flame-light);
+  margin-bottom:28px;
+}
+
+.cover-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:56px;
+  font-weight:700;
+  color:var(--white);
+  line-height:1.1;
+  margin-bottom:8px;
+}
+
+.cover-sub{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px;
+  font-weight:400;
+  color:rgba(255,255,255,.6);
+  margin-bottom:48px;
+}
+
+.cover-divider{
+  width:64px;
+  height:2px;
+  background:var(--flame);
+  margin-bottom:32px;
+}
+
+.cover-desc{
+  font-size:15px;
+  color:rgba(255,255,255,.75);
+  max-width:520px;
+  line-height:1.75;
+  margin-bottom:48px;
+}
+
+.cover-pills{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.cover-pill{
+  padding:6px 14px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:20px;
+  font-size:11px;
+  font-weight:600;
+  color:rgba(255,255,255,.8);
+  letter-spacing:.04em;
+}
+
+.cover-footer{
+  padding:28px 72px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  z-index:2;
+}
+
+.cover-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;
+  color:var(--white);
+  font-weight:600;
+}
+
+.cover-brand span{
+  color:var(--flame-light);
+}
+
+.cover-contact{
+  font-size:11px;
+  color:rgba(255,255,255,.55);
+  text-align:right;
+  line-height:1.8;
+}
+
+/* ── INNER PAGES ── */
+.page{
+  max-width:860px;
+  margin:0 auto;
+  padding:64px 56px;
+  background:var(--white);
+  border-left:1px solid var(--border);
+  border-right:1px solid var(--border);
+}
+
+/* ── SECTION HEADERS ── */
+.section-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:32px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+
+.section-num{
+  width:36px;
+  height:36px;
+  background:var(--ink-black);
+  color:var(--white);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+  flex-shrink:0;
+}
+
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:26px;
+  font-weight:600;
+  color:var(--ink-black);
+}
+
+.section-sub{
+  font-size:12px;
+  color:var(--ink-soft);
+  margin-top:2px;
+}
+
+/* ── DIVIDERS ── */
+.page-sep{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:40px 0;
+}
+
+/* ── INTRO / ABOUT ── */
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:32px;
+}
+
+.intro-card{
+  background:var(--flame-pale);
+  border:1px solid #f0d4bc;
+  border-radius:10px;
+  padding:20px 22px;
+}
+
+.intro-card-label{
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--flame);
+  margin-bottom:6px;
+}
+
+.intro-card-value{
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.4;
+}
+
+/* ── KEY FACTS ── */
+.facts-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-bottom:32px;
+}
+
+.fact-box{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 20px;
+  border-top:3px solid var(--ink-black);
+}
+
+.fact-value{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:28px;
+  font-weight:700;
+  color:var(--ink-black);
+  line-height:1;
+  margin-bottom:4px;
+}
+
+.fact-label{
+  font-size:11px;
+  color:var(--ink-soft);
+  line-height:1.4;
+}
+
+/* ── BODY TEXT ── */
+p{
+  color:var(--ink-mid);
+  margin-bottom:14px;
+  line-height:1.75;
+}
+
+p:last-child{ margin-bottom:0; }
+
+strong{ color:var(--ink); font-weight:600; }
+
+/* ── REGION CARDS ── */
+.regions{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-bottom:28px;
+}
+
+.region{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:0;
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.region-label{
+  background:var(--ink-black);
+  padding:18px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.region-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:16px;
+  font-weight:600;
+  color:var(--white);
+  margin-bottom:4px;
+}
+
+.region-tag{
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+}
+
+.region-body{
+  padding:16px 20px;
+  background:var(--white);
+}
+
+.region-drive{
+  font-size:10px;
+  font-weight:700;
+  color:var(--flame);
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  margin-bottom:5px;
+}
+
+.region-desc{
+  font-size:13px;
+  color:var(--ink-mid);
+  line-height:1.6;
+  margin:0;
+}
+
+.region-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:8px;
+}
+
+.rtag{
+  font-size:10px;
+  font-weight:600;
+  background:#f4f0f0;
+  color:var(--ink-black);
+  border:1px solid #ddd4d0;
+  padding:2px 8px;
+  border-radius:6px;
+}
+
+/* ── ITINERARY BOXES ── */
+.itin-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-bottom:28px;
+}
+
+.itin-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.itin-head{
+  background:var(--ink-black);
+  padding:14px 16px;
+}
+
+.itin-duration{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--white);
+}
+
+.itin-type{
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.55);
+  margin-top:2px;
+}
+
+.itin-body{
+  padding:14px 16px;
+  background:var(--white);
+}
+
+.itin-days{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.itin-days li{
+  font-size:12px;
+  color:var(--ink-mid);
+  padding:4px 0;
+  border-bottom:1px solid #f2ece4;
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+}
+
+.itin-days li:last-child{ border-bottom:none; }
+
+.day-num{
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  color:var(--flame);
+  min-width:28px;
+  margin-top:2px;
+}
+
+.itin-footer{
+  background:var(--flame-pale);
+  padding:10px 16px;
+  font-size:11px;
+  color:var(--flame);
+  font-weight:600;
+  border-top:1px solid #f0d4bc;
+}
+
+/* ── MICE ── */
+.mice-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:28px;
+}
+
+.mice-card{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:20px;
+  background:var(--white);
+}
+
+.mice-card-title{
+  font-weight:700;
+  color:var(--ink-black);
+  font-size:14px;
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.mice-icon{
+  width:24px;
+  height:24px;
+  background:var(--ink-black);
+  color:var(--white);
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  flex-shrink:0;
+}
+
+.mice-card p{
+  font-size:12.5px;
+  margin-bottom:0;
+}
+
+/* ── RATE TABLE ── */
+.rate-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:24px;
+  font-size:13px;
+}
+
+.rate-table th{
+  background:var(--ink-black);
+  color:var(--white);
+  padding:10px 14px;
+  text-align:left;
+  font-weight:600;
+  font-size:11px;
+  letter-spacing:.04em;
+}
+
+.rate-table th:first-child{ border-radius:8px 0 0 0; }
+.rate-table th:last-child{ border-radius:0 8px 0 0; }
+
+.rate-table td{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  color:var(--ink-mid);
+  vertical-align:top;
+}
+
+.rate-table tr:last-child td{ border-bottom:none; }
+
+.rate-table tr:nth-child(even) td{ background:#fbf9f6; }
+
+.rate-incl{
+  font-size:11px;
+  color:var(--ink-soft);
+  margin-top:3px;
+}
+
+.rate-price{
+  font-weight:700;
+  color:var(--flame);
+  font-size:14px;
+}
+
+/* ── PROCESS ── */
+.process-steps{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  margin-bottom:28px;
+}
+
+.step{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:0;
+}
+
+.step-line{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.step-dot{
+  width:32px;
+  height:32px;
+  background:var(--ink-black);
+  color:var(--white);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+  flex-shrink:0;
+}
+
+.step-connector{
+  width:2px;
+  flex:1;
+  background:var(--border);
+  margin:4px 0;
+  min-height:16px;
+}
+
+.step:last-child .step-connector{ display:none; }
+
+.step-content{
+  padding:4px 0 24px 16px;
+}
+
+.step-title{
+  font-weight:700;
+  color:var(--ink-black);
+  margin-bottom:4px;
+  font-size:14px;
+}
+
+.step-desc{
+  font-size:13px;
+  color:var(--ink-soft);
+  margin:0;
+}
+
+/* ── POLICY TABLE ── */
+.policy-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:28px;
+}
+
+.policy-card{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 20px;
+}
+
+.policy-label{
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--ink-soft);
+  margin-bottom:8px;
+}
+
+.policy-val{
+  font-size:13px;
+  color:var(--ink-mid);
+  line-height:1.5;
+}
+
+/* ── HIGHLIGHT BOX ── */
+.highlight{
+  background:var(--flame-pale);
+  border:1px solid #ecc299;
+  border-left:4px solid var(--flame);
+  border-radius:8px;
+  padding:16px 20px;
+  margin-bottom:24px;
+}
+
+.highlight p{
+  font-size:13px;
+  color:var(--ink-mid);
+  margin:0;
+}
+
+/* ── CTA FOOTER ── */
+.cta-section{
+  background:var(--ink-black);
+  padding:48px 56px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  max-width:860px;
+  margin:0 auto;
+}
+
+.cta-text h2{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:28px;
+  color:var(--white);
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+.cta-text p{
+  font-size:14px;
+  color:rgba(255,255,255,.7);
+  margin:0;
+}
+
+.cta-details{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  padding:24px;
+}
+
+.cta-item{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.cta-item:last-child{ margin-bottom:0; }
+
+.cta-icon{
+  width:32px;
+  height:32px;
+  background:var(--flame);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  flex-shrink:0;
+}
+
+.cta-item-label{
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.45);
+  margin-bottom:2px;
+}
+
+.cta-item-value{
+  font-size:13px;
+  color:var(--white);
+  font-weight:500;
+}
+
+/* ── PAGE HEADER STRIP ── */
+.page-header{
+  background:var(--ink-black);
+  padding:12px 56px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:860px;
+  margin:0 auto;
+}
+
+.page-header-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:13px;
+  color:rgba(255,255,255,.6);
+}
+
+.page-header-title{
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--flame-light);
+}
+
+/* ── SEASONAL TABLE ── */
+.season-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:24px;
+  font-size:12px;
+}
+
+.season-table th{
+  background:var(--ink-black);
+  color:var(--white);
+  padding:9px 12px;
+  font-weight:600;
+  font-size:11px;
+  text-align:left;
+}
+
+.season-table td{
+  padding:9px 12px;
+  border-bottom:1px solid var(--border);
+  vertical-align:top;
+}
+
+.season-table tr:nth-child(even) td{ background:#fbf9f6; }
+
+.srating{
+  display:inline-block;
+  font-weight:700;
+  font-size:11px;
+  padding:2px 8px;
+  border-radius:4px;
+}
+
+.s-best{ background:#fde0c4; color:#7c2d0a; }
+.s-good{ background:#f4e3d3; color:#5c4530; }
+.s-ok{ background:#ece4d8; color:#6b5d4a; }
+
+/* ── PRINT ── */
+@media print{
+  body{ background:white; font-size:11px; }
+  .cover{ min-height:100vh; }
+  .page{ max-width:100%; border:none; }
+  .page-header{ max-width:100%; }
+  .cta-section{ max-width:100%; }
+  .page-break{ page-break-before:always; }
+  a{ color:inherit; text-decoration:none; }
+}
+
+@media(max-width:640px){
+  .cover-body{ padding:40px 28px; }
+  .cover-footer{ padding:20px 28px; flex-direction:column; gap:12px; text-align:left; }
+  .cover-title{ font-size:36px; }
+  .page{ padding:32px 20px; }
+  .page-header{ padding:10px 20px; }
+  .intro-grid,.facts-grid{ grid-template-columns:1fr; }
+  .itin-grid{ grid-template-columns:1fr; }
+  .mice-grid{ grid-template-columns:1fr; }
+  .policy-grid{ grid-template-columns:1fr; }
+  .region{ grid-template-columns:1fr; }
+  .cta-section{ grid-template-columns:1fr; padding:32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-gold-bar"></div>
+  <div class="cover-flame-glow"></div>
+
+  <div class="cover-body">
+    <div class="cover-eyebrow">B2B Operator Reference Document — For Trade Use Only</div>
+    <div class="cover-title">Azerbaijan</div>
+    <div class="cover-sub">Ground Operations &amp; Program Guide</div>
+    <div class="cover-divider"></div>
+    <div class="cover-desc">
+      A ground reference for tour operators, OTAs, and travel agencies building
+      Azerbaijan programs — standalone or as a Caucasus extension. Covers Baku
+      and regional excursions, sample itineraries, rate frameworks, and booking process.
+    </div>
+    <div class="cover-pills">
+      <span class="cover-pill">FIT · 1–6 Pax</span>
+      <span class="cover-pill">Groups · 7–40 Pax</span>
+      <span class="cover-pill">MICE &amp; Incentives</span>
+      <span class="cover-pill">4-Hour RFQ Response</span>
+      <span class="cover-pill">Land-Only Pricing</span>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="cover-contact">
+      ops@caravancompass.com &nbsp;·&nbsp; +91 75208 16288<br>
+      caravancompass.com &nbsp;·&nbsp; Corporate Office: India &nbsp;·&nbsp; Operations: Caucasus Region
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 1 — ABOUT CC ════════════════════════════════════ -->
+<div class="page">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-title">About Caravan Compass</div>
+      <div class="section-sub">Who we are and how we work in Azerbaijan</div>
+    </div>
+  </div>
+
+  <p>
+    Caravan Compass is a B2B-only Destination Management Company with its corporate office in India and an operational network across the Caucasus and Central Asia — Georgia, Azerbaijan, Armenia, and Almaty (Kazakhstan). We provide ground services exclusively to tour operators, OTAs, and travel agencies. We do not sell directly to consumers.
+  </p>
+
+  <p>
+    Azerbaijan sits as our second core destination after Georgia, and the two combine naturally — a one-hour flight or a land crossing connects Tbilisi and Baku, and a large share of our Azerbaijan bookings move as an extension of a Georgia program rather than standalone. We receive an RFQ, respond within 4 hours with a detailed land-only quotation, and handle hotel contracting, guide and transport coordination, and excursion bookings.
+  </p>
+
+  <div class="intro-grid">
+    <div class="intro-card">
+      <div class="intro-card-label">Corporate Office</div>
+      <div class="intro-card-value">India<br><span style="font-weight:400;font-size:12px;color:#6b6460">Operational network across the Caucasus &amp; Central Asia</span></div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-label">Response Time</div>
+      <div class="intro-card-value">Within 4 Hours<br><span style="font-weight:400;font-size:12px;color:#6b6460">Detailed quotation on land-only basis</span></div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-label">Client Type</div>
+      <div class="intro-card-value">B2B Trade Only<br><span style="font-weight:400;font-size:12px;color:#6b6460">Tour operators, OTAs, travel agencies</span></div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-label">Guide Policy</div>
+      <div class="intro-card-value">7+ Pax: Professional Guide Throughout<br><span style="font-weight:400;font-size:12px;color:#6b6460">English-speaking licensed guide, full program duration</span></div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>What we quote:</strong> Land-only pricing direct to trade. Hotels, guides, transport, excursions, and airport transfers. Flight arrangements are not included. Quotes for Azerbaijan can be issued standalone or combined into a single quote with Georgia or Armenia.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-title">Azerbaijan — At a Glance</div>
+      <div class="section-sub">Key facts for operators building product</div>
+    </div>
+  </div>
+
+  <div class="facts-grid">
+    <div class="fact-box">
+      <div class="fact-value">ASAN E-Visa</div>
+      <div class="fact-label">For Indian passport holders. Online application only — not visa-on-arrival.</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">3–5 Days</div>
+      <div class="fact-label">Standard e-visa processing time; urgent processing available in a few hours</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">"Land of Fire"</div>
+      <div class="fact-label">National identity built on natural gas seeps — Yanar Dag, Ateshgah, and ancient fire-worship sites</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">25–30 min</div>
+      <div class="fact-label">Drive time, Heydar Aliyev International Airport to Baku city centre</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">3–4 hrs</div>
+      <div class="fact-label">Drive time Baku to Gabala (mountain region, northwest Azerbaijan)</div>
+    </div>
+    <div class="fact-box">
+      <div class="fact-value">1–1.5 hrs</div>
+      <div class="fact-label">Drive time Baku to Gobustan (UNESCO petroglyphs &amp; mud volcanoes)</div>
+    </div>
+  </div>
+
+  <p>
+    Baku is Caravan Compass's second core destination after Tbilisi. Our operational network gives us tested, current relationships with hotels, licensed guides, and transport partners across Baku and the regional excursion circuit.
+  </p>
+  <p>
+    For Indian operators, Azerbaijan offers a contrast that complements Georgia well: a modern, Gulf-adjacent capital city (Flame Towers, Heydar Aliyev Center, Caspian seafront boulevard) against a backdrop of UNESCO sites, fire-worship history, and Soviet-era industrial landscape. It reads as a different country, not a repeat of Georgia — which is exactly why the two-country circuit sells well.
+  </p>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 3 — REGIONS ═════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-title">Baku &amp; Regional Breakdown</div>
+      <div class="section-sub">What each area offers and who it suits</div>
+    </div>
+  </div>
+
+  <div class="regions">
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Baku Old City</div>
+        <div class="region-tag">City Base</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">Gateway city · All programs begin here</div>
+        <p class="region-desc">Icheri Sheher (Old City, UNESCO World Heritage) holds the Maiden's Tower and the Shirvanshahs' Palace, both 12th–15th century. Outside the walls, the Flame Towers and Heydar Aliyev Center (Zaha Hadid design) give Baku its modern skyline. Typically 1.5–2 days minimum: a half-day Old City walk, an evening at the Caspian seafront boulevard, and time for the Flame Towers / Heydar Aliyev Center pairing.</p>
+        <div class="region-tags">
+          <span class="rtag">Icheri Sheher (Old City)</span>
+          <span class="rtag">Maiden's Tower</span>
+          <span class="rtag">Flame Towers</span>
+          <span class="rtag">Heydar Aliyev Center</span>
+          <span class="rtag">Caspian Boulevard</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Absheron Peninsula</div>
+        <div class="region-tag">Day Trip</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">30–45 minutes from Baku · Half to full day</div>
+        <p class="region-desc">Ateshgah Fire Temple (Zoroastrian and Hindu fire-worship site, active until the 19th century) and Yanar Dag, a hillside natural gas seep that has burned continuously for decades. Both sit within Baku's immediate surroundings and pair easily into a half-day with the Gobustan excursion or a standalone city-day add-on.</p>
+        <div class="region-tags">
+          <span class="rtag">Ateshgah Fire Temple</span>
+          <span class="rtag">Yanar Dag</span>
+          <span class="rtag">Half-Day Add-On</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Gobustan</div>
+        <div class="region-tag">UNESCO Site</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">1–1.5 hours from Baku · Full day with Absheron combo</div>
+        <p class="region-desc">Gobustan National Park holds UNESCO-listed rock carvings dating back 5,000–20,000 years, plus the mud volcano field a further short drive beyond the museum. The standard full-day combines Gobustan petroglyphs, the mud volcanoes, and a return route through Ateshgah and Yanar Dag — one of our most consistently booked day excursions for Indian groups.</p>
+        <div class="region-tags">
+          <span class="rtag">Rock Petroglyphs</span>
+          <span class="rtag">Mud Volcanoes</span>
+          <span class="rtag">UNESCO Site</span>
+          <span class="rtag">Full-Day Combo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Gabala</div>
+        <div class="region-tag">Mountains</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">3–4 hours from Baku · Best April–October</div>
+        <p class="region-desc">Gabala sits in the foothills of the Greater Caucasus, used both as a standalone mountain-and-forest add-on and as the access point for Tufandag mountain resort (cable car, zip-line, alpine views). Best taken as an overnight rather than a return day trip from Baku, given the drive time. Functions as Azerbaijan's answer to a "nature day" in an otherwise city-and-history program.</p>
+        <div class="region-tags">
+          <span class="rtag">Tufandag Resort</span>
+          <span class="rtag">Cable Car</span>
+          <span class="rtag">Nohur Lake</span>
+          <span class="rtag">Mountain Forest</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Shahdag</div>
+        <div class="region-tag">Ski · Adventure</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">3–3.5 hours from Baku · Ski season Dec–March</div>
+        <p class="region-desc">Shahdag is Azerbaijan's purpose-built alpine resort in the north, with reliable ski season December through March and warm-weather activities (zip-line, coaster, horseback riding) the rest of the year. Best sold as a dedicated day trip or overnight rather than combined with Gabala on the same day — the two are not directly connected and routing between them passes back through Baku.</p>
+        <div class="region-tags">
+          <span class="rtag">Skiing (Dec–Mar)</span>
+          <span class="rtag">Alpine Resort</span>
+          <span class="rtag">Summer Adventure Sports</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="region-label">
+        <div class="region-name">Sheki</div>
+        <div class="region-tag">Heritage</div>
+      </div>
+      <div class="region-body">
+        <div class="region-drive">4.5–6.5 hours from Baku · Overnight recommended</div>
+        <p class="region-desc">Sheki holds the Khan's Palace (18th century, no nails or glue in construction — only wood joinery and stained glass), the old caravanserais, and the Albanian Church in nearby Kish. Given the drive length, Sheki is best positioned as an overnight stop on a Baku–Tbilisi overland route rather than a Baku round-trip — most of our Indian client bookings encounter Sheki only when overlanding into Georgia.</p>
+        <div class="region-tags">
+          <span class="rtag">Khan's Palace</span>
+          <span class="rtag">Caravanserais</span>
+          <span class="rtag">Overland Route Stop</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 4 — SEASONALITY ════════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-title">Seasonality Guide</div>
+      <div class="section-sub">When to send which client type</div>
+    </div>
+  </div>
+
+  <table class="season-table">
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Conditions</th>
+        <th>Rating</th>
+        <th>Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>March–April</strong></td>
+        <td>Mild spring temperatures in Baku, some rain. Gabala and mountain regions greening up.</td>
+        <td><span class="srating s-good">Good</span></td>
+        <td>City programs, regional day trips, lighter budgets</td>
+      </tr>
+      <tr>
+        <td><strong>May–June</strong></td>
+        <td>Warm, dry, comfortable across Baku and Absheron. Gabala fully accessible.</td>
+        <td><span class="srating s-best">Best</span></td>
+        <td>All client types. Full city + regional programs.</td>
+      </tr>
+      <tr>
+        <td><strong>July–August</strong></td>
+        <td>Hot in Baku (32–38°C), Caspian breeze offsets it on the boulevard. Gabala noticeably cooler.</td>
+        <td><span class="srating s-ok">Hot</span></td>
+        <td>Clients comfortable with heat; mountain-region programs preferred</td>
+      </tr>
+      <tr>
+        <td><strong>September–October</strong></td>
+        <td>Cooling city temperatures, clear skies. One of the most comfortable windows for sightseeing.</td>
+        <td><span class="srating s-best">Best</span></td>
+        <td>Premium FIT and group programs across the full circuit</td>
+      </tr>
+      <tr>
+        <td><strong>November</strong></td>
+        <td>Cooler, quieter, occasional rain. Indoor sites (museums, Heydar Aliyev Center) hold up well.</td>
+        <td><span class="srating s-good">Good</span></td>
+        <td>Off-peak pricing, city-focused programs</td>
+      </tr>
+      <tr>
+        <td><strong>December–March</strong></td>
+        <td>Shahdag ski season open and reliable. Baku mild by regional standards; Gabala cold but scenic.</td>
+        <td><span class="srating s-good">Good</span></td>
+        <td>Ski programs (Shahdag). Winter city breaks, niche market.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight">
+    <p><strong>Operator note:</strong> Azerbaijan, like Georgia, runs year-round with no true "avoid" season. The strongest argument for combining it with Georgia is climate complementarity — when Tbilisi or Kazbegi are too cold or wet for a given window, Baku's lower elevation and milder winters often still work, and vice versa for Baku's hottest summer weeks.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-title">Sample Itineraries</div>
+      <div class="section-sub">Standard circuit structures — all customisable</div>
+    </div>
+  </div>
+
+  <div class="itin-grid">
+
+    <div class="itin-card">
+      <div class="itin-head">
+        <div class="itin-duration">4 Days</div>
+        <div class="itin-type">Essential Baku — FIT &amp; Small Groups</div>
+      </div>
+      <div class="itin-body">
+        <ul class="itin-days">
+          <li><span class="day-num">D1</span>Baku arrival · leisure, hotel check-in, Caspian Boulevard evening walk</li>
+          <li><span class="day-num">D2</span>Baku full day: Icheri Sheher, Maiden's Tower, Shirvanshahs' Palace</li>
+          <li><span class="day-num">D3</span>Full day: Gobustan petroglyphs, mud volcanoes, Ateshgah Fire Temple, Yanar Dag</li>
+          <li><span class="day-num">D4</span>Flame Towers, Heydar Aliyev Center · departure transfer</li>
+        </ul>
+      </div>
+      <div class="itin-footer">Standalone Baku · Modern city + ancient fire sites</div>
+    </div>
+
+    <div class="itin-card">
+      <div class="itin-head">
+        <div class="itin-duration">6 Days</div>
+        <div class="itin-type">Baku + Gabala — Complete Circuit</div>
+      </div>
+      <div class="itin-body">
+        <ul class="itin-days">
+          <li><span class="day-num">D1</span>Baku arrival · leisure, Caspian Boulevard</li>
+          <li><span class="day-num">D2</span>Baku full day: Icheri Sheher, Maiden's Tower, Shirvanshahs' Palace</li>
+          <li><span class="day-num">D3</span>Gobustan + Absheron full day (mud volcanoes, Ateshgah, Yanar Dag)</li>
+          <li><span class="day-num">D4</span>Baku → Gabala (3–4 hrs) · Tufandag cable car, Nohur Lake</li>
+          <li><span class="day-num">D5</span>Gabala leisure / waterfall visit → return Baku</li>
+          <li><span class="day-num">D6</span>Flame Towers, Heydar Aliyev Center · departure</li>
+        </ul>
+      </div>
+      <div class="itin-footer">Full circuit · City + mountain combination</div>
+    </div>
+
+    <div class="itin-card">
+      <div class="itin-head">
+        <div class="itin-duration">10 Days</div>
+        <div class="itin-type">Georgia + Baku Extension</div>
+      </div>
+      <div class="itin-body">
+        <ul class="itin-days">
+          <li><span class="day-num">D1–2</span>Tbilisi: Old Town, Sulphur Baths, Supra</li>
+          <li><span class="day-num">D3</span>Mtskheta → Kazbegi</li>
+          <li><span class="day-num">D4</span>Kazbegi full day → return Tbilisi</li>
+          <li><span class="day-num">D5</span>Kakheti: Winery + Sighnaghi</li>
+          <li><span class="day-num">D6</span>Fly Tbilisi → Baku · Icheri Sheher walk</li>
+          <li><span class="day-num">D7</span>Baku: Flame Towers, Caspian Boulevard, Ateshgah</li>
+          <li><span class="day-num">D8</span>Gobustan petroglyphs + mud volcano field</li>
+          <li><span class="day-num">D9</span>Gabala or Shahdag day trip (optional) or Baku leisure</li>
+          <li><span class="day-num">D10</span>Departure from Baku</li>
+        </ul>
+      </div>
+      <div class="itin-footer">Two-country circuit · Our strongest seller</div>
+    </div>
+
+  </div>
+
+  <div class="highlight">
+    <p><strong>On itinerary logic:</strong> Baku-only programs run 4–6 days comfortably; beyond that, most Indian clients prefer to combine with Georgia rather than extend within Azerbaijan alone, since the country's product depth outside Baku and its immediate day-trip radius is thinner than Georgia's. Sheki and the overland route to Tbilisi are positioned as a connector, not a destination in their own right, given the 4.5–6.5 hour drive.</p>
+  </div>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 6 — MICE ════════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div>
+      <div class="section-title">MICE &amp; Incentive Programs</div>
+      <div class="section-sub">Corporate groups, conferences, and incentive travel</div>
+    </div>
+  </div>
+
+  <p>Baku has genuine convention infrastructure — built for hosting Formula 1, Eurovision, and major international summits — which puts it ahead of Tbilisi for large-scale corporate events. Combined with the Flame Towers skyline and Caspian seafront, it photographs well for incentive group branding, and pricing typically lands below comparable Gulf or European incentive destinations.</p>
+
+  <div class="mice-grid">
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🔥</div>
+        Fire &amp; Heritage Evening
+      </div>
+      <p>Private evening at Yanar Dag or Ateshgah Fire Temple, paired with a traditional Azerbaijani dinner (plov, kebab varieties, local pomegranate-based dishes) and folk music performance. Available for groups of 10–50 pax. A strong differentiator from a standard city-hotel gala dinner.</p>
+    </div>
+
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🏙</div>
+        Flame Towers &amp; Boulevard Buyout
+      </div>
+      <p>Private rooftop or boulevard-facing venue with Flame Towers backdrop, available for cocktail receptions and award evenings. Baku's skyline lighting and Caspian waterfront give a strong photo backdrop for branded events. Groups of up to 80 pax depending on venue.</p>
+    </div>
+
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🏔</div>
+        Gabala Adventure Day
+      </div>
+      <p>Cable car ascent, team activities at Tufandag resort, and a mountain-set lunch. Strong outdoor activity component for corporate groups wanting a contrast to Baku's city program. Best run as an overnight extension given the 3–4 hour drive each way.</p>
+    </div>
+
+    <div class="mice-card">
+      <div class="mice-card-title">
+        <div class="mice-icon">🏛</div>
+        Old City Heritage Walk
+      </div>
+      <p>Private guided tour of Icheri Sheher with access to the Shirvanshahs' Palace complex, a carpet-weaving or pottery workshop demonstration, and team lunch at a restaurant within the Old City walls. Suited to mid-size groups preferring cultural content over adventure.</p>
+    </div>
+  </div>
+
+  <table class="rate-table">
+    <thead>
+      <tr>
+        <th>Group Size</th>
+        <th>Service Level</th>
+        <th>Guide / Driver</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1–6 pax</strong><div class="rate-incl">FIT / Leisure</div></td>
+        <td>English-speaking driver-guide + private vehicle (up to 7-seater)</td>
+        <td>Driver-guide throughout</td>
+        <td>Standard FIT setup</td>
+      </tr>
+      <tr>
+        <td><strong>7–12 pax</strong><div class="rate-incl">Small Group</div></td>
+        <td>Professional English-speaking guide + minibus (up to 15-seat)</td>
+        <td><strong>Full guide included</strong></td>
+        <td>Licensed guide from Day 1</td>
+      </tr>
+      <tr>
+        <td><strong>13–25 pax</strong><div class="rate-incl">Group</div></td>
+        <td>Professional guide + coach</td>
+        <td><strong>Full guide throughout</strong></td>
+        <td>Guide joins Day 1 to departure</td>
+      </tr>
+      <tr>
+        <td><strong>26–40 pax</strong><div class="rate-incl">Large Group / MICE</div></td>
+        <td>Lead guide + assistant guide + coach</td>
+        <td><strong>Full guide team</strong></td>
+        <td>Full operational coordination</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 7 — RATE FRAMEWORK ═════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div>
+      <div class="section-title">Rate Framework</div>
+      <div class="section-sub">Indicative pricing — all programs quoted individually</div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Important:</strong> All pricing below is indicative only. Every program is quoted individually based on your dates, pax count, hotel preference, and inclusions. Contact ops@caravancompass.com with RFQ details for a binding quotation within 4 hours.</p>
+  </div>
+
+  <table class="rate-table">
+    <thead>
+      <tr>
+        <th>Program</th>
+        <th>Duration</th>
+        <th>Hotel Tier</th>
+        <th>Indicative Range (USD pp)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Essential Baku</strong><div class="rate-incl">City + Gobustan + Absheron</div></td>
+        <td>4 Days / 3 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$320–$420</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Essential Baku</strong><div class="rate-incl">City + Gobustan + Absheron</div></td>
+        <td>4 Days / 3 Nights</td>
+        <td>5-Star</td>
+        <td><span class="rate-price">$520–$680</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Baku + Gabala</strong><div class="rate-incl">Complete circuit</div></td>
+        <td>6 Days / 5 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$480–$620</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Georgia + Baku</strong><div class="rate-incl">Two-country extension</div></td>
+        <td>10 Days / 9 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$820–$980</span><div class="rate-incl">Based on min 2 pax double share</div></td>
+      </tr>
+      <tr>
+        <td><strong>Groups (15–30 pax)</strong><div class="rate-incl">Any of the above circuits</div></td>
+        <td>6 Days / 5 Nights</td>
+        <td>4-Star (standard)</td>
+        <td><span class="rate-price">$390–$480 pp</span><div class="rate-incl">Includes professional English-speaking guide throughout</div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">
+    All rates are land-only, per person on twin/double share basis. Single supplement available on request. Rates include: accommodation with breakfast, all ground transfers, licensed guides, specified excursions, and applicable entrance fees. Exclude: flights, visas, personal expenses, tips, and any items not listed in the confirmed program.
+  </p>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">08</div>
+    <div>
+      <div class="section-title">Hotels We Work With</div>
+      <div class="section-sub">Contracted properties across categories</div>
+    </div>
+  </div>
+
+  <table class="rate-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Baku</th>
+        <th>Gabala</th>
+        <th>Shahdag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>4-Star</strong></td>
+        <td>Qafqaz Baku City Hotel &amp; Residences, Parkside Hotel and Apartments, Holiday Inn Baku, Hilton Garden Inn Baku, City Park Hotel Baku</td>
+        <td>Gabala Karvan Hotel, Yengice Thermal Resort Hotel</td>
+        <td>Shahdag Cottages, Shahdag Hotel Annex</td>
+      </tr>
+      <tr>
+        <td><strong>5-Star</strong></td>
+        <td>Four Seasons Hotel Baku, JW Marriott Absheron Baku, Fairmont Baku (Flame Towers), Baku Marriott Hotel Boulevard, InterContinental Baku</td>
+        <td>Qafqaz Tufandag Mountain Resort Hotel, Qafqaz Riverside Resort Hotel</td>
+        <td>Shahdag Hotel &amp; Spa, Pik Palace Shahdag</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">For Sheki (overland route stop), we work with Sheki Palace Hotel and Karvansaray Hotel at the 5-star tier. Full property list with current rates available on request — this table reflects our most frequently booked options by category.</p>
+</div>
+
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 9 — BOOKING PROCESS ═══════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div>
+      <div class="section-title">How to Work With Us</div>
+      <div class="section-sub">Booking process, payment terms, and policies</div>
+    </div>
+  </div>
+
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">1</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Send Your RFQ</div>
+        <p class="step-desc">Email ops@caravancompass.com with: dates, destination, pax count, star preference, any special requirements (dietary, accessibility, activity level). No form needed — a clear email is sufficient.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">2</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Receive Detailed Quotation Within 4 Hours</div>
+        <p class="step-desc">We respond with a day-by-day program, itemised cost breakdown (hotels, guides, transport, excursions separately listed), and hotel options at the requested category. You can use our pricing directly to build your own quotes.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">3</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Confirm with 30% Deposit</div>
+        <p class="step-desc">On your client's confirmation, a 30% deposit secures the booking and triggers hotel + guide confirmation. We hold rates for 72 hours pending deposit after confirmation.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">4</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Balance 21 Days Before Departure</div>
+        <p class="step-desc">Remaining 70% is due 21 days before the program start date. We then send the confirmed voucher package, guide contacts, emergency numbers, and a pre-trip briefing document for your clients.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-line">
+        <div class="step-dot">5</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Execution &amp; On-Ground Support</div>
+        <p class="step-desc">Your clients land with a driver or guide waiting. For FIT groups (1–6 pax), an English-speaking driver-guide handles the program. For 7 pax and above, a professional English-speaking licensed guide accompanies the group from Day 1 to departure. Our operations line is available throughout active programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="policy-grid">
+    <div class="policy-card">
+      <div class="policy-label">Payment Terms</div>
+      <div class="policy-val">30% on confirmation<br>70% balance 21 days prior to departure<br>Payment to our Indian bank account (INR/USD accepted). These terms apply unless otherwise specified in the quote.</div>
+    </div>
+    <div class="policy-card">
+      <div class="policy-label">Cancellation Policy</div>
+      <div class="policy-val">30+ days: full refund of deposit<br>15–29 days: 50% of total program cost<br>Under 14 days: 100% of total<br><span style="font-size:11px;color:var(--ink-soft)">Applies unless otherwise stated in the confirmed quote.</span></div>
+    </div>
+    <div class="policy-card">
+      <div class="policy-label">Amendment Policy</div>
+      <div class="policy-val">Program changes accepted up to 14 days before departure at no charge, subject to hotel availability</div>
+    </div>
+    <div class="policy-card">
+      <div class="policy-label">Pricing Validity</div>
+      <div class="policy-val">Quoted rates valid 14 days from quotation date. Rates may vary for peak season (May–June, Sep–Oct) and holidays.</div>
+    </div>
+  </div>
+
+  <hr class="page-sep">
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-num">10</div>
+    <div>
+      <div class="section-title">Frequently Asked by Operators</div>
+      <div class="section-sub">Honest answers to common pre-booking questions</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;">
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Is Azerbaijan a standalone product or only an extension of Georgia?</div>
+      <p style="margin:0;font-size:13px;">Both. Baku works well as a 4–6 day standalone city-and-region program, particularly for clients who want a Caspian/Gulf-adjacent city experience. It also combines naturally with Georgia as a 9–10 day two-country circuit, which is currently our stronger-performing structure for Indian operators.</p>
+    </div>
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Can you accommodate vegetarian and Jain clients?</div>
+      <p style="margin:0;font-size:13px;">Vegetarian: manageable in Baku city hotels and restaurants, though the food culture is more meat-forward than Georgia's — plov and kebab variations dominate menus. Strict Jain requirements are more limited here than in Georgia; brief us at RFQ stage so we can confirm specific restaurants and pre-arrange meals where needed.</p>
+    </div>
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">What happens if a client misses a flight or arrives late?</div>
+      <p style="margin:0;font-size:13px;">Standard hotel cancellation policies apply in cases of no-show or late arrival. However, if we are informed 24–48 hours in advance, we will request the hotel to shift dates (subject to availability; alteration charges may apply). For tours and excursions, changes can be made if communicated at least 24 hours in advance.</p>
+    </div>
+
+    <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
+      <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Can you provide references from other Indian operators?</div>
+      <p style="margin:0;font-size:13px;">Caravan Compass is a newly established DMC — we are transparent about this. What we offer instead is direct visibility: a discovery call with our founder, and for first-time bookings, terms structured to reduce your risk while our track record builds. Our supplier relationships in Baku — hotels, guides, transport — are established and verifiable on request.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ CTA SECTION ════════════════════════════════════════════ -->
+<div class="cta-section">
+  <div class="cta-text">
+    <h2>Ready to build your Azerbaijan program?</h2>
+    <p>Send us an RFQ — dates, pax count, hotel preference. We'll respond within 4 hours with a detailed land-only quotation you can build on.</p>
+  </div>
+  <div class="cta-details">
+    <div class="cta-item">
+      <div class="cta-icon">✉</div>
+      <div>
+        <div class="cta-item-label">Primary Contact</div>
+        <div class="cta-item-value">ops@caravancompass.com</div>
+      </div>
+    </div>
+    <div class="cta-item">
+      <div class="cta-icon">☎</div>
+      <div>
+        <div class="cta-item-label">Phone / WhatsApp</div>
+        <div class="cta-item-value">+91 75208 16288</div>
+      </div>
+    </div>
+    <div class="cta-item">
+      <div class="cta-icon">🌐</div>
+      <div>
+        <div class="cta-item-label">Website</div>
+        <div class="cta-item-value">caravancompass.com</div>
+      </div>
+    </div>
+    <div class="cta-item">
+      <div class="cta-icon">📍</div>
+      <div>
+        <div class="cta-item-label">Operational Base</div>
+        <div class="cta-item-value">Corporate: India · Operations: Caucasus Region</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-header" style="border-top:1px solid #2e2622;">
+  <div style="font-size:11px;color:rgba(255,255,255,.4);padding:4px 0;">This document is for trade use only. Not for distribution to end consumers. © Caravan Compass DMC 2026. All rates indicative — confirmed on individual quotation.</div>
+  <div style="font-size:11px;color:rgba(255,255,255,.4);">ops@caravancompass.com · caravancompass.com</div>
+</div>
+
+</body>
+</html>

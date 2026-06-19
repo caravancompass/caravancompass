@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner Access — Caravan Compass DMC</title>
+<meta name="description" content="Trade resources for tour operators, OTAs and travel agencies. Operator decks, readymade itineraries and quote requests for Georgia, Azerbaijan, Armenia and Almaty.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.caravancompass.com/partners">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --forest:#0b3d2e;
+  --forest-mid:#155c44;
+  --gold:#b5712a;
+  --gold-light:#d4944a;
+  --gold-pale:#fdf5e8;
+  --cream:#f8f5f0;
+  --ink:#1a1814;
+  --ink-mid:#3d3830;
+  --ink-soft:#6b6460;
+  --border:#e0d8cc;
+  --white:#ffffff;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.7;
+  min-height:100vh;
+}
+
+/* ── NAV ── */
+.nav-wrap{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;width:88%;max-width:1180px;margin:auto;}
+.logo{height:52px;}
+.nav-right{display:flex;align-items:center;gap:20px;}
+.nav-link{text-decoration:none;color:var(--ink-mid);font-weight:500;font-size:13px;}
+.nav-link:hover{color:var(--forest);}
+.nav-badge{
+  background:var(--forest);color:var(--white);
+  font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  padding:4px 10px;border-radius:20px;
+}
+
+/* ── HERO STRIP ── */
+.portal-hero{
+  background:var(--forest);
+  padding:48px 0 40px;
+  position:relative;
+  overflow:hidden;
+}
+.portal-hero::after{
+  content:'';position:absolute;top:0;right:0;
+  width:35%;height:100%;
+  background:linear-gradient(160deg,#155c44 0%,transparent 65%);
+  pointer-events:none;
+}
+.portal-hero-inner{width:88%;max-width:1180px;margin:auto;position:relative;z-index:2;}
+.portal-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-light);margin-bottom:12px;
+}
+.portal-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:38px;font-weight:700;color:var(--white);
+  line-height:1.15;margin-bottom:10px;
+}
+.portal-sub{
+  font-size:14px;color:rgba(255,255,255,.65);
+  max-width:560px;line-height:1.7;
+}
+
+/* ── THREE MAIN BUTTONS ── */
+.hub{width:88%;max-width:1180px;margin:48px auto 0;}
+.hub-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-bottom:56px;
+}
+.hub-card{
+  border:2px solid var(--border);
+  border-radius:16px;
+  background:var(--white);
+  padding:32px 28px;
+  cursor:pointer;
+  transition:border-color .18s,box-shadow .18s,transform .18s;
+  text-align:center;
+  position:relative;
+}
+.hub-card:hover{
+  border-color:var(--forest);
+  box-shadow:0 8px 32px rgba(11,61,46,.12);
+  transform:translateY(-3px);
+}
+.hub-card.active{
+  border-color:var(--forest);
+  background:#f0f6f3;
+  box-shadow:0 8px 32px rgba(11,61,46,.14);
+}
+.hub-card.active::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:50%;
+  transform:translateX(-50%);
+  width:32px;height:3px;
+  background:var(--forest);
+  border-radius:2px;
+}
+.hub-icon{
+  width:56px;height:56px;
+  background:var(--cream);
+  border:1px solid var(--border);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;
+  margin:0 auto 16px;
+  transition:background .18s;
+}
+.hub-card:hover .hub-icon,
+.hub-card.active .hub-icon{
+  background:var(--forest);
+  border-color:var(--forest);
+}
+.hub-card:hover .hub-icon span,
+.hub-card.active .hub-icon span{
+  filter:brightness(10);
+}
+.hub-card-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px;font-weight:600;color:var(--forest);
+  margin-bottom:6px;
+}
+.hub-card-desc{
+  font-size:12px;color:var(--ink-soft);line-height:1.6;
+}
+
+/* ── PANELS ── */
+.panel{display:none;}
+.panel.active{display:block;animation:fadeUp .3s ease;}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(10px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ── PANEL HEADER ── */
+.panel-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:28px;padding-bottom:20px;
+  border-bottom:1px solid var(--border);
+}
+.panel-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:24px;font-weight:600;color:var(--forest);
+}
+.panel-note{font-size:12px;color:var(--ink-soft);}
+
+/* ── OPERATOR DECK CARDS ── */
+.decks-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-bottom:40px;
+}
+.deck-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--white);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:box-shadow .18s,transform .18s;
+}
+.deck-card:hover{
+  box-shadow:0 8px 28px rgba(11,61,46,.1);
+  transform:translateY(-2px);
+}
+.deck-card-top{
+  padding:22px 24px 18px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+}
+.deck-flag{
+  width:42px;height:42px;
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+  flex-shrink:0;
+  background:var(--cream);
+  border:1px solid var(--border);
+}
+.deck-meta{flex:1;}
+.deck-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px;font-weight:600;color:var(--forest);
+  margin-bottom:2px;
+}
+.deck-tagline{font-size:11.5px;color:var(--ink-soft);}
+.deck-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.deck-tag{
+  font-size:10px;font-weight:600;
+  background:var(--gold-pale);color:var(--gold);
+  border:1px solid #e8d4b4;
+  padding:2px 8px;border-radius:6px;
+}
+.deck-card-body{
+  padding:16px 24px;
+  flex:1;
+}
+.deck-highlights{
+  list-style:none;padding:0;margin:0;
+}
+.deck-highlights li{
+  font-size:12px;color:var(--ink-mid);
+  padding:4px 0;
+  display:flex;gap:8px;align-items:flex-start;
+  border-bottom:1px solid #f5f0ea;
+}
+.deck-highlights li:last-child{border-bottom:none;}
+.deck-highlights li::before{
+  content:'→';color:var(--gold);font-size:11px;margin-top:2px;flex-shrink:0;
+}
+.deck-card-foot{
+  padding:14px 24px;
+  border-top:1px solid var(--border);
+  display:flex;gap:10px;align-items:center;
+}
+.btn-deck-view{
+  flex:1;
+  background:var(--forest);
+  color:var(--white);
+  border:none;border-radius:8px;
+  padding:9px 14px;
+  font-size:12px;font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+  text-align:center;
+  font-family:inherit;
+  transition:background .15s;
+}
+.btn-deck-view:hover{background:var(--forest-mid);}
+.btn-deck-dl{
+  padding:9px 14px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--white);
+  font-size:12px;font-weight:600;
+  color:var(--ink-mid);
+  cursor:pointer;
+  font-family:inherit;
+  text-decoration:none;
+  display:block;
+  transition:border-color .15s;
+}
+.btn-deck-dl:hover{border-color:var(--forest);color:var(--forest);}
+
+/* ── VISA STATUS BAR ── */
+.visa-bar{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:12px;margin-bottom:40px;
+  padding:20px 24px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+.visa-item{text-align:center;}
+.visa-flag{font-size:18px;margin-bottom:4px;}
+.visa-dest{font-size:11px;font-weight:700;color:var(--forest);margin-bottom:3px;}
+.visa-type{
+  font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:4px;
+  display:inline-block;
+}
+.v-evisa{background:#bee3f8;color:#1a3a5a;}
+.v-free{background:#c6f6d5;color:#1a4a2a;}
+.v-note{font-size:9.5px;color:var(--ink-soft);margin-top:3px;}
+
+/* ── ITINERARIES PANEL ── */
+.itin-coming{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:48px 40px;
+  text-align:center;
+  margin-bottom:32px;
+}
+.itin-coming-icon{font-size:36px;margin-bottom:16px;}
+.itin-coming h3{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px;color:var(--forest);margin-bottom:10px;
+}
+.itin-coming p{font-size:13px;color:var(--ink-soft);max-width:480px;margin:0 auto 24px;}
+
+.itin-preview-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.itin-preview{
+  border:1px solid var(--border);border-radius:12px;
+  background:var(--white);padding:18px 20px;
+  opacity:.65;
+}
+.itin-preview-label{
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--gold);margin-bottom:6px;
+}
+.itin-preview-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:15px;font-weight:600;color:var(--forest);margin-bottom:4px;
+}
+.itin-preview-dur{font-size:11.5px;color:var(--ink-soft);}
+
+/* ── QUOTE FORM ── */
+.quote-wrap{
+  display:grid;grid-template-columns:1.2fr 1fr;
+  gap:28px;margin-bottom:40px;
+}
+.quote-form{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:32px 32px;
+}
+.form-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;font-weight:600;color:var(--forest);
+  margin-bottom:24px;
+}
+.form-row{margin-bottom:16px;}
+.form-row.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+label{
+  display:block;
+  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink-soft);margin-bottom:5px;
+}
+input,select,textarea{
+  width:100%;
+  border:1.5px solid var(--border);
+  border-radius:8px;
+  padding:10px 14px;
+  font-family:inherit;font-size:13px;
+  color:var(--ink);
+  background:var(--white);
+  transition:border-color .15s;
+  outline:none;
+  appearance:none;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--forest);
+}
+textarea{resize:vertical;min-height:90px;}
+select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6460' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:36px;
+}
+.btn-submit{
+  width:100%;
+  background:var(--forest);
+  color:var(--white);
+  border:none;border-radius:10px;
+  padding:13px 20px;
+  font-size:13px;font-weight:700;
+  cursor:pointer;
+  font-family:inherit;
+  margin-top:6px;
+  transition:background .15s;
+  letter-spacing:.02em;
+}
+.btn-submit:hover{background:var(--forest-mid);}
+.form-note{font-size:11px;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+.quote-sidebar{display:flex;flex-direction:column;gap:14px;}
+.sidebar-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:20px 22px;
+}
+.sidebar-card-label{
+  font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;
+  color:var(--gold);margin-bottom:8px;
+}
+.sidebar-card-val{font-size:13px;font-weight:600;color:var(--ink);line-height:1.45;}
+.sidebar-card-note{font-size:11.5px;color:var(--ink-soft);margin-top:3px;font-weight:400;}
+
+.process-mini{display:flex;flex-direction:column;gap:12px;margin-top:4px;}
+.pm-step{display:flex;gap:12px;align-items:flex-start;}
+.pm-num{
+  width:24px;height:24px;
+  background:var(--forest);color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;flex-shrink:0;
+  margin-top:1px;
+}
+.pm-text{font-size:12px;color:var(--ink-mid);line-height:1.5;}
+.pm-text strong{color:var(--forest);}
+
+/* ── SUCCESS STATE ── */
+.form-success{
+  display:none;
+  text-align:center;
+  padding:40px 20px;
+}
+.form-success-icon{font-size:40px;margin-bottom:16px;}
+.form-success h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;color:var(--forest);margin-bottom:8px;}
+.form-success p{font-size:13px;color:var(--ink-soft);}
+
+/* ── FOOTER STRIP ── */
+.portal-footer{
+  background:var(--forest);
+  padding:28px 0;
+  margin-top:60px;
+}
+.portal-footer-inner{
+  width:88%;max-width:1180px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.pf-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:16px;color:rgba(255,255,255,.7);
+}
+.pf-brand span{color:var(--gold-light);}
+.pf-contact{font-size:12px;color:rgba(255,255,255,.5);text-align:right;line-height:1.7;}
+.pf-contact a{color:rgba(255,255,255,.6);text-decoration:none;}
+.pf-contact a:hover{color:var(--white);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .hub-grid{grid-template-columns:1fr;}
+  .decks-grid{grid-template-columns:1fr;}
+  .itin-preview-grid{grid-template-columns:1fr 1fr;}
+  .quote-wrap{grid-template-columns:1fr;}
+  .visa-bar{grid-template-columns:repeat(2,1fr);}
+  .form-row.two{grid-template-columns:1fr;}
+  .portal-title{font-size:28px;}
+  .nav{flex-direction:column;gap:12px;text-align:center;}
+}
+@media(max-width:540px){
+  .itin-preview-grid{grid-template-columns:1fr;}
+  .visa-bar{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav-wrap">
+  <div class="nav">
+    <a href="index.html">
+      <img src="images/Blue Minimalist Air Plane Travel Logo.png" class="logo" alt="Caravan Compass">
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">← Back to Website</a>
+      <span class="nav-badge">Trade Access</span>
+    </div>
+  </div>
+</header>
+
+<!-- PORTAL HERO -->
+<div class="portal-hero">
+  <div class="portal-hero-inner">
+    <div class="portal-eyebrow">B2B Trade Portal — For Tour Operators, OTAs &amp; Travel Agencies</div>
+    <div class="portal-title">Partner Resources</div>
+    <div class="portal-sub">Operator decks, readymade itineraries, and quote requests — everything your product team needs to build and price Caucasus &amp; Central Asia programs.</div>
+  </div>
+</div>
+
+<!-- HUB -->
+<div class="hub">
+
+  <!-- THREE MAIN BUTTONS -->
+  <div class="hub-grid">
+    <div class="hub-card active" onclick="showPanel('decks', this)">
+      <div class="hub-icon"><span>📋</span></div>
+      <div class="hub-card-title">Operator Decks</div>
+      <div class="hub-card-desc">Destination guides for Georgia, Azerbaijan, Armenia and Almaty — with regional breakdowns, itineraries, hotels, and pricing frameworks.</div>
+    </div>
+    <div class="hub-card" onclick="showPanel('itins', this)">
+      <div class="hub-icon"><span>🗺</span></div>
+      <div class="hub-card-title">Readymade Itineraries</div>
+      <div class="hub-card-desc">Pre-built day-by-day programs ready to quote. Georgia circuits, Caucasus trio, Silk Road 14-day, and seasonal specials.</div>
+    </div>
+    <div class="hub-card" onclick="showPanel('quote', this)">
+      <div class="hub-icon"><span>✉</span></div>
+      <div class="hub-card-title">Request a Quote</div>
+      <div class="hub-card-desc">Send us your RFQ — dates, destination, pax count, hotel category. We respond within 4 hours with a detailed land-only quotation.</div>
+    </div>
+  </div>
+
+  <!-- ══ PANEL: OPERATOR DECKS ══ -->
+  <div class="panel active" id="panel-decks">
+
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Operator Decks</div>
+        <div class="panel-note">Click any deck to open in full — or use the print button inside to save as PDF.</div>
+      </div>
+    </div>
+
+    <!-- VISA STATUS BAR -->
+    <div class="visa-bar">
+      <div class="visa-item">
+        <div class="visa-flag">🇬🇪</div>
+        <div class="visa-dest">Georgia</div>
+        <div class="visa-type v-evisa">E-Visa</div>
+        <div class="visa-note">Online application · Not visa-on-arrival</div>
+      </div>
+      <div class="visa-item">
+        <div class="visa-flag">🇦🇿</div>
+        <div class="visa-dest">Azerbaijan</div>
+        <div class="visa-type v-evisa">ASAN E-Visa</div>
+        <div class="visa-note">Quick online processing</div>
+      </div>
+      <div class="visa-item">
+        <div class="visa-flag">🇦🇲</div>
+        <div class="visa-dest">Armenia</div>
+        <div class="visa-type v-evisa">E-Visa</div>
+        <div class="visa-note">Approvals can be inconsistent — caveat clients</div>
+      </div>
+      <div class="visa-item">
+        <div class="visa-flag">🇰🇿</div>
+        <div class="visa-dest">Almaty, Kazakhstan</div>
+        <div class="visa-type v-free">Visa-Free · 14 Days</div>
+        <div class="visa-note">No application required for Indians</div>
+      </div>
+    </div>
+
+    <!-- DECK CARDS -->
+    <div class="decks-grid">
+
+      <!-- GEORGIA -->
+      <div class="deck-card">
+        <div class="deck-card-top">
+          <div class="deck-flag">🇬🇪</div>
+          <div class="deck-meta">
+            <div class="deck-name">Georgia</div>
+            <div class="deck-tagline">Core Destination &amp; Operational Base</div>
+            <div class="deck-tags">
+              <span class="deck-tag">FIT &amp; Groups</span>
+              <span class="deck-tag">MICE</span>
+              <span class="deck-tag">E-Visa</span>
+              <span class="deck-tag">Year-Round</span>
+            </div>
+          </div>
+        </div>
+        <div class="deck-card-body">
+          <ul class="deck-highlights">
+            <li>Tbilisi · Kazbegi · Kakheti · Batumi · Gudauri regional breakdown</li>
+            <li>5-day, 7-day, and 10-day (Georgia + Baku) sample circuits</li>
+            <li>Martvili Canyon + Prometheus Cave routing for Batumi extension</li>
+            <li>MICE: Supra dinner, Kakheti winery buyout, Kazbegi adventure</li>
+            <li>Contracted hotel list across 3-star to 5-star categories</li>
+            <li>Booking process, payment terms &amp; FAQ</li>
+          </ul>
+        </div>
+        <div class="deck-card-foot">
+          <a href="georgia_operator_deck_updated.html" target="_blank" class="btn-deck-view">Open Deck →</a>
+          <a href="georgia_operator_deck_updated.html" download class="btn-deck-dl">⬇ Save</a>
+        </div>
+      </div>
+
+      <!-- AZERBAIJAN -->
+      <div class="deck-card">
+        <div class="deck-card-top">
+          <div class="deck-flag">🇦🇿</div>
+          <div class="deck-meta">
+            <div class="deck-name">Azerbaijan</div>
+            <div class="deck-tagline">Baku &amp; Countryside Programs</div>
+            <div class="deck-tags">
+              <span class="deck-tag">FIT &amp; Groups</span>
+              <span class="deck-tag">ASAN E-Visa</span>
+              <span class="deck-tag">City + Countryside</span>
+            </div>
+          </div>
+        </div>
+        <div class="deck-card-body">
+          <ul class="deck-highlights">
+            <li>Baku: Icheri Sheher, Flame Towers, Ateshgah Hindu fire temple</li>
+            <li>Gobustan mud volcanoes &amp; UNESCO rock carvings</li>
+            <li>Gabala / Shahdag mountain excursion options</li>
+            <li>Sheki: Khan's Palace &amp; Silk Road caravanserai</li>
+            <li>Georgia + Azerbaijan 10-day combined circuit</li>
+            <li>Hotel list, rates framework &amp; booking terms</li>
+          </ul>
+        </div>
+        <div class="deck-card-foot">
+          <a href="azerbaijan_operator_deck__1_.html" target="_blank" class="btn-deck-view">Open Deck →</a>
+          <a href="azerbaijan_operator_deck__1_.html" download class="btn-deck-dl">⬇ Save</a>
+        </div>
+      </div>
+
+      <!-- ARMENIA -->
+      <div class="deck-card">
+        <div class="deck-card-top">
+          <div class="deck-flag">🇦🇲</div>
+          <div class="deck-meta">
+            <div class="deck-name">Armenia</div>
+            <div class="deck-tagline">Heritage &amp; Story-Led Travel</div>
+            <div class="deck-tags">
+              <span class="deck-tag">Culture-Focused</span>
+              <span class="deck-tag">E-Visa</span>
+              <span class="deck-tag">Caucasus Circuit</span>
+            </div>
+          </div>
+        </div>
+        <div class="deck-card-body">
+          <ul class="deck-highlights">
+            <li>Garni Temple — only pre-Christian Hellenistic temple in former Soviet Union</li>
+            <li>Geghard Monastery · Khor Virap · Lake Sevan · Tatev</li>
+            <li>Wings of Tatev: world's longest reversible aerial tramway</li>
+            <li>Honest visa briefing: e-visa approvals can be inconsistent</li>
+            <li>Works best as 3–4 day add-on after Georgia in Caucasus circuit</li>
+            <li>Routing, hotels &amp; booking process</li>
+          </ul>
+        </div>
+        <div class="deck-card-foot">
+          <a href="armenia_operator_brief.html" target="_blank" class="btn-deck-view">Open Deck →</a>
+          <a href="armenia_operator_brief.html" download class="btn-deck-dl">⬇ Save</a>
+        </div>
+      </div>
+
+      <!-- ALMATY -->
+      <div class="deck-card">
+        <div class="deck-card-top">
+          <div class="deck-flag">🇰🇿</div>
+          <div class="deck-meta">
+            <div class="deck-name">Almaty, Kazakhstan</div>
+            <div class="deck-tagline">Alpine Gateway · No Visa Required</div>
+            <div class="deck-tags">
+              <span class="deck-tag">Visa-Free 14 Days</span>
+              <span class="deck-tag">Alpine</span>
+              <span class="deck-tag">First-Mover</span>
+            </div>
+          </div>
+        </div>
+        <div class="deck-card-body">
+          <ul class="deck-highlights">
+            <li>Big Almaty Lake at 2,510m · 28km from city centre</li>
+            <li>Shymbulak ski resort: 25 min from Almaty · reliable Dec–Mar</li>
+            <li>Charyn Canyon: 154km canyon, 3hrs from Almaty</li>
+            <li>Kolsai Lakes three-cascade glacial circuit</li>
+            <li>Visa-free for Indian passport holders up to 14 days — no application</li>
+            <li>City program, alpine extensions &amp; Silk Road circuit options</li>
+          </ul>
+        </div>
+        <div class="deck-card-foot">
+          <a href="almaty_kazakhstan_operator_guide.html" target="_blank" class="btn-deck-view">Open Deck →</a>
+          <a href="almaty_kazakhstan_operator_guide.html" download class="btn-deck-dl">⬇ Save</a>
+        </div>
+      </div>
+
+    </div><!-- /decks-grid -->
+
+    <!-- BOTTOM CTA -->
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:8px;">
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:600;color:var(--forest);margin-bottom:4px;">Need a custom program or multi-country circuit?</div>
+        <div style="font-size:13px;color:var(--ink-soft);">We build custom itineraries across all four destinations. Send us your RFQ and we'll respond within 4 hours.</div>
+      </div>
+      <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:12px 24px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;">Request a Quote →</button>
+    </div>
+
+  </div><!-- /panel-decks -->
+
+
+  <!-- ══ PANEL: ITINERARIES ══ -->
+  <div class="panel" id="panel-itins">
+
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Readymade Itineraries</div>
+        <div class="panel-note">Pre-built day-by-day programs ready to quote to your clients.</div>
+      </div>
+    </div>
+
+    <div class="itin-coming">
+      <div class="itin-coming-icon">🗺</div>
+      <h3>Itinerary documents being prepared</h3>
+      <p>We're finalising our readymade itinerary library — day-by-day programs with routing, hotels, and inclusions clearly laid out. Expected to be live shortly. In the meantime, every operator deck includes sample circuit structures you can use to build a quote.</p>
+      <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:11px 24px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Request a Custom Itinerary →</button>
+    </div>
+
+    <!-- Preview cards (coming soon, greyed out) -->
+    <div class="itin-preview-grid">
+      <div class="itin-preview">
+        <div class="itin-preview-label">Georgia</div>
+        <div class="itin-preview-name">Core Georgia Circuit</div>
+        <div class="itin-preview-dur">5 Days / 4 Nights · Tbilisi + Kazbegi + Kakheti</div>
+      </div>
+      <div class="itin-preview">
+        <div class="itin-preview-label">Georgia + Batumi</div>
+        <div class="itin-preview-name">Georgia with Black Sea</div>
+        <div class="itin-preview-dur">7 Days / 6 Nights · 4N Tbilisi + 2N Batumi</div>
+      </div>
+      <div class="itin-preview">
+        <div class="itin-preview-label">Two Countries</div>
+        <div class="itin-preview-name">Georgia + Baku</div>
+        <div class="itin-preview-dur">10 Days / 9 Nights · Tbilisi + Baku + Gabala</div>
+      </div>
+      <div class="itin-preview">
+        <div class="itin-preview-label">Caucasus Trio</div>
+        <div class="itin-preview-name">Georgia + Armenia + Azerbaijan</div>
+        <div class="itin-preview-dur">12 Days · Three-country circuit</div>
+      </div>
+      <div class="itin-preview">
+        <div class="itin-preview-label">Silk Road</div>
+        <div class="itin-preview-name">Modern Silk Road</div>
+        <div class="itin-preview-dur">14 Days · Georgia + Azerbaijan + Almaty</div>
+      </div>
+      <div class="itin-preview">
+        <div class="itin-preview-label">Almaty</div>
+        <div class="itin-preview-name">Almaty Alpine Circuit</div>
+        <div class="itin-preview-dur">5 Days · City + Big Almaty Lake + Charyn Canyon</div>
+      </div>
+    </div>
+
+  </div><!-- /panel-itins -->
+
+
+  <!-- ══ PANEL: QUOTE ══ -->
+  <div class="panel" id="panel-quote">
+
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Request a Quote</div>
+        <div class="panel-note">Land-only pricing · 4-hour turnaround · B2B trade only</div>
+      </div>
+    </div>
+
+    <div class="quote-wrap">
+
+      <!-- FORM -->
+      <div class="quote-form">
+        <div class="form-title">Tell us about your program</div>
+
+        <div id="formFields">
+          <div class="form-row two">
+            <div>
+              <label for="f-name">Your Name</label>
+              <input type="text" id="f-name" placeholder="Full name">
+            </div>
+            <div>
+              <label for="f-agency">Agency / Company</label>
+              <input type="text" id="f-agency" placeholder="Agency name">
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="f-email">Email Address</label>
+              <input type="email" id="f-email" placeholder="ops@youragency.com">
+            </div>
+            <div>
+              <label for="f-phone">WhatsApp / Phone</label>
+              <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="f-dest">Destination(s)</label>
+            <select id="f-dest">
+              <option value="">Select destination</option>
+              <option>Georgia only</option>
+              <option>Georgia + Batumi extension</option>
+              <option>Georgia + Baku (two-country)</option>
+              <option>Azerbaijan / Baku only</option>
+              <option>Armenia (standalone or Caucasus circuit)</option>
+              <option>Almaty / Kazakhstan</option>
+              <option>Caucasus Trio (Georgia + Armenia + Azerbaijan)</option>
+              <option>Silk Road (Georgia + Azerbaijan + Almaty)</option>
+              <option>Other / Multi-country — let me describe</option>
+            </select>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="f-dates">Travel Dates</label>
+              <input type="text" id="f-dates" placeholder="e.g. Oct 10–18, 2026">
+            </div>
+            <div>
+              <label for="f-pax">Pax Count</label>
+              <input type="text" id="f-pax" placeholder="e.g. 2 adults, 1 child">
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="f-hotel">Hotel Category</label>
+              <select id="f-hotel">
+                <option value="">Select category</option>
+                <option>3-Star</option>
+                <option>4-Star</option>
+                <option>4-Star+ (Radisson / Courtyard tier)</option>
+                <option>5-Star</option>
+                <option>Mix — quote multiple tiers</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-type">Program Type</label>
+              <select id="f-type">
+                <option value="">Select type</option>
+                <option>FIT / Leisure</option>
+                <option>Small Group (7–15 pax)</option>
+                <option>Group (16–40 pax)</option>
+                <option>MICE / Incentive</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="f-notes">Special Requirements or Notes</label>
+            <textarea id="f-notes" placeholder="Dietary needs (vegetarian / Jain), special interests, any add-ons you want included…"></textarea>
+          </div>
+
+          <button class="btn-submit" onclick="submitForm()">Send RFQ — We'll Reply Within 4 Hours</button>
+          <div class="form-note">This goes directly to ops@caravancompass.com · B2B trade enquiries only</div>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">✅</div>
+          <h3>RFQ received</h3>
+          <p>We'll come back to you within 4 hours with a detailed land-only quotation. Check your inbox — and your spam folder just in case.<br><br>
+          Questions in the meantime? WhatsApp us: <strong>+91 75208 16288</strong></p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="quote-sidebar">
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-label">Response Commitment</div>
+          <div class="sidebar-card-val">Within 4 hours<span class="sidebar-card-note"><br>Detailed itemised quotation, land-only basis, ready for you to build on</span></div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-label">What's Included in a Quote</div>
+          <div style="font-size:12.5px;color:var(--ink-mid);line-height:1.7;margin-top:2px;">
+            ✓ Day-by-day program<br>
+            ✓ Hotels at requested category<br>
+            ✓ Guide / driver costs<br>
+            ✓ All transfers &amp; transport<br>
+            ✓ Excursions &amp; entrance fees<br>
+            ✓ Single supplement if needed<br>
+            ✗ Flights (land-only)<br>
+            ✗ Visa fees
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-label">How It Works</div>
+          <div class="process-mini">
+            <div class="pm-step"><div class="pm-num">1</div><div class="pm-text">Send RFQ with dates, pax &amp; hotel preference</div></div>
+            <div class="pm-step"><div class="pm-num">2</div><div class="pm-text"><strong>4-hour response</strong> with itemised land-only quote</div></div>
+            <div class="pm-step"><div class="pm-num">3</div><div class="pm-text">Confirm with 30% deposit to Indian bank account</div></div>
+            <div class="pm-step"><div class="pm-num">4</div><div class="pm-text">Balance due 21 days before departure</div></div>
+            <div class="pm-step"><div class="pm-num">5</div><div class="pm-text">Guide / driver meets your clients on arrival</div></div>
+          </div>
+        </div>
+
+        <div class="sidebar-card" style="background:var(--forest);border-color:var(--forest);">
+          <div class="sidebar-card-label" style="color:var(--gold-light);">Direct Contact</div>
+          <div style="font-size:13px;color:var(--white);font-weight:600;">ops@caravancompass.com</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.6);margin-top:4px;">+91 75208 16288 (WhatsApp)</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /panel-quote -->
+
+</div><!-- /hub -->
+
+<!-- FOOTER -->
+<footer class="portal-footer">
+  <div class="portal-footer-inner">
+    <div class="pf-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="pf-contact">
+      <a href="mailto:ops@caravancompass.com">ops@caravancompass.com</a> · +91 75208 16288<br>
+      Corporate office: India · Operational base: Tbilisi, Georgia<br>
+      <a href="index.html">caravancompass.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPanel(id, card) {
+  // Update hub cards
+  document.querySelectorAll('.hub-card').forEach(c => c.classList.remove('active'));
+  if (card) card.classList.add('active');
+
+  // Update panels
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('panel-' + id);
+  if (target) {
+    target.classList.add('active');
+    // Scroll to panel smoothly
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 50);
+  }
+}
+
+function submitForm() {
+  const name    = document.getElementById('f-name').value.trim();
+  const agency  = document.getElementById('f-agency').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const dest    = document.getElementById('f-dest').value;
+
+  if (!name || !email || !dest) {
+    alert('Please fill in your name, email, and destination to submit.');
+    return;
+  }
+
+  // Build mailto string
+  const phone  = document.getElementById('f-phone').value.trim();
+  const dates  = document.getElementById('f-dates').value.trim();
+  const pax    = document.getElementById('f-pax').value.trim();
+  const hotel  = document.getElementById('f-hotel').value;
+  const type   = document.getElementById('f-type').value;
+  const notes  = document.getElementById('f-notes').value.trim();
+
+  const subject = encodeURIComponent('RFQ — ' + dest + (agency ? ' | ' + agency : ''));
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Agency: ' + (agency || '—') + '\n' +
+    'Email: ' + email + '\n' +
+    'Phone/WhatsApp: ' + (phone || '—') + '\n\n' +
+    'Destination: ' + dest + '\n' +
+    'Travel Dates: ' + (dates || '—') + '\n' +
+    'Pax: ' + (pax || '—') + '\n' +
+    'Hotel Category: ' + (hotel || '—') + '\n' +
+    'Program Type: ' + (type || '—') + '\n\n' +
+    'Special Requirements:\n' + (notes || 'None specified')
+  );
+
+  // Open mailto — works across devices
+  window.location.href = 'mailto:ops@caravancompass.com?subject=' + subject + '&body=' + body;
+
+  // Show success after brief delay
+  setTimeout(() => {
+    document.getElementById('formFields').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }, 800);
+}
+</script>
+
+</body>
+</html>
