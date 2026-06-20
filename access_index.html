@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner Access — Caravan Compass DMC</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --forest:#0b3d2e;
+  --forest-mid:#155c44;
+  --gold:#b5712a;
+  --gold-light:#d4944a;
+  --gold-pale:#fdf5e8;
+  --cream:#f8f5f0;
+  --ink:#1a1814;
+  --ink-mid:#3d3830;
+  --ink-soft:#6b6460;
+  --border:#e0d8cc;
+  --white:#ffffff;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--forest);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* background texture */
+body::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, #155c44 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, #0d4a35 0%, transparent 55%);
+  pointer-events:none;
+}
+
+.gate-wrap{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:440px;
+}
+
+/* logo */
+.gate-logo{
+  text-align:center;
+  margin-bottom:32px;
+}
+.gate-logo img{
+  height:56px;
+  filter:brightness(0) invert(1);
+  opacity:.9;
+}
+.gate-logo-fallback{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px;
+  font-weight:700;
+  color:var(--white);
+}
+.gate-logo-fallback span{color:var(--gold-light);}
+
+/* card */
+.gate-card{
+  background:var(--white);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 24px 64px rgba(0,0,0,.3);
+}
+
+.gate-card-top{
+  background:var(--cream);
+  border-bottom:1px solid var(--border);
+  padding:28px 32px 24px;
+  text-align:center;
+}
+
+.gate-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:10px;
+}
+
+.gate-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px;font-weight:700;color:var(--forest);
+  margin-bottom:6px;
+}
+
+.gate-desc{
+  font-size:13px;color:var(--ink-soft);line-height:1.6;
+}
+
+/* ── STEP 1: Request Screen ── */
+.gate-body{padding:28px 32px;}
+
+.gate-body h3{
+  font-size:13px;font-weight:700;color:var(--ink);
+  margin-bottom:16px;
+}
+
+.contact-options{
+  display:flex;flex-direction:column;gap:10px;
+  margin-bottom:24px;
+}
+
+.contact-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  border-radius:12px;
+  text-decoration:none;
+  border:1.5px solid var(--border);
+  background:var(--white);
+  transition:border-color .15s, background .15s;
+  cursor:pointer;
+  font-family:inherit;
+  width:100%;
+  text-align:left;
+}
+.contact-btn:hover{
+  border-color:var(--forest);
+  background:var(--cream);
+}
+.contact-icon{
+  width:38px;height:38px;
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;
+  flex-shrink:0;
+}
+.contact-icon.wa{background:#25D366;}
+.contact-icon.em{background:var(--forest);}
+.contact-label{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.contact-detail{font-size:11px;color:var(--ink-soft);}
+
+.gate-divider{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:20px;
+}
+.gate-divider-line{flex:1;height:1px;background:var(--border);}
+.gate-divider-text{font-size:11px;color:var(--ink-soft);white-space:nowrap;}
+
+/* ── STEP 2: Code Entry ── */
+.code-label{
+  font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--ink-soft);
+  display:block;margin-bottom:6px;
+}
+.code-input-wrap{display:flex;gap:8px;}
+.code-input{
+  flex:1;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:11px 16px;
+  font-family:inherit;font-size:14px;
+  color:var(--ink);
+  letter-spacing:.1em;font-weight:600;
+  text-transform:uppercase;
+  outline:none;
+  transition:border-color .15s;
+}
+.code-input:focus{border-color:var(--forest);}
+.code-input.error{border-color:#e53e3e;animation:shake .3s ease;}
+.code-input.success{border-color:#38a169;}
+
+@keyframes shake{
+  0%,100%{transform:translateX(0);}
+  25%{transform:translateX(-6px);}
+  75%{transform:translateX(6px);}
+}
+
+.code-btn{
+  background:var(--forest);color:var(--white);
+  border:none;border-radius:10px;
+  padding:11px 20px;
+  font-size:13px;font-weight:700;
+  cursor:pointer;font-family:inherit;
+  white-space:nowrap;
+  transition:background .15s;
+  flex-shrink:0;
+}
+.code-btn:hover{background:var(--forest-mid);}
+
+.code-error{
+  font-size:12px;color:#c53030;
+  margin-top:8px;
+  display:none;
+}
+.code-error.show{display:block;}
+
+/* ── SUCCESS: Enter portal ── */
+.gate-success{
+  display:none;
+  text-align:center;
+  padding:32px;
+}
+.gate-success-icon{font-size:40px;margin-bottom:14px;}
+.gate-success h3{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;color:var(--forest);margin-bottom:8px;
+}
+.gate-success p{font-size:13px;color:var(--ink-soft);margin-bottom:24px;}
+.gate-success-btn{
+  display:block;
+  background:var(--forest);color:var(--white);
+  border-radius:12px;padding:13px 24px;
+  font-size:13px;font-weight:700;
+  text-decoration:none;
+  transition:background .15s;
+}
+.gate-success-btn:hover{background:var(--forest-mid);}
+
+/* footer */
+.gate-footer{
+  text-align:center;margin-top:24px;
+  font-size:11.5px;color:rgba(255,255,255,.4);
+}
+.gate-footer a{color:rgba(255,255,255,.5);text-decoration:none;}
+.gate-footer a:hover{color:rgba(255,255,255,.8);}
+
+@media(max-width:480px){
+  .gate-card-top,.gate-body{padding:22px 20px;}
+  .gate-title{font-size:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="gate-wrap">
+
+  <!-- Logo -->
+  <div class="gate-logo">
+    <img src="/images/Blue Minimalist Air Plane Travel Logo.png"
+         alt="Caravan Compass"
+         onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
+    <div class="gate-logo-fallback" id="logoFallback" style="display:none;">
+      Caravan <span>Compass</span>
+    </div>
+  </div>
+
+  <div class="gate-card">
+
+    <div class="gate-card-top">
+      <div class="gate-eyebrow">Trade Partners Only</div>
+      <div class="gate-title">Partner Access Portal</div>
+      <p class="gate-desc">This area is restricted to registered tour operators, OTAs and travel agencies. Contact us to receive your access code.</p>
+    </div>
+
+    <!-- Main body — shown by default -->
+    <div class="gate-body" id="gateMain">
+
+      <h3>Step 1 — Request your access code</h3>
+
+      <div class="contact-options">
+        <a href="https://wa.me/917520816288?text=Hi%2C%20I%27d%20like%20to%20request%20access%20to%20the%20Caravan%20Compass%20partner%20portal.%20Agency%3A%20"
+           class="contact-btn" target="_blank">
+          <div class="contact-icon wa">💬</div>
+          <div>
+            <div class="contact-label">WhatsApp Us</div>
+            <div class="contact-detail">+91 75208 16288 — quickest response</div>
+          </div>
+        </a>
+
+        <a href="mailto:ops@caravancompass.com?subject=Partner%20Portal%20Access%20Request&body=Hi%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20the%20Caravan%20Compass%20partner%20portal.%0A%0AAgency%20name%3A%20%0AGST%20%2F%20registration%20no%3A%20%0AContact%20name%3A%20%0APhone%3A%20%0A%0AThank%20you"
+           class="contact-btn">
+          <div class="contact-icon em">✉</div>
+          <div>
+            <div class="contact-label">Email Us</div>
+            <div class="contact-detail">ops@caravancompass.com</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="gate-divider">
+        <div class="gate-divider-line"></div>
+        <div class="gate-divider-text">Already have a code?</div>
+        <div class="gate-divider-line"></div>
+      </div>
+
+      <label class="code-label" for="accessCode">Enter access code</label>
+      <div class="code-input-wrap">
+        <input
+          type="text"
+          id="accessCode"
+          class="code-input"
+          placeholder="e.g. CCPARTNER26"
+          maxlength="20"
+          autocomplete="off"
+          onkeydown="if(event.key==='Enter') checkCode()">
+        <button class="code-btn" onclick="checkCode()">Enter →</button>
+      </div>
+      <div class="code-error" id="codeError">Incorrect code. Please check with ops@caravancompass.com</div>
+
+    </div>
+
+    <!-- Success state — hidden until correct code -->
+    <div class="gate-success" id="gateSuccess">
+      <div class="gate-success-icon">✅</div>
+      <h3>Access granted</h3>
+      <p>Welcome to the Caravan Compass partner portal.</p>
+      <a href="/partners/" class="gate-success-btn">Enter Partner Portal →</a>
+    </div>
+
+  </div>
+
+  <div class="gate-footer">
+    <a href="/">← Back to caravancompass.com</a>
+    &nbsp;·&nbsp; B2B trade access only
+  </div>
+
+</div>
+
+<script>
+// ── ACCESS CODES ──────────────────────────────────────────────
+// Add or remove codes here at any time.
+// All codes are checked case-insensitively.
+const VALID_CODES = [
+  'CCPARTNER26',
+  'CCOPS2026',
+  'GEORGIA26',
+  'CARAVANB2B',
+];
+// ─────────────────────────────────────────────────────────────
+
+function checkCode() {
+  const input = document.getElementById('accessCode');
+  const errorEl = document.getElementById('codeError');
+  const entered = input.value.trim().toUpperCase();
+
+  const valid = VALID_CODES.some(c => c.toUpperCase() === entered);
+
+  if (valid) {
+    input.classList.remove('error');
+    input.classList.add('success');
+    errorEl.classList.remove('show');
+
+    // Store access in sessionStorage so portal page doesn't bounce them
+    sessionStorage.setItem('cc_partner_access', 'granted');
+
+    // Show success state after brief pause
+    setTimeout(() => {
+      document.getElementById('gateMain').style.display = 'none';
+      document.getElementById('gateSuccess').style.display = 'block';
+    }, 350);
+
+  } else {
+    input.classList.add('error');
+    errorEl.classList.add('show');
+    input.value = '';
+    setTimeout(() => input.classList.remove('error'), 400);
+  }
+}
+</script>
+
+</body>
+</html>

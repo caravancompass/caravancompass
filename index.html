@@ -17,8 +17,8 @@
 /* ── PARTNER ACCESS BUTTON in nav ── */
 .btn-partner{
   background:transparent;
-  color:#0B3A28; /* Changed to exact emerald from image_e7016f.png */
-  border:1.5px solid #0B3A28; /* Changed to exact emerald from image_e7016f.png */
+  color:#0B3D91;
+  border:1.5px solid #0B3D91;
   border-radius:10px;
   padding:8px 14px;
   text-decoration:none;
@@ -30,19 +30,19 @@
   transition:background .15s, color .15s;
 }
 .btn-partner:hover{
-  background:#0B3A28; /* Changed to exact emerald from image_e7016f.png */
+  background:#0B3D91;
   color:#fff;
 }
 .btn-partner-dot{
   width:7px;height:7px;
-  background:#D4944A; /* Slightly brighter warm gold accent for better dark-green contrast */
+  background:#b5712a;
   border-radius:50%;
   flex-shrink:0;
 }
 
 /* ── B2B TRADE STRIP ── */
 .trade-strip{
-  background:#0B3A28; /* Changed to exact emerald from image_e7016f.png */
+  background:#0B3D91;
   padding:60px 0;
 }
 .trade-strip-inner{
@@ -114,10 +114,6 @@
   .trade-strip-inner{grid-template-columns:1fr;}
   .trade-strip-cards{grid-template-columns:1fr 1fr;}
   .btn-partner{font-size:12px;padding:7px 11px;}
-  
-  /* Matches mobile nav menu item theme injection from your core stylesheet */
-  nav a { background: #F3F7F5 !important; color: #0B3A28 !important; }
-  nav a.btn-primary { background: linear-gradient(135deg, #4C8469, #0B3A28) !important; color: #fff !important; }
 }
 @media(max-width:480px){
   .trade-strip-cards{grid-template-columns:1fr;}
@@ -131,7 +127,7 @@
   "name": "Caravan Compass",
   "legalName": "Caravan Compass DMC",
   "url": "https://www.caravancompass.com/",
-  "logo": "https://www.caravancompass.com/images/olive%20variant.png",
+  "logo": "https://www.caravancompass.com/images/Blue%20Minimalist%20Air%20Plane%20Travel%20Logo.png",
   "description": "B2B Destination Management Company specializing in Georgia, Azerbaijan, Armenia, and Central Asia.",
   "telephone": "+917520816288",
   "email": "ops@caravancompass.com",
@@ -155,13 +151,12 @@
 <!-- NAVBAR -->
 <header class="nav-wrap">
   <div class="container nav">
-    <!-- Updated source to point to olive variant asset -->
-    <img src="images/olive variant.png" class="logo" alt="Caravan Compass Logo">
+    <img src="images/Blue Minimalist Air Plane Travel Logo.png" class="logo" alt="Caravan Compass Logo">
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#destinations">Destinations</a>
-      <a href="/partners/" class="btn-partner">
+      <a href="/access/" class="btn-partner">
         <span class="btn-partner-dot"></span>
         Partner Access
       </a>
@@ -328,17 +323,17 @@
       </p>
     </div>
     <div class="trade-strip-cards">
-      <a href="/partners/" class="trade-strip-card">
+      <a href="/access/" class="trade-strip-card">
         <div class="trade-strip-card-icon">📋</div>
         <div class="trade-strip-card-title">Operator Decks</div>
         <div class="trade-strip-card-desc">Georgia · Azerbaijan · Armenia · Almaty</div>
       </a>
-      <a href="/partners/" class="trade-strip-card">
+      <a href="/access/" class="trade-strip-card">
         <div class="trade-strip-card-icon">🗺</div>
         <div class="trade-strip-card-title">Readymade Itineraries</div>
         <div class="trade-strip-card-desc">Pre-built programs ready to quote</div>
       </a>
-      <a href="/partners/#quote" class="trade-strip-cta">
+      <a href="/access/" class="trade-strip-cta">
         Access Partner Portal — Request a Quote →
       </a>
     </div>
@@ -375,8 +370,7 @@
   <div class="container footer-grid">
 
     <div class="footer-brand">
-      <!-- Updated source to point to olive variant asset -->
-      <img src="images/olive variant.png" alt="Caravan Compass" class="footer-logo">
+      <img src="images/Blue Minimalist Air Plane Travel Logo.png" alt="Caravan Compass" class="footer-logo">
       <p>People-driven Destination Management for the Caucasus &amp; Central Asia Region.</p>
     </div>
 
@@ -386,7 +380,7 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">What We Do</a></li>
         <li><a href="#destinations">Destinations</a></li>
-        <li><a href="/partners/">Partner Access</a></li>
+        <li><a href="/access/">Partner Access</a></li>
         <li><a href="https://www.instagram.com/caravancompass/">Instagram</a></li>
         <li><a href="https://www.linkedin.com/company/caravancompass/">LinkedIn</a></li>
       </ul>
