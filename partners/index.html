@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+// Gate check — bounce anyone without valid session back to access gate
+if (sessionStorage.getItem('cc_partner_access') !== 'granted') {
+  window.location.replace('/access/');
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Partner Access — Caravan Compass DMC</title>
 <meta name="description" content="Trade resources for tour operators, OTAs and travel agencies. Operator decks, readymade itineraries and quote requests for Georgia, Azerbaijan, Armenia and Almaty.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://www.caravancompass.com/partners">
-
+ 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+ 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-
+ 
 :root{
   --forest:#0b3d2e;
   --forest-mid:#155c44;
@@ -26,7 +32,7 @@
   --border:#e0d8cc;
   --white:#ffffff;
 }
-
+ 
 body{
   font-family:'Inter',system-ui,sans-serif;
   background:var(--cream);
@@ -35,7 +41,7 @@ body{
   line-height:1.7;
   min-height:100vh;
 }
-
+ 
 /* ── NAV ── */
 .nav-wrap{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;width:88%;max-width:1180px;margin:auto;}
@@ -48,7 +54,7 @@ body{
   font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   padding:4px 10px;border-radius:20px;
 }
-
+ 
 /* ── HERO STRIP ── */
 .portal-hero{
   background:var(--forest);
@@ -76,7 +82,7 @@ body{
   font-size:14px;color:rgba(255,255,255,.65);
   max-width:560px;line-height:1.7;
 }
-
+ 
 /* ── THREE MAIN BUTTONS ── */
 .hub{width:88%;max-width:1180px;margin:48px auto 0;}
 .hub-grid{
@@ -141,16 +147,16 @@ body{
 .hub-card-desc{
   font-size:12px;color:var(--ink-soft);line-height:1.6;
 }
-
+ 
 /* ── PANELS ── */
 .panel{display:none;}
 .panel.active{display:block;animation:fadeUp .3s ease;}
-
+ 
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(10px);}
   to{opacity:1;transform:translateY(0);}
 }
-
+ 
 /* ── PANEL HEADER ── */
 .panel-header{
   display:flex;align-items:center;justify-content:space-between;
@@ -162,7 +168,7 @@ body{
   font-size:24px;font-weight:600;color:var(--forest);
 }
 .panel-note{font-size:12px;color:var(--ink-soft);}
-
+ 
 /* ── OPERATOR DECK CARDS ── */
 .decks-grid{
   display:grid;
@@ -264,7 +270,7 @@ body{
   transition:border-color .15s;
 }
 .btn-deck-dl:hover{border-color:var(--forest);color:var(--forest);}
-
+ 
 /* ── VISA STATUS BAR ── */
 .visa-bar{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -285,7 +291,7 @@ body{
 .v-evisa{background:#bee3f8;color:#1a3a5a;}
 .v-free{background:#c6f6d5;color:#1a4a2a;}
 .v-note{font-size:9.5px;color:var(--ink-soft);margin-top:3px;}
-
+ 
 /* ── ITINERARIES PANEL ── */
 .itin-coming{
   background:var(--white);
@@ -301,7 +307,7 @@ body{
   font-size:22px;color:var(--forest);margin-bottom:10px;
 }
 .itin-coming p{font-size:13px;color:var(--ink-soft);max-width:480px;margin:0 auto 24px;}
-
+ 
 .itin-preview-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:14px;
@@ -320,7 +326,7 @@ body{
   font-size:15px;font-weight:600;color:var(--forest);margin-bottom:4px;
 }
 .itin-preview-dur{font-size:11.5px;color:var(--ink-soft);}
-
+ 
 /* ── QUOTE FORM ── */
 .quote-wrap{
   display:grid;grid-template-columns:1.2fr 1fr;
@@ -381,7 +387,7 @@ select{
 }
 .btn-submit:hover{background:var(--forest-mid);}
 .form-note{font-size:11px;color:var(--ink-soft);margin-top:10px;text-align:center;}
-
+ 
 .quote-sidebar{display:flex;flex-direction:column;gap:14px;}
 .sidebar-card{
   background:var(--white);
@@ -395,7 +401,7 @@ select{
 }
 .sidebar-card-val{font-size:13px;font-weight:600;color:var(--ink);line-height:1.45;}
 .sidebar-card-note{font-size:11.5px;color:var(--ink-soft);margin-top:3px;font-weight:400;}
-
+ 
 .process-mini{display:flex;flex-direction:column;gap:12px;margin-top:4px;}
 .pm-step{display:flex;gap:12px;align-items:flex-start;}
 .pm-num{
@@ -408,7 +414,7 @@ select{
 }
 .pm-text{font-size:12px;color:var(--ink-mid);line-height:1.5;}
 .pm-text strong{color:var(--forest);}
-
+ 
 /* ── SUCCESS STATE ── */
 .form-success{
   display:none;
@@ -418,7 +424,7 @@ select{
 .form-success-icon{font-size:40px;margin-bottom:16px;}
 .form-success h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;color:var(--forest);margin-bottom:8px;}
 .form-success p{font-size:13px;color:var(--ink-soft);}
-
+ 
 /* ── FOOTER STRIP ── */
 .portal-footer{
   background:var(--forest);
@@ -437,7 +443,7 @@ select{
 .pf-contact{font-size:12px;color:rgba(255,255,255,.5);text-align:right;line-height:1.7;}
 .pf-contact a{color:rgba(255,255,255,.6);text-decoration:none;}
 .pf-contact a:hover{color:var(--white);}
-
+ 
 /* ── RESPONSIVE ── */
 @media(max-width:860px){
   .hub-grid{grid-template-columns:1fr;}
@@ -456,7 +462,7 @@ select{
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <header class="nav-wrap">
   <div class="nav">
@@ -469,7 +475,7 @@ select{
     </div>
   </div>
 </header>
-
+ 
 <!-- PORTAL HERO -->
 <div class="portal-hero">
   <div class="portal-hero-inner">
@@ -478,10 +484,10 @@ select{
     <div class="portal-sub">Operator decks, readymade itineraries, and quote requests — everything your product team needs to build and price Caucasus &amp; Central Asia programs.</div>
   </div>
 </div>
-
+ 
 <!-- HUB -->
 <div class="hub">
-
+ 
   <!-- THREE MAIN BUTTONS -->
   <div class="hub-grid">
     <div class="hub-card active" onclick="showPanel('decks', this)">
@@ -500,17 +506,17 @@ select{
       <div class="hub-card-desc">Send us your RFQ — dates, destination, pax count, hotel category. We respond within 4 hours with a detailed land-only quotation.</div>
     </div>
   </div>
-
+ 
   <!-- ══ PANEL: OPERATOR DECKS ══ -->
   <div class="panel active" id="panel-decks">
-
+ 
     <div class="panel-header">
       <div>
         <div class="panel-title">Operator Decks</div>
         <div class="panel-note">Click any deck to open in full — or use the print button inside to save as PDF.</div>
       </div>
     </div>
-
+ 
     <!-- VISA STATUS BAR -->
     <div class="visa-bar">
       <div class="visa-item">
@@ -538,10 +544,10 @@ select{
         <div class="visa-note">No application required for Indians</div>
       </div>
     </div>
-
+ 
     <!-- DECK CARDS -->
     <div class="decks-grid">
-
+ 
       <!-- GEORGIA -->
       <div class="deck-card">
         <div class="deck-card-top">
@@ -572,7 +578,7 @@ select{
           <a href="/decks/georgia/" download class="btn-deck-dl">⬇ Save</a>
         </div>
       </div>
-
+ 
       <!-- AZERBAIJAN -->
       <div class="deck-card">
         <div class="deck-card-top">
@@ -602,7 +608,7 @@ select{
           <a href="/decks/azerbaijan/" download class="btn-deck-dl">⬇ Save</a>
         </div>
       </div>
-
+ 
       <!-- ARMENIA -->
       <div class="deck-card">
         <div class="deck-card-top">
@@ -632,7 +638,7 @@ select{
           <a href="/decks/armenia/" download class="btn-deck-dl">⬇ Save</a>
         </div>
       </div>
-
+ 
       <!-- ALMATY -->
       <div class="deck-card">
         <div class="deck-card-top">
@@ -662,9 +668,9 @@ select{
           <a href="/decks/almaty/" download class="btn-deck-dl">⬇ Save</a>
         </div>
       </div>
-
+ 
     </div><!-- /decks-grid -->
-
+ 
     <!-- BOTTOM CTA -->
     <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:8px;">
       <div>
@@ -673,27 +679,27 @@ select{
       </div>
       <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:12px 24px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;">Request a Quote →</button>
     </div>
-
+ 
   </div><!-- /panel-decks -->
-
-
+ 
+ 
   <!-- ══ PANEL: ITINERARIES ══ -->
   <div class="panel" id="panel-itins">
-
+ 
     <div class="panel-header">
       <div>
         <div class="panel-title">Readymade Itineraries</div>
         <div class="panel-note">Pre-built day-by-day programs ready to quote to your clients.</div>
       </div>
     </div>
-
+ 
     <div class="itin-coming">
       <div class="itin-coming-icon">🗺</div>
       <h3>Itinerary documents being prepared</h3>
       <p>We're finalising our readymade itinerary library — day-by-day programs with routing, hotels, and inclusions clearly laid out. Expected to be live shortly. In the meantime, every operator deck includes sample circuit structures you can use to build a quote.</p>
       <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:11px 24px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Request a Custom Itinerary →</button>
     </div>
-
+ 
     <!-- Preview cards (coming soon, greyed out) -->
     <div class="itin-preview-grid">
       <div class="itin-preview">
@@ -727,26 +733,26 @@ select{
         <div class="itin-preview-dur">5 Days · City + Big Almaty Lake + Charyn Canyon</div>
       </div>
     </div>
-
+ 
   </div><!-- /panel-itins -->
-
-
+ 
+ 
   <!-- ══ PANEL: QUOTE ══ -->
   <div class="panel" id="panel-quote">
-
+ 
     <div class="panel-header">
       <div>
         <div class="panel-title">Request a Quote</div>
         <div class="panel-note">Land-only pricing · 4-hour turnaround · B2B trade only</div>
       </div>
     </div>
-
+ 
     <div class="quote-wrap">
-
+ 
       <!-- FORM -->
       <div class="quote-form">
         <div class="form-title">Tell us about your program</div>
-
+ 
         <div id="formFields">
           <div class="form-row two">
             <div>
@@ -758,7 +764,7 @@ select{
               <input type="text" id="f-agency" placeholder="Agency name">
             </div>
           </div>
-
+ 
           <div class="form-row two">
             <div>
               <label for="f-email">Email Address</label>
@@ -769,7 +775,7 @@ select{
               <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX">
             </div>
           </div>
-
+ 
           <div class="form-row">
             <label for="f-dest">Destination(s)</label>
             <select id="f-dest">
@@ -785,7 +791,7 @@ select{
               <option>Other / Multi-country — let me describe</option>
             </select>
           </div>
-
+ 
           <div class="form-row two">
             <div>
               <label for="f-dates">Travel Dates</label>
@@ -796,7 +802,7 @@ select{
               <input type="text" id="f-pax" placeholder="e.g. 2 adults, 1 child">
             </div>
           </div>
-
+ 
           <div class="form-row two">
             <div>
               <label for="f-hotel">Hotel Category</label>
@@ -820,16 +826,16 @@ select{
               </select>
             </div>
           </div>
-
+ 
           <div class="form-row">
             <label for="f-notes">Special Requirements or Notes</label>
             <textarea id="f-notes" placeholder="Dietary needs (vegetarian / Jain), special interests, any add-ons you want included…"></textarea>
           </div>
-
+ 
           <button class="btn-submit" onclick="submitForm()">Send RFQ — We'll Reply Within 4 Hours</button>
           <div class="form-note">This goes directly to ops@caravancompass.com · B2B trade enquiries only</div>
         </div>
-
+ 
         <!-- SUCCESS STATE -->
         <div class="form-success" id="formSuccess">
           <div class="form-success-icon">✅</div>
@@ -838,15 +844,15 @@ select{
           Questions in the meantime? WhatsApp us: <strong>+91 75208 16288</strong></p>
         </div>
       </div>
-
+ 
       <!-- SIDEBAR -->
       <div class="quote-sidebar">
-
+ 
         <div class="sidebar-card">
           <div class="sidebar-card-label">Response Commitment</div>
           <div class="sidebar-card-val">Within 4 hours<span class="sidebar-card-note"><br>Detailed itemised quotation, land-only basis, ready for you to build on</span></div>
         </div>
-
+ 
         <div class="sidebar-card">
           <div class="sidebar-card-label">What's Included in a Quote</div>
           <div style="font-size:12.5px;color:var(--ink-mid);line-height:1.7;margin-top:2px;">
@@ -860,7 +866,7 @@ select{
             ✗ Visa fees
           </div>
         </div>
-
+ 
         <div class="sidebar-card">
           <div class="sidebar-card-label">How It Works</div>
           <div class="process-mini">
@@ -871,20 +877,20 @@ select{
             <div class="pm-step"><div class="pm-num">5</div><div class="pm-text">Guide / driver meets your clients on arrival</div></div>
           </div>
         </div>
-
+ 
         <div class="sidebar-card" style="background:var(--forest);border-color:var(--forest);">
           <div class="sidebar-card-label" style="color:var(--gold-light);">Direct Contact</div>
           <div style="font-size:13px;color:var(--white);font-weight:600;">ops@caravancompass.com</div>
           <div style="font-size:12px;color:rgba(255,255,255,.6);margin-top:4px;">+91 75208 16288 (WhatsApp)</div>
         </div>
-
+ 
       </div>
     </div>
-
+ 
   </div><!-- /panel-quote -->
-
+ 
 </div><!-- /hub -->
-
+ 
 <!-- FOOTER -->
 <footer class="portal-footer">
   <div class="portal-footer-inner">
@@ -896,13 +902,13 @@ select{
     </div>
   </div>
 </footer>
-
+ 
 <script>
 function showPanel(id, card) {
   // Update hub cards
   document.querySelectorAll('.hub-card').forEach(c => c.classList.remove('active'));
   if (card) card.classList.add('active');
-
+ 
   // Update panels
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   const target = document.getElementById('panel-' + id);
@@ -914,18 +920,18 @@ function showPanel(id, card) {
     }, 50);
   }
 }
-
+ 
 function submitForm() {
   const name    = document.getElementById('f-name').value.trim();
   const agency  = document.getElementById('f-agency').value.trim();
   const email   = document.getElementById('f-email').value.trim();
   const dest    = document.getElementById('f-dest').value;
-
+ 
   if (!name || !email || !dest) {
     alert('Please fill in your name, email, and destination to submit.');
     return;
   }
-
+ 
   // Build mailto string
   const phone  = document.getElementById('f-phone').value.trim();
   const dates  = document.getElementById('f-dates').value.trim();
@@ -933,7 +939,7 @@ function submitForm() {
   const hotel  = document.getElementById('f-hotel').value;
   const type   = document.getElementById('f-type').value;
   const notes  = document.getElementById('f-notes').value.trim();
-
+ 
   const subject = encodeURIComponent('RFQ — ' + dest + (agency ? ' | ' + agency : ''));
   const body = encodeURIComponent(
     'Name: ' + name + '\n' +
@@ -947,10 +953,10 @@ function submitForm() {
     'Program Type: ' + (type || '—') + '\n\n' +
     'Special Requirements:\n' + (notes || 'None specified')
   );
-
+ 
   // Open mailto — works across devices
   window.location.href = 'mailto:ops@caravancompass.com?subject=' + subject + '&body=' + body;
-
+ 
   // Show success after brief delay
   setTimeout(() => {
     document.getElementById('formFields').style.display = 'none';
@@ -958,6 +964,6 @@ function submitForm() {
   }, 800);
 }
 </script>
-
+ 
 </body>
 </html>
