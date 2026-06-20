@@ -21,7 +21,7 @@
   --border:#e0d8cc;
   --white:#ffffff;
 }
-
+ 
 body{
   font-family:'Inter',system-ui,sans-serif;
   background:var(--forest);
@@ -34,7 +34,7 @@ body{
   position:relative;
   overflow:hidden;
 }
-
+ 
 /* background texture */
 body::before{
   content:'';
@@ -44,14 +44,14 @@ body::before{
     radial-gradient(ellipse 40% 60% at 10% 80%, #0d4a35 0%, transparent 55%);
   pointer-events:none;
 }
-
+ 
 .gate-wrap{
   position:relative;
   z-index:2;
   width:100%;
   max-width:440px;
 }
-
+ 
 /* logo */
 .gate-logo{
   text-align:center;
@@ -69,7 +69,7 @@ body::before{
   color:var(--white);
 }
 .gate-logo-fallback span{color:var(--gold-light);}
-
+ 
 /* card */
 .gate-card{
   background:var(--white);
@@ -77,43 +77,43 @@ body::before{
   overflow:hidden;
   box-shadow:0 24px 64px rgba(0,0,0,.3);
 }
-
+ 
 .gate-card-top{
   background:var(--cream);
   border-bottom:1px solid var(--border);
   padding:28px 32px 24px;
   text-align:center;
 }
-
+ 
 .gate-eyebrow{
   font-size:10px;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--gold);
   margin-bottom:10px;
 }
-
+ 
 .gate-title{
   font-family:'Playfair Display',Georgia,serif;
   font-size:22px;font-weight:700;color:var(--forest);
   margin-bottom:6px;
 }
-
+ 
 .gate-desc{
   font-size:13px;color:var(--ink-soft);line-height:1.6;
 }
-
+ 
 /* ── STEP 1: Request Screen ── */
 .gate-body{padding:28px 32px;}
-
+ 
 .gate-body h3{
   font-size:13px;font-weight:700;color:var(--ink);
   margin-bottom:16px;
 }
-
+ 
 .contact-options{
   display:flex;flex-direction:column;gap:10px;
   margin-bottom:24px;
 }
-
+ 
 .contact-btn{
   display:flex;align-items:center;gap:14px;
   padding:14px 18px;
@@ -142,14 +142,14 @@ body::before{
 .contact-icon.em{background:var(--forest);}
 .contact-label{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;}
 .contact-detail{font-size:11px;color:var(--ink-soft);}
-
+ 
 .gate-divider{
   display:flex;align-items:center;gap:12px;
   margin-bottom:20px;
 }
 .gate-divider-line{flex:1;height:1px;background:var(--border);}
 .gate-divider-text{font-size:11px;color:var(--ink-soft);white-space:nowrap;}
-
+ 
 /* ── STEP 2: Code Entry ── */
 .code-label{
   font-size:11px;font-weight:700;text-transform:uppercase;
@@ -172,13 +172,13 @@ body::before{
 .code-input:focus{border-color:var(--forest);}
 .code-input.error{border-color:#e53e3e;animation:shake .3s ease;}
 .code-input.success{border-color:#38a169;}
-
+ 
 @keyframes shake{
   0%,100%{transform:translateX(0);}
   25%{transform:translateX(-6px);}
   75%{transform:translateX(6px);}
 }
-
+ 
 .code-btn{
   background:var(--forest);color:var(--white);
   border:none;border-radius:10px;
@@ -190,14 +190,14 @@ body::before{
   flex-shrink:0;
 }
 .code-btn:hover{background:var(--forest-mid);}
-
+ 
 .code-error{
   font-size:12px;color:#c53030;
   margin-top:8px;
   display:none;
 }
 .code-error.show{display:block;}
-
+ 
 /* ── SUCCESS: Enter portal ── */
 .gate-success{
   display:none;
@@ -219,7 +219,7 @@ body::before{
   transition:background .15s;
 }
 .gate-success-btn:hover{background:var(--forest-mid);}
-
+ 
 /* footer */
 .gate-footer{
   text-align:center;margin-top:24px;
@@ -227,7 +227,7 @@ body::before{
 }
 .gate-footer a{color:rgba(255,255,255,.5);text-decoration:none;}
 .gate-footer a:hover{color:rgba(255,255,255,.8);}
-
+ 
 @media(max-width:480px){
   .gate-card-top,.gate-body{padding:22px 20px;}
   .gate-title{font-size:20px;}
@@ -235,32 +235,32 @@ body::before{
 </style>
 </head>
 <body>
-
+ 
 <div class="gate-wrap">
-
+ 
   <!-- Logo -->
   <div class="gate-logo">
-    <img src="/images/Blue Minimalist Air Plane Travel Logo.png"
+    <img src="/images/olive_variant.png"
          alt="Caravan Compass"
          onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
     <div class="gate-logo-fallback" id="logoFallback" style="display:none;">
       Caravan <span>Compass</span>
     </div>
   </div>
-
+ 
   <div class="gate-card">
-
+ 
     <div class="gate-card-top">
       <div class="gate-eyebrow">Trade Partners Only</div>
       <div class="gate-title">Partner Access Portal</div>
       <p class="gate-desc">This area is restricted to registered tour operators, OTAs and travel agencies. Contact us to receive your access code.</p>
     </div>
-
+ 
     <!-- Main body — shown by default -->
     <div class="gate-body" id="gateMain">
-
+ 
       <h3>Step 1 — Request your access code</h3>
-
+ 
       <div class="contact-options">
         <a href="https://wa.me/917520816288?text=Hi%2C%20I%27d%20like%20to%20request%20access%20to%20the%20Caravan%20Compass%20partner%20portal.%20Agency%3A%20"
            class="contact-btn" target="_blank">
@@ -270,7 +270,7 @@ body::before{
             <div class="contact-detail">+91 75208 16288 — quickest response</div>
           </div>
         </a>
-
+ 
         <a href="mailto:ops@caravancompass.com?subject=Partner%20Portal%20Access%20Request&body=Hi%2C%0A%0AI%27d%20like%20to%20request%20access%20to%20the%20Caravan%20Compass%20partner%20portal.%0A%0AAgency%20name%3A%20%0AGST%20%2F%20registration%20no%3A%20%0AContact%20name%3A%20%0APhone%3A%20%0A%0AThank%20you"
            class="contact-btn">
           <div class="contact-icon em">✉</div>
@@ -280,13 +280,13 @@ body::before{
           </div>
         </a>
       </div>
-
+ 
       <div class="gate-divider">
         <div class="gate-divider-line"></div>
         <div class="gate-divider-text">Already have a code?</div>
         <div class="gate-divider-line"></div>
       </div>
-
+ 
       <label class="code-label" for="accessCode">Enter access code</label>
       <div class="code-input-wrap">
         <input
@@ -300,9 +300,9 @@ body::before{
         <button class="code-btn" onclick="checkCode()">Enter →</button>
       </div>
       <div class="code-error" id="codeError">Incorrect code. Please check with ops@caravancompass.com</div>
-
+ 
     </div>
-
+ 
     <!-- Success state — hidden until correct code -->
     <div class="gate-success" id="gateSuccess">
       <div class="gate-success-icon">✅</div>
@@ -310,16 +310,16 @@ body::before{
       <p>Welcome to the Caravan Compass partner portal.</p>
       <a href="/partners/" class="gate-success-btn">Enter Partner Portal →</a>
     </div>
-
+ 
   </div>
-
+ 
   <div class="gate-footer">
     <a href="/">← Back to caravancompass.com</a>
     &nbsp;·&nbsp; B2B trade access only
   </div>
-
+ 
 </div>
-
+ 
 <script>
 // ── ACCESS CODES ──────────────────────────────────────────────
 // Add or remove codes here at any time.
@@ -331,28 +331,28 @@ const VALID_CODES = [
   'CARAVANB2B',
 ];
 // ─────────────────────────────────────────────────────────────
-
+ 
 function checkCode() {
   const input = document.getElementById('accessCode');
   const errorEl = document.getElementById('codeError');
   const entered = input.value.trim().toUpperCase();
-
+ 
   const valid = VALID_CODES.some(c => c.toUpperCase() === entered);
-
+ 
   if (valid) {
     input.classList.remove('error');
     input.classList.add('success');
     errorEl.classList.remove('show');
-
+ 
     // Store access in sessionStorage so portal page doesn't bounce them
     sessionStorage.setItem('cc_partner_access', 'granted');
-
+ 
     // Show success state after brief pause
     setTimeout(() => {
       document.getElementById('gateMain').style.display = 'none';
       document.getElementById('gateSuccess').style.display = 'block';
     }, 350);
-
+ 
   } else {
     input.classList.add('error');
     errorEl.classList.add('show');
@@ -361,6 +361,6 @@ function checkCode() {
   }
 }
 </script>
-
+ 
 </body>
 </html>
