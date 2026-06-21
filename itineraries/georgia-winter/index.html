@@ -381,7 +381,7 @@ body{
     padding:0 50px;
   }
   .day{
-    grid-template-columns:64px 1fr;
+    grid-template-columns:160px 1fr;
     page-break-inside:avoid;
     padding:16px 0;
     gap:16px;
@@ -391,10 +391,9 @@ body{
   /* Emoji placeholder logic wrapper */
   .day-img-placeholder{
     display:flex !important;
-    width:52px;
-    height:52px;
-    aspect-ratio:1;
-    border-radius:10px;
+    width:160px;
+    aspect-ratio:4/3;
+    border-radius:12px;
     background:#f0f4f0 !important;
     font-size:20px;
     flex-shrink:0;
@@ -402,13 +401,21 @@ body{
     justify-content:center;
   }
 
+  .day-img{
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:4/3 !important;
+    object-fit:cover !important;
+    border-radius:12px !important;
+  }
+
   .day-num{margin-bottom:2px;}
   .day-title{font-size:13.5px;margin-bottom:8px;}
   .day-bullets li{padding:3px 0;font-size:11px;}
 
   .overnight{
-    background:#1a1814 !important;
-    color:white !important;
+    background:var(--forest) !important;
+    color:var(--white) !important;
     font-size:10px;
     padding:4px 10px;
   }
@@ -548,7 +555,7 @@ body{
   <div class="days">
 
     <div class="day">
-      <div class="day-img-placeholder">✈</div>
+      <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&q=80" alt="Tbilisi city skyline" class="day-img">
       <div>
         <div class="day-num">Day 1</div>
         <div class="day-title">Arrival in Tbilisi</div>
@@ -562,7 +569,7 @@ body{
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🏛</div>
+      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80" alt="Historic architecture and monuments" class="day-img">
       <div>
         <div class="day-num">Day 2</div>
         <div class="day-title">Tbilisi City Tour</div>
@@ -577,7 +584,7 @@ body{
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">⛰</div>
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Mountain fortress and reservoir" class="day-img">
       <div>
         <div class="day-num">Day 3</div>
         <div class="day-title">Ananuri — Zhinvali — Gudauri</div>
@@ -592,7 +599,7 @@ body{
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🏔</div>
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Snow-capped mountain peak" class="day-img">
       <div>
         <div class="day-num">Day 4</div>
         <div class="day-title">Kazbegi Mountain Tour</div>
@@ -607,7 +614,7 @@ body{
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🏺</div>
+      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&q=80" alt="Ancient cave town and ruins" class="day-img">
       <div>
         <div class="day-num">Day 5</div>
         <div class="day-title">Gori — Uplistsikhe — Borjomi — Bakuriani</div>
@@ -622,7 +629,7 @@ body{
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">⛪</div>
+      <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&q=80" alt="Ancient monastery and cathedral" class="day-img">
       <div>
         <div class="day-num">Day 6</div>
         <div class="day-title">Bakuriani — Mtskheta — Tbilisi</div>
@@ -637,7 +644,7 @@ body{
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🍷</div>
+      <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=400&q=80" alt="Wine vineyard and tasting" class="day-img">
       <div>
         <div class="day-num">Day 7</div>
         <div class="day-title">Kakheti — Wine Region</div>
@@ -652,7 +659,7 @@ body{
     </div>
 
     <div class="day" style="border-bottom:none;">
-      <div class="day-img-placeholder">🛫</div>
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&q=80" alt="Airport departure" class="day-img">
       <div>
         <div class="day-num">Day 8</div>
         <div class="day-title">Departure from Tbilisi</div>
