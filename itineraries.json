@@ -1,0 +1,23 @@
+{
+  "itineraries": [
+    {
+      "id": "georgia-winter",
+      "title": "Caucasus Winter Wonderland",
+      "destination": "Georgia",
+      "flag": "🇬🇪",
+      "duration": "7 Nights / 8 Days",
+      "validity": "Dec 2025 – Mar 2026",
+      "price_from": "$599 pp",
+      "star": "4★ & 5★",
+      "pax_basis": "Based on 4 pax",
+      "tags": ["Winter", "Mountains", "Heritage", "Wine"],
+      "highlights": [
+        "Kazbegi & Gergeti Trinity Church by 4x4",
+        "Gudauri ski resort leisure",
+        "Uplistsikhe cave town & Borjomi",
+        "Kakheti wine tasting"
+      ],
+      "path": "/itineraries/georgia-winter/"
+    }
+  ]
+}
