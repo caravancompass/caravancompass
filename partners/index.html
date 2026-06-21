@@ -459,6 +459,79 @@ select{
   .itin-preview-grid{grid-template-columns:1fr;}
   .visa-bar{grid-template-columns:1fr 1fr;}
 }
+ 
+/* ── LIVE ITINERARY CARDS ── */
+.itin-live-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-bottom:16px;
+}
+.itin-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--white);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:box-shadow .18s,transform .18s;
+}
+.itin-card:hover{
+  box-shadow:0 8px 28px rgba(11,61,46,.1);
+  transform:translateY(-2px);
+}
+.itin-card-top{
+  padding:18px 20px 14px;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:flex-start;gap:12px;
+}
+.itin-flag{
+  font-size:22px;flex-shrink:0;margin-top:2px;
+}
+.itin-meta{flex:1;}
+.itin-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:16px;font-weight:600;color:var(--forest);
+  margin-bottom:3px;
+}
+.itin-dur{font-size:11.5px;color:var(--ink-soft);margin-bottom:6px;}
+.itin-tags{display:flex;flex-wrap:wrap;gap:4px;}
+.itin-tag{
+  font-size:10px;font-weight:600;
+  background:var(--gold-pale);color:var(--gold);
+  border:1px solid #e8d4b4;
+  padding:2px 7px;border-radius:5px;
+}
+.itin-card-body{
+  padding:14px 20px;flex:1;
+}
+.itin-highlights{list-style:none;padding:0;margin:0;}
+.itin-highlights li{
+  font-size:12px;color:var(--ink-mid);
+  padding:3px 0;border-bottom:1px solid #f5f0ea;
+  display:flex;gap:8px;align-items:flex-start;
+}
+.itin-highlights li:last-child{border-bottom:none;}
+.itin-highlights li::before{content:'→';color:var(--gold);font-size:10px;margin-top:3px;flex-shrink:0;}
+.itin-card-foot{
+  padding:12px 20px;border-top:1px solid var(--border);
+  display:flex;gap:8px;align-items:center;
+}
+.itin-price{
+  flex:1;font-size:13px;font-weight:700;color:var(--forest);
+}
+.itin-price-note{font-size:10px;font-weight:400;color:var(--ink-soft);}
+.btn-itin-view{
+  background:var(--forest);color:var(--white);
+  border:none;border-radius:7px;padding:8px 14px;
+  font-size:12px;font-weight:700;cursor:pointer;
+  text-decoration:none;display:block;text-align:center;
+  font-family:inherit;transition:background .15s;
+}
+.btn-itin-view:hover{background:var(--forest-mid);}
+ 
+@media(max-width:640px){
+  .itin-live-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -689,49 +762,26 @@ select{
     <div class="panel-header">
       <div>
         <div class="panel-title">Readymade Itineraries</div>
-        <div class="panel-note">Pre-built day-by-day programs ready to quote to your clients.</div>
+        <div class="panel-note">Pre-built day-by-day programs — open to view, download as PDF for your own branding.</div>
       </div>
     </div>
  
-    <div class="itin-coming">
-      <div class="itin-coming-icon">🗺</div>
-      <h3>Itinerary documents being prepared</h3>
-      <p>We're finalising our readymade itinerary library — day-by-day programs with routing, hotels, and inclusions clearly laid out. Expected to be live shortly. In the meantime, every operator deck includes sample circuit structures you can use to build a quote.</p>
-      <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:11px 24px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Request a Custom Itinerary →</button>
+    <!-- Dynamic grid — populated from /itineraries.json -->
+    <div id="itin-grid" class="itin-live-grid">
+      <!-- Loading state -->
+      <div id="itin-loading" style="grid-column:1/-1;text-align:center;padding:40px 20px;">
+        <div style="font-size:28px;margin-bottom:12px;">⏳</div>
+        <div style="font-size:13px;color:var(--ink-soft);">Loading itineraries…</div>
+      </div>
     </div>
  
-    <!-- Preview cards (coming soon, greyed out) -->
-    <div class="itin-preview-grid">
-      <div class="itin-preview">
-        <div class="itin-preview-label">Georgia</div>
-        <div class="itin-preview-name">Core Georgia Circuit</div>
-        <div class="itin-preview-dur">5 Days / 4 Nights · Tbilisi + Kazbegi + Kakheti</div>
+    <!-- Bottom CTA -->
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:8px;margin-bottom:8px;">
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:600;color:var(--forest);margin-bottom:4px;">Need a custom program not listed here?</div>
+        <div style="font-size:12.5px;color:var(--ink-soft);">We build bespoke itineraries across all destinations. Send us an RFQ and we'll respond within 4 hours.</div>
       </div>
-      <div class="itin-preview">
-        <div class="itin-preview-label">Georgia + Batumi</div>
-        <div class="itin-preview-name">Georgia with Black Sea</div>
-        <div class="itin-preview-dur">7 Days / 6 Nights · 4N Tbilisi + 2N Batumi</div>
-      </div>
-      <div class="itin-preview">
-        <div class="itin-preview-label">Two Countries</div>
-        <div class="itin-preview-name">Georgia + Baku</div>
-        <div class="itin-preview-dur">10 Days / 9 Nights · Tbilisi + Baku + Gabala</div>
-      </div>
-      <div class="itin-preview">
-        <div class="itin-preview-label">Caucasus Trio</div>
-        <div class="itin-preview-name">Georgia + Armenia + Azerbaijan</div>
-        <div class="itin-preview-dur">12 Days · Three-country circuit</div>
-      </div>
-      <div class="itin-preview">
-        <div class="itin-preview-label">Silk Road</div>
-        <div class="itin-preview-name">Modern Silk Road</div>
-        <div class="itin-preview-dur">14 Days · Georgia + Azerbaijan + Almaty</div>
-      </div>
-      <div class="itin-preview">
-        <div class="itin-preview-label">Almaty</div>
-        <div class="itin-preview-name">Almaty Alpine Circuit</div>
-        <div class="itin-preview-dur">5 Days · City + Big Almaty Lake + Charyn Canyon</div>
-      </div>
+      <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:11px 22px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;">Request Custom Itinerary →</button>
     </div>
  
   </div><!-- /panel-itins -->
@@ -963,6 +1013,84 @@ function submitForm() {
     document.getElementById('formSuccess').style.display = 'block';
   }, 800);
 }
+ 
+// ── ITINERARY MANIFEST LOADER ─────────────────────────────────
+async function loadItineraries() {
+  const grid = document.getElementById('itin-grid');
+  const loading = document.getElementById('itin-loading');
+ 
+  try {
+    const res = await fetch('/itineraries.json');
+    if (!res.ok) throw new Error('Manifest not found');
+    const data = await res.json();
+    const items = data.itineraries || [];
+ 
+    // Remove loading indicator
+    loading.remove();
+ 
+    if (items.length === 0) {
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px 20px;">
+        <div style="font-size:28px;margin-bottom:12px;">🗺</div>
+        <div style="font-size:13px;color:var(--ink-soft);">Itinerary documents coming soon. Request a custom program below.</div>
+      </div>`;
+      return;
+    }
+ 
+    items.forEach(item => {
+      const highlights = (item.highlights || [])
+        .map(h => `<li>${h}</li>`).join('');
+      const tags = (item.tags || [])
+        .map(t => `<span class="itin-tag">${t}</span>`).join('');
+ 
+      const card = document.createElement('div');
+      card.className = 'itin-card';
+      card.innerHTML = `
+        <div class="itin-card-top">
+          <div class="itin-flag">${item.flag || '🗺'}</div>
+          <div class="itin-meta">
+            <div class="itin-name">${item.title}</div>
+            <div class="itin-dur">${item.duration} · ${item.validity}</div>
+            <div class="itin-tags">${tags}</div>
+          </div>
+        </div>
+        <div class="itin-card-body">
+          <ul class="itin-highlights">${highlights}</ul>
+        </div>
+        <div class="itin-card-foot">
+          <div class="itin-price">
+            From ${item.price_from}
+            <div class="itin-price-note">${item.star} · ${item.pax_basis}</div>
+          </div>
+          <a href="${item.path}" target="_blank" class="btn-itin-view">Open →</a>
+        </div>`;
+      grid.appendChild(card);
+    });
+ 
+  } catch(e) {
+    loading.innerHTML = `<div style="font-size:13px;color:var(--ink-soft);padding:20px;">
+      Could not load itineraries. <a href="mailto:ops@caravancompass.com" style="color:var(--forest);">Contact us directly.</a>
+    </div>`;
+  }
+}
+ 
+// Load itineraries when the panel is first shown
+const _origShowPanel = showPanel;
+let _itinLoaded = false;
+function showPanel(id, card) {
+  _origShowPanel(id, card);
+  if (id === 'itins' && !_itinLoaded) {
+    _itinLoaded = true;
+    loadItineraries();
+  }
+}
+ 
+// Also load if itineraries panel is already active on page load
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('panel-itins').classList.contains('active')) {
+    loadItineraries();
+  }
+});
+ 
 </script>
  
 </body>
