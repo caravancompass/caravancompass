@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caucasus Winter Wonderland — 7 Nights / 8 Days | Caravan Compass</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════
+   SCREEN STYLES (branded, full colour)
+══════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --forest:#0b3d2e;
+  --forest-mid:#155c44;
+  --gold:#b5712a;
+  --gold-light:#d4944a;
+  --gold-pale:#fdf5e8;
+  --cream:#f8f5f0;
+  --ink:#1a1814;
+  --ink-mid:#3d3830;
+  --ink-soft:#6b6460;
+  --border:#e0d8cc;
+  --white:#ffffff;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* ── TOP BAR (screen only) ── */
+.topbar{
+  background:var(--forest);
+  padding:10px 0;
+  position:sticky;top:0;z-index:100;
+  border-bottom:3px solid var(--gold);
+}
+.topbar-inner{
+  width:90%;max-width:1000px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.topbar-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:15px;color:var(--white);font-weight:600;
+}
+.topbar-brand span{color:var(--gold-light);}
+.topbar-actions{display:flex;gap:10px;align-items:center;}
+.btn-print{
+  background:var(--gold);color:var(--white);
+  border:none;border-radius:8px;
+  padding:8px 18px;font-size:12px;font-weight:700;
+  cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;gap:7px;
+  transition:background .15s;
+}
+.btn-print:hover{background:var(--gold-light);}
+.btn-back{
+  color:rgba(255,255,255,.6);font-size:12px;
+  text-decoration:none;
+  display:flex;align-items:center;gap:5px;
+}
+.btn-back:hover{color:var(--white);}
+.print-note{
+  font-size:10px;color:rgba(255,255,255,.45);
+  max-width:200px;line-height:1.4;
+}
+
+/* ── PAGE WRAPPER ── */
+.doc{
+  width:90%;max-width:820px;
+  margin:32px auto 60px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 8px 40px rgba(11,61,46,.1);
+}
+
+/* ── COVER ── */
+.cover{
+  position:relative;
+  min-height:480px;
+  background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.65) 100%),
+    url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=900&q=80') center/cover no-repeat;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;
+  padding:48px 48px 40px;
+}
+.cover-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold-light);
+  margin-bottom:12px;
+}
+.cover-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:48px;font-weight:700;color:var(--white);
+  line-height:1.1;margin-bottom:6px;
+}
+.cover-sub{
+  font-size:14px;color:rgba(255,255,255,.7);
+  margin-bottom:32px;
+}
+.cover-pills{display:flex;gap:10px;flex-wrap:wrap;}
+.cover-pill{
+  padding:6px 14px;
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:20px;font-size:11px;font-weight:600;
+  color:rgba(255,255,255,.85);
+  background:rgba(0,0,0,.25);
+  backdrop-filter:blur(4px);
+}
+.cover-pill.gold{
+  background:var(--gold);border-color:var(--gold);
+  color:var(--white);
+}
+
+/* ── OVERVIEW STRIP ── */
+.overview{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-bottom:1px solid var(--border);
+}
+.ov-item{
+  padding:20px 20px;
+  border-right:1px solid var(--border);
+  text-align:center;
+}
+.ov-item:last-child{border-right:none;}
+.ov-label{
+  font-size:9px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--gold);margin-bottom:5px;
+}
+.ov-val{font-size:15px;font-weight:700;color:var(--forest);line-height:1.2;}
+.ov-note{font-size:10.5px;color:var(--ink-soft);margin-top:2px;}
+
+/* ── EXPERIENCES ── */
+.exp-section{
+  padding:32px 40px;
+  border-bottom:1px solid var(--border);
+  background:var(--cream);
+}
+.section-eyebrow{
+  font-size:9px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.15em;color:var(--gold);margin-bottom:8px;
+}
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;font-weight:600;color:var(--forest);
+  margin-bottom:20px;
+}
+.exp-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+}
+.exp-item{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:12.5px;color:var(--ink-mid);
+  padding:6px 0;
+}
+.exp-dot{
+  width:6px;height:6px;background:var(--gold);
+  border-radius:50%;flex-shrink:0;margin-top:5px;
+}
+
+/* ── DAY SECTIONS ── */
+.days{padding:0 40px;}
+.day{
+  padding:28px 0;
+  border-bottom:1px solid var(--border);
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:28px;
+  align-items:start;
+}
+.day:last-child{border-bottom:none;}
+.day-img{
+  width:100%;
+  aspect-ratio:4/3;
+  border-radius:12px;
+  object-fit:cover;
+  background:var(--cream);
+}
+.day-img-placeholder{
+  width:100%;aspect-ratio:4/3;
+  border-radius:12px;
+  background:linear-gradient(135deg,#e8f0ea,#d4e4d8);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--forest);font-size:28px;
+}
+.day-num{
+  font-size:9px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.15em;color:var(--gold);margin-bottom:4px;
+}
+.day-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px;font-weight:600;color:var(--forest);
+  margin-bottom:14px;
+}
+.day-bullets{list-style:none;padding:0;margin:0 0 14px;}
+.day-bullets li{
+  font-size:12.5px;color:var(--ink-mid);
+  padding:4px 0;border-bottom:1px solid #f0ece6;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.day-bullets li:last-child{border-bottom:none;}
+.day-bullets li::before{
+  content:'→';color:var(--gold);font-size:11px;
+  margin-top:2px;flex-shrink:0;
+}
+.overnight{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--forest);color:var(--white);
+  font-size:11px;font-weight:700;
+  padding:5px 12px;border-radius:20px;
+}
+.overnight::before{content:'🌙';font-size:10px;}
+
+/* ── INCLUSIONS / EXCLUSIONS ── */
+.inc-exc{
+  padding:32px 40px;
+  border-top:1px solid var(--border);
+  background:var(--cream);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:32px;
+}
+.ie-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px;font-weight:600;
+  margin-bottom:14px;
+}
+.ie-title.inc{color:var(--forest);}
+.ie-title.exc{color:#c0392b;}
+.ie-list{list-style:none;padding:0;margin:0;}
+.ie-list li{
+  font-size:12px;color:var(--ink-mid);
+  padding:4px 0;
+  display:flex;gap:8px;align-items:flex-start;
+  border-bottom:1px solid var(--border);
+}
+.ie-list li:last-child{border-bottom:none;}
+.ie-inc::before{content:'✓';color:var(--forest);font-weight:700;font-size:11px;margin-top:2px;flex-shrink:0;}
+.ie-exc::before{content:'✗';color:#c0392b;font-weight:700;font-size:11px;margin-top:2px;flex-shrink:0;}
+
+/* ── HOTELS ── */
+.hotels-section{
+  padding:24px 40px 32px;
+  border-top:1px solid var(--border);
+}
+.hotel-grid{
+  display:flex;flex-direction:column;gap:8px;margin-top:14px;
+}
+.hotel-item{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 14px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:8px;
+  font-size:12.5px;
+}
+.hotel-loc{
+  font-weight:700;color:var(--forest);
+  min-width:80px;
+}
+.hotel-sep{color:var(--border);}
+.hotel-names{color:var(--ink-mid);}
+.hotel-note{
+  font-size:11px;color:var(--ink-soft);
+  font-style:italic;margin-top:10px;
+}
+
+/* ── CONTACT (screen only) ── */
+.contact-section{
+  padding:28px 40px;
+  background:var(--forest);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;flex-wrap:wrap;
+}
+.contact-brand{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px;color:var(--white);font-weight:600;
+}
+.contact-brand span{color:var(--gold-light);}
+.contact-details{
+  font-size:12px;color:rgba(255,255,255,.65);
+  line-height:1.9;text-align:right;
+}
+.contact-details a{color:rgba(255,255,255,.8);text-decoration:none;}
+
+
+/* ══════════════════════════════════════════
+   PRINT STYLES — unbranded, clean, agent-ready
+   Triggered by Ctrl+P or the Print button
+══════════════════════════════════════════ */
+@media print {
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+
+  /* ── Page setup: Zero out cover, add margins globally ── */
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+  }
+  @page :first {
+    margin: 0mm !important; /* Forces the browser layout engine to give page 1 zero white borders */
+  }
+
+  /* Hide screen chrome */
+  .topbar,
+  .contact-section{
+    display:none !important;
+  }
+
+  body{
+    background:white;
+    font-size:11.5px;
+    margin:0;padding:0;
+    color:#1a1814;
+  }
+
+  .doc{
+    width:100%;max-width:100%;
+    margin:0;padding:0;
+    border:none;border-radius:0;
+    box-shadow:none;
+    background:white !important;
+  }
+
+  /* ── Cover: Truly full bleed cover layout ── */
+  .cover{
+    height: 100vh;
+    min-height: 297mm; /* Absolute physical A4 structural height fallback */
+    page-break-after:always;
+    border-radius:0;
+    padding:60px 55px 60px; /* Enhanced inner text positioning padding */
+    background-color:#0b3d2e !important;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    box-sizing: border-box;
+  }
+  .cover-title{font-size:46px;line-height:1.1;}
+  .cover-eyebrow{margin-bottom:14px;}
+  .cover-sub{margin-bottom:28px;}
+  .cover-pill{
+    border:1px solid rgba(255,255,255,.5) !important;
+    background:rgba(0,0,0,.3) !important;
+    color:white !important;
+    padding:5px 12px;
+  }
+  .cover-pill.gold{
+    background:#b5712a !important;
+    border-color:#b5712a !important;
+  }
+
+  /* ── Inner content sections: Shifted right/left dynamically via padding to balance page 2+ margins ── */
+  .overview{
+    page-break-inside:avoid;
+    border-bottom:1px solid #e0d8cc;
+    padding-top:8px;
+    margin: 0 10px;
+  }
+  .ov-item{padding:18px 18px 14px;}
+  .ov-val{font-size:14px;}
+
+  .exp-section{
+    page-break-inside:avoid;
+    padding:28px 50px 24px; /* Increased internal padding alignment */
+    background:white !important;
+    border-bottom:1px solid #e0d8cc;
+  }
+
+  /* Itinerary header layout styling adjustment */
+  div[style*="padding:32px 40px 0"]{
+    padding:28px 50px 0 !important;
+  }
+
+  .days{
+    padding:0 50px;
+  }
+  .day{
+    grid-template-columns:64px 1fr;
+    page-break-inside:avoid;
+    padding:16px 0;
+    gap:16px;
+    align-items:start;
+  }
+
+  /* Emoji placeholder logic wrapper */
+  .day-img-placeholder{
+    display:flex !important;
+    width:52px;
+    height:52px;
+    aspect-ratio:1;
+    border-radius:10px;
+    background:#f0f4f0 !important;
+    font-size:20px;
+    flex-shrink:0;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .day-num{margin-bottom:2px;}
+  .day-title{font-size:13.5px;margin-bottom:8px;}
+  .day-bullets li{padding:3px 0;font-size:11px;}
+
+  .overnight{
+    background:#1a1814 !important;
+    color:white !important;
+    font-size:10px;
+    padding:4px 10px;
+  }
+
+  .inc-exc{
+    page-break-before:always;
+    padding:28px 50px 24px !important;
+    background:white !important;
+    border-top:none;
+    gap:28px;
+  }
+  .ie-title{font-size:15px;margin-bottom:12px;}
+  .ie-list li{padding:3px 0;font-size:11px;}
+
+  .hotels-section{
+    padding:20px 50px 28px;
+    page-break-inside:avoid;
+  }
+  .hotel-item{
+    padding:8px 12px;
+    border:1px solid #e0d8cc;
+    background:white !important;
+  }
+  .hotel-note{margin-top:10px;}
+
+  .section-eyebrow{margin-bottom:4px;}
+  .section-title{font-size:17px;margin-bottom:14px;}
+
+  /* Prevent orphaned text lines */
+  h2,h3,.day-title,.section-title,.ie-title{page-break-after:avoid;}
+  .day-bullets,.ie-list,.exp-grid,.hotel-grid{page-break-inside:avoid;}
+
+  .overview,
+  .exp-section,
+  .inc-exc,
+  .hotels-section,
+  .days,
+  body,
+  .doc{
+    background:white !important;
+  }
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .cover{padding:28px 24px 28px;}
+  .cover-title{font-size:32px;}
+  .overview{grid-template-columns:1fr 1fr;}
+  .ov-item:nth-child(2){border-right:none;}
+  .ov-item:nth-child(3){border-top:1px solid var(--border);}
+  .ov-item:nth-child(4){border-top:1px solid var(--border);border-right:none;}
+  .exp-section,.days,.hotels-section,.inc-exc,.contact-section{padding-left:20px;padding-right:20px;}
+  .exp-grid{grid-template-columns:1fr;}
+  .day{grid-template-columns:1fr;gap:16px;}
+  .day-img,.day-img-placeholder{aspect-ratio:16/7;width:100%;}
+  .inc-exc{grid-template-columns:1fr;}
+  .contact-section{flex-direction:column;}
+  .contact-details{text-align:left;}
+  .topbar-inner{flex-wrap:wrap;gap:8px;}
+  .print-note{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="topbar-actions">
+      <div class="print-note">Print / Save as PDF — opens unbranded, agent-ready version</div>
+      <button class="btn-print" onclick="window.print()">⬇ Download / Print PDF</button>
+      <a href="/partners/" class="btn-back">← Partner Portal</a>
+    </div>
+  </div>
+</div>
+
+<div class="doc">
+
+  <div class="cover">
+    <div class="cover-eyebrow">Georgia · Winter Program · 2025–2026</div>
+    <div class="cover-title">Caucasus Winter<br>Wonderland</div>
+    <div class="cover-sub">A curated winter circuit through the mountains, heritage, and wine valleys of Georgia</div>
+    <div class="cover-pills">
+      <span class="cover-pill">7 Nights / 8 Days</span>
+      <span class="cover-pill">December 2025 – March 2026</span>
+      <span class="cover-pill gold">4★ from $599 pp · 5★ from $859 pp</span>
+      <span class="cover-pill">Based on 4 Pax</span>
+    </div>
+  </div>
+
+  <div class="overview">
+    <div class="ov-item">
+      <div class="ov-label">Duration</div>
+      <div class="ov-val">7N / 8D</div>
+    </div>
+    <div class="ov-item">
+      <div class="ov-label">Validity</div>
+      <div class="ov-val">Dec 2025</div>
+      <div class="ov-note">to March 2026</div>
+    </div>
+    <div class="ov-item">
+      <div class="ov-label">4-Star Price</div>
+      <div class="ov-val">$599 pp</div>
+      <div class="ov-note">Based on 4 pax</div>
+    </div>
+    <div class="ov-item">
+      <div class="ov-label">5-Star Price</div>
+      <div class="ov-val">$859 pp</div>
+      <div class="ov-note">Based on 4 pax</div>
+    </div>
+  </div>
+
+  <div class="exp-section">
+    <div class="section-eyebrow">What's Included</div>
+    <div class="section-title">Highlights &amp; Experiences</div>
+    <div class="exp-grid">
+      <div class="exp-item"><div class="exp-dot"></div>Tbilisi Old Town walking tour with Cable Car</div>
+      <div class="exp-item"><div class="exp-dot"></div>Mtatsminda Park &amp; Chronicles of Georgia</div>
+      <div class="exp-item"><div class="exp-dot"></div>Ananuri Fortress &amp; Zhinvali Reservoir</div>
+      <div class="exp-item"><div class="exp-dot"></div>Gudauri Friendship Monument viewpoint</div>
+      <div class="exp-item"><div class="exp-dot"></div>4x4 ascent to Gergeti Trinity Church (weather permitting)</div>
+      <div class="exp-item"><div class="exp-dot"></div>Uplistsikhe Cave Town</div>
+      <div class="exp-item"><div class="exp-dot"></div>Stalin Museum in Gori</div>
+      <div class="exp-item"><div class="exp-dot"></div>Borjomi Mineral Water Park</div>
+      <div class="exp-item"><div class="exp-dot"></div>Mtskheta &amp; Jvari Monastery</div>
+      <div class="exp-item"><div class="exp-dot"></div>Sighnaghi — City of Love</div>
+      <div class="exp-item"><div class="exp-dot"></div>Kakheti wine tasting at Vineria winery</div>
+      <div class="exp-item"><div class="exp-dot"></div>Free leisure time in Gudauri ski resort</div>
+    </div>
+  </div>
+
+  <div style="padding:32px 40px 0;border-top:1px solid var(--border);">
+    <div class="section-eyebrow">Day by Day</div>
+    <div class="section-title">Itinerary</div>
+  </div>
+
+  <div class="days">
+
+    <div class="day">
+      <div class="day-img-placeholder">✈</div>
+      <div>
+        <div class="day-num">Day 1</div>
+        <div class="day-title">Arrival in Tbilisi</div>
+        <ul class="day-bullets">
+          <li>Arrive at Tbilisi International Airport — meet and greet on arrival</li>
+          <li>Private transfer to hotel and check-in</li>
+          <li>Free time to relax or explore the city at your own pace</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🏛</div>
+      <div>
+        <div class="day-num">Day 2</div>
+        <div class="day-title">Tbilisi City Tour</div>
+        <ul class="day-bullets">
+          <li>Old Tbilisi walking tour — Freedom Square, Metekhi Church, Abanotubani sulphur bath district, carved wooden balconies</li>
+          <li>Cable car to Narikala Fortress with panoramic city views</li>
+          <li>Funicular to Mtatsminda Park</li>
+          <li>Visit the Chronicles of Georgia monument</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">⛰</div>
+      <div>
+        <div class="day-num">Day 3</div>
+        <div class="day-title">Ananuri — Zhinvali — Gudauri</div>
+        <ul class="day-bullets">
+          <li>Scenic drive along the Georgian Military Highway</li>
+          <li>Photo stop at Ananuri Fortress complex and the turquoise Zhinvali Reservoir</li>
+          <li>Continue to Gudauri — visit the Soviet-era Friendship Monument viewpoint at 2,395m</li>
+          <li>Check-in at Gudauri ski resort (leisure time at the resort)</li>
+        </ul>
+        <span class="overnight">Overnight in Gudauri</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🏔</div>
+      <div>
+        <div class="day-num">Day 4</div>
+        <div class="day-title">Kazbegi Mountain Tour</div>
+        <ul class="day-bullets">
+          <li>Drive to Stepantsminda (Kazbegi) through dramatic mountain landscapes</li>
+          <li>4×4 jeep ride to Gergeti Trinity Church at 2,170m (subject to weather conditions)</li>
+          <li>Views of Mt. Kazbek at 5,047m</li>
+          <li>Return to Gudauri for leisure time at the winter resort</li>
+        </ul>
+        <span class="overnight">Overnight in Gudauri</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🏺</div>
+      <div>
+        <div class="day-num">Day 5</div>
+        <div class="day-title">Gori — Uplistsikhe — Borjomi — Bakuriani</div>
+        <ul class="day-bullets">
+          <li>Visit the Stalin Museum in Gori (exterior or interior as per group preference)</li>
+          <li>Explore Uplistsikhe — an ancient rock-cut cave town occupied from the Bronze Age to the 13th century</li>
+          <li>Continue via Borjomi Mineral Water Park (taste the famous mineral spring water)</li>
+          <li>Arrive at Bakuriani — alpine resort town</li>
+        </ul>
+        <span class="overnight">Overnight in Bakuriani</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">⛪</div>
+      <div>
+        <div class="day-num">Day 6</div>
+        <div class="day-title">Bakuriani — Mtskheta — Tbilisi</div>
+        <ul class="day-bullets">
+          <li>Free morning at leisure in Bakuriani</li>
+          <li>Drive to Mtskheta — Georgia's ancient capital and UNESCO World Heritage site</li>
+          <li>Visit Jvari Monastery (6th century) and Svetitskhoveli Cathedral (11th century)</li>
+          <li>Continue to Tbilisi — evening free for shopping or relaxation</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🍷</div>
+      <div>
+        <div class="day-num">Day 7</div>
+        <div class="day-title">Kakheti — Wine Region</div>
+        <ul class="day-bullets">
+          <li>Drive to Sighnaghi — the walled "City of Love" with panoramic Caucasus valley views</li>
+          <li>Visit Bodbe Monastery, burial site of St. Nino</li>
+          <li>Traditional wine tasting experience at Vineria winery</li>
+          <li>Return to Tbilisi for the evening</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day" style="border-bottom:none;">
+      <div class="day-img-placeholder">🛫</div>
+      <div>
+        <div class="day-num">Day 8</div>
+        <div class="day-title">Departure from Tbilisi</div>
+        <ul class="day-bullets">
+          <li>Hotel check-out after breakfast</li>
+          <li>Private transfer to Tbilisi International Airport</li>
+          <li>Departure</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><div class="inc-exc">
+    <div>
+      <div class="ie-title inc">Inclusions</div>
+      <ul class="ie-list">
+        <li class="ie-inc">4 nights accommodation in Tbilisi (4★/5★ hotel)</li>
+        <li class="ie-inc">2 nights accommodation in Gudauri (4★/5★ hotel)</li>
+        <li class="ie-inc">1 night accommodation in Bakuriani (4★ hotel)</li>
+        <li class="ie-inc">Daily breakfast at hotel</li>
+        <li class="ie-inc">Round airport transfers (arrival and departure)</li>
+        <li class="ie-inc">All tours and transfers on private basis</li>
+        <li class="ie-inc">English-speaking guide / driver service throughout</li>
+        <li class="ie-inc">Ticket — Tbilisi Cable Car (return)</li>
+        <li class="ie-inc">Ticket — Mtatsminda Funicular (return)</li>
+        <li class="ie-inc">Ticket — Stalin Museum, Gori</li>
+        <li class="ie-inc">Ticket — Uplistsikhe Cave Town</li>
+        <li class="ie-inc">Ticket — Borjomi Mineral Water Park</li>
+        <li class="ie-inc">4×4 vehicle for Gergeti Trinity Church ascent</li>
+        <li class="ie-inc">Wine tasting at Vineria winery, Kakheti</li>
+        <li class="ie-inc">1 bottle of water per person per day</li>
+        <li class="ie-inc">All local taxes and charges</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ie-title exc">Exclusions</div>
+      <ul class="ie-list">
+        <li class="ie-exc">Lunch and dinner</li>
+        <li class="ie-exc">Dinner transfers</li>
+        <li class="ie-exc">Tips for guide and driver</li>
+        <li class="ie-exc">Extras at hotels (minibar, laundry, room service)</li>
+        <li class="ie-exc">Visa fees</li>
+        <li class="ie-exc">Travel insurance</li>
+        <li class="ie-exc">International flights</li>
+        <li class="ie-exc">Any services not mentioned in the program</li>
+        <li class="ie-exc">Personal expenses</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hotels-section">
+    <div class="section-eyebrow">Accommodation</div>
+    <div class="section-title" style="margin-bottom:0;">Hotels</div>
+    <div class="hotel-grid">
+      <div class="hotel-item">
+        <span class="hotel-loc">Tbilisi</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names"><strong>4★:</strong> Clocks Hotel &nbsp;·&nbsp; <strong>5★:</strong> Sheraton Grand Metechi Palace</span>
+      </div>
+      <div class="hotel-item">
+        <span class="hotel-loc">Gudauri</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names"><strong>4★:</strong> Carpe Diem &nbsp;·&nbsp; <strong>5★:</strong> Marco Polo</span>
+      </div>
+      <div class="hotel-item">
+        <span class="hotel-loc">Bakuriani</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names"><strong>4★:</strong> Bakuriani Inn &nbsp;·&nbsp; Crystal Hotel &amp; Spa</span>
+      </div>
+    </div>
+    <p class="hotel-note">Rates are subject to availability and may vary as per hotels confirmed at time of booking.</p>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="contact-details">
+      ops@caravancompass.com<br>
+      +91 75208 16288<br>
+      <a href="https://www.caravancompass.com">caravancompass.com</a>
+    </div>
+  </div>
+
+</div></body>
+</html>
