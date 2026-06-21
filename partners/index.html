@@ -964,7 +964,6 @@ function showPanel(id, card) {
   const target = document.getElementById('panel-' + id);
   if (target) {
     target.classList.add('active');
-    // Scroll to panel smoothly
     setTimeout(() => {
       target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 50);
@@ -1073,22 +1072,10 @@ async function loadItineraries() {
   }
 }
  
-// Load itineraries when the panel is first shown
-const _origShowPanel = showPanel;
+// Load itineraries on DOMContentLoaded (always fetch when portal opens)
 let _itinLoaded = false;
-function showPanel(id, card) {
-  _origShowPanel(id, card);
-  if (id === 'itins' && !_itinLoaded) {
-    _itinLoaded = true;
-    loadItineraries();
-  }
-}
- 
-// Also load if itineraries panel is already active on page load
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('panel-itins').classList.contains('active')) {
-    loadItineraries();
-  }
+  loadItineraries();
 });
  
 </script>
