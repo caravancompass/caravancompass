@@ -1084,17 +1084,29 @@ strong{ color:var(--ink); font-weight:600; }
   margin-top:4px;
   font-style:italic;
 }
-
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 24px;
+ 
+/* ── TABLE OVERFLOW WRAPPER ── */
+.table-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:24px;
+  border-radius:8px;
 }
-.page-break-inside-prevent {
-  page-break-inside: avoid;
+.table-scroll table{
+  margin-bottom:0;
 }
-  
+ 
+/* ── MID-DESKTOP BREAKPOINT (≤860px) ── */
+@media(max-width:860px){
+  .mice-grid{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr 1fr; }
+  .img-row{ grid-template-columns:1fr; }
+  .img-row-3{ grid-template-columns:1fr 1fr; }
+  .itin-grid{ grid-template-columns:1fr 1fr; }
+  .policy-grid{ grid-template-columns:1fr; }
+}
+ 
 /* ── PRINT ── */
 @media print{
   body{ background:white; font-size:11px; }
@@ -1104,6 +1116,7 @@ strong{ color:var(--ink); font-weight:600; }
   .cta-section{ max-width:100%; }
   .page-break{ page-break-before:always; }
   a{ color:inherit; text-decoration:none; }
+  .table-scroll{ overflow-x:visible; }
 }
  
 @media(max-width:640px){
@@ -1115,9 +1128,15 @@ strong{ color:var(--ink); font-weight:600; }
   .intro-grid,.facts-grid{ grid-template-columns:1fr; }
   .itin-grid{ grid-template-columns:1fr; }
   .mice-grid{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr; }
+  .img-row,.img-row-3{ grid-template-columns:1fr; }
   .policy-grid{ grid-template-columns:1fr; }
   .region{ grid-template-columns:1fr; }
   .cta-section{ grid-template-columns:1fr; padding:32px 20px; }
+  .connect-table td, .connect-table th{ padding:7px 8px; font-size:11px; }
+  .season-table td, .season-table th{ padding:7px 8px; font-size:11px; }
+  .rate-table td, .rate-table th{ padding:7px 8px; font-size:11px; }
 }
 </style>
 </head>
@@ -1295,6 +1314,7 @@ strong{ color:var(--ink); font-weight:600; }
   <div style="margin-bottom:0;">
     <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--forest);margin-bottom:14px;">Flight Connectivity — India to Georgia</div>
  
+    <div class="table-scroll">
     <table class="connect-table">
       <thead>
         <tr>
@@ -1343,6 +1363,7 @@ strong{ color:var(--ink); font-weight:600; }
         </tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">Flight schedules and timings are indicative and subject to seasonal change. Always verify current schedules at booking. IndiGo's DEL–TBS direct is the most operator-friendly option — overnight departure means clients land in Tbilisi without losing a full day.</p>
  
     <p style="font-size:12px;color:var(--ink-soft);">Tbilisi International Airport (TBS) is the main entry point. Baggage clearance is standard — allow 45–60 minutes on arrival for immigration and collection. Advise clients to have all documents (vouchers, tickets, insurance) accessible before reaching the immigration counter.</p>
@@ -1455,7 +1476,7 @@ strong{ color:var(--ink); font-weight:600; }
         <div class="img-placeholder h-sm" style="margin-top:12px;">
           <div class="img-placeholder-icon">🌊</div>
           <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Mtskheta - Georgia's ancient capital</div>
+          <div class="img-placeholder-desc">Mtskheta and Gori — Ancient Georgia and its Capital</div>
         </div>
       </div>
     </div>
@@ -1524,6 +1545,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
  
+  <div class="table-scroll">
   <table class="season-table">
     <thead>
       <tr>
@@ -1586,6 +1608,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
  
   <div class="highlight">
     <p><strong>Operator note:</strong> Georgia operates year-round. There is no "avoid" season — only seasons that suit different client profiles. May–June and September–October represent peak demand and require earlier booking confirmation, particularly for Kazbegi accommodation.</p>
@@ -1755,6 +1778,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
  
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1791,6 +1815,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
  
  
@@ -1814,6 +1839,7 @@ strong{ color:var(--ink); font-weight:600; }
     <p><strong>Important:</strong> All pricing below is indicative only. Every program is quoted individually based on your dates, pax count, hotel preference, and inclusions. Contact ops@caravancompass.com with RFQ details for a binding quotation within 4 hours.</p>
   </div>
  
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1862,6 +1888,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
  
   <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">
     All rates are land-only, per person on twin/double share basis. Single supplement available on request. Rates include: accommodation with breakfast, all ground transfers, licensed guides, specified excursions, and applicable entrance fees. Exclude: flights, visas, personal expenses, tips, and any items not listed in the confirmed program.
@@ -1877,6 +1904,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
  
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1913,6 +1941,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
  
   <p style="font-size:12px;color:var(--ink-soft);">Hotel availability and rates vary by season. We confirm current contracted rates in each individual quotation. For groups requiring specific hotel categories or properties, confirm early — Kazbegi in particular has limited premium inventory in peak season (May–June, Sep–Oct).</p>
 </div>
