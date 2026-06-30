@@ -1065,6 +1065,18 @@ strong{ color:var(--ink); font-weight:600; }
 .img-placeholder.h-md{ height:220px; }
 .img-placeholder.h-lg{ height:280px; }
  
+.deck-img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:12px;
+  background:linear-gradient(135deg,#e8f0ec 0%,#d4e4da 100%);
+}
+.deck-img.h-xs{ height:110px; }
+.deck-img.h-sm{ height:160px; }
+.deck-img.h-md{ height:220px; }
+.deck-img.h-lg{ height:280px; }
+ 
 .img-row{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1225,19 +1237,11 @@ strong{ color:var(--ink); font-weight:600; }
  
   <div class="img-row" style="margin-top:24px;">
     <div>
-      <div class="img-placeholder h-md">
-        <div class="img-placeholder-icon">🏔</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Gergeti Trinity Church against Mt. Kazbek — hero shot</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/hero-gergeti.jpg" alt="Gergeti Trinity Church against Mt. Kazbek" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-gergeti.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Gergeti Trinity Church, Kazbegi, Georgia</div>
     </div>
     <div>
-      <img src="/images/decks/georgia/Tbilisi-oldtown.jpg" alt="Gergeti Trinity Church">
-        <div class="img-placeholder-icon">🏛</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Tbilisi Old Town — carved wooden balconies, Narikala Fortress above</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/hero-tbilisi-oldtown.jpg" alt="Tbilisi Old Town, Georgia" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-tbilisi-oldtown.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Tbilisi Old Town (Abanotubani), Georgia</div>
     </div>
   </div>
@@ -1405,11 +1409,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Wine Bars</span>
           <span class="rtag">Georgian Feast (Supra)</span>
         </div>
-        <div class="img-placeholder h-sm" style="margin-top:12px;">
-          <div class="img-placeholder-icon">🌆</div>
-          <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Tbilisi Old Town at dusk — wooden balconies, Narikala above</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/region-tbilisi.jpg" alt="Tbilisi Old Town at dusk" class="deck-img h-sm" style="margin-top:12px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-tbilisi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       </div>
     </div>
  
@@ -1428,11 +1428,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Jvari Pass</span>
           <span class="rtag">4WD Excursions</span>
         </div>
-        <div class="img-placeholder h-sm" style="margin-top:12px;">
-          <div class="img-placeholder-icon">🏔</div>
-          <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Gergeti Trinity Church with Mt. Kazbek summit behind</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/region-kazbegi.jpg" alt="Gergeti Trinity Church, Kazbegi" class="deck-img h-sm" style="margin-top:12px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-kazbegi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       </div>
     </div>
  
@@ -1451,11 +1447,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Harvest Season (Oct)</span>
           <span class="rtag">Alazani Valley</span>
         </div>
-        <div class="img-placeholder h-sm" style="margin-top:12px;">
-          <div class="img-placeholder-icon">🍇</div>
-          <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Kakheti vineyards in autumn — Caucasus foothills behind</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/region-kakheti.jpg" alt="Kakheti vineyards" class="deck-img h-sm" style="margin-top:12px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-kakheti.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       </div>
     </div>
  
@@ -1472,11 +1464,6 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Svetitskhoveli Cathedral</span>
           <span class="rtag">Uplistsikhe Cave City</span>
           <span class="rtag">UNESCO Sites</span>
-        </div>
-        <div class="img-placeholder h-sm" style="margin-top:12px;">
-          <div class="img-placeholder-icon">🌊</div>
-          <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Mtskheta and Gori — Ancient Georgia and its Capital</div>
         </div>
       </div>
     </div>
@@ -1495,11 +1482,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Botanical Garden</span>
           <span class="rtag">Adjara Day Trips</span>
         </div>
-        <div class="img-placeholder h-sm" style="margin-top:12px;">
-          <div class="img-placeholder-icon">🌊</div>
-          <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Batumi Seaside Boulevard — modern seafront with Adjara mountains</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/region-batumi.jpg" alt="Batumi Seaside Boulevard" class="deck-img h-sm" style="margin-top:12px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-batumi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       </div>
     </div>
  
@@ -1517,11 +1500,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Mountain Views</span>
           <span class="rtag">Kazbegi Combo</span>
         </div>
-        <div class="img-placeholder h-sm" style="margin-top:12px;">
-          <div class="img-placeholder-icon">⛷</div>
-          <div class="img-placeholder-label">Image Placeholder</div>
-          <div class="img-placeholder-desc">Gudauri ski slopes — Greater Caucasus peaks in background</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/region-gudauri.jpg" alt="Gudauri ski slopes" class="deck-img h-sm" style="margin-top:12px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-gudauri.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       </div>
     </div>
  
@@ -1711,29 +1690,18 @@ strong{ color:var(--ink); font-weight:600; }
  
   <div class="img-row" style="margin-bottom:20px;">
     <div>
-      <div class="img-placeholder h-md">
-        <div class="img-placeholder-icon">🍽</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Traditional Georgian Supra feast — long table, Tamada, polyphonic singers</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/mice-supra.jpg" alt="Traditional Georgian Supra feast" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-supra.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Georgian Supra — the signature MICE evening experience</div>
     </div>
     <div>
-      <div class="img-placeholder h-md">
-        <div class="img-placeholder-icon">🍷</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Kakheti winery — qvevri clay vessels being filled during Rtveli harvest</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/mice-kakheti-winery.jpg" alt="Kakheti winery, qvevri vessels" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-kakheti-winery.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Kakheti winery buyout — private cellar experience</div>
     </div>
   </div>
  
   <div class="mice-grid">
     <div class="mice-card">
-      <div class="img-placeholder h-xs" style="margin-bottom:12px;border-radius:8px;">
-        <div class="img-placeholder-icon">🍽</div>
-        <div class="img-placeholder-desc">Long Supra table — 20+ dishes, Tamada raising a horn, polyphonic singers performing</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/mice-supra.jpg" alt="Supra table" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-supra.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="mice-card-title">
         <div class="mice-icon">🍽</div>
         The Supra Experience
@@ -1742,10 +1710,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
  
     <div class="mice-card">
-      <div class="img-placeholder h-xs" style="margin-bottom:12px;border-radius:8px;">
-        <div class="img-placeholder-icon">🍷</div>
-        <div class="img-placeholder-desc">Kakheti winery cellar — row of buried qvevri clay vessels, amber wine being poured</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/mice-kakheti-winery.jpg" alt="Kakheti winery cellar" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-kakheti-winery.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="mice-card-title">
         <div class="mice-icon">🍷</div>
         Kakheti Winery Buyout
@@ -1754,10 +1719,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
  
     <div class="mice-card">
-      <div class="img-placeholder h-xs" style="margin-bottom:12px;border-radius:8px;">
-        <div class="img-placeholder-icon">⛰</div>
-        <div class="img-placeholder-desc">4WD convoy on mountain road below Gergeti Trinity Church — Kazbek summit in cloud behind</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/mice-kazbegi-4wd.jpg" alt="4WD convoy below Gergeti Trinity Church" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-kazbegi-4wd.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="mice-card-title">
         <div class="mice-icon">⛰</div>
         Kazbegi Group Adventure
@@ -1766,10 +1728,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
  
     <div class="mice-card">
-      <div class="img-placeholder h-xs" style="margin-bottom:12px;border-radius:8px;">
-        <div class="img-placeholder-icon">🏛</div>
-        <div class="img-placeholder-desc">Tbilisi Old Town walking tour — guide with group in Abanotubani, carved wooden balconies behind</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/mice-tbilisi-heritage.jpg" alt="Tbilisi Old Town walking tour" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-tbilisi-heritage.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="mice-card-title">
         <div class="mice-icon">🏛</div>
         Heritage &amp; Culture Day
@@ -1967,27 +1926,15 @@ strong{ color:var(--ink); font-weight:600; }
  
   <div class="img-row-3" style="margin-bottom:28px;">
     <div>
-      <div class="img-placeholder h-sm">
-        <div class="img-placeholder-icon">🫓</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Adjarian Khachapuri — bread boat with egg and butter</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/food-khachapuri.jpg" alt="Khachapuri" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-khachapuri.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Khachapuri (Adjarian style)</div>
     </div>
     <div>
-      <div class="img-placeholder h-sm">
-        <div class="img-placeholder-icon">🥟</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Khinkali soup dumplings — platter of 8–10 on a wooden board</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/food-khinkali.jpg" alt="Khinkali" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-khinkali.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Khinkali — Georgian soup dumplings</div>
     </div>
     <div>
-      <div class="img-placeholder h-sm">
-        <div class="img-placeholder-icon">🥗</div>
-        <div class="img-placeholder-label">Image Placeholder</div>
-        <div class="img-placeholder-desc">Pkhali and Badrijani appetiser spread — colourful, vibrant table</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/food-pkhali-badrijani.jpg" alt="Pkhali and Badrijani spread" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-pkhali-badrijani.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="img-caption">Pkhali &amp; Badrijani — vegetarian starters</div>
     </div>
   </div>
@@ -2004,10 +1951,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🍛</div>
-          <div class="img-placeholder-desc">Interior or food spread — dal, paneer, roti on the table</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-sanjha-chulha.jpg" alt="Sanjha Chulha" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-sanjha-chulha.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">Tbilisi Old Town area</div>
           <div class="resto-note">The most well-known Indian restaurant in Tbilisi. Reliable North Indian menu — dal, paneer dishes, roti, rice. Good for groups wanting a familiar meal mid-program. We recommend this as one dinner option, not the default every night.</div>
@@ -2024,10 +1968,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🍽</div>
-          <div class="img-placeholder-desc">Restaurant interior or signage — warm lighting, Indian décor elements</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-namaste-india.jpg" alt="Namaste India" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-namaste-india.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">Central Tbilisi</div>
           <div class="resto-note">Solid mid-range Indian option. Familiar curries and tandoor items. Useful for groups with strict dietary requirements (strict vegetarian, Jain on request) where Georgian options may not provide enough certainty. Staff speak basic English.</div>
@@ -2044,10 +1985,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🍱</div>
-          <div class="img-placeholder-desc">Group dining setup — large table, Indian food spread including South Indian items</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-bollywood.jpg" alt="Bollywood Restaurant" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-bollywood.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">Central Tbilisi</div>
           <div class="resto-note">Popular with Indian expats and visiting groups. Wider menu range including South Indian items. Comfortable group seating. Reliable consistency — useful when you need a confirmed Indian meal with no surprises.</div>
@@ -2064,10 +2002,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🫙</div>
-          <div class="img-placeholder-desc">Casual Indian dining — compact, warm interior; FIT-friendly table setting</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-khana-khazana.jpg" alt="Khana Khazana" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-khana-khazana.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">Tbilisi</div>
           <div class="resto-note">Smaller, more casual Indian option. Good for FIT clients or couples who want a comfortable Indian meal without the group-restaurant feel. Ask us to confirm current operating status at RFQ stage — smaller restaurants occasionally change hours.</div>
@@ -2090,10 +2025,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🏔</div>
-          <div class="img-placeholder-desc">Restaurant exterior or interior in Stepantsminda — mountain backdrop visible, Indian signage</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-maharaja-kazbegi.jpg" alt="Maharaja Palace, Kazbegi" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-maharaja-kazbegi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">~1.1 km from Rooms Hotel Kazbegi</div>
           <div class="resto-note">A notable addition to the Kazbegi dining scene — Indian restaurant in Stepantsminda itself, removing the previous reliance on hotel kitchen coordination for Indian clients overnighting in the mountains. Useful reference point for groups staying near Rooms Hotel. Confirm current operating hours at booking stage, particularly for off-season programs. For clients with specific dietary requirements (Jain, strict vegetarian), brief us at RFQ stage so we can pre-confirm the menu scope.</div>
@@ -2116,10 +2048,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🌊</div>
-          <div class="img-placeholder-desc">Restaurant exterior on Rustaveli Ave — Batumi Tower or Seaside Boulevard visible nearby</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-maharajah-porta-batumi.jpg" alt="Maharajah Porta Batumi Tower" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-maharajah-porta-batumi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">Rustaveli Ave — near Seaside Boulevard</div>
           <div class="resto-note">Highly-rated, cosy venue right next to the Seaside Boulevard. Authentic North Indian profile with reliable execution. Works well for both family dinners and mid-sized groups — service is consistent and the setting is comfortable for longer evening meals after a day of sightseeing.</div>
@@ -2136,10 +2065,7 @@ strong{ color:var(--ink); font-weight:600; }
         </div>
       </div>
       <div class="resto-body">
-        <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-          <div class="img-placeholder-icon">🫙</div>
-          <div class="img-placeholder-desc">Halal signage visible; Butter Chicken or Chana Masala dish plated, hot Garlic Naan alongside</div>
-        </div>
+        <img src="https://caravancompass.com/images/decks/georgia/resto-spice-garden-batumi.jpg" alt="Spice Garden Batumi" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-spice-garden-batumi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
         <div class="resto-item">
           <div class="resto-loc">Sh. Khimshiashvili St, Batumi</div>
           <div class="resto-note">Fully halal — a key point for Muslim clients and mixed groups. Strong execution on comfort staples: Butter Chicken, Chana Masala, hot Garlic Naans. Coastal branch of a popular franchise with consistent quality. A reliable default for groups needing a confirmed Indian meal in Batumi with no ambiguity on dietary standards.</div>
@@ -2155,90 +2081,63 @@ strong{ color:var(--ink); font-weight:600; }
   <div class="local-dish-grid">
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🫓</div>
-        <div class="img-placeholder-desc">Adjarian Khachapuri — bread boat with runny egg and butter, served hot</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-khachapuri.jpg" alt="Khachapuri" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-khachapuri.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Khachapuri</div>
       <div class="dish-desc">Georgia's iconic bread-cheese dish. Eight regional varieties. The Adjarian version (bread boat with egg and butter) is the crowd favourite. Rich, filling, universally loved.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🍞</div>
-        <div class="img-placeholder-desc">Lobiani — round flatbread, golden-brown, sliced open to show spiced bean filling</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-lobiani.jpg" alt="Lobiani" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-lobiani.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Lobiani</div>
       <div class="dish-desc">Bread filled with spiced kidney beans. One of the most naturally Indian-palate-friendly dishes in Georgia — earthy, warming, and genuinely satisfying for vegetarians.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🥗</div>
-        <div class="img-placeholder-desc">Pkhali — colourful rounds of spinach, beetroot and walnut on a white plate</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-pkhali.jpg" alt="Pkhali" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-pkhali.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Pkhali</div>
       <div class="dish-desc">Cold vegetable appetisers — spinach, walnut, beetroot — shaped into small rounds. A standard Supra starter. Light, flavourful, and a consistent hit with Indian clients.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🫕</div>
-        <div class="img-placeholder-desc">Lobio in a clay pot — dark spiced bean stew, steam rising, served with mchadi</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-lobio.jpg" alt="Lobio" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-lobio.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Lobio</div>
       <div class="dish-desc">Slow-cooked spiced bean stew, often served in a clay pot. Comparable in comfort and spice level to Indian dal. One of the safest and most satisfying vegetarian choices throughout Georgia.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🍆</div>
-        <div class="img-placeholder-desc">Badrijani Nigvzit — dark aubergine rolls filled with pale walnut paste, garnished with pomegranate seeds</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-badrijani.jpg" alt="Badrijani Nigvzit" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-badrijani.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Badrijani Nigvzit</div>
       <div class="dish-desc">Fried aubergine slices filled with walnut paste and garlic. A Supra staple. Rich and nutty — flavours that work well for Indian palates used to stuffed vegetable dishes.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🌽</div>
-        <div class="img-placeholder-desc">Mchadi — small golden cornbread rounds on a wooden board, beside a bowl of lobio</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-mchadi.jpg" alt="Mchadi" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-mchadi.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Mchadi</div>
       <div class="dish-desc">Georgian cornbread, typically served alongside lobio or cheese. Simple, mild, and a useful carb base for clients who are being cautious with unfamiliar foods.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🥟</div>
-        <div class="img-placeholder-desc">Khinkali — large pleated dumplings, platter of 8, top knots visible, steam rising</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-khinkali.jpg" alt="Khinkali" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-khinkali.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Khinkali</div>
       <div class="dish-desc">Large soup dumplings. Meat-filled as standard (lamb/pork/beef), but mushroom and potato-cheese versions are widely available and excellent. Teach clients the eating technique: pick up by the top knot, drink the broth first.</div>
       <span class="dish-rating dr-flex">⚬ Ask for veg variant</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🥗</div>
-        <div class="img-placeholder-desc">Georgian salad — chopped tomato and cucumber, walnut oil dressing, fresh herbs, white bowl</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-salad.jpg" alt="Georgian Salad" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-salad.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Georgian Salad</div>
       <div class="dish-desc">Chopped tomato, cucumber, and walnut oil dressing. Extremely fresh and clean. A reliable side on any menu, safe for all dietary categories, and something Indian clients consistently enjoy alongside heavier dishes.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
     </div>
  
     <div class="local-dish">
-      <div class="img-placeholder h-xs" style="margin-bottom:10px;border-radius:8px;">
-        <div class="img-placeholder-icon">🍬</div>
-        <div class="img-placeholder-desc">Churchkhela — hanging strings of walnut-grape sweets at a Georgian market stall, deep amber and dark purple</div>
-      </div>
+      <img src="https://caravancompass.com/images/decks/georgia/dish-churchkhela.jpg" alt="Churchkhela" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-churchkhela.jpg';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.style.fontSize='11px';this.style.color='#a8978a';this.style.border='1.5px dashed #c9b8a8';">
       <div class="dish-name">Churchkhela</div>
       <div class="dish-desc">Walnuts or hazelnuts threaded on a string and dipped in grape juice concentrate — dried into a candle-like sweet. The most common Georgian souvenir food. Good for clients who want a sweet snack without alcohol content.</div>
       <span class="dish-rating dr-veg">✓ Vegetarian</span>
