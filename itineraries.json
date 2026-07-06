@@ -15,9 +15,66 @@
         "Kazbegi & Gergeti Trinity Church by 4x4",
         "Gudauri ski resort leisure",
         "Uplistsikhe cave town & Borjomi",
-        "Kakheti wine tasting"
+        "Kakheti wine tasting at Vineria winery"
       ],
       "path": "/itineraries/georgia-winter/"
+    },
+    {
+      "id": "georgia-summer",
+      "title": "Georgia Summer Escape",
+      "destination": "Georgia",
+      "flag": "🇬🇪",
+      "duration": "6 Nights / 7 Days",
+      "validity": "Year-Round 2026",
+      "price_from": "$TBC pp",
+      "star": "4★ & 5★",
+      "pax_basis": "Based on 2 pax",
+      "tags": ["Summer", "Mountains", "Black Sea", "Caves"],
+      "highlights": [
+        "Tbilisi Old Town, Narikala cable car & Mtatsminda",
+        "Kazbegi & Gergeti Trinity Church by 4x4",
+        "Martvili Canyon boat ride (en route to Batumi)",
+        "Prometheus Cave on the return"
+      ],
+      "path": "/itineraries/georgia-summer/"
+    },
+    {
+      "id": "baku-4n",
+      "title": "Baku City & Beyond",
+      "destination": "Azerbaijan",
+      "flag": "🇦🇿",
+      "duration": "4 Nights / 5 Days",
+      "validity": "Year-Round 2026",
+      "price_from": "$TBC pp",
+      "star": "4★ & 5★",
+      "pax_basis": "Based on 2 pax",
+      "tags": ["City", "Heritage", "Countryside", "Mountains"],
+      "highlights": [
+        "Icheri Sheher Old City & Maiden Tower (UNESCO)",
+        "Ateshgah Hindu fire temple & Yanar Dag",
+        "Gobustan mud volcanoes & rock carvings",
+        "Gabala — Nohur Lake & Tufandag cable car"
+      ],
+      "path": "/itineraries/baku-4n/"
+    },
+    {
+      "id": "baku-6n",
+      "title": "Azerbaijan Complete",
+      "destination": "Azerbaijan",
+      "flag": "🇦🇿",
+      "duration": "6 Nights / 7 Days",
+      "validity": "Year-Round 2026",
+      "price_from": "$TBC pp",
+      "star": "4★ & 5★",
+      "pax_basis": "Based on 2 pax",
+      "tags": ["City", "Silk Road", "Mountains", "Heritage"],
+      "highlights": [
+        "Baku Old City, Absheron & Gobustan",
+        "Gabala — Nohur Lake & Tufandag cable car",
+        "Sheki Khan's Palace & Silk Road caravanserai",
+        "Candy Cane mountains on the return to Baku"
+      ],
+      "path": "/itineraries/baku-6n/"
     }
   ]
 }
