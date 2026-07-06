@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Georgia Summer Escape — 4N Tbilisi + 2N Batumi | Caravan Compass</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--forest:#0b3d2e;--forest-mid:#155c44;--gold:#b5712a;--gold-light:#d4944a;--gold-pale:#fdf5e8;--cream:#f8f5f0;--ink:#1a1814;--ink-mid:#3d3830;--ink-soft:#6b6460;--border:#e0d8cc;--white:#ffffff;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:14px;line-height:1.7;}
+.topbar{background:var(--forest);padding:10px 0;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--gold);}
+.topbar-inner{width:90%;max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.topbar-brand{font-family:'Playfair Display',Georgia,serif;font-size:15px;color:var(--white);font-weight:600;}
+.topbar-brand span{color:var(--gold-light);}
+.topbar-actions{display:flex;gap:10px;align-items:center;}
+.btn-print{background:var(--gold);color:var(--white);border:none;border-radius:8px;padding:8px 18px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:7px;transition:background .15s;}
+.btn-print:hover{background:var(--gold-light);}
+.btn-back{color:rgba(255,255,255,.6);font-size:12px;text-decoration:none;}
+.btn-back:hover{color:var(--white);}
+.print-note{font-size:10px;color:rgba(255,255,255,.45);max-width:200px;line-height:1.4;}
+.doc{width:90%;max-width:820px;margin:32px auto 60px;background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(11,61,46,.1);}
+.cover{position:relative;min-height:480px;background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.65) 100%),url('https://images.unsplash.com/photo-1565008576549-57569a49371d?w=900&q=80') center/cover no-repeat;display:flex;flex-direction:column;justify-content:flex-end;padding:48px 48px 40px;}
+.cover-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;}
+.cover-title{font-family:'Playfair Display',Georgia,serif;font-size:48px;font-weight:700;color:var(--white);line-height:1.1;margin-bottom:6px;}
+.cover-sub{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:32px;}
+.cover-pills{display:flex;gap:10px;flex-wrap:wrap;}
+.cover-pill{padding:6px 14px;border:1px solid rgba(255,255,255,.3);border-radius:20px;font-size:11px;font-weight:600;color:rgba(255,255,255,.85);background:rgba(0,0,0,.25);backdrop-filter:blur(4px);}
+.cover-pill.gold{background:var(--gold);border-color:var(--gold);color:var(--white);}
+.overview{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border);}
+.ov-item{padding:20px;border-right:1px solid var(--border);text-align:center;}
+.ov-item:last-child{border-right:none;}
+.ov-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:5px;}
+.ov-val{font-size:15px;font-weight:700;color:var(--forest);line-height:1.2;}
+.ov-note{font-size:10.5px;color:var(--ink-soft);margin-top:2px;}
+.exp-section{padding:32px 40px;border-bottom:1px solid var(--border);background:var(--cream);}
+.section-eyebrow{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:8px;}
+.section-title{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:600;color:var(--forest);margin-bottom:20px;}
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.exp-item{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--ink-mid);padding:6px 0;}
+.exp-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:5px;}
+.days{padding:0 40px;}
+.day{padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start;}
+.day:last-child{border-bottom:none;}
+.day-img-placeholder{width:100%;aspect-ratio:4/3;border-radius:12px;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);display:flex;align-items:center;justify-content:center;color:var(--forest);font-size:28px;}
+.day-num{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:4px;}
+.day-title{font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:600;color:var(--forest);margin-bottom:14px;}
+.day-bullets{list-style:none;padding:0;margin:0 0 14px;}
+.day-bullets li{font-size:12.5px;color:var(--ink-mid);padding:4px 0;border-bottom:1px solid #f0ece6;display:flex;gap:10px;align-items:flex-start;}
+.day-bullets li:last-child{border-bottom:none;}
+.day-bullets li::before{content:'→';color:var(--gold);font-size:11px;margin-top:2px;flex-shrink:0;}
+.overnight{display:inline-flex;align-items:center;gap:7px;background:var(--forest);color:var(--white);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;}
+.overnight::before{content:'🌙';font-size:10px;}
+.inc-exc{padding:32px 40px;border-top:1px solid var(--border);background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.ie-title{font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:600;margin-bottom:14px;}
+.ie-title.inc{color:var(--forest);}.ie-title.exc{color:#c0392b;}
+.ie-list{list-style:none;padding:0;margin:0;}
+.ie-list li{font-size:12px;color:var(--ink-mid);padding:4px 0;display:flex;gap:8px;align-items:flex-start;border-bottom:1px solid var(--border);}
+.ie-list li:last-child{border-bottom:none;}
+.ie-inc::before{content:'✓';color:var(--forest);font-weight:700;font-size:11px;margin-top:2px;flex-shrink:0;}
+.ie-exc::before{content:'✗';color:#c0392b;font-weight:700;font-size:11px;margin-top:2px;flex-shrink:0;}
+.hotels-section{padding:24px 40px 32px;border-top:1px solid var(--border);}
+.hotel-grid{display:flex;flex-direction:column;gap:8px;margin-top:14px;}
+.hotel-item{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;font-size:12.5px;}
+.hotel-loc{font-weight:700;color:var(--forest);min-width:90px;}
+.hotel-sep{color:var(--border);}
+.hotel-names{color:var(--ink-mid);}
+.hotel-note{font-size:11px;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+.contact-section{padding:28px 40px;background:var(--forest);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.contact-brand{font-family:'Playfair Display',Georgia,serif;font-size:18px;color:var(--white);font-weight:600;}
+.contact-brand span{color:var(--gold-light);}
+.contact-details{font-size:12px;color:rgba(255,255,255,.65);line-height:1.9;text-align:right;}
+.contact-details a{color:rgba(255,255,255,.8);text-decoration:none;}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .topbar,.contact-section{display:none !important;}
+  body{background:white;font-size:11px;margin:0;padding:0;}
+  .doc{width:100%;max-width:100%;margin:0;padding:0;border:none;border-radius:0;box-shadow:none;}
+  .cover{min-height:100vh;page-break-after:always;border-radius:0;padding:60px 55px 60px;background-color:#0b3d2e !important;}
+  .overview,.exp-section{page-break-inside:avoid;}
+  .day{page-break-inside:avoid;padding:20px 0;}
+  .days{padding:0 28px;}
+  .inc-exc{page-break-before:always;padding:32px 28px;padding-top:32px !important;}
+  .hotels-section{padding:20px 28px 36px;}
+  h2,h3,.day-title,.section-title{page-break-after:avoid;}
+  .day-bullets,.ie-list{page-break-inside:avoid;}
+  .overview,.exp-section,.inc-exc,.hotels-section{background:white !important;}
+  .day-img-placeholder{background:#f0f0f0 !important;}
+  .overnight{background:#333 !important;}
+  @page{margin:20mm 15mm 20mm 15mm;size:A4;}
+  @page :first{margin:0mm !important;}
+}
+@media(max-width:700px){
+  .cover{padding:28px 24px;}.cover-title{font-size:32px;}
+  .overview{grid-template-columns:1fr 1fr;}
+  .exp-section,.days,.hotels-section,.inc-exc,.contact-section{padding-left:20px;padding-right:20px;}
+  .exp-grid{grid-template-columns:1fr;}.day{grid-template-columns:1fr;gap:16px;}
+  .inc-exc{grid-template-columns:1fr;}.contact-section{flex-direction:column;}.contact-details{text-align:left;}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="topbar-actions">
+      <div class="print-note">Print / Save as PDF — opens unbranded, agent-ready version</div>
+      <button class="btn-print" onclick="window.print()">⬇ Download / Print PDF</button>
+      <a href="/partners/" class="btn-back">← Partner Portal</a>
+    </div>
+  </div>
+</div>
+
+<div class="doc">
+  <div class="cover">
+    <div class="cover-eyebrow">Georgia · Summer Program · 2026</div>
+    <div class="cover-title">Georgia<br>Summer Escape</div>
+    <div class="cover-sub">Tbilisi Old Town, Kazbegi mountains, Martvili Canyon, Batumi Black Sea coast and Prometheus Cave</div>
+    <div class="cover-pills">
+      <span class="cover-pill">6 Nights / 7 Days</span>
+      <span class="cover-pill">4N Tbilisi · 2N Batumi</span>
+      <span class="cover-pill gold">4★ from $TBC pp · 5★ from $TBC pp</span>
+      <span class="cover-pill">Based on 2 Pax</span>
+    </div>
+  </div>
+
+  <div class="overview">
+    <div class="ov-item"><div class="ov-label">Duration</div><div class="ov-val">6N / 7D</div></div>
+    <div class="ov-item"><div class="ov-label">Structure</div><div class="ov-val">4N + 2N</div><div class="ov-note">Tbilisi + Batumi</div></div>
+    <div class="ov-item"><div class="ov-label">4-Star Price</div><div class="ov-val">$TBC pp</div><div class="ov-note">Based on 2 pax</div></div>
+    <div class="ov-item"><div class="ov-label">5-Star Price</div><div class="ov-val">$TBC pp</div><div class="ov-note">Based on 2 pax</div></div>
+  </div>
+
+  <div class="exp-section">
+    <div class="section-eyebrow">What's Included</div>
+    <div class="section-title">Highlights &amp; Experiences</div>
+    <div class="exp-grid">
+      <div class="exp-item"><div class="exp-dot"></div>Tbilisi Old Town — Freedom Square to Narikala by cable car</div>
+      <div class="exp-item"><div class="exp-dot"></div>Mtatsminda Park — cable car &amp; funicular</div>
+      <div class="exp-item"><div class="exp-dot"></div>Ananuri Fortress &amp; Zhinvali Reservoir</div>
+      <div class="exp-item"><div class="exp-dot"></div>4x4 ascent to Gergeti Trinity Church, Kazbegi</div>
+      <div class="exp-item"><div class="exp-dot"></div>Martvili Canyon boat ride (en route to Batumi)</div>
+      <div class="exp-item"><div class="exp-dot"></div>Batumi city tour — Piazza, Alphabet Tower, Ali &amp; Nino</div>
+      <div class="exp-item"><div class="exp-dot"></div>Makhuntseti Waterfall &amp; Adjara countryside</div>
+      <div class="exp-item"><div class="exp-dot"></div>Prometheus Cave, Tskaltubo (return to Tbilisi)</div>
+    </div>
+  </div>
+
+  <div style="padding:32px 40px 0;border-top:1px solid var(--border);">
+    <div class="section-eyebrow">Day by Day</div>
+    <div class="section-title">Itinerary</div>
+  </div>
+
+  <div class="days">
+    <div class="day">
+      <div class="day-img-placeholder">✈</div>
+      <div>
+        <div class="day-num">Day 1</div>
+        <div class="day-title">Arrival in Tbilisi</div>
+        <ul class="day-bullets">
+          <li>Arrive at Tbilisi International Airport — meet and greet on arrival, assistance through immigration and baggage collection</li>
+          <li>Private transfer to hotel — check-in (standard time 14:00–15:00)</li>
+          <li>Free time to freshen up and explore at your own pace</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🏛</div>
+      <div>
+        <div class="day-num">Day 2</div>
+        <div class="day-title">Tbilisi Full Day</div>
+        <ul class="day-bullets">
+          <li>Old Tbilisi walking tour from Freedom Square — Clock Tower, Bridge of Peace, Rike Park, Metekhi Church</li>
+          <li>Cable car up to Narikala Fortress — panoramic city views, "Mother of Kartli" statue, Abanotubani sulphur bath district</li>
+          <li>Rustaveli Avenue stroll — shopping at Flea Market and Gallery Mall</li>
+          <li>Cable car to Mtatsminda Park (approx. 4-minute ride) — leisure time at the park, funicular ride back down to city centre</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">⛰</div>
+      <div>
+        <div class="day-num">Day 3</div>
+        <div class="day-title">Gudauri &amp; Kazbegi Mountain Tour</div>
+        <ul class="day-bullets">
+          <li>Early departure (approx. 09:00) — drive through Mtskheta-Mtianeti Region along the Georgian Military Highway</li>
+          <li>Ananuri Fortress complex and Zhinvali Reservoir — photo stop</li>
+          <li>Gudauri viewpoint — Soviet-era Friendship Monument, mountain panorama</li>
+          <li>Drive to Stepantsminda (Kazbegi) — transfer to 4x4 vehicle for ascent to Gergeti Trinity Church at 2,170m</li>
+          <li>Return to Tbilisi in the evening</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🏞</div>
+      <div>
+        <div class="day-num">Day 4</div>
+        <div class="day-title">Tbilisi to Batumi via Martvili Canyon</div>
+        <ul class="day-bullets">
+          <li>Departure approx. 10:00 — drive west toward Batumi through Imereti and Samegrelo regions</li>
+          <li>Martvili Canyon — boat ride through the jade-green gorge, waterfalls cascading from the canyon walls</li>
+          <li>Continue to Batumi — check-in at hotel on the Black Sea coast</li>
+          <li>Free evening stroll along the Batumi Boulevard seafront</li>
+        </ul>
+        <span class="overnight">Overnight in Batumi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🌊</div>
+      <div>
+        <div class="day-num">Day 5</div>
+        <div class="day-title">Batumi City Tour &amp; Makhuntseti Waterfall</div>
+        <ul class="day-bullets">
+          <li>Batumi city tour — Piazza Square, Alphabet Tower, Ali &amp; Nino kinetic sculpture, Medea Square, Poseidon Statue</li>
+          <li>Cable car ride (approx. 2km) up the hill — panoramic views over the Black Sea and the Caucasus behind</li>
+          <li>Free time at the seaside beach</li>
+          <li>Drive to Makhuntseti Waterfall in the Adjara countryside — one of the most impressive waterfalls in western Georgia</li>
+        </ul>
+        <span class="overnight">Overnight in Batumi</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-img-placeholder">🦷</div>
+      <div>
+        <div class="day-num">Day 6</div>
+        <div class="day-title">Return to Tbilisi via Prometheus Cave</div>
+        <ul class="day-bullets">
+          <li>Check-out from Batumi hotel (approx. 09:00)</li>
+          <li>Drive east toward Tbilisi through Imereti</li>
+          <li>Prometheus Cave, Tskaltubo — over 1km of illuminated chambers, stalactites, stalagmites, underground rivers and lakes</li>
+          <li>Arrive Tbilisi — hotel check-in and evening at leisure</li>
+        </ul>
+        <span class="overnight">Overnight in Tbilisi</span>
+      </div>
+    </div>
+
+    <div class="day" style="border-bottom:none;">
+      <div class="day-img-placeholder">🛫</div>
+      <div>
+        <div class="day-num">Day 7</div>
+        <div class="day-title">Departure from Tbilisi</div>
+        <ul class="day-bullets">
+          <li>Breakfast at hotel — check-out (standard time 12:00)</li>
+          <li>Private transfer to Tbilisi International Airport (3–3.5 hours prior to departure flight)</li>
+          <li>Departure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="inc-exc">
+    <div>
+      <div class="ie-title inc">Inclusions</div>
+      <ul class="ie-list">
+        <li class="ie-inc">4 nights accommodation in Tbilisi (4★/5★ hotel)</li>
+        <li class="ie-inc">2 nights accommodation in Batumi (4★/5★ hotel)</li>
+        <li class="ie-inc">Daily breakfast at hotel</li>
+        <li class="ie-inc">Round airport transfers (arrival and departure)</li>
+        <li class="ie-inc">All tours and transfers on private basis</li>
+        <li class="ie-inc">English-speaking guide / driver service throughout</li>
+        <li class="ie-inc">Ticket — Tbilisi Cable Car to Narikala (return)</li>
+        <li class="ie-inc">Ticket — Mtatsminda cable car &amp; funicular (return)</li>
+        <li class="ie-inc">4×4 vehicle for Gergeti Trinity Church ascent</li>
+        <li class="ie-inc">Martvili Canyon boat ride</li>
+        <li class="ie-inc">Batumi cable car (return)</li>
+        <li class="ie-inc">Ticket — Prometheus Cave, Tskaltubo</li>
+        <li class="ie-inc">1 bottle of water per person per day</li>
+        <li class="ie-inc">All local taxes and charges</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ie-title exc">Exclusions</div>
+      <ul class="ie-list">
+        <li class="ie-exc">Lunch and dinner</li>
+        <li class="ie-exc">Tips for guide and driver</li>
+        <li class="ie-exc">Extras at hotels</li>
+        <li class="ie-exc">Georgia e-visa fees</li>
+        <li class="ie-exc">Travel insurance</li>
+        <li class="ie-exc">International flights</li>
+        <li class="ie-exc">Personal expenses</li>
+        <li class="ie-exc">Any services not mentioned in the program</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hotels-section">
+    <div class="section-eyebrow">Accommodation</div>
+    <div class="section-title" style="margin-bottom:0;">Hotels</div>
+    <div class="hotel-grid">
+      <div class="hotel-item">
+        <span class="hotel-loc">Tbilisi 4★</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names">Philharmonic by Mercure &nbsp;·&nbsp; Ibis Styles Old Tbilisi &nbsp;·&nbsp; Ramada by Wyndham</span>
+      </div>
+      <div class="hotel-item">
+        <span class="hotel-loc">Tbilisi 5★</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names">Wyndham Grand &nbsp;·&nbsp; Pullman Axis Towers</span>
+      </div>
+      <div class="hotel-item">
+        <span class="hotel-loc">Batumi 4★</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names">Le Port</span>
+      </div>
+      <div class="hotel-item">
+        <span class="hotel-loc">Batumi 5★</span>
+        <span class="hotel-sep">|</span>
+        <span class="hotel-names">Ramada Plaza &nbsp;·&nbsp; Hilton Batumi</span>
+      </div>
+    </div>
+    <p class="hotel-note">Rates are subject to availability and may vary as per hotels confirmed at time of booking.</p>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-brand">Caravan <span>Compass</span> DMC</div>
+    <div class="contact-details">
+      ops@caravancompass.com<br>+91 75208 16288<br>
+      <a href="https://www.caravancompass.com">caravancompass.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
