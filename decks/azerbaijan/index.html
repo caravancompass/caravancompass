@@ -6,9 +6,9 @@
 <title>Azerbaijan — B2B Operator Brief | Caravan Compass DMC</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
+ 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-
+ 
 :root{
   --ink-black:#171312;
   --char:#231d1a;
@@ -23,7 +23,7 @@
   --border:#e3dccf;
   --white:#ffffff;
 }
-
+ 
 body{
   font-family:'Inter',system-ui,sans-serif;
   background:var(--sand);
@@ -31,7 +31,7 @@ body{
   font-size:14px;
   line-height:1.7;
 }
-
+ 
 /* ── COVER ── */
 .cover{
   min-height:100vh;
@@ -44,7 +44,7 @@ body{
   position:relative;
   overflow:hidden;
 }
-
+ 
 .cover-flame-glow{
   position:absolute;
   top:-10%; right:-10%;
@@ -53,13 +53,13 @@ body{
   background:radial-gradient(circle at 70% 30%, rgba(194,65,12,.35) 0%, transparent 65%);
   pointer-events:none;
 }
-
+ 
 .cover-gold-bar{
   height:4px;
   background:linear-gradient(90deg, var(--flame) 0%, var(--copper) 100%);
   width:100%;
 }
-
+ 
 .cover-body{
   flex:1;
   display:flex;
@@ -69,7 +69,7 @@ body{
   position:relative;
   z-index:2;
 }
-
+ 
 .cover-eyebrow{
   font-size:10px;
   font-weight:700;
@@ -78,7 +78,7 @@ body{
   color:var(--flame-light);
   margin-bottom:28px;
 }
-
+ 
 .cover-title{
   font-family:'Playfair Display',Georgia,serif;
   font-size:56px;
@@ -87,7 +87,7 @@ body{
   line-height:1.1;
   margin-bottom:8px;
 }
-
+ 
 .cover-sub{
   font-family:'Playfair Display',Georgia,serif;
   font-size:22px;
@@ -95,14 +95,14 @@ body{
   color:rgba(255,255,255,.6);
   margin-bottom:48px;
 }
-
+ 
 .cover-divider{
   width:64px;
   height:2px;
   background:var(--flame);
   margin-bottom:32px;
 }
-
+ 
 .cover-desc{
   font-size:15px;
   color:rgba(255,255,255,.75);
@@ -110,13 +110,13 @@ body{
   line-height:1.75;
   margin-bottom:48px;
 }
-
+ 
 .cover-pills{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
 }
-
+ 
 .cover-pill{
   padding:6px 14px;
   border:1px solid rgba(255,255,255,.25);
@@ -126,7 +126,7 @@ body{
   color:rgba(255,255,255,.8);
   letter-spacing:.04em;
 }
-
+ 
 .cover-footer{
   padding:28px 72px;
   border-top:1px solid rgba(255,255,255,.1);
@@ -136,25 +136,25 @@ body{
   position:relative;
   z-index:2;
 }
-
+ 
 .cover-brand{
   font-family:'Playfair Display',Georgia,serif;
   font-size:20px;
   color:var(--white);
   font-weight:600;
 }
-
+ 
 .cover-brand span{
   color:var(--flame-light);
 }
-
+ 
 .cover-contact{
   font-size:11px;
   color:rgba(255,255,255,.55);
   text-align:right;
   line-height:1.8;
 }
-
+ 
 /* ── INNER PAGES ── */
 .page{
   max-width:860px;
@@ -164,7 +164,7 @@ body{
   border-left:1px solid var(--border);
   border-right:1px solid var(--border);
 }
-
+ 
 /* ── SECTION HEADERS ── */
 .section-header{
   display:flex;
@@ -174,7 +174,7 @@ body{
   padding-bottom:16px;
   border-bottom:1px solid var(--border);
 }
-
+ 
 .section-num{
   width:36px;
   height:36px;
@@ -188,27 +188,27 @@ body{
   font-weight:700;
   flex-shrink:0;
 }
-
+ 
 .section-title{
   font-family:'Playfair Display',Georgia,serif;
   font-size:26px;
   font-weight:600;
   color:var(--ink-black);
 }
-
+ 
 .section-sub{
   font-size:12px;
   color:var(--ink-soft);
   margin-top:2px;
 }
-
+ 
 /* ── DIVIDERS ── */
 .page-sep{
   border:none;
   border-top:1px solid var(--border);
   margin:40px 0;
 }
-
+ 
 /* ── INTRO / ABOUT ── */
 .intro-grid{
   display:grid;
@@ -216,14 +216,14 @@ body{
   gap:24px;
   margin-bottom:32px;
 }
-
+ 
 .intro-card{
   background:var(--flame-pale);
   border:1px solid #f0d4bc;
   border-radius:10px;
   padding:20px 22px;
 }
-
+ 
 .intro-card-label{
   font-size:9px;
   font-weight:800;
@@ -232,14 +232,14 @@ body{
   color:var(--flame);
   margin-bottom:6px;
 }
-
+ 
 .intro-card-value{
   font-size:14px;
   font-weight:600;
   color:var(--ink);
   line-height:1.4;
 }
-
+ 
 /* ── KEY FACTS ── */
 .facts-grid{
   display:grid;
@@ -247,7 +247,7 @@ body{
   gap:16px;
   margin-bottom:32px;
 }
-
+ 
 .fact-box{
   background:var(--sand);
   border:1px solid var(--border);
@@ -255,7 +255,7 @@ body{
   padding:18px 20px;
   border-top:3px solid var(--ink-black);
 }
-
+ 
 .fact-value{
   font-family:'Playfair Display',Georgia,serif;
   font-size:28px;
@@ -264,24 +264,24 @@ body{
   line-height:1;
   margin-bottom:4px;
 }
-
+ 
 .fact-label{
   font-size:11px;
   color:var(--ink-soft);
   line-height:1.4;
 }
-
+ 
 /* ── BODY TEXT ── */
 p{
   color:var(--ink-mid);
   margin-bottom:14px;
   line-height:1.75;
 }
-
+ 
 p:last-child{ margin-bottom:0; }
-
+ 
 strong{ color:var(--ink); font-weight:600; }
-
+ 
 /* ── REGION CARDS ── */
 .regions{
   display:flex;
@@ -289,7 +289,7 @@ strong{ color:var(--ink); font-weight:600; }
   gap:16px;
   margin-bottom:28px;
 }
-
+ 
 .region{
   display:grid;
   grid-template-columns:160px 1fr;
@@ -298,7 +298,7 @@ strong{ color:var(--ink); font-weight:600; }
   border-radius:12px;
   overflow:hidden;
 }
-
+ 
 .region-label{
   background:var(--ink-black);
   padding:18px 20px;
@@ -306,7 +306,7 @@ strong{ color:var(--ink); font-weight:600; }
   flex-direction:column;
   justify-content:center;
 }
-
+ 
 .region-name{
   font-family:'Playfair Display',Georgia,serif;
   font-size:16px;
@@ -314,7 +314,7 @@ strong{ color:var(--ink); font-weight:600; }
   color:var(--white);
   margin-bottom:4px;
 }
-
+ 
 .region-tag{
   font-size:9px;
   font-weight:700;
@@ -322,12 +322,12 @@ strong{ color:var(--ink); font-weight:600; }
   text-transform:uppercase;
   color:rgba(255,255,255,.5);
 }
-
+ 
 .region-body{
   padding:16px 20px;
   background:var(--white);
 }
-
+ 
 .region-drive{
   font-size:10px;
   font-weight:700;
@@ -336,21 +336,21 @@ strong{ color:var(--ink); font-weight:600; }
   letter-spacing:.07em;
   margin-bottom:5px;
 }
-
+ 
 .region-desc{
   font-size:13px;
   color:var(--ink-mid);
   line-height:1.6;
   margin:0;
 }
-
+ 
 .region-tags{
   display:flex;
   flex-wrap:wrap;
   gap:5px;
   margin-top:8px;
 }
-
+ 
 .rtag{
   font-size:10px;
   font-weight:600;
@@ -360,7 +360,7 @@ strong{ color:var(--ink); font-weight:600; }
   padding:2px 8px;
   border-radius:6px;
 }
-
+ 
 /* ── ITINERARY BOXES ── */
 .itin-grid{
   display:grid;
@@ -368,25 +368,25 @@ strong{ color:var(--ink); font-weight:600; }
   gap:16px;
   margin-bottom:28px;
 }
-
+ 
 .itin-card{
   border:1px solid var(--border);
   border-radius:12px;
   overflow:hidden;
 }
-
+ 
 .itin-head{
   background:var(--ink-black);
   padding:14px 16px;
 }
-
+ 
 .itin-duration{
   font-family:'Playfair Display',Georgia,serif;
   font-size:18px;
   font-weight:700;
   color:var(--white);
 }
-
+ 
 .itin-type{
   font-size:9px;
   font-weight:700;
@@ -395,18 +395,18 @@ strong{ color:var(--ink); font-weight:600; }
   color:rgba(255,255,255,.55);
   margin-top:2px;
 }
-
+ 
 .itin-body{
   padding:14px 16px;
   background:var(--white);
 }
-
+ 
 .itin-days{
   list-style:none;
   padding:0;
   margin:0;
 }
-
+ 
 .itin-days li{
   font-size:12px;
   color:var(--ink-mid);
@@ -416,9 +416,9 @@ strong{ color:var(--ink); font-weight:600; }
   gap:8px;
   align-items:flex-start;
 }
-
+ 
 .itin-days li:last-child{ border-bottom:none; }
-
+ 
 .day-num{
   font-size:9px;
   font-weight:800;
@@ -427,7 +427,7 @@ strong{ color:var(--ink); font-weight:600; }
   min-width:28px;
   margin-top:2px;
 }
-
+ 
 .itin-footer{
   background:var(--flame-pale);
   padding:10px 16px;
@@ -436,7 +436,7 @@ strong{ color:var(--ink); font-weight:600; }
   font-weight:600;
   border-top:1px solid #f0d4bc;
 }
-
+ 
 /* ── MICE ── */
 .mice-grid{
   display:grid;
@@ -444,14 +444,14 @@ strong{ color:var(--ink); font-weight:600; }
   gap:16px;
   margin-bottom:28px;
 }
-
+ 
 .mice-card{
   border:1px solid var(--border);
   border-radius:10px;
   padding:20px;
   background:var(--white);
 }
-
+ 
 .mice-card-title{
   font-weight:700;
   color:var(--ink-black);
@@ -461,7 +461,7 @@ strong{ color:var(--ink); font-weight:600; }
   align-items:center;
   gap:8px;
 }
-
+ 
 .mice-icon{
   width:24px;
   height:24px;
@@ -474,12 +474,12 @@ strong{ color:var(--ink); font-weight:600; }
   font-size:11px;
   flex-shrink:0;
 }
-
+ 
 .mice-card p{
   font-size:12.5px;
   margin-bottom:0;
 }
-
+ 
 /* ── RATE TABLE ── */
 .rate-table{
   width:100%;
@@ -487,7 +487,7 @@ strong{ color:var(--ink); font-weight:600; }
   margin-bottom:24px;
   font-size:13px;
 }
-
+ 
 .rate-table th{
   background:var(--ink-black);
   color:var(--white);
@@ -497,33 +497,33 @@ strong{ color:var(--ink); font-weight:600; }
   font-size:11px;
   letter-spacing:.04em;
 }
-
+ 
 .rate-table th:first-child{ border-radius:8px 0 0 0; }
 .rate-table th:last-child{ border-radius:0 8px 0 0; }
-
+ 
 .rate-table td{
   padding:10px 14px;
   border-bottom:1px solid var(--border);
   color:var(--ink-mid);
   vertical-align:top;
 }
-
+ 
 .rate-table tr:last-child td{ border-bottom:none; }
-
+ 
 .rate-table tr:nth-child(even) td{ background:#fbf9f6; }
-
+ 
 .rate-incl{
   font-size:11px;
   color:var(--ink-soft);
   margin-top:3px;
 }
-
+ 
 .rate-price{
   font-weight:700;
   color:var(--flame);
   font-size:14px;
 }
-
+ 
 /* ── PROCESS ── */
 .process-steps{
   display:flex;
@@ -531,19 +531,19 @@ strong{ color:var(--ink); font-weight:600; }
   gap:0;
   margin-bottom:28px;
 }
-
+ 
 .step{
   display:grid;
   grid-template-columns:48px 1fr;
   gap:0;
 }
-
+ 
 .step-line{
   display:flex;
   flex-direction:column;
   align-items:center;
 }
-
+ 
 .step-dot{
   width:32px;
   height:32px;
@@ -557,7 +557,7 @@ strong{ color:var(--ink); font-weight:600; }
   font-weight:700;
   flex-shrink:0;
 }
-
+ 
 .step-connector{
   width:2px;
   flex:1;
@@ -565,26 +565,26 @@ strong{ color:var(--ink); font-weight:600; }
   margin:4px 0;
   min-height:16px;
 }
-
+ 
 .step:last-child .step-connector{ display:none; }
-
+ 
 .step-content{
   padding:4px 0 24px 16px;
 }
-
+ 
 .step-title{
   font-weight:700;
   color:var(--ink-black);
   margin-bottom:4px;
   font-size:14px;
 }
-
+ 
 .step-desc{
   font-size:13px;
   color:var(--ink-soft);
   margin:0;
 }
-
+ 
 /* ── POLICY TABLE ── */
 .policy-grid{
   display:grid;
@@ -592,14 +592,14 @@ strong{ color:var(--ink); font-weight:600; }
   gap:16px;
   margin-bottom:28px;
 }
-
+ 
 .policy-card{
   background:var(--sand);
   border:1px solid var(--border);
   border-radius:10px;
   padding:18px 20px;
 }
-
+ 
 .policy-label{
   font-size:9px;
   font-weight:800;
@@ -608,13 +608,13 @@ strong{ color:var(--ink); font-weight:600; }
   color:var(--ink-soft);
   margin-bottom:8px;
 }
-
+ 
 .policy-val{
   font-size:13px;
   color:var(--ink-mid);
   line-height:1.5;
 }
-
+ 
 /* ── HIGHLIGHT BOX ── */
 .highlight{
   background:var(--flame-pale);
@@ -624,13 +624,13 @@ strong{ color:var(--ink); font-weight:600; }
   padding:16px 20px;
   margin-bottom:24px;
 }
-
+ 
 .highlight p{
   font-size:13px;
   color:var(--ink-mid);
   margin:0;
 }
-
+ 
 /* ── CTA FOOTER ── */
 .cta-section{
   background:var(--ink-black);
@@ -642,7 +642,7 @@ strong{ color:var(--ink); font-weight:600; }
   max-width:860px;
   margin:0 auto;
 }
-
+ 
 .cta-text h2{
   font-family:'Playfair Display',Georgia,serif;
   font-size:28px;
@@ -650,29 +650,29 @@ strong{ color:var(--ink); font-weight:600; }
   margin-bottom:12px;
   font-weight:600;
 }
-
+ 
 .cta-text p{
   font-size:14px;
   color:rgba(255,255,255,.7);
   margin:0;
 }
-
+ 
 .cta-details{
   background:rgba(255,255,255,.07);
   border:1px solid rgba(255,255,255,.15);
   border-radius:12px;
   padding:24px;
 }
-
+ 
 .cta-item{
   display:flex;
   align-items:flex-start;
   gap:12px;
   margin-bottom:16px;
 }
-
+ 
 .cta-item:last-child{ margin-bottom:0; }
-
+ 
 .cta-icon{
   width:32px;
   height:32px;
@@ -684,7 +684,7 @@ strong{ color:var(--ink); font-weight:600; }
   font-size:13px;
   flex-shrink:0;
 }
-
+ 
 .cta-item-label{
   font-size:9px;
   font-weight:700;
@@ -693,13 +693,13 @@ strong{ color:var(--ink); font-weight:600; }
   color:rgba(255,255,255,.45);
   margin-bottom:2px;
 }
-
+ 
 .cta-item-value{
   font-size:13px;
   color:var(--white);
   font-weight:500;
 }
-
+ 
 /* ── PAGE HEADER STRIP ── */
 .page-header{
   background:var(--ink-black);
@@ -710,13 +710,13 @@ strong{ color:var(--ink); font-weight:600; }
   max-width:860px;
   margin:0 auto;
 }
-
+ 
 .page-header-brand{
   font-family:'Playfair Display',Georgia,serif;
   font-size:13px;
   color:rgba(255,255,255,.6);
 }
-
+ 
 .page-header-title{
   font-size:11px;
   font-weight:600;
@@ -724,32 +724,42 @@ strong{ color:var(--ink); font-weight:600; }
   letter-spacing:.08em;
   color:var(--flame-light);
 }
-
+ 
 /* ── SEASONAL TABLE ── */
 .season-table{
   width:100%;
+  min-width:680px;
   border-collapse:collapse;
   margin-bottom:24px;
   font-size:12px;
 }
-
+ 
 .season-table th{
   background:var(--ink-black);
   color:var(--white);
-  padding:9px 12px;
+  padding:9px 10px;
   font-weight:600;
   font-size:11px;
   text-align:left;
+  white-space:nowrap;
 }
-
+ 
 .season-table td{
-  padding:9px 12px;
+  padding:9px 10px;
   border-bottom:1px solid var(--border);
   vertical-align:top;
+  line-height:1.5;
 }
-
+ 
+.season-table td:nth-child(1){ white-space:nowrap; font-weight:600; }
+.season-table td:nth-child(2){ white-space:nowrap; min-width:72px; }
+.season-table td:nth-child(3){ white-space:nowrap; min-width:72px; }
+.season-table td:nth-child(4){ min-width:160px; }
+.season-table td:nth-child(5){ white-space:nowrap; text-align:center; }
+.season-table td:nth-child(6){ min-width:140px; }
+ 
 .season-table tr:nth-child(even) td{ background:#fbf9f6; }
-
+ 
 .srating{
   display:inline-block;
   font-weight:700;
@@ -757,11 +767,203 @@ strong{ color:var(--ink); font-weight:600; }
   padding:2px 8px;
   border-radius:4px;
 }
-
+ 
 .s-best{ background:#fde0c4; color:#7c2d0a; }
 .s-good{ background:#f4e3d3; color:#5c4530; }
 .s-ok{ background:#ece4d8; color:#6b5d4a; }
-
+ 
+/* ── TABLE OVERFLOW WRAPPER ── */
+.table-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:24px;
+  border-radius:8px;
+}
+.table-scroll table{ margin-bottom:0; }
+ 
+/* ── IMAGE PLACEHOLDERS ── */
+.img-placeholder{
+  width:100%;
+  border-radius:12px;
+  background:linear-gradient(135deg,#f5ede2 0%,#eedcca 100%);
+  border:1.5px dashed #c8a882;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:var(--copper);
+  position:relative;
+  overflow:hidden;
+}
+.img-placeholder::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 80%,rgba(194,65,12,.06) 0%,transparent 50%),
+    radial-gradient(circle at 80% 20%,rgba(156,107,63,.06) 0%,transparent 50%);
+}
+.img-placeholder-icon{ font-size:28px;opacity:.5;position:relative;z-index:1; }
+.img-placeholder-label{
+  font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--flame);opacity:.6;position:relative;z-index:1;
+}
+.img-placeholder-desc{
+  font-size:11px;color:var(--ink-soft);text-align:center;
+  max-width:200px;line-height:1.4;position:relative;z-index:1;
+}
+ 
+.deck-img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:12px;
+  background:linear-gradient(135deg,#f5ede2 0%,#eedcca 100%);
+}
+.deck-img.h-xs{ height:110px; }
+.deck-img.h-sm{ height:160px; }
+.deck-img.h-md{ height:220px; }
+.deck-img.h-lg{ height:280px; }
+.img-placeholder.h-xs{ height:110px; }
+.img-placeholder.h-sm{ height:160px; }
+.img-placeholder.h-md{ height:220px; }
+.img-placeholder.h-lg{ height:280px; }
+ 
+.img-row{ display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px; }
+.img-row-3{ display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px; }
+.img-caption{ font-size:10px;color:var(--ink-soft);text-align:center;margin-top:4px;font-style:italic; }
+ 
+/* ── VISA / BORDER CHECKLIST ── */
+.checklist{
+  background:#fff8f0;border:1px solid #e8c89a;
+  border-left:4px solid var(--flame);border-radius:10px;
+  padding:18px 22px;margin-bottom:20px;
+}
+.checklist-title{
+  font-size:11px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--flame);margin-bottom:12px;
+}
+.checklist ul{ margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px; }
+.checklist li{ font-size:13px;color:var(--ink-mid);line-height:1.55; }
+.checklist li strong{ color:var(--ink); }
+ 
+.visa-exempt-box{
+  background:#f5f0e8;border:1px solid #d8c8aa;
+  border-left:4px solid var(--copper);border-radius:10px;
+  padding:14px 18px;margin-bottom:20px;
+}
+.visa-exempt-box p{ font-size:13px;margin:0;color:var(--ink-mid); }
+ 
+/* ── CONNECTIVITY TABLE ── */
+.connect-table{
+  width:100%;border-collapse:collapse;margin-bottom:20px;font-size:13px;
+}
+.connect-table th{
+  background:var(--ink-black);color:var(--white);padding:9px 14px;
+  text-align:left;font-size:11px;font-weight:600;letter-spacing:.04em;
+}
+.connect-table th:first-child{ border-radius:8px 0 0 0; }
+.connect-table th:last-child{ border-radius:0 8px 0 0; }
+.connect-table td{
+  padding:9px 14px;border-bottom:1px solid var(--border);
+  color:var(--ink-mid);vertical-align:top;line-height:1.5;
+}
+.connect-table tr:last-child td{ border-bottom:none; }
+.connect-table tr:nth-child(even) td{ background:#fbf9f6; }
+.connect-badge{
+  display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;
+  border-radius:4px;background:#fde0c4;color:#7c2d0a;
+}
+ 
+/* ── RESTAURANT SECTION ── */
+.resto-grid{ display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px; }
+.resto-card{ border:1px solid var(--border);border-radius:12px;overflow:hidden; }
+.resto-head{
+  background:var(--ink-black);padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+}
+.resto-icon{
+  width:28px;height:28px;background:var(--flame);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;
+}
+.resto-head-title{
+  font-family:'Playfair Display',Georgia,serif;font-size:14px;
+  font-weight:600;color:var(--white);
+}
+.resto-head-sub{
+  font-size:9px;color:rgba(255,255,255,.5);
+  text-transform:uppercase;letter-spacing:.08em;margin-top:1px;
+}
+.resto-body{ padding:14px 16px;background:var(--white); }
+.resto-item{
+  padding:8px 0;border-bottom:1px solid #f0ece6;
+  display:flex;flex-direction:column;gap:2px;
+}
+.resto-item:last-child{ border-bottom:none;padding-bottom:0; }
+.resto-item:first-child{ padding-top:0; }
+.resto-name{ font-size:13px;font-weight:600;color:var(--ink); }
+.resto-note{ font-size:11px;color:var(--ink-soft);line-height:1.4; }
+.resto-loc{
+  font-size:10px;font-weight:700;color:var(--flame);
+  text-transform:uppercase;letter-spacing:.06em;
+}
+ 
+.food-tip{
+  background:var(--sand);border:1px solid var(--border);
+  border-radius:10px;padding:16px 20px;margin-bottom:16px;
+}
+.food-tip-label{
+  font-size:9px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--flame);margin-bottom:6px;
+}
+.food-tip p{ font-size:13px;margin:0; }
+ 
+/* ── LOCAL DISH GRID ── */
+.local-dish-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;
+}
+.local-dish{
+  background:var(--flame-pale);border:1px solid #f0d4bc;
+  border-radius:10px;padding:14px 16px;
+}
+.dish-name{ font-weight:700;font-size:13px;color:var(--ink-black);margin-bottom:4px; }
+.dish-desc{ font-size:11px;color:var(--ink-soft);line-height:1.45; }
+.dish-rating{
+  display:inline-block;margin-top:6px;font-size:10px;
+  font-weight:700;padding:2px 6px;border-radius:4px;
+}
+.dr-veg{ background:#c6f6d5;color:#1a4a2a; }
+.dr-flex{ background:#bee3f8;color:#1a3a5a; }
+.dr-halal{ background:#feebc8;color:#7b341e; }
+ 
+/* ── OBJECTION HANDLER ── */
+.objection{ border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px; }
+.objection-q{
+  background:var(--sand);padding:14px 18px;font-size:13px;font-weight:700;
+  color:var(--ink);display:flex;gap:10px;align-items:flex-start;
+  border-bottom:1px solid var(--border);
+}
+.obj-tag{
+  font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--ink-black);color:var(--white);padding:3px 8px;
+  border-radius:4px;white-space:nowrap;margin-top:1px;flex-shrink:0;
+}
+.objection-a{ padding:14px 18px;background:var(--white); }
+.objection-a p{ font-size:13px;margin:0;color:var(--ink-mid); }
+ 
+/* ── MID-DESKTOP BREAKPOINT ── */
+@media(max-width:860px){
+  .mice-grid{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr 1fr; }
+  .img-row{ grid-template-columns:1fr; }
+  .img-row-3{ grid-template-columns:1fr 1fr; }
+  .itin-grid{ grid-template-columns:1fr 1fr; }
+  .policy-grid{ grid-template-columns:1fr; }
+  .intro-grid{ grid-template-columns:1fr; }
+}
+ 
 /* ── PRINT ── */
 @media print{
   body{ background:white; font-size:11px; }
@@ -772,7 +974,7 @@ strong{ color:var(--ink); font-weight:600; }
   .page-break{ page-break-before:always; }
   a{ color:inherit; text-decoration:none; }
 }
-
+ 
 @media(max-width:640px){
   .cover-body{ padding:40px 28px; }
   .cover-footer{ padding:20px 28px; flex-direction:column; gap:12px; text-align:left; }
@@ -784,17 +986,24 @@ strong{ color:var(--ink); font-weight:600; }
   .mice-grid{ grid-template-columns:1fr; }
   .policy-grid{ grid-template-columns:1fr; }
   .region{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr; }
+  .img-row,.img-row-3{ grid-template-columns:1fr; }
   .cta-section{ grid-template-columns:1fr; padding:32px 20px; }
+  .connect-table td,.connect-table th{ padding:7px 8px;font-size:11px; }
+  .season-table td,.season-table th{ padding:7px 8px;font-size:11px; }
+  .rate-table td,.rate-table th{ padding:7px 8px;font-size:11px; }
+  .table-scroll{ overflow-x:visible; }
 }
 </style>
 </head>
 <body>
-
+ 
 <!-- ══ COVER ══════════════════════════════════════════════════════ -->
 <div class="cover">
   <div class="cover-gold-bar"></div>
   <div class="cover-flame-glow"></div>
-
+ 
   <div class="cover-body">
     <div class="cover-eyebrow">B2B Operator Reference Document — For Trade Use Only</div>
     <div class="cover-title">Azerbaijan</div>
@@ -813,7 +1022,7 @@ strong{ color:var(--ink); font-weight:600; }
       <span class="cover-pill">Land-Only Pricing</span>
     </div>
   </div>
-
+ 
   <div class="cover-footer">
     <div class="cover-brand">Caravan <span>Compass</span> DMC</div>
     <div class="cover-contact">
@@ -822,14 +1031,14 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 </div>
-
-
+ 
+ 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header">
   <div class="page-header-brand">Caravan Compass DMC</div>
   <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
 </div>
-
+ 
 <!-- ══ SECTION 1 — ABOUT CC ════════════════════════════════════ -->
 <div class="page">
   <div class="section-header">
@@ -839,15 +1048,15 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">Who we are and how we work in Azerbaijan</div>
     </div>
   </div>
-
+ 
   <p>
     Caravan Compass is a B2B-only Destination Management Company with its corporate office in India and an operational network across the Caucasus and Central Asia — Georgia, Azerbaijan, Armenia, and Almaty (Kazakhstan). We provide ground services exclusively to tour operators, OTAs, and travel agencies. We do not sell directly to consumers.
   </p>
-
+ 
   <p>
     Azerbaijan sits as our second core destination after Georgia, and the two combine naturally — a one-hour flight or a land crossing connects Tbilisi and Baku, and a large share of our Azerbaijan bookings move as an extension of a Georgia program rather than standalone. We receive an RFQ, respond within 4 hours with a detailed land-only quotation, and handle hotel contracting, guide and transport coordination, and excursion bookings.
   </p>
-
+ 
   <div class="intro-grid">
     <div class="intro-card">
       <div class="intro-card-label">Corporate Office</div>
@@ -866,13 +1075,13 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="intro-card-value">7+ Pax: Professional Guide Throughout<br><span style="font-weight:400;font-size:12px;color:#6b6460">English-speaking licensed guide, full program duration</span></div>
     </div>
   </div>
-
+ 
   <div class="highlight">
     <p><strong>What we quote:</strong> Land-only pricing direct to trade. Hotels, guides, transport, excursions, and airport transfers. Flight arrangements are not included. Quotes for Azerbaijan can be issued standalone or combined into a single quote with Georgia or Armenia.</p>
   </div>
-
+ 
   <hr class="page-sep">
-
+ 
   <div class="section-header" style="margin-top:8px;">
     <div class="section-num">02</div>
     <div>
@@ -880,7 +1089,7 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">Key facts for operators building product</div>
     </div>
   </div>
-
+ 
   <div class="facts-grid">
     <div class="fact-box">
       <div class="fact-value">ASAN E-Visa</div>
@@ -907,22 +1116,116 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="fact-label">Drive time Baku to Gobustan (UNESCO petroglyphs &amp; mud volcanoes)</div>
     </div>
   </div>
-
+ 
   <p>
     Baku is Caravan Compass's second core destination after Tbilisi. Our operational network gives us tested, current relationships with hotels, licensed guides, and transport partners across Baku and the regional excursion circuit.
   </p>
   <p>
     For Indian operators, Azerbaijan offers a contrast that complements Georgia well: a modern, Gulf-adjacent capital city (Flame Towers, Heydar Aliyev Center, Caspian seafront boulevard) against a backdrop of UNESCO sites, fire-worship history, and Soviet-era industrial landscape. It reads as a different country, not a repeat of Georgia — which is exactly why the two-country circuit sells well.
   </p>
+ 
+  <div class="img-row" style="margin-top:20px;">
+    <div>
+      <img src="https://caravancompass.com/images/decks/baku/hero-flame-towers.jpg" alt="Flame Towers at night, Baku" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-flame-towers.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="img-caption">Flame Towers, Baku — the city's defining skyline</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/baku/hero-icheri-sheher.jpg" alt="Icheri Sheher Old City, Baku" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-icheri-sheher.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="img-caption">Icheri Sheher (Old City), Baku — UNESCO World Heritage</div>
+    </div>
+  </div>
+ 
+  <hr class="page-sep">
+ 
+  <div style="margin-bottom:10px;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--flame);margin-bottom:12px;">Visa — What Operators Need to Know</div>
+ 
+    <div class="visa-exempt-box">
+      <p><strong>Important:</strong> Azerbaijan requires the <strong>ASAN e-visa</strong> for Indian passport holders — this is an online application, not visa-on-arrival. Do not advise clients to arrive without a confirmed e-visa. Processing is 3–5 business days for standard; urgent processing is available in a few hours at higher fee. Apply at <strong>evisa.gov.az</strong>. There is no visa-on-arrival option for Indian nationals.</p>
+    </div>
+ 
+    <div class="checklist">
+      <div class="checklist-title">⚠ Border Arrival Checklist — Brief Every Client</div>
+      <ul>
+        <li><strong>Confirmed ASAN e-visa printout</strong> — physical print recommended; digital acceptable but have it ready before immigration</li>
+        <li><strong>Confirmed return flight tickets</strong> — printout or clearly accessible on device</li>
+        <li><strong>Hotel vouchers</strong> matching exact travel dates, for every night of the program</li>
+        <li><strong>Proof of financial means</strong> — cash or an active credit card; officers may ask at entry</li>
+        <li><strong>Travel insurance</strong> — while not a documented mandatory requirement like Georgia, we recommend minimum coverage for medical/accident as standard pre-departure briefing</li>
+      </ul>
+    </div>
+ 
+    <p style="font-size:12px;color:var(--ink-soft);">Heydar Aliyev International Airport (GYD) immigration is generally efficient. Allow 30–45 minutes for immigration and baggage. Transfer to city centre is 25–30 minutes. Build all document checks into your pre-departure client briefing — do not leave it to the airport.</p>
+  </div>
+ 
+  <hr class="page-sep">
+ 
+  <div style="margin-bottom:0;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--flame);margin-bottom:14px;">Flight Connectivity — India to Baku</div>
+ 
+    <div class="table-scroll">
+    <table class="connect-table">
+      <thead>
+        <tr>
+          <th>Route Type</th>
+          <th>Airline(s)</th>
+          <th>Route</th>
+          <th>Typical Timing</th>
+          <th>Approx. Total Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Direct</strong> <span class="connect-badge">Fastest</span></td>
+          <td>IndiGo (6E)</td>
+          <td>Delhi (DEL) → Baku (GYD) nonstop</td>
+          <td>~01:30–03:30 (overnight dep.)<div class="rate-incl">Arrives Baku early morning</div></td>
+          <td>~5 hrs 30 min</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Air Arabia (G9)</td>
+          <td>Delhi / Mumbai / Ahmedabad → Sharjah (SHJ) → Baku</td>
+          <td>Varies by origin<div class="rate-incl">SHJ layover typically 2–4 hrs</div></td>
+          <td>~8–10 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>flydubai (FZ)</td>
+          <td>Delhi / Mumbai → Dubai (DXB) → Baku</td>
+          <td>Multiple daily DXB departures<div class="rate-incl">DXB layover typically 2–5 hrs</div></td>
+          <td>~9–11 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Turkish Airlines (TK)</td>
+          <td>Multiple Indian cities → Istanbul (IST) → Baku</td>
+          <td>IST layover varies<div class="rate-incl">Good connectivity from South India</div></td>
+          <td>~10–13 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>Combo routing</strong></td>
+          <td>AZAL / Azerbaijan Airlines (J2)</td>
+          <td>Delhi → Baku (GYD) direct or via connection</td>
+          <td>AZAL operates DEL–GYD<div class="rate-incl">Also useful for Baku–Tbilisi combo programs</div></td>
+          <td>~5.5–6 hrs direct</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+ 
+    <p style="font-size:12px;color:var(--ink-soft);">Flight schedules are indicative and subject to seasonal change. Always verify current schedules at booking. For Georgia + Baku combo programs, the Tbilisi–Baku sector is typically a 1-hour flight (AZAL or Georgian Airways) or a 3-hour overland coach via the Kars route depending on the program structure.</p>
+  </div>
+ 
 </div>
-
-
+ 
+ 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header">
   <div class="page-header-brand">Caravan Compass DMC</div>
   <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
 </div>
-
+ 
 <!-- ══ SECTION 3 — REGIONS ═════════════════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
@@ -932,9 +1235,9 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">What each area offers and who it suits</div>
     </div>
   </div>
-
+ 
   <div class="regions">
-
+ 
     <div class="region">
       <div class="region-label">
         <div class="region-name">Baku Old City</div>
@@ -950,9 +1253,10 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Heydar Aliyev Center</span>
           <span class="rtag">Caspian Boulevard</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/baku/region-baku-oldcity.jpg" alt="Baku Old City walls and Maiden's Tower" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-baku-oldcity.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       </div>
     </div>
-
+ 
     <div class="region">
       <div class="region-label">
         <div class="region-name">Absheron Peninsula</div>
@@ -966,9 +1270,10 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Yanar Dag</span>
           <span class="rtag">Half-Day Add-On</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/baku/region-yanar-dag.jpg" alt="Yanar Dag burning hillside, Absheron" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-yanar-dag.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       </div>
     </div>
-
+ 
     <div class="region">
       <div class="region-label">
         <div class="region-name">Gobustan</div>
@@ -983,9 +1288,10 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">UNESCO Site</span>
           <span class="rtag">Full-Day Combo</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/baku/region-gobustan.jpg" alt="Gobustan mud volcanoes" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-gobustan.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       </div>
     </div>
-
+ 
     <div class="region">
       <div class="region-label">
         <div class="region-name">Gabala</div>
@@ -1000,9 +1306,10 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Nohur Lake</span>
           <span class="rtag">Mountain Forest</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/baku/region-tufandag.jpg" alt="Tufandag cable car, Gabala" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-tufandag.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       </div>
     </div>
-
+ 
     <div class="region">
       <div class="region-label">
         <div class="region-name">Shahdag</div>
@@ -1016,9 +1323,10 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Alpine Resort</span>
           <span class="rtag">Summer Adventure Sports</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/baku/region-shahdag.jpg" alt="Shahdag ski resort in winter" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-shahdag.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       </div>
     </div>
-
+ 
     <div class="region">
       <div class="region-label">
         <div class="region-name">Sheki</div>
@@ -1032,19 +1340,20 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Caravanserais</span>
           <span class="rtag">Overland Route Stop</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/baku/region-sheki-palace.jpg" alt="Sheki Khan's Palace stained glass" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-sheki-palace.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       </div>
     </div>
-
+ 
   </div>
 </div>
-
-
+ 
+ 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header">
   <div class="page-header-brand">Caravan Compass DMC</div>
   <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
 </div>
-
+ 
 <!-- ══ SECTION 4 — SEASONALITY ════════════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
@@ -1054,11 +1363,14 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">When to send which client type</div>
     </div>
   </div>
-
+ 
+  <div class="table-scroll">
   <table class="season-table">
     <thead>
       <tr>
         <th>Month</th>
+        <th>Baku Temp</th>
+        <th>Gabala Temp</th>
         <th>Conditions</th>
         <th>Rating</th>
         <th>Best For</th>
@@ -1066,50 +1378,63 @@ strong{ color:var(--ink); font-weight:600; }
     </thead>
     <tbody>
       <tr>
-        <td><strong>March–April</strong></td>
-        <td>Mild spring temperatures in Baku, some rain. Gabala and mountain regions greening up.</td>
+        <td><strong>Mar–Apr</strong></td>
+        <td>8–18°C</td>
+        <td>4–14°C</td>
+        <td>Mild spring, some rain. Mountains greening up.</td>
         <td><span class="srating s-good">Good</span></td>
-        <td>City programs, regional day trips, lighter budgets</td>
+        <td>City programs, day trips, lighter budgets</td>
       </tr>
       <tr>
-        <td><strong>May–June</strong></td>
-        <td>Warm, dry, comfortable across Baku and Absheron. Gabala fully accessible.</td>
+        <td><strong>May–Jun</strong></td>
+        <td>18–28°C</td>
+        <td>12–22°C</td>
+        <td>Warm, dry, comfortable. Gabala fully open.</td>
         <td><span class="srating s-best">Best</span></td>
         <td>All client types. Full city + regional programs.</td>
       </tr>
       <tr>
-        <td><strong>July–August</strong></td>
-        <td>Hot in Baku (32–38°C), Caspian breeze offsets it on the boulevard. Gabala noticeably cooler.</td>
+        <td><strong>Jul–Aug</strong></td>
+        <td>28–38°C</td>
+        <td>18–28°C</td>
+        <td>Hot in Baku; Caspian breeze helps. Gabala cooler.</td>
         <td><span class="srating s-ok">Hot</span></td>
-        <td>Clients comfortable with heat; mountain-region programs preferred</td>
+        <td>Heat-tolerant clients; Gabala extension recommended</td>
       </tr>
       <tr>
-        <td><strong>September–October</strong></td>
-        <td>Cooling city temperatures, clear skies. One of the most comfortable windows for sightseeing.</td>
+        <td><strong>Sep–Oct</strong></td>
+        <td>16–26°C</td>
+        <td>10–20°C</td>
+        <td>Clear skies, comfortable temps. Best sightseeing window.</td>
         <td><span class="srating s-best">Best</span></td>
-        <td>Premium FIT and group programs across the full circuit</td>
+        <td>Premium FIT and groups. Full circuit.</td>
       </tr>
       <tr>
         <td><strong>November</strong></td>
-        <td>Cooler, quieter, occasional rain. Indoor sites (museums, Heydar Aliyev Center) hold up well.</td>
+        <td>8–16°C</td>
+        <td>2–10°C</td>
+        <td>Cooler, quieter, some rain. Indoor sites hold up well.</td>
         <td><span class="srating s-good">Good</span></td>
         <td>Off-peak pricing, city-focused programs</td>
       </tr>
       <tr>
-        <td><strong>December–March</strong></td>
-        <td>Shahdag ski season open and reliable. Baku mild by regional standards; Gabala cold but scenic.</td>
+        <td><strong>Dec–Mar</strong></td>
+        <td>2–10°C</td>
+        <td>−4–4°C</td>
+        <td>Shahdag ski season open. Baku mild. Gabala cold.</td>
         <td><span class="srating s-good">Good</span></td>
-        <td>Ski programs (Shahdag). Winter city breaks, niche market.</td>
+        <td>Ski programs (Shahdag). Winter city breaks.</td>
       </tr>
     </tbody>
   </table>
-
+  </div>
+ 
   <div class="highlight">
     <p><strong>Operator note:</strong> Azerbaijan, like Georgia, runs year-round with no true "avoid" season. The strongest argument for combining it with Georgia is climate complementarity — when Tbilisi or Kazbegi are too cold or wet for a given window, Baku's lower elevation and milder winters often still work, and vice versa for Baku's hottest summer weeks.</p>
   </div>
-
+ 
   <hr class="page-sep">
-
+ 
   <div class="section-header" style="margin-top:8px;">
     <div class="section-num">05</div>
     <div>
@@ -1117,9 +1442,9 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">Standard circuit structures — all customisable</div>
     </div>
   </div>
-
+ 
   <div class="itin-grid">
-
+ 
     <div class="itin-card">
       <div class="itin-head">
         <div class="itin-duration">4 Days</div>
@@ -1135,7 +1460,7 @@ strong{ color:var(--ink); font-weight:600; }
       </div>
       <div class="itin-footer">Standalone Baku · Modern city + ancient fire sites</div>
     </div>
-
+ 
     <div class="itin-card">
       <div class="itin-head">
         <div class="itin-duration">6 Days</div>
@@ -1153,7 +1478,7 @@ strong{ color:var(--ink); font-weight:600; }
       </div>
       <div class="itin-footer">Full circuit · City + mountain combination</div>
     </div>
-
+ 
     <div class="itin-card">
       <div class="itin-head">
         <div class="itin-duration">10 Days</div>
@@ -1174,21 +1499,21 @@ strong{ color:var(--ink); font-weight:600; }
       </div>
       <div class="itin-footer">Two-country circuit · Our strongest seller</div>
     </div>
-
+ 
   </div>
-
+ 
   <div class="highlight">
     <p><strong>On itinerary logic:</strong> Baku-only programs run 4–6 days comfortably; beyond that, most Indian clients prefer to combine with Georgia rather than extend within Azerbaijan alone, since the country's product depth outside Baku and its immediate day-trip radius is thinner than Georgia's. Sheki and the overland route to Tbilisi are positioned as a connector, not a destination in their own right, given the 4.5–6.5 hour drive.</p>
   </div>
 </div>
-
-
+ 
+ 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header">
   <div class="page-header-brand">Caravan Compass DMC</div>
   <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
 </div>
-
+ 
 <!-- ══ SECTION 6 — MICE ════════════════════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
@@ -1198,35 +1523,39 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">Corporate groups, conferences, and incentive travel</div>
     </div>
   </div>
-
+ 
   <p>Baku has genuine convention infrastructure — built for hosting Formula 1, Eurovision, and major international summits — which puts it ahead of Tbilisi for large-scale corporate events. Combined with the Flame Towers skyline and Caspian seafront, it photographs well for incentive group branding, and pricing typically lands below comparable Gulf or European incentive destinations.</p>
-
+ 
   <div class="mice-grid">
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/baku/mice-ateshgah.jpg" alt="Ateshgah Fire Temple courtyard at night" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-ateshgah.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       <div class="mice-card-title">
         <div class="mice-icon">🔥</div>
         Fire &amp; Heritage Evening
       </div>
       <p>Private evening at Yanar Dag or Ateshgah Fire Temple, paired with a traditional Azerbaijani dinner (plov, kebab varieties, local pomegranate-based dishes) and folk music performance. Available for groups of 10–50 pax. A strong differentiator from a standard city-hotel gala dinner.</p>
     </div>
-
+ 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/baku/mice-rooftop-flametowers.jpg" alt="Rooftop event with Flame Towers backdrop" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-rooftop-flametowers.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       <div class="mice-card-title">
         <div class="mice-icon">🏙</div>
         Flame Towers &amp; Boulevard Buyout
       </div>
       <p>Private rooftop or boulevard-facing venue with Flame Towers backdrop, available for cocktail receptions and award evenings. Baku's skyline lighting and Caspian waterfront give a strong photo backdrop for branded events. Groups of up to 80 pax depending on venue.</p>
     </div>
-
+ 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/baku/mice-tufandag-group.jpg" alt="Corporate group at Tufandag mountain station" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-tufandag-group.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       <div class="mice-card-title">
         <div class="mice-icon">🏔</div>
         Gabala Adventure Day
       </div>
       <p>Cable car ascent, team activities at Tufandag resort, and a mountain-set lunch. Strong outdoor activity component for corporate groups wanting a contrast to Baku's city program. Best run as an overnight extension given the 3–4 hour drive each way.</p>
     </div>
-
+ 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/baku/mice-shirvanshahs.jpg" alt="Shirvanshahs Palace courtyard group tour" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-shirvanshahs.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
       <div class="mice-card-title">
         <div class="mice-icon">🏛</div>
         Old City Heritage Walk
@@ -1234,7 +1563,8 @@ strong{ color:var(--ink); font-weight:600; }
       <p>Private guided tour of Icheri Sheher with access to the Shirvanshahs' Palace complex, a carpet-weaving or pottery workshop demonstration, and team lunch at a restaurant within the Old City walls. Suited to mid-size groups preferring cultural content over adventure.</p>
     </div>
   </div>
-
+ 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1271,15 +1601,16 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
-
-
+ 
+ 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header">
   <div class="page-header-brand">Caravan Compass DMC</div>
   <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
 </div>
-
+ 
 <!-- ══ SECTION 7 — RATE FRAMEWORK ═════════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
@@ -1289,11 +1620,12 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">Indicative pricing — all programs quoted individually</div>
     </div>
   </div>
-
+ 
   <div class="highlight">
     <p><strong>Important:</strong> All pricing below is indicative only. Every program is quoted individually based on your dates, pax count, hotel preference, and inclusions. Contact ops@caravancompass.com with RFQ details for a binding quotation within 4 hours.</p>
   </div>
-
+ 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1336,13 +1668,14 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
-
+  </div>
+ 
   <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">
     All rates are land-only, per person on twin/double share basis. Single supplement available on request. Rates include: accommodation with breakfast, all ground transfers, licensed guides, specified excursions, and applicable entrance fees. Exclude: flights, visas, personal expenses, tips, and any items not listed in the confirmed program.
   </p>
-
+ 
   <hr class="page-sep">
-
+ 
   <div class="section-header" style="margin-top:8px;">
     <div class="section-num">08</div>
     <div>
@@ -1350,7 +1683,8 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="section-sub">Contracted properties across categories</div>
     </div>
   </div>
-
+ 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1375,27 +1709,195 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
-
+  </div>
+ 
   <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">For Sheki (overland route stop), we work with Sheki Palace Hotel and Karvansaray Hotel at the 5-star tier. Full property list with current rates available on request — this table reflects our most frequently booked options by category.</p>
 </div>
-
-
+ 
+ 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header">
   <div class="page-header-brand">Caravan Compass DMC</div>
   <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
 </div>
-
-<!-- ══ SECTION 9 — BOOKING PROCESS ═══════════════════════════ -->
+ 
+<!-- ══ SECTION 9 — RESTAURANTS & FOOD ════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
     <div class="section-num">09</div>
+    <div>
+      <div class="section-title">Restaurants &amp; Food Guide</div>
+      <div class="section-sub">Indian-friendly dining and Azerbaijani dishes suited to Indian palates</div>
+    </div>
+  </div>
+ 
+  <p>Azerbaijan's food culture is more meat-forward than Georgia's — plov (rice pilaf), kebab varieties, and lamb dishes dominate menus. That said, Baku has a growing number of Indian restaurants, and vegetarian options are available in most city hotels. Brief your clients accurately: they will eat well in Baku, but it requires more active selection than in Tbilisi.</p>
+ 
+  <div class="img-row-3" style="margin-bottom:28px;">
+    <div>
+      <img src="https://caravancompass.com/images/decks/baku/food-plov.jpg" alt="Azerbaijani plov on copper plate" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-plov.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="img-caption">Plov — Azerbaijan's national dish</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/baku/food-lula-kebab.jpg" alt="Lula kebab with lavash" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-lula-kebab.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="img-caption">Lula Kebab — street food staple</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/baku/food-spread.jpg" alt="Traditional Azerbaijani table spread" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-spread.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="img-caption">Azerbaijani table spread</div>
+    </div>
+  </div>
+ 
+  <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--flame);margin-bottom:14px;">Indian Restaurants in Baku</div>
+ 
+  <div class="resto-grid">
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🇮🇳</div>
+        <div>
+          <div class="resto-head-title">Maharaja</div>
+          <div class="resto-head-sub">North Indian · Baku</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/baku/resto-maharaja.jpg" alt="Maharaja Restaurant, Baku" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-maharaja.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+        <div class="resto-item">
+          <div class="resto-loc">Central Baku</div>
+          <div class="resto-note">One of the most established Indian restaurants in Baku. Reliable North Indian menu covering curries, tandoor dishes, dal, and rice. The default recommendation for groups needing a familiar meal. Comfortable for both FIT couples and mid-sized groups.</div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🇮🇳</div>
+        <div>
+          <div class="resto-head-title">Namaste India Baku</div>
+          <div class="resto-head-sub">Indian · Baku</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/baku/resto-namaste-india-baku.jpg" alt="Namaste India Baku" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-namaste-india-baku.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+        <div class="resto-item">
+          <div class="resto-loc">Baku city centre</div>
+          <div class="resto-note">Solid Indian option. Good for clients with strict vegetarian requirements where Azerbaijani menus may not provide sufficient certainty. Staff familiar with Indian dietary preferences. Confirm current operating hours at RFQ stage.</div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🇮🇳</div>
+        <div>
+          <div class="resto-head-title">Spice House</div>
+          <div class="resto-head-sub">Indian · Baku</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/baku/resto-spice-house.jpg" alt="Spice House Baku" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-spice-house.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+        <div class="resto-item">
+          <div class="resto-loc">Baku</div>
+          <div class="resto-note">Smaller, more casual Indian option. Well-suited for FIT clients who want a reliable Indian meal without the group-restaurant format. Good execution on North Indian comfort staples. Verify current status at booking stage as hours vary.</div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🍽</div>
+        <div>
+          <div class="resto-head-title">Chinar Restaurant</div>
+          <div class="resto-head-sub">Azerbaijani Fine Dining · Baku</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/baku/resto-chinar.jpg" alt="Chinar Restaurant terrace, Baku" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-chinar.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+        <div class="resto-item">
+          <div class="resto-loc">Baku seafront area</div>
+          <div class="resto-note">The best introduction to Azerbaijani cuisine for Indian clients open to exploring local food. Refined setting, English-speaking staff, clear menu with good vegetarian options (dolma, kutab with herbs and cheese, pumpkin dishes). We recommend this for FIT clients and small premium groups who want an authentic dinner experience beyond Indian restaurants.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="food-tip">
+    <div class="food-tip-label">Operator Note — Indian restaurants outside Baku</div>
+    <p>Indian restaurant options in Gabala and Shahdag are very limited to non-existent. For overnight mountain programs, we pre-coordinate with hotel restaurants to prepare vegetarian alternatives — typically egg dishes, grilled vegetables, rice, and bread. Brief clients ahead of mountain nights. For strict Jain requirements, flag at RFQ stage so we can plan meal stops carefully.</p>
+  </div>
+ 
+  <hr class="page-sep">
+ 
+  <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--flame);margin-bottom:14px;">Azerbaijani Dishes Suited to Indian Palates</div>
+ 
+  <div class="local-dish-grid">
+ 
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/baku/dish-dolma.jpg" alt="Dolma — stuffed vine leaves" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-dolma.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="dish-name">Dolma</div>
+      <div class="dish-desc">Grape vine leaves stuffed with spiced rice and herbs (vegetarian version) or meat. Ask specifically for vegetarian dolma — it's available at most restaurants. The herb and rice combination is mild and accessible for Indian palates.</div>
+      <span class="dish-rating dr-flex">⚬ Ask for veg variant</span>
+    </div>
+ 
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/baku/dish-kutab.jpg" alt="Kutab flatbread" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-kutab.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="dish-name">Kutab</div>
+      <div class="dish-desc">Thin, folded flatbread filled with herbs and cheese (or spinach). One of the most vegetarian-friendly items on any Azerbaijani menu. Similar in spirit to Indian stuffed paratha — approachable and satisfying.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+ 
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/baku/dish-dushbara.jpg" alt="Dushbara soup dumplings" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-dushbara.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="dish-name">Dushbara</div>
+      <div class="dish-desc">Tiny lamb-filled dumplings in clear broth, typically served as a starter. For clients who eat meat, a strong introduction to Azerbaijani cuisine — light and delicate, nothing like the richness of plov.</div>
+      <span class="dish-rating dr-flex">⚬ Contains lamb</span>
+    </div>
+ 
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/baku/dish-salad.jpg" alt="Azerbaijani shepherd's salad" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-salad.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="dish-name">Azerbaijani Salad</div>
+      <div class="dish-desc">Chopped tomatoes, cucumbers, onion, and fresh herbs. Clean, light, and universally available. A reliable side for vegetarian clients who need something fresh alongside heavier dishes on the menu.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+ 
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/baku/dish-pakhlava.jpg" alt="Pakhlava honey-walnut pastry" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-pakhlava.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="dish-name">Pakhlava</div>
+      <div class="dish-desc">Azerbaijan's signature sweet — layers of pastry with walnut and honey filling, cut into diamond shapes. A strong parallel to Indian mithai culture, and consistently enjoyed by Indian clients as a dessert or souvenir gift. Available at every bakery.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+ 
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/baku/dish-ayran.jpg" alt="Ayran in a clay cup" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-ayran.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';';">
+      <div class="dish-name">Ayran</div>
+      <div class="dish-desc">Cold, salted yoghurt drink — very similar to Indian chaas (buttermilk). Particularly welcome in Baku's hot summer months. Available everywhere and universally familiar to Indian clients. A reliable comfort drink throughout the program.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+ 
+  </div>
+ 
+  <div class="food-tip">
+    <div class="food-tip-label">Halal Food Note</div>
+    <p>Azerbaijan is a majority-Muslim country. Most meat served in Azerbaijani restaurants is halal as standard. For Muslim clients, this is a significant comfort factor worth briefing them on explicitly — it removes a major pre-trip concern. Indian-run halal restaurants are also available in Baku; confirm options at RFQ stage if this is a group requirement.</p>
+  </div>
+ 
+</div>
+ 
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+ 
+<!-- ══ SECTION 10 — BOOKING PROCESS ══════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">10</div>
     <div>
       <div class="section-title">How to Work With Us</div>
       <div class="section-sub">Booking process, payment terms, and policies</div>
     </div>
   </div>
-
+ 
   <div class="process-steps">
     <div class="step">
       <div class="step-line">
@@ -1407,7 +1909,7 @@ strong{ color:var(--ink); font-weight:600; }
         <p class="step-desc">Email ops@caravancompass.com with: dates, destination, pax count, star preference, any special requirements (dietary, accessibility, activity level). No form needed — a clear email is sufficient.</p>
       </div>
     </div>
-
+ 
     <div class="step">
       <div class="step-line">
         <div class="step-dot">2</div>
@@ -1418,7 +1920,7 @@ strong{ color:var(--ink); font-weight:600; }
         <p class="step-desc">We respond with a day-by-day program, itemised cost breakdown (hotels, guides, transport, excursions separately listed), and hotel options at the requested category. You can use our pricing directly to build your own quotes.</p>
       </div>
     </div>
-
+ 
     <div class="step">
       <div class="step-line">
         <div class="step-dot">3</div>
@@ -1429,7 +1931,7 @@ strong{ color:var(--ink); font-weight:600; }
         <p class="step-desc">On your client's confirmation, a 30% deposit secures the booking and triggers hotel + guide confirmation. We hold rates for 72 hours pending deposit after confirmation.</p>
       </div>
     </div>
-
+ 
     <div class="step">
       <div class="step-line">
         <div class="step-dot">4</div>
@@ -1440,7 +1942,7 @@ strong{ color:var(--ink); font-weight:600; }
         <p class="step-desc">Remaining 70% is due 21 days before the program start date. We then send the confirmed voucher package, guide contacts, emergency numbers, and a pre-trip briefing document for your clients.</p>
       </div>
     </div>
-
+ 
     <div class="step">
       <div class="step-line">
         <div class="step-dot">5</div>
@@ -1452,7 +1954,7 @@ strong{ color:var(--ink); font-weight:600; }
       </div>
     </div>
   </div>
-
+ 
   <div class="policy-grid">
     <div class="policy-card">
       <div class="policy-label">Payment Terms</div>
@@ -1471,43 +1973,133 @@ strong{ color:var(--ink); font-weight:600; }
       <div class="policy-val">Quoted rates valid 14 days from quotation date. Rates may vary for peak season (May–June, Sep–Oct) and holidays.</div>
     </div>
   </div>
-
+ 
   <hr class="page-sep">
-
+ 
   <div class="section-header" style="margin-top:8px;">
-    <div class="section-num">10</div>
+    <div class="section-num">11</div>
     <div>
       <div class="section-title">Frequently Asked by Operators</div>
       <div class="section-sub">Honest answers to common pre-booking questions</div>
     </div>
   </div>
-
+ 
   <div style="display:flex;flex-direction:column;gap:14px;">
-
+ 
     <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
       <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Is Azerbaijan a standalone product or only an extension of Georgia?</div>
       <p style="margin:0;font-size:13px;">Both. Baku works well as a 4–6 day standalone city-and-region program, particularly for clients who want a Caspian/Gulf-adjacent city experience. It also combines naturally with Georgia as a 9–10 day two-country circuit, which is currently our stronger-performing structure for Indian operators.</p>
     </div>
-
+ 
     <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
       <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Can you accommodate vegetarian and Jain clients?</div>
       <p style="margin:0;font-size:13px;">Vegetarian: manageable in Baku city hotels and restaurants, though the food culture is more meat-forward than Georgia's — plov and kebab variations dominate menus. Strict Jain requirements are more limited here than in Georgia; brief us at RFQ stage so we can confirm specific restaurants and pre-arrange meals where needed.</p>
     </div>
-
+ 
     <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
       <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">What happens if a client misses a flight or arrives late?</div>
       <p style="margin:0;font-size:13px;">Standard hotel cancellation policies apply in cases of no-show or late arrival. However, if we are informed 24–48 hours in advance, we will request the hotel to shift dates (subject to availability; alteration charges may apply). For tours and excursions, changes can be made if communicated at least 24 hours in advance.</p>
     </div>
-
+ 
     <div style="border:1px solid var(--border);border-radius:10px;padding:16px 20px;">
       <div style="font-weight:700;color:var(--ink-black);margin-bottom:6px;font-size:13px;">Can you provide references from other Indian operators?</div>
       <p style="margin:0;font-size:13px;">Caravan Compass is a newly established DMC — we are transparent about this. What we offer instead is direct visibility: a discovery call with our founder, and for first-time bookings, terms structured to reduce your risk while our track record builds. Our supplier relationships in Baku — hotels, guides, transport — are established and verifiable on request.</p>
     </div>
-
+ 
   </div>
 </div>
-
-
+ 
+ 
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Azerbaijan — B2B Operator Brief 2026</div>
+</div>
+ 
+<!-- ══ SECTION 12 — CLIENT OBJECTION HANDLER ═════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div>
+      <div class="section-title">Handling Client Objections</div>
+      <div class="section-sub">Ready-to-use pivots for common sales conversations</div>
+    </div>
+  </div>
+ 
+  <p>These are the objections Indian clients most commonly raise when Azerbaijan is proposed. Each has a clean, factually honest answer — use these in your sales consultations and pre-departure briefings.</p>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Safety</span>
+      "Azerbaijan borders conflict zones. Is it safe?"
+    </div>
+    <div class="objection-a">
+      <p>Baku and the main tourist circuit (Gobustan, Absheron, Gabala, Shahdag) are entirely removed from any conflict areas. The Nagorno-Karabakh situation is geographically distant from Baku and the tourist circuit, and as of 2024, the situation has changed significantly. India's MEA does not advise against travel to Baku. In practice, Indian travelers who visit describe Baku as a modern, well-policed city with a very low street crime rate and genuinely hospitable locals.</p>
+    </div>
+  </div>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Food</span>
+      "My clients are vegetarian. Will they be able to eat in Azerbaijan?"
+    </div>
+    <div class="objection-a">
+      <p>Vegetarian is manageable in Baku — not as effortless as in Georgia, but workable with good briefing. Kutab (herb-and-cheese flatbread), dolma (vegetarian variant available), Azerbaijani salad, yoghurt-based dishes, and cheese spreads are all vegetarian. Baku's Indian restaurants (Maharaja, Namaste India Baku) provide a reliable fallback for any meal where the client wants certainty. For strict Jain requirements, brief us at RFQ stage so we can plan meal stops and pre-coordinate with restaurants.</p>
+    </div>
+  </div>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Novelty</span>
+      "My clients have already been to Dubai and Turkey. Why Azerbaijan?"
+    </div>
+    <div class="objection-a">
+      <p>Because it's genuinely different from both. Baku is the only capital city in the world built on natural fire seeps — Ateshgah Fire Temple was worshipped by Hindu and Zoroastrian pilgrims on the same site. The Gobustan rock carvings predate written history. The Flame Towers skyline is unique to Baku. For clients who've done the standard Gulf and Mediterranean circuit, Azerbaijan is the answer to "what's next" — and at 3–5 days, it's a compact addition that adds genuine distinction to a Caucasus program.</p>
+    </div>
+  </div>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Visa</span>
+      "The e-visa process sounds complicated. What if it gets rejected?"
+    </div>
+    <div class="objection-a">
+      <p>The ASAN e-visa is one of the most straightforward e-visa systems in the region — fully online at evisa.gov.az, no embassy visit, no interview. Standard processing is 3–5 business days; urgent processing is available within a few hours at a higher fee. Rejection rates for complete, accurate Indian applications are low. We recommend applying at least 10 days before travel to allow buffer. The most common reason for delays is incomplete documentation — brief agents to submit complete applications on the first attempt.</p>
+    </div>
+  </div>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Weather</span>
+      "Is it too hot in summer for sightseeing?"
+    </div>
+    <div class="objection-a">
+      <p>Baku in July–August can reach 35–38°C. It's manageable for most Indian clients who are already comfortable with summer heat — and the Caspian seafront provides a consistent breeze. For heat-sensitive clients, we structure outdoor sightseeing in the morning (before 11am) and evenings (after 5pm), with afternoon time in air-conditioned venues (Heydar Aliyev Center, museums). The Gabala mountain extension is a natural solution for peak summer — Gabala sits at altitude and runs 8–10°C cooler than Baku.</p>
+    </div>
+  </div>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Value</span>
+      "Is Azerbaijan worth it as a standalone trip, or only as an add-on to Georgia?"
+    </div>
+    <div class="objection-a">
+      <p>Both work — but honestly, the 9–10 day Georgia + Baku circuit is the stronger commercial product. As a standalone, Baku runs best at 4–6 days, and at that length some clients feel it's compact. The two-country circuit, however, is one of the most compelling value propositions in the Indian outbound market right now: two distinct countries, completely different characters, both with accessible visa processes, combinable in under two weeks at a price point well below comparable European circuits.</p>
+    </div>
+  </div>
+ 
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Ateshgah</span>
+      "What's special about Ateshgah? Is it just a fire temple?"
+    </div>
+    <div class="objection-a">
+      <p>It's one of the most unexpectedly personal stops for Indian clients in the entire Caucasus region. Ateshgah was built by Indian merchants settled in Baku along the Silk Road — the Sanskrit and Devanagari inscriptions are still on the walls. Zoroastrian and Hindu pilgrims worshipped at the same site for centuries, fueled by natural gas seeps from the ground beneath. For Indian clients, the connection is visceral and immediate. Most say it's the stop they talk about first when they get home. We consider it essential on any Azerbaijan program.</p>
+    </div>
+  </div>
+ 
+</div>
+ 
 <!-- ══ CTA SECTION ════════════════════════════════════════════ -->
 <div class="cta-section">
   <div class="cta-text">
@@ -1545,11 +2137,11 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 </div>
-
+ 
 <div class="page-header" style="border-top:1px solid #2e2622;">
   <div style="font-size:11px;color:rgba(255,255,255,.4);padding:4px 0;">This document is for trade use only. Not for distribution to end consumers. © Caravan Compass DMC 2026. All rates indicative — confirmed on individual quotation.</div>
   <div style="font-size:11px;color:rgba(255,255,255,.4);">ops@caravancompass.com · caravancompass.com</div>
 </div>
-
+ 
 </body>
 </html>
