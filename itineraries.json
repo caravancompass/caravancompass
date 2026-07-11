@@ -25,15 +25,15 @@
       "destination": "Georgia",
       "flag": "🇬🇪",
       "duration": "6 Nights / 7 Days",
-      "validity": "May-October",
-      "price_from": "$629 pp",
+      "validity": "Year-Round 2026",
+      "price_from": "$TBC pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 2 pax",
       "tags": ["Summer", "Mountains", "Black Sea", "Caves"],
       "highlights": [
         "Tbilisi Old Town, Narikala cable car & Mtatsminda",
         "Kazbegi & Gergeti Trinity Church by 4x4",
-        "Martvili Canyon boat ride (en route to Batumi)",
+        "Martvili Canyon boat ride en route to Batumi",
         "Prometheus Cave on the return"
       ],
       "path": "/itineraries/georgia-summer/"
@@ -75,6 +75,44 @@
         "Candy Cane mountains on the return to Baku"
       ],
       "path": "/itineraries/baku-6n/"
+    },
+    {
+      "id": "almaty-express",
+      "title": "Almaty Express",
+      "destination": "Almaty, Kazakhstan",
+      "flag": "🇰🇿",
+      "duration": "4 Nights / 5 Days",
+      "validity": "May-October 2026",
+      "price_from": "$TBC pp",
+      "star": "4★ & 5★",
+      "pax_basis": "Based on 2 pax",
+      "tags": ["Short Break", "Mountains", "City", "MICE"],
+      "highlights": [
+        "Shymbulak cable car to 3,200m — snow & alpine views",
+        "Kok-Tobe sunset panorama & alpine coaster",
+        "Zenkov Cathedral, Green Bazaar & Rakhat Chocolate",
+        "Big Almaty Lake or Lake Issyk full-day excursion"
+      ],
+      "path": "/itineraries/almaty-express/"
+    },
+    {
+      "id": "almaty-wilderness",
+      "title": "Grand Wilderness Loop",
+      "destination": "Almaty, Kazakhstan",
+      "flag": "🇰🇿",
+      "duration": "6 Nights / 7 Days",
+      "validity": "May-October 2026",
+      "price_from": "$TBC pp",
+      "star": "4★ & 5★",
+      "pax_basis": "Based on 2 pax",
+      "tags": ["Wilderness", "Lakes", "Canyon", "Culture"],
+      "highlights": [
+        "Charyn Canyon — Valley of Castles hike",
+        "Kaindy Lake sunken forest by 4x4",
+        "Kolsai Lakes — boat ride in the Tian Shan",
+        "Traditional nomad falconry show"
+      ],
+      "path": "/itineraries/almaty-wilderness/"
     }
   ]
 }
