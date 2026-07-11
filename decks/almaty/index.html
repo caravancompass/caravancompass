@@ -756,6 +756,227 @@ strong{ color:var(--ink); font-weight:600; }
 .s-good{ background:#e3ddc8; color:#6b5a2f; }
 .s-ok{ background:#e6e3da; color:#5c5648; }
 
+/* ── TABLE SCROLL WRAPPER ── */
+.table-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:24px;
+  border-radius:8px;
+}
+.table-scroll table{ margin-bottom:0; }
+
+/* ── SEASON TABLE — scroll-safe ── */
+.season-table{
+  width:100%;
+  min-width:640px;
+  border-collapse:collapse;
+  margin-bottom:24px;
+  font-size:12px;
+}
+.season-table th{
+  background:var(--ink-black);
+  color:var(--white);
+  padding:9px 10px;
+  font-weight:600;
+  font-size:11px;
+  text-align:left;
+  white-space:nowrap;
+}
+.season-table td{
+  padding:9px 10px;
+  border-bottom:1px solid var(--border);
+  vertical-align:top;
+  line-height:1.5;
+}
+.season-table td:nth-child(1){ white-space:nowrap; font-weight:600; }
+.season-table td:nth-child(2){ white-space:nowrap; min-width:72px; }
+.season-table td:nth-child(3){ white-space:nowrap; min-width:72px; }
+.season-table td:nth-child(4){ min-width:160px; }
+.season-table td:nth-child(5){ white-space:nowrap; text-align:center; }
+.season-table td:nth-child(6){ min-width:140px; }
+.season-table tr:nth-child(even) td{ background:#fafaf7; }
+
+/* ── IMAGE PLACEHOLDERS ── */
+.img-placeholder{
+  width:100%;
+  border-radius:12px;
+  background:linear-gradient(135deg,#e4f2f1 0%,#cce6e4 100%);
+  border:1.5px dashed #8ec9c6;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  position:relative;
+  overflow:hidden;
+}
+.img-placeholder::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 80%,rgba(14,124,134,.07) 0%,transparent 50%),
+    radial-gradient(circle at 80% 20%,rgba(176,138,62,.07) 0%,transparent 50%);
+}
+.img-placeholder-icon{ font-size:28px;opacity:.5;position:relative;z-index:1; }
+.img-placeholder-label{
+  font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--turquoise);opacity:.7;position:relative;z-index:1;
+}
+.img-placeholder-desc{
+  font-size:11px;color:var(--ink-soft);text-align:center;
+  max-width:200px;line-height:1.4;position:relative;z-index:1;
+}
+
+.deck-img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:12px;
+  background:linear-gradient(135deg,#e4f2f1 0%,#cce6e4 100%);
+}
+.deck-img.h-xs{ height:110px; }
+.deck-img.h-sm{ height:160px; }
+.deck-img.h-md{ height:220px; }
+.deck-img.h-lg{ height:280px; }
+.img-placeholder.h-xs{ height:110px; }
+.img-placeholder.h-sm{ height:160px; }
+.img-placeholder.h-md{ height:220px; }
+.img-placeholder.h-lg{ height:280px; }
+
+.img-row{ display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px; }
+.img-row-3{ display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px; }
+.img-caption{ font-size:10px;color:var(--ink-soft);text-align:center;margin-top:4px;font-style:italic; }
+
+/* ── VISA / CHECKLIST ── */
+.checklist{
+  background:#f0faf9;border:1px solid #b5d9d6;
+  border-left:4px solid var(--turquoise);border-radius:10px;
+  padding:18px 22px;margin-bottom:20px;
+}
+.checklist-title{
+  font-size:11px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--turquoise);margin-bottom:12px;
+}
+.checklist ul{ margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px; }
+.checklist li{ font-size:13px;color:var(--ink-mid);line-height:1.55; }
+.checklist li strong{ color:var(--ink); }
+
+.visa-free-box{
+  background:#f5f3ea;border:1px solid #dbd5b8;
+  border-left:4px solid var(--gold);border-radius:10px;
+  padding:14px 18px;margin-bottom:20px;
+}
+.visa-free-box p{ font-size:13px;margin:0;color:var(--ink-mid); }
+
+/* ── CONNECTIVITY TABLE ── */
+.connect-table{
+  width:100%;min-width:580px;border-collapse:collapse;font-size:13px;
+}
+.connect-table th{
+  background:var(--ink-black);color:var(--white);padding:9px 10px;
+  text-align:left;font-size:11px;font-weight:600;letter-spacing:.04em;white-space:nowrap;
+}
+.connect-table th:first-child{ border-radius:8px 0 0 0; }
+.connect-table th:last-child{ border-radius:0 8px 0 0; }
+.connect-table td{
+  padding:9px 10px;border-bottom:1px solid var(--border);
+  color:var(--ink-mid);vertical-align:top;line-height:1.5;
+}
+.connect-table tr:last-child td{ border-bottom:none; }
+.connect-table tr:nth-child(even) td{ background:#fafaf7; }
+.connect-badge{
+  display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;
+  border-radius:4px;background:#cdeae6;color:#0e5a58;
+}
+
+/* ── RESTAURANT SECTION ── */
+.resto-grid{ display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px; }
+.resto-card{ border:1px solid var(--border);border-radius:12px;overflow:hidden; }
+.resto-head{
+  background:var(--ink-black);padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+}
+.resto-icon{
+  width:28px;height:28px;background:var(--turquoise);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;
+}
+.resto-head-title{
+  font-family:'Playfair Display',Georgia,serif;font-size:14px;
+  font-weight:600;color:var(--white);
+}
+.resto-head-sub{
+  font-size:9px;color:rgba(255,255,255,.5);
+  text-transform:uppercase;letter-spacing:.08em;margin-top:1px;
+}
+.resto-body{ padding:14px 16px;background:var(--white); }
+.resto-item{
+  padding:8px 0;border-bottom:1px solid #f0ece6;
+  display:flex;flex-direction:column;gap:2px;
+}
+.resto-item:last-child{ border-bottom:none;padding-bottom:0; }
+.resto-item:first-child{ padding-top:0; }
+.resto-note{ font-size:11px;color:var(--ink-soft);line-height:1.4; }
+.resto-loc{
+  font-size:10px;font-weight:700;color:var(--turquoise);
+  text-transform:uppercase;letter-spacing:.06em;
+}
+
+.food-tip{
+  background:var(--sand);border:1px solid var(--border);
+  border-radius:10px;padding:16px 20px;margin-bottom:16px;
+}
+.food-tip-label{
+  font-size:9px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--turquoise);margin-bottom:6px;
+}
+.food-tip p{ font-size:13px;margin:0; }
+
+/* ── LOCAL DISH GRID ── */
+.local-dish-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;
+}
+.local-dish{
+  background:var(--turquoise-pale);border:1px solid #c7e3e1;
+  border-radius:10px;padding:14px 16px;
+}
+.dish-name{ font-weight:700;font-size:13px;color:var(--ink-black);margin-bottom:4px; }
+.dish-desc{ font-size:11px;color:var(--ink-soft);line-height:1.45; }
+.dish-rating{
+  display:inline-block;margin-top:6px;font-size:10px;
+  font-weight:700;padding:2px 6px;border-radius:4px;
+}
+.dr-veg{ background:#c6f6d5;color:#1a4a2a; }
+.dr-flex{ background:#bee3f8;color:#1a3a5a; }
+.dr-halal{ background:#feebc8;color:#7b341e; }
+
+/* ── OBJECTION HANDLER ── */
+.objection{ border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px; }
+.objection-q{
+  background:var(--sand);padding:14px 18px;font-size:13px;font-weight:700;
+  color:var(--ink);display:flex;gap:10px;align-items:flex-start;
+  border-bottom:1px solid var(--border);
+}
+.obj-tag{
+  font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--ink-black);color:var(--white);padding:3px 8px;
+  border-radius:4px;white-space:nowrap;margin-top:1px;flex-shrink:0;
+}
+.objection-a{ padding:14px 18px;background:var(--white); }
+.objection-a p{ font-size:13px;margin:0;color:var(--ink-mid); }
+
+/* ── MID-DESKTOP BREAKPOINT ── */
+@media(max-width:860px){
+  .mice-grid{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr 1fr; }
+  .img-row{ grid-template-columns:1fr; }
+  .img-row-3{ grid-template-columns:1fr 1fr; }
+  .itin-grid{ grid-template-columns:1fr 1fr; }
+  .policy-grid{ grid-template-columns:1fr; }
+  .intro-grid{ grid-template-columns:1fr 1fr; }
+}
+
 /* ── PRINT ── */
 @media print{
   body{ background:white; font-size:11px; }
@@ -778,7 +999,12 @@ strong{ color:var(--ink); font-weight:600; }
   .mice-grid{ grid-template-columns:1fr; }
   .policy-grid{ grid-template-columns:1fr; }
   .region{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr; }
+  .img-row,.img-row-3{ grid-template-columns:1fr; }
   .cta-section{ grid-template-columns:1fr; padding:32px 20px; }
+  .connect-table td,.connect-table th{ padding:7px 8px;font-size:11px; }
+  .rate-table td,.rate-table th{ padding:7px 8px;font-size:11px; }
 }
 </style>
 </head>
@@ -909,6 +1135,100 @@ strong{ color:var(--ink); font-weight:600; }
   <p>
     For Indian operators, Kazakhstan reads as genuinely new territory — not a repeat of Georgia or Azerbaijan, and not yet saturated with Indian tour groups the way some Southeast Asian and Gulf destinations are. The combination of visa-free entry, direct flight connectivity, and a mountain-and-canyon landscape unlike anything else in the region's current Indian-outbound product mix is what's driving early interest.
   </p>
+
+  <div class="img-row" style="margin-top:20px;">
+    <div>
+      <img src="https://caravancompass.com/images/decks/almaty/hero-almaty-skyline.jpg" alt="Almaty skyline with Tian Shan peaks" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-almaty-skyline.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Almaty — where the city meets the mountains</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/almaty/hero-big-almaty-lake.jpg" alt="Big Almaty Lake, 2,500m altitude" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-big-almaty-lake.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Big Almaty Lake, 2,500m altitude</div>
+    </div>
+  </div>
+
+  <hr class="page-sep">
+
+  <div style="margin-bottom:10px;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--turquoise);margin-bottom:12px;">Visa — What Operators Need to Know</div>
+
+    <div class="visa-free-box">
+      <p><strong>Kazakhstan is visa-free for Indian passport holders for up to 14 continuous days</strong> (maximum 42 days within any rolling 180-day period). No application, no embassy visit, no fee. This is a bilateral arrangement — not e-visa, not visa on arrival with a form to fill at the airport. Clients simply arrive. The only conditions: passport must have minimum 6 months validity remaining, and a confirmed return ticket plus accommodation details can be requested at immigration. Brief clients to carry both.</p>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-title">✓ Arrival Checklist — Brief Every Client</div>
+      <ul>
+        <li><strong>Passport with 6+ months validity remaining</strong> — check this before departure, not at check-in</li>
+        <li><strong>Confirmed return flight tickets</strong> — printout or clearly accessible on device at immigration</li>
+        <li><strong>Hotel vouchers or accommodation confirmation</strong> — for every night of the program</li>
+        <li><strong>Proof of financial means</strong> — cash or credit card; immigration can ask</li>
+        <li><strong>Border permit awareness for Big Almaty Lake</strong> — this excursion passes a military checkpoint due to proximity to the Kyrgyzstan border; passports must be physically carried on this day trip</li>
+      </ul>
+    </div>
+
+    <p style="font-size:12px;color:var(--ink-soft);">Almaty International Airport (ALA) immigration is generally smooth. Allow 30–45 minutes for immigration and baggage on arrival. Transfer to city centre is 25–40 minutes depending on traffic.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div style="margin-bottom:0;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--turquoise);margin-bottom:14px;">Flight Connectivity — India to Almaty</div>
+
+    <div class="table-scroll">
+    <table class="connect-table">
+      <thead>
+        <tr>
+          <th>Route Type</th>
+          <th>Airline(s)</th>
+          <th>Route</th>
+          <th>Typical Timing</th>
+          <th>Approx. Total Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Direct</strong> <span class="connect-badge">Best Option</span></td>
+          <td>Air Astana (KC)</td>
+          <td>Delhi (DEL) → Almaty (ALA) nonstop</td>
+          <td>Multiple weekly departures<div class="rate-incl">Check current schedule — frequency varies seasonally</div></td>
+          <td>~4 hrs 30 min</td>
+        </tr>
+        <tr>
+          <td><strong>Direct</strong></td>
+          <td>IndiGo (6E)</td>
+          <td>Delhi (DEL) → Almaty (ALA) nonstop</td>
+          <td>Seasonal service<div class="rate-incl">Verify availability for travel dates</div></td>
+          <td>~4 hrs 30 min</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Air Arabia (G9)</td>
+          <td>Multiple Indian cities → Sharjah (SHJ) → Almaty</td>
+          <td>SHJ layover typically 2–4 hrs<div class="rate-incl">Good option from Mumbai/Ahmedabad</div></td>
+          <td>~8–10 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Turkish Airlines (TK)</td>
+          <td>Multiple Indian cities → Istanbul (IST) → Almaty</td>
+          <td>IST layover 2–5 hrs<div class="rate-incl">Wide India coverage via IST hub</div></td>
+          <td>~11–14 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>flydubai (FZ) / Emirates (EK)</td>
+          <td>Multiple Indian cities → Dubai (DXB) → Almaty</td>
+          <td>DXB layover 2–5 hrs<div class="rate-incl">Strong South India connectivity via DXB</div></td>
+          <td>~9–12 hours total</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p style="font-size:12px;color:var(--ink-soft);">Flight schedules and frequencies are indicative and subject to seasonal change — always verify at booking. Air Astana's DEL–ALA direct is currently the most reliable non-stop option. For groups, early confirmation of flight options is recommended as Almaty capacity on direct routes is more limited than on Caucasus routes.</p>
+  </div>
+
 </div>
 
 
@@ -944,6 +1264,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Panfilov Park</span>
           <span class="rtag">Green Bazaar</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/almaty/region-almaty-city.jpg" alt="Almaty city centre and Kok-Tobe Hill" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-almaty-city.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -961,6 +1282,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Cable Car</span>
           <span class="rtag">Half-Day or Ski Day</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/almaty/region-shymbulak.jpg" alt="Shymbulak ski resort and gondola" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-shymbulak.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -977,6 +1299,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Half-Day Excursion</span>
           <span class="rtag">Photography</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/almaty/region-big-almaty-lake.jpg" alt="Big Almaty Lake at 2,500m" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-big-almaty-lake.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -993,6 +1316,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Red Sandstone Canyon</span>
           <span class="rtag">Long Full-Day Trip</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/almaty/region-charyn-canyon.jpg" alt="Charyn Canyon Valley of Castles" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-charyn-canyon.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1009,6 +1333,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Kaindy Sunken Forest</span>
           <span class="rtag">2–3 Day Program</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/almaty/region-kaindy-lake.jpg" alt="Kaindy Lake submerged forest" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-kaindy-lake.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1032,10 +1357,13 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 
+  <div class="table-scroll">
   <table class="season-table">
     <thead>
       <tr>
         <th>Month</th>
+        <th>Almaty Temp</th>
+        <th>Mountains</th>
         <th>Conditions</th>
         <th>Rating</th>
         <th>Best For</th>
@@ -1043,37 +1371,48 @@ strong{ color:var(--ink); font-weight:600; }
     </thead>
     <tbody>
       <tr>
-        <td><strong>April–May</strong></td>
-        <td>Mountain snow melt begins, city greens up. Some lake/canyon roads may still be affected by spring conditions.</td>
+        <td><strong>Apr–May</strong></td>
+        <td>8–22°C</td>
+        <td>0–10°C</td>
+        <td>Snow melt begins; city greens up. Some lake/canyon roads may still be affected by spring conditions.</td>
         <td><span class="srating s-good">Good</span></td>
         <td>City programs; confirm regional road conditions before booking</td>
       </tr>
       <tr>
-        <td><strong>June–August</strong></td>
-        <td>Warm, dry, all regional excursions fully accessible. Big Almaty Lake, Charyn Canyon, and Kolsai Lakes all at their best.</td>
+        <td><strong>Jun–Aug</strong></td>
+        <td>22–32°C</td>
+        <td>10–22°C</td>
+        <td>Warm, dry. All excursions fully open. Big Almaty Lake, Charyn, Kolsai at their best.</td>
         <td><span class="srating s-best">Best</span></td>
         <td>All client types. Full regional circuit possible.</td>
       </tr>
       <tr>
-        <td><strong>September–October</strong></td>
-        <td>Cooling temperatures, clear skies, autumn colour in the mountain foothills. Comfortable for hiking and excursions.</td>
+        <td><strong>Sep–Oct</strong></td>
+        <td>8–22°C</td>
+        <td>0–12°C</td>
+        <td>Cooling temps, clear skies, autumn colour in mountain foothills. Excellent for hiking.</td>
         <td><span class="srating s-best">Best</span></td>
-        <td>Premium FIT and group programs, photography-focused clients</td>
+        <td>Premium FIT and group programs; photography clients</td>
       </tr>
       <tr>
         <td><strong>November</strong></td>
-        <td>Cooling fast, early snow possible. Regional excursions become weather-dependent.</td>
+        <td>−2–8°C</td>
+        <td>−10–0°C</td>
+        <td>Cooling fast; early snow possible. Regional excursions weather-dependent.</td>
         <td><span class="srating s-ok">Variable</span></td>
         <td>City-focused programs; confirm regional access case by case</td>
       </tr>
       <tr>
-        <td><strong>December–March</strong></td>
-        <td>Reliable Shymbulak ski season. Almaty city remains accessible; canyon and lake regions largely inaccessible or impractical.</td>
+        <td><strong>Dec–Mar</strong></td>
+        <td>−10–2°C</td>
+        <td>−20–−5°C</td>
+        <td>Reliable Shymbulak ski season. Canyon and lake regions largely inaccessible.</td>
         <td><span class="srating s-good">Good</span></td>
-        <td>Ski programs and winter city breaks; not for canyon/lake itineraries</td>
+        <td>Ski programs; winter city breaks. Not for canyon/lake itineraries.</td>
       </tr>
     </tbody>
   </table>
+  </div>
 
   <div class="highlight">
     <p><strong>Operator note:</strong> Unlike Georgia and Azerbaijan, Almaty's regional excursion product (Charyn Canyon, Kolsai Lakes) is genuinely seasonal — winter access to these sites is limited or impractical, not just less comfortable. For winter bookings, we steer clients toward the city + Shymbulak combination rather than promising canyon or lake access.</p>
@@ -1173,6 +1512,7 @@ strong{ color:var(--ink); font-weight:600; }
 
   <div class="mice-grid">
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/almaty/mice-shymbulak-group.jpg" alt="Corporate group at Shymbulak, 2,200m" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-shymbulak-group.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🏔</div>
         Shymbulak Mountain Day
@@ -1181,6 +1521,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/almaty/mice-big-almaty-lake-group.jpg" alt="Leadership group at Big Almaty Lake" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-big-almaty-lake-group.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🌊</div>
         Big Almaty Lake Offsite
@@ -1189,6 +1530,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/almaty/mice-silk-road-dinner.jpg" alt="Traditional Kazakh Silk Road dinner" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-silk-road-dinner.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🏛</div>
         Silk Road Heritage Evening
@@ -1197,6 +1539,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/almaty/mice-green-bazaar.jpg" alt="Green Bazaar team challenge, Almaty" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-green-bazaar.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🏙</div>
         City &amp; Bazaar Team Challenge
@@ -1205,6 +1548,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1241,6 +1585,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
 
 
@@ -1264,6 +1609,7 @@ strong{ color:var(--ink); font-weight:600; }
     <p><strong>Important:</strong> All pricing below is indicative only. Every program is quoted individually based on your dates, pax count, hotel preference, and inclusions. Contact ops@caravancompass.com with RFQ details for a binding quotation within 4 hours.</p>
   </div>
 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1306,6 +1652,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
 
   <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">
     All rates are land-only, per person on twin/double share basis. Single supplement available on request. Rates include: accommodation with breakfast, all ground transfers, licensed guides, specified excursions, and applicable entrance/permit fees. Exclude: flights, personal expenses, tips, and any items not listed in the confirmed program.
@@ -1321,6 +1668,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1345,6 +1693,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
 
   <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">For the Charyn Canyon / Kolsai Lakes route (overnight programs), we work with Pana Unique Charyn and Charyn Eco Resort near the canyon, and premium eco-chalets in Kolsai Lakes Town for the combined canyon-and-lake circuit. Full property list with current rates available on request.</p>
 </div>
@@ -1356,10 +1705,177 @@ strong{ color:var(--ink); font-weight:600; }
   <div class="page-header-title">Almaty / Kazakhstan — B2B Operator Guide 2026</div>
 </div>
 
-<!-- ══ SECTION 9 — BOOKING PROCESS ═══════════════════════════ -->
+<!-- ══ SECTION 9 — RESTAURANTS & FOOD ════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
     <div class="section-num">09</div>
+    <div>
+      <div class="section-title">Restaurants &amp; Food Guide</div>
+      <div class="section-sub">Indian-friendly dining and Kazakh dishes suited to Indian palates</div>
+    </div>
+  </div>
+
+  <p>Almaty has a developing Indian restaurant scene and a broader dining culture that is more international than the Caucasus — years as a Soviet commercial hub and a large expat population mean the city has diverse restaurant options. Kazakh cuisine itself is meat-heavy and nomadic in origin (lamb, horse meat, dairy), but vegetarian-friendly options exist in city restaurants and can be pre-arranged. Brief clients accurately on the food landscape so expectations are set before arrival.</p>
+
+  <div class="img-row-3" style="margin-bottom:28px;">
+    <div>
+      <img src="https://caravancompass.com/images/decks/almaty/food-beshbarmak.jpg" alt="Beshbarmak — Kazakhstan's national dish" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-beshbarmak.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Beshbarmak — Kazakhstan's national dish</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/almaty/food-plov.jpg" alt="Plov in a kazan" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-plov.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Plov — Silk Road comfort food</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/almaty/food-samsa.jpg" alt="Samsa baked pastries" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-samsa.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Samsa — baked Central Asian pastry</div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--turquoise);margin-bottom:14px;">Indian Restaurants in Almaty</div>
+
+  <div class="resto-grid">
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🇮🇳</div>
+        <div>
+          <div class="resto-head-title">Bollywood Indian Restaurant</div>
+          <div class="resto-head-sub">North Indian · Almaty</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/almaty/resto-bollywood.jpg" alt="Bollywood Indian Restaurant, Almaty" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-bollywood.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+        <div class="resto-item">
+          <div class="resto-loc">Central Almaty</div>
+          <div class="resto-note">One of the most established Indian restaurants in Almaty. Reliable North Indian menu — curries, tandoor, dal, rice. The default recommendation for groups needing a familiar meal. Comfortable seating for mid-sized groups. Confirm current operating hours at RFQ stage.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🇮🇳</div>
+        <div>
+          <div class="resto-head-title">Namaste India Almaty</div>
+          <div class="resto-head-sub">Indian · Almaty</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/almaty/resto-namaste-india-almaty.jpg" alt="Namaste India Almaty" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-namaste-india-almaty.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+        <div class="resto-item">
+          <div class="resto-loc">Almaty city centre</div>
+          <div class="resto-note">Solid Indian option. Good for clients with strict vegetarian requirements where Kazakh menus don't provide enough certainty. Staff familiar with Indian dietary preferences. Verify current status at booking stage.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🍽</div>
+        <div>
+          <div class="resto-head-title">Navat Restaurant</div>
+          <div class="resto-head-sub">Traditional Kazakh · Almaty</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/almaty/resto-navat.jpg" alt="Navat Restaurant, Almaty" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-navat.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+        <div class="resto-item">
+          <div class="resto-loc">Central Almaty</div>
+          <div class="resto-note">The best introduction to traditional Kazakh cuisine for Indian clients open to exploring local food. Yurt-inspired interior, strong on beshbarmak and plov. English-friendly staff. We recommend this for FIT clients and small premium groups who want a cultural dining experience. Vegetarian items available with advance notice.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🍽</div>
+        <div>
+          <div class="resto-head-title">Chайхана / Chayhana</div>
+          <div class="resto-head-sub">Central Asian · Almaty</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/almaty/resto-chayhana.jpg" alt="Chayhana teahouse, Almaty" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-chayhana.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+        <div class="resto-item">
+          <div class="resto-loc">Multiple locations, Almaty</div>
+          <div class="resto-note">Traditional Central Asian teahouse format — plov, samsa, lagman noodle soup, and green tea. Good for a casual lunch during city sightseeing. More accessible for Indian palates than formal Kazakh dining; the plov and vegetable dishes in particular work well. Available across multiple locations in central Almaty.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-tip">
+    <div class="food-tip-label">Operator Note — Food outside Almaty</div>
+    <p>At Shymbulak resort and Big Almaty Lake, dining options are resort-based and more limited in variety — hotel restaurants and mountain cafés with standard European and Kazakh menus. For Charyn Canyon and Kolsai Lakes overnight programs, we include meal coordination in our itinerary planning; remote locations have basic facilities. Brief clients that these are nature programs, not food destinations — Almaty city is where the dining experience sits.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--turquoise);margin-bottom:14px;">Kazakh &amp; Central Asian Dishes Suited to Indian Palates</div>
+
+  <div class="local-dish-grid">
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/almaty/dish-plov.jpg" alt="Plov — Central Asian rice pilaf" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-plov.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Plov</div>
+      <div class="dish-desc">Central Asian rice pilaf with carrots and spices — the vegetarian version (without meat) is available at most restaurants on request. Closest parallel to Indian pulao. Mild, filling, and comfortable for Indian palates.</div>
+      <span class="dish-rating dr-flex">⚬ Request veg version</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/almaty/dish-samsa.jpg" alt="Samsa — baked pastry" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-samsa.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Samsa</div>
+      <div class="dish-desc">Baked triangular pastry filled with lamb and onion. Widely available at bakeries and teahouses throughout Almaty — a good street food snack. Cheese and potato variants exist and work well for vegetarian clients.</div>
+      <span class="dish-rating dr-flex">⚬ Cheese/potato variant available</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/almaty/dish-lagman.jpg" alt="Lagman — hand-pulled noodle soup" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-lagman.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Lagman</div>
+      <div class="dish-desc">Hand-pulled noodle soup with vegetables and broth — a Uyghur-influenced dish common across Central Asia. The vegetarian version is widely available, and the noodle-in-broth format is immediately comfortable for Indian palates.</div>
+      <span class="dish-rating dr-flex">⚬ Vegetarian version available</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/almaty/dish-lepyoshka.jpg" alt="Lepyoshka — Central Asian flatbread" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-lepyoshka.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Lepyoshka</div>
+      <div class="dish-desc">Round Central Asian flatbread, similar to Indian naan in texture and eating style. Served at almost every meal and a reliable, universally enjoyed staple for Indian clients alongside any dish on the table.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/almaty/dish-achik-chuchuk.jpg" alt="Achik-chuchuk salad" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-achik-chuchuk.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Achik-Chuchuk</div>
+      <div class="dish-desc">A simple Uyghur-origin fresh salad of sliced tomatoes and raw onion with black pepper and oil. Clean, light, and very similar in spirit to Indian tomato-onion salad. Universally available alongside main dishes.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/almaty/dish-chak-chak.jpg" alt="Chak-chak — Kazakh honey sweet" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-chak-chak.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Chak-Chak</div>
+      <div class="dish-desc">A traditional Kazakh sweet — small fried dough pieces bound together with honey. Rich and sweet, comparable in spirit to Indian mithai. Commonly served at celebrations and as a souvenir gift; available at bakeries and bazaars across Almaty.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+  </div>
+
+  <div class="food-tip">
+    <div class="food-tip-label">Vegetarian &amp; Jain Clients</div>
+    <p>Vegetarian is workable in Almaty city with good briefing — plov (veg version), lagman (veg version), lepyoshka, achik-chuchuk, and samsa (cheese/potato variant) provide reliable options. Indian restaurants fill any gaps. Strict Jain (no root vegetables, no onion/garlic) is more challenging and requires advance coordination at RFQ stage — we can arrange pre-coordinated menus at select restaurants for Jain clients but cannot guarantee Jain-certified options at mountain stops.</p>
+  </div>
+
+</div>
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Almaty / Kazakhstan — B2B Operator Guide 2026</div>
+</div>
+
+<!-- ══ SECTION 10 — BOOKING PROCESS ══════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">10</div>
     <div>
       <div class="section-title">How to Work With Us</div>
       <div class="section-sub">Booking process, payment terms, and policies</div>
@@ -1445,7 +1961,7 @@ strong{ color:var(--ink); font-weight:600; }
   <hr class="page-sep">
 
   <div class="section-header" style="margin-top:8px;">
-    <div class="section-num">10</div>
+    <div class="section-num">11</div>
     <div>
       <div class="section-title">Frequently Asked by Operators</div>
       <div class="section-sub">Honest answers to common pre-booking questions</div>
@@ -1477,6 +1993,96 @@ strong{ color:var(--ink); font-weight:600; }
   </div>
 </div>
 
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Almaty / Kazakhstan — B2B Operator Guide 2026</div>
+</div>
+
+<!-- ══ SECTION 12 — CLIENT OBJECTION HANDLER ═════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div>
+      <div class="section-title">Handling Client Objections</div>
+      <div class="section-sub">Ready-to-use pivots for common sales conversations</div>
+    </div>
+  </div>
+
+  <p>Almaty requires more explanation than Georgia or Baku — most Indian clients don't have an existing mental picture of it. These are the objections that come up most in sales conversations, with honest, factually grounded responses.</p>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Awareness</span>
+      "My clients haven't heard of Almaty / Kazakhstan. It'll be a hard sell."
+    </div>
+    <div class="objection-a">
+      <p>That's exactly the point — and it's a feature, not a problem. Almaty is at the stage Georgia was 4–5 years ago: high quality, genuinely undiscovered by Indian mass tourism, and producing strong word-of-mouth from clients who do go. The pitch that works: "Imagine the Alps — at a fraction of the price, no Schengen visa required, visa-free entry, and none of the crowds." Once clients see images of Big Almaty Lake or the Tian Shan backdrop, the conversation changes quickly. The destination sells itself visually.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Visa</span>
+      "Is the visa-free entry really that simple? What's the catch?"
+    </div>
+    <div class="objection-a">
+      <p>It's genuinely that simple. No application, no form, no fee — Indian passport holders enter Kazakhstan visa-free for up to 14 continuous days (42 days within any rolling 180-day period). The only conditions to brief clients on: passport must have 6 months validity remaining; carry confirmed return tickets and hotel vouchers as immigration can ask. There is no catch — this is a bilateral arrangement that's been in place and functioning cleanly for Indian travelers.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Food</span>
+      "My clients are vegetarian. Can they eat properly in Kazakhstan?"
+    </div>
+    <div class="objection-a">
+      <p>In Almaty city, yes — with good briefing. Vegetarian plov, lagman (noodle soup), lepyoshka (flatbread), samsa (cheese/potato variant), and fresh salads provide a workable foundation. Almaty has Indian restaurants (Bollywood, Namaste India) as reliable fallbacks for any meal requiring certainty. The honest briefing: Almaty is not as naturally vegetarian-friendly as Georgia, but it's manageable in the city. The challenge is at mountain stops (Shymbulak, canyon/lake overnight programs) where options are more limited — pre-coordinate with us at RFQ stage.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Value</span>
+      "How does the cost compare to Switzerland or Scandinavia for a similar mountain experience?"
+    </div>
+    <div class="objection-a">
+      <p>Almaty delivers a comparable mountain visual experience at roughly 35–50% of the cost of equivalent Swiss or Scandinavian programs, with no Schengen visa required. Big Almaty Lake at 2,500m altitude with 4,000m+ peaks behind it is objectively comparable to Alpine lake scenery — at a 4-star price point significantly lower than Interlaken or Innsbruck. For clients who want mountain grandeur without European pricing or visa complexity, the value case is clear and factually honest.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Safety</span>
+      "Is Central Asia safe for Indian tourists?"
+    </div>
+    <div class="objection-a">
+      <p>Kazakhstan is consistently rated among the safest countries in Central Asia — Almaty has a low street crime rate, a large expat community, and well-developed tourism infrastructure. India's MEA does not advise against travel to Kazakhstan. The main practical considerations for clients: stay within the tourist circuit (city, Shymbulak, Charyn, Kolsai), carry passports on the Big Almaty Lake excursion (military checkpoint), and use our arranged transport rather than unlicensed taxis. In practice, Indian clients who visit Almaty consistently report feeling safe and well-received.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Seasonality</span>
+      "My clients want to visit in winter. Is there enough to do?"
+    </div>
+    <div class="objection-a">
+      <p>Winter is a strong product in Almaty — specifically for ski clients. Shymbulak's reliable December–March ski season at 2,200m is the anchor, with the city's cafés, restaurants, and cultural sites fully operational year-round. The honest scope-setting: winter programs run as city + Shymbulak combinations; Charyn Canyon, Big Almaty Lake, and Kolsai Lakes are not practical in winter due to access conditions. For non-ski clients wanting a winter cultural break, Almaty works as a 3–4 day city program with Shymbulak as the scenic day trip.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Duration</span>
+      "Is 4–5 days enough, or does it need more?"
+    </div>
+    <div class="objection-a">
+      <p>4 days is the comfortable minimum for the Essential Almaty program (city + Big Almaty Lake + Shymbulak). 6 days allows the full circuit including Charyn Canyon. 8 days is needed for the nature extension with Kolsai and Kaindy Lakes. The most common mistake is underpacking time for Charyn Canyon — the drive is 3–3.5 hours each way, making it a genuinely long full day. We set client expectations on this clearly at the booking stage.</p>
+    </div>
+  </div>
+
+</div>
 
 <!-- ══ CTA SECTION ════════════════════════════════════════════ -->
 <div class="cta-section">
