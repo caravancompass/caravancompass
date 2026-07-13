@@ -735,6 +735,259 @@ strong{ color:var(--ink); font-weight:600; }
 .s-good{ background:#ece4d3; color:#6b5a3a; }
 .s-ok{ background:#e9e2d4; color:#5c5444; }
 
+/* ── TABLE SCROLL WRAPPER ── */
+.table-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:24px;
+  border-radius:8px;
+}
+.table-scroll table{ margin-bottom:0; }
+
+/* ── SEASON TABLE — scroll-safe ── */
+.season-table{
+  width:100%;
+  min-width:600px;
+  border-collapse:collapse;
+  margin-bottom:24px;
+  font-size:12px;
+}
+.season-table th{
+  background:var(--ink-black);
+  color:var(--white);
+  padding:9px 10px;
+  font-weight:600;
+  font-size:11px;
+  text-align:left;
+  white-space:nowrap;
+}
+.season-table td{
+  padding:9px 10px;
+  border-bottom:1px solid var(--border);
+  vertical-align:top;
+  line-height:1.5;
+}
+.season-table td:nth-child(1){ white-space:nowrap; font-weight:600; }
+.season-table td:nth-child(2){ white-space:nowrap; min-width:72px; }
+.season-table td:nth-child(3){ white-space:nowrap; min-width:72px; }
+.season-table td:nth-child(4){ min-width:160px; }
+.season-table td:nth-child(5){ white-space:nowrap; text-align:center; }
+.season-table td:nth-child(6){ min-width:140px; }
+.season-table tr:nth-child(even) td{ background:#fbf7f0; }
+
+/* ── IMAGE PLACEHOLDERS ── */
+.img-placeholder{
+  width:100%;
+  border-radius:12px;
+  background:linear-gradient(135deg,#f5ede6 0%,#eeddd4 100%);
+  border:1.5px dashed #d4a896;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  position:relative;
+  overflow:hidden;
+}
+.img-placeholder::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 80%,rgba(163,73,47,.07) 0%,transparent 50%),
+    radial-gradient(circle at 80% 20%,rgba(201,138,62,.07) 0%,transparent 50%);
+}
+.img-placeholder-icon{ font-size:28px;opacity:.5;position:relative;z-index:1; }
+.img-placeholder-label{
+  font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--terracotta);opacity:.7;position:relative;z-index:1;
+}
+.img-placeholder-desc{
+  font-size:11px;color:var(--ink-soft);text-align:center;
+  max-width:200px;line-height:1.4;position:relative;z-index:1;
+}
+.img-placeholder.h-xs{ height:110px; }
+.img-placeholder.h-sm{ height:160px; }
+.img-placeholder.h-md{ height:220px; }
+.img-placeholder.h-lg{ height:280px; }
+
+.deck-img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:12px;
+  background:linear-gradient(135deg,#f5ede6 0%,#eeddd4 100%);
+}
+.deck-img.h-xs{ height:110px; }
+.deck-img.h-sm{ height:160px; }
+.deck-img.h-md{ height:220px; }
+.deck-img.h-lg{ height:280px; }
+
+.img-row{ display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px; }
+.img-row-3{ display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px; }
+.img-caption{ font-size:10px;color:var(--ink-soft);text-align:center;margin-top:4px;font-style:italic; }
+
+/* ── CONNECTIVITY TABLE ── */
+.connect-table{
+  width:100%;min-width:580px;border-collapse:collapse;font-size:13px;
+}
+.connect-table th{
+  background:var(--ink-black);color:var(--white);padding:9px 10px;
+  text-align:left;font-size:11px;font-weight:600;letter-spacing:.04em;white-space:nowrap;
+}
+.connect-table th:first-child{ border-radius:8px 0 0 0; }
+.connect-table th:last-child{ border-radius:0 8px 0 0; }
+.connect-table td{
+  padding:9px 10px;border-bottom:1px solid var(--border);
+  color:var(--ink-mid);vertical-align:top;line-height:1.5;
+}
+.connect-table tr:last-child td{ border-bottom:none; }
+.connect-table tr:nth-child(even) td{ background:#fbf7f0; }
+.connect-badge{
+  display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;
+  border-radius:4px;background:#f7e9e2;color:#7c2a14;
+}
+
+/* ── RESTAURANT SECTION ── */
+.resto-grid{ display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px; }
+.resto-card{ border:1px solid var(--border);border-radius:12px;overflow:hidden; }
+.resto-head{
+  background:var(--ink-black);padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+}
+.resto-icon{
+  width:28px;height:28px;background:var(--terracotta);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;
+}
+.resto-head-title{
+  font-family:'Playfair Display',Georgia,serif;font-size:14px;
+  font-weight:600;color:var(--white);
+}
+.resto-head-sub{
+  font-size:9px;color:rgba(255,255,255,.5);
+  text-transform:uppercase;letter-spacing:.08em;margin-top:1px;
+}
+.resto-body{ padding:14px 16px;background:var(--white); }
+.resto-item{
+  padding:8px 0;border-bottom:1px solid #f0ece6;
+  display:flex;flex-direction:column;gap:2px;
+}
+.resto-item:last-child{ border-bottom:none;padding-bottom:0; }
+.resto-item:first-child{ padding-top:0; }
+.resto-note{ font-size:11px;color:var(--ink-soft);line-height:1.4; }
+.resto-loc{
+  font-size:10px;font-weight:700;color:var(--terracotta);
+  text-transform:uppercase;letter-spacing:.06em;
+}
+.food-tip{
+  background:var(--sand);border:1px solid var(--border);
+  border-radius:10px;padding:16px 20px;margin-bottom:16px;
+}
+.food-tip-label{
+  font-size:9px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--terracotta);margin-bottom:6px;
+}
+.food-tip p{ font-size:13px;margin:0; }
+
+/* ── LOCAL DISH GRID ── */
+.local-dish-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;
+}
+.local-dish{
+  background:var(--terracotta-pale);border:1px solid #ecc8b5;
+  border-radius:10px;padding:14px 16px;
+}
+.dish-name{ font-weight:700;font-size:13px;color:var(--ink-black);margin-bottom:4px; }
+.dish-desc{ font-size:11px;color:var(--ink-soft);line-height:1.45; }
+.dish-rating{
+  display:inline-block;margin-top:6px;font-size:10px;
+  font-weight:700;padding:2px 6px;border-radius:4px;
+}
+.dr-veg{ background:#c6f6d5;color:#1a4a2a; }
+.dr-flex{ background:#bee3f8;color:#1a3a5a; }
+
+/* ── OBJECTION HANDLER ── */
+.objection{ border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px; }
+.objection-q{
+  background:var(--sand);padding:14px 18px;font-size:13px;font-weight:700;
+  color:var(--ink);display:flex;gap:10px;align-items:flex-start;
+  border-bottom:1px solid var(--border);
+}
+.obj-tag{
+  font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--ink-black);color:var(--white);padding:3px 8px;
+  border-radius:4px;white-space:nowrap;margin-top:1px;flex-shrink:0;
+}
+.objection-a{ padding:14px 18px;background:var(--white); }
+.objection-a p{ font-size:13px;margin:0;color:var(--ink-mid); }
+
+/* ── MID-DESKTOP BREAKPOINT ── */
+@media(max-width:860px){
+  .mice-grid{ grid-template-columns:1fr; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr 1fr; }
+  .img-row{ grid-template-columns:1fr; }
+  .img-row-3{ grid-template-columns:1fr 1fr; }
+  .itin-grid{ grid-template-columns:1fr 1fr; }
+  .policy-grid{ grid-template-columns:1fr; }
+  .intro-grid{ grid-template-columns:1fr 1fr; }
+  .facts-grid{ grid-template-columns:1fr 1fr; }
+}
+
+/* ── HOTEL GRID ── */
+.hotel-grid{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-bottom:24px;
+}
+.hotel-tier{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.hotel-tier-head{
+  background:var(--ink-black);
+  padding:11px 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.hotel-tier-badge{
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--apricot);
+}
+.hotel-tier-stars{
+  font-size:12px;
+  letter-spacing:1px;
+}
+.hotel-tier-body{
+  padding:14px 18px;
+  background:var(--white);
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.hotel-pill{
+  font-size:12px;
+  color:var(--ink-mid);
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:4px 10px;
+  line-height:1.4;
+}
+.hotel-note{
+  font-size:11px;
+  color:var(--ink-soft);
+  padding:8px 18px 14px;
+  background:var(--white);
+  border-top:1px solid var(--border);
+}
+
 /* ── PRINT ── */
 @media print{
   body{ background:white; font-size:11px; }
@@ -760,7 +1013,12 @@ strong{ color:var(--ink); font-weight:600; }
   .visa-paths{ grid-template-columns:1fr; }
   .visa-path{ border-right:none; border-bottom:1px solid var(--border); }
   .visa-path:last-child{ border-bottom:none; }
+  .resto-grid{ grid-template-columns:1fr; }
+  .local-dish-grid{ grid-template-columns:1fr; }
+  .img-row,.img-row-3{ grid-template-columns:1fr; }
   .cta-section{ grid-template-columns:1fr; padding:32px 20px; }
+  .connect-table td,.connect-table th{ padding:7px 8px;font-size:11px; }
+  .rate-table td,.rate-table th{ padding:7px 8px;font-size:11px; }
 }
 </style>
 </head>
@@ -853,6 +1111,17 @@ strong{ color:var(--ink); font-weight:600; }
     <p><strong>What we quote:</strong> Land-only pricing direct to trade. Hotels, guides, transport, excursions, airport transfers, and — uniquely for Armenia — visa facilitation including invitation letters where required (see Section 2). Flight arrangements are not included. Armenia quotes can be issued standalone or combined into a single quote with Georgia as a two-country Caucasus circuit.</p>
   </div>
 
+  <div class="img-row" style="margin-top:20px;">
+    <div>
+      <img src="https://caravancompass.com/images/decks/armenia/hero-geghard.jpg" alt="Geghard Monastery interior, Armenia" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-geghard.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Geghard Monastery, Kotayk Province</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/armenia/hero-garni.jpg" alt="Garni Temple, 1st century AD" class="deck-img h-md" onerror="this.onerror=null;this.src='';this.alt='Image not found: hero-garni.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Garni Temple, 1st century AD</div>
+    </div>
+  </div>
+
   <hr class="page-sep">
 
   <div class="section-header" style="margin-top:8px;">
@@ -912,6 +1181,65 @@ strong{ color:var(--ink); font-weight:600; }
   <p style="font-size:12px;color:var(--ink-soft);">
     The Embassy of Armenia in New Delhi states plainly that visa processing takes 10 working days for embassy applications and that <strong>"in case of rejection, the Embassy does not provide any clarifications or comments."</strong> We build buffer into every Armenia timeline accordingly and always recommend applying at least 3–4 weeks ahead of travel, not the bare minimum.
   </p>
+
+  <hr class="page-sep">
+
+  <div style="margin-bottom:0;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--terracotta);margin-bottom:14px;">Flight Connectivity — India to Yerevan</div>
+
+    <div class="table-scroll">
+    <table class="connect-table">
+      <thead>
+        <tr>
+          <th>Route Type</th>
+          <th>Airline(s)</th>
+          <th>Route</th>
+          <th>Typical Timing</th>
+          <th>Approx. Total Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>One-stop</strong> <span class="connect-badge">Recommended</span></td>
+          <td>flydubai (FZ) / Emirates (EK)</td>
+          <td>Delhi / Mumbai → Dubai (DXB) → Yerevan (EVN)</td>
+          <td>DXB layover 2–5 hrs<div class="rate-incl">Strong India coverage via DXB hub</div></td>
+          <td>~9–12 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Air Arabia (G9)</td>
+          <td>Delhi / Mumbai / Ahmedabad → Sharjah (SHJ) → Yerevan</td>
+          <td>SHJ layover typically 2–4 hrs<div class="rate-incl">Budget-friendly option</div></td>
+          <td>~9–11 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Turkish Airlines (TK)</td>
+          <td>Multiple Indian cities → Istanbul (IST) → Yerevan</td>
+          <td>IST layover 2–5 hrs<div class="rate-incl">Wide India city coverage via IST</div></td>
+          <td>~10–13 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>One-stop</strong></td>
+          <td>Qatar Airways (QR)</td>
+          <td>Multiple Indian cities → Doha (DOH) → Yerevan</td>
+          <td>DOH layover 2–4 hrs<div class="rate-incl">Good South India connectivity</div></td>
+          <td>~10–12 hours total</td>
+        </tr>
+        <tr>
+          <td><strong>Via Tbilisi</strong></td>
+          <td>Any carrier into TBS</td>
+          <td>Fly into Tbilisi (TBS) → Yerevan by road (5–6 hrs overland)</td>
+          <td>Best for Caucasus circuit clients<div class="rate-incl">Tbilisi first, Armenia as extension</div></td>
+          <td>Depends on Tbilisi routing</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:12px;color:var(--ink-soft);">Zvartnots International Airport (EVN) is 12km from Yerevan city centre — approximately 20–30 minutes transfer. For most Indian operators building Armenia as part of a Caucasus circuit, flying into Tbilisi and overlanding to Yerevan is operationally cleaner than separate Armenia flights. We can advise on the best routing at RFQ stage.</p>
+  </div>
+
 </div>
 
 
@@ -988,6 +1316,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Matenadaran</span>
           <span class="rtag">Vernissage Market</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/armenia/region-yerevan.jpg" alt="Yerevan Cascade at dusk" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-yerevan.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1004,6 +1333,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Geghard Monastery (UNESCO)</span>
           <span class="rtag">Symphony of Stones</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/armenia/region-garni.jpg" alt="Garni Temple and Azat gorge" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-garni.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1020,6 +1350,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Echmiadzin</span>
           <span class="rtag">Zvartnots Cathedral</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/armenia/region-khor-virap.jpg" alt="Khor Virap with Mount Ararat" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-khor-virap.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1036,6 +1367,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Sevanavank Monastery</span>
           <span class="rtag">Dilijan</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/armenia/region-lake-sevan.jpg" alt="Lake Sevan and Sevanavank Monastery" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-lake-sevan.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1053,6 +1385,7 @@ strong{ color:var(--ink); font-weight:600; }
           <span class="rtag">Khndzoresk</span>
           <span class="rtag">Overnight in Goris</span>
         </div>
+        <img src="https://caravancompass.com/images/decks/armenia/region-tatev.jpg" alt="Wings of Tatev tramway" class="deck-img h-sm" style="margin-top:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: region-tatev.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       </div>
     </div>
 
@@ -1076,10 +1409,13 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 
+  <div class="table-scroll">
   <table class="season-table">
     <thead>
       <tr>
         <th>Month</th>
+        <th>Yerevan Temp</th>
+        <th>Tatev / Hills</th>
         <th>Conditions</th>
         <th>Rating</th>
         <th>Best For</th>
@@ -1087,37 +1423,48 @@ strong{ color:var(--ink); font-weight:600; }
     </thead>
     <tbody>
       <tr>
-        <td><strong>April–May</strong></td>
-        <td>Mild spring, occasional rain, mountain regions greening up. Tatev route fully open.</td>
+        <td><strong>Apr–May</strong></td>
+        <td>10–22°C</td>
+        <td>4–14°C</td>
+        <td>Mild spring, occasional rain. Mountain regions greening up. Tatev route fully open.</td>
         <td><span class="srating s-good">Good</span></td>
-        <td>City + regional programs; visa lead time matters most for spring group travel</td>
+        <td>City + regional programs; build visa lead time into spring group travel</td>
       </tr>
       <tr>
-        <td><strong>June–August</strong></td>
-        <td>Warm and dry, Yerevan can run hot (30°C+), Dilijan and Tatev noticeably cooler.</td>
+        <td><strong>Jun–Aug</strong></td>
+        <td>22–34°C</td>
+        <td>14–24°C</td>
+        <td>Warm and dry. Yerevan city hot; Dilijan and Tatev noticeably cooler.</td>
         <td><span class="srating s-best">Best</span></td>
         <td>All client types. Full regional circuit including Tatev overnight.</td>
       </tr>
       <tr>
-        <td><strong>September–October</strong></td>
-        <td>Cooling temperatures, clear skies — among the best windows for Ararat visibility from Khor Virap and the Cascade.</td>
+        <td><strong>Sep–Oct</strong></td>
+        <td>12–24°C</td>
+        <td>6–16°C</td>
+        <td>Cooling temps, clear skies. Best window for Ararat visibility from Khor Virap.</td>
         <td><span class="srating s-best">Best</span></td>
-        <td>Premium FIT and group programs, photography-focused clients</td>
+        <td>Premium FIT and groups; photography-focused clients</td>
       </tr>
       <tr>
         <td><strong>November</strong></td>
-        <td>Cooling fast, early mountain snow possible on the Tatev road.</td>
+        <td>2–10°C</td>
+        <td>−4–4°C</td>
+        <td>Cooling fast; early mountain snow possible on the Tatev road.</td>
         <td><span class="srating s-good">Good</span></td>
-        <td>City and near-Yerevan programs; confirm Tatev road conditions case by case</td>
+        <td>City and near-Yerevan programs; confirm Tatev road conditions</td>
       </tr>
       <tr>
-        <td><strong>December–March</strong></td>
-        <td>Cold, occasional snow in Yerevan; mountain routes (Tatev, Dilijan pass) weather-dependent.</td>
+        <td><strong>Dec–Mar</strong></td>
+        <td>−4–4°C</td>
+        <td>−12–−2°C</td>
+        <td>Cold; occasional snow in Yerevan. Mountain routes weather-dependent.</td>
         <td><span class="srating s-ok">Variable</span></td>
         <td>City-focused programs; confirm regional access before confirming itinerary</td>
       </tr>
     </tbody>
   </table>
+  </div>
 
   <div class="highlight">
     <p><strong>Operator note:</strong> Armenia runs comfortably year-round for the Yerevan-centred circuit (Garni, Geghard, Khor Virap), but the Tatev and Dilijan/Sevan routes are genuinely weather-affected in winter, similar to Almaty's regional excursions. We confirm road conditions before locking in any itinerary involving these routes between November and March.</p>
@@ -1217,6 +1564,7 @@ strong{ color:var(--ink); font-weight:600; }
 
   <div class="mice-grid">
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/armenia/mice-geghard-evening.jpg" alt="Geghard Monastery evening choir" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-geghard-evening.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🏛</div>
         Geghard Cave Monastery Evening
@@ -1225,6 +1573,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/armenia/mice-areni-winery.jpg" alt="Areni winery cave tasting" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-areni-winery.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🍇</div>
         Areni Wine Region Day
@@ -1233,6 +1582,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/armenia/mice-tatev-team.jpg" alt="Tatev team day gondola" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-tatev-team.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🚡</div>
         Wings of Tatev Team Day
@@ -1241,6 +1591,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
 
     <div class="mice-card">
+      <img src="https://caravancompass.com/images/decks/armenia/mice-cascade-challenge.jpg" alt="Yerevan Cascade team challenge" class="deck-img h-xs" style="margin-bottom:12px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: mice-cascade-challenge.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
       <div class="mice-card-title">
         <div class="mice-icon">🏙</div>
         Yerevan City &amp; Cascade Challenge
@@ -1249,6 +1600,7 @@ strong{ color:var(--ink); font-weight:600; }
     </div>
   </div>
 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1279,12 +1631,13 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
       <tr>
         <td><strong>26–40 pax</strong><div class="rate-incl">Large Group / MICE</div></td>
-        <td>Lead guide + assistant guide + coach</td>
-        <td><strong>Full guide team</strong></td>
+        <td>Professional Guide + coach</td>
+        <td><strong>Full guide throughout</strong></td>
         <td>Full operational coordination; recommend 6+ weeks lead time for visa processing</td>
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
 
 
@@ -1308,6 +1661,7 @@ strong{ color:var(--ink); font-weight:600; }
     <p><strong>Important:</strong> All pricing below is indicative only and excludes visa fees, which are paid directly to the Armenian e-visa system or embassy. Every program is quoted individually based on your dates, pax count, hotel preference, and inclusions. Contact ops@caravancompass.com with RFQ details for a binding quotation within 4 hours.</p>
   </div>
 
+  <div class="table-scroll">
   <table class="rate-table">
     <thead>
       <tr>
@@ -1350,6 +1704,7 @@ strong{ color:var(--ink); font-weight:600; }
       </tr>
     </tbody>
   </table>
+  </div>
 
   <p style="font-size:12px;color:var(--ink-soft);margin-top:-8px;">
     All rates are land-only, per person on twin/double share basis. Single supplement available on request. Rates include: accommodation with breakfast, all ground transfers, licensed guides, specified excursions, and applicable entrance fees. Exclude: flights, visa fees, personal expenses, tips, and any items not listed in the confirmed program. Visa facilitation service (invitation letter, document review) is included in the program cost — see Section 2.
@@ -1360,16 +1715,205 @@ strong{ color:var(--ink); font-weight:600; }
   <div class="section-header" style="margin-top:8px;">
     <div class="section-num">09</div>
     <div>
+      <div class="section-title">Restaurants &amp; Food Guide</div>
+      <div class="section-sub">Indian-friendly dining and Armenian dishes suited to Indian palates</div>
+    </div>
+  </div>
+
+  <p>Armenian cuisine is one of the most naturally compatible with Indian palates in the Caucasus — rich in herbs, legumes, grilled meats, and flatbread, with strong vegetarian options and a food culture built around sharing and hospitality. Yerevan has a handful of Indian restaurants for clients who want a familiar meal, but the honest advice is: Armenian food itself works extremely well for most Indian travelers.</p>
+
+  <div class="img-row-3" style="margin-bottom:24px;">
+    <div>
+      <img src="https://caravancompass.com/images/decks/armenia/food-khorovats.jpg" alt="Armenian Khorovats barbecue" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-khorovats.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Khorovats — Armenian BBQ</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/armenia/food-ghapama.jpg" alt="Ghapama stuffed pumpkin" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-ghapama.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Ghapama — festive stuffed pumpkin</div>
+    </div>
+    <div>
+      <img src="https://caravancompass.com/images/decks/armenia/food-wine-brandy.jpg" alt="Armenian wine and Ararat brandy" class="deck-img h-sm" onerror="this.onerror=null;this.src='';this.alt='Image not found: food-wine-brandy.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="img-caption">Armenian wine &amp; Ararat brandy</div>
+    </div>
+  </div>
+
+  <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--terracotta);margin-bottom:14px;">Indian Restaurants in Yerevan</div>
+
+  <div class="resto-grid">
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🇮🇳</div>
+        <div>
+          <div class="resto-head-title">Namaste India Yerevan</div>
+          <div class="resto-head-sub">North Indian · Yerevan</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/armenia/resto-namaste-india-yerevan.jpg" alt="Namaste India Yerevan" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-namaste-india-yerevan.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+        <div class="resto-item">
+          <div class="resto-loc">Central Yerevan</div>
+          <div class="resto-note">The most consistent Indian restaurant option in Yerevan. Reliable North Indian menu covering curries, tandoor items, dal, and rice. A good fallback for any meal where the group wants certainty. Confirm current operating hours at RFQ stage — the Yerevan Indian restaurant scene is smaller and more subject to change than Tbilisi or Baku.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resto-card">
+      <div class="resto-head">
+        <div class="resto-icon">🍽</div>
+        <div>
+          <div class="resto-head-title">Caucasus Tavern</div>
+          <div class="resto-head-sub">Armenian Fine Dining · Yerevan</div>
+        </div>
+      </div>
+      <div class="resto-body">
+        <img src="https://caravancompass.com/images/decks/armenia/resto-caucasus-tavern.jpg" alt="Caucasus Tavern Yerevan" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: resto-caucasus-tavern.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+        <div class="resto-item">
+          <div class="resto-loc">Central Yerevan</div>
+          <div class="resto-note">The best introduction to Armenian cuisine for Indian clients open to exploring local food. Wide mezze spread format, English-friendly staff, clear vegetarian options. We recommend this for FIT clients and small groups wanting a genuine Armenian dining experience. The meze format — multiple small dishes arriving continuously — is immediately comfortable for Indian palates used to thali-style eating.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-tip">
+    <div class="food-tip-label">Operator Note — Food outside Yerevan</div>
+    <p>Indian restaurant options outside Yerevan are non-existent. For Tatev overnight programs based in Goris, we coordinate with guesthouse kitchens to prepare vegetarian options — egg dishes, grilled vegetables, bean soups, lavash. Brief clients ahead of Goris nights. For strict Jain requirements, flag at RFQ stage.</p>
+  </div>
+
+  <hr class="page-sep">
+
+  <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--terracotta);margin-bottom:14px;">Armenian Dishes Suited to Indian Palates</div>
+
+  <div class="local-dish-grid">
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/armenia/dish-lavash.jpg" alt="Lavash flatbread being made" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-lavash.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Lavash</div>
+      <div class="dish-desc">UNESCO-listed thin flatbread baked over a tonir (clay oven) — the everyday bread of Armenia and a natural parallel to Indian roti. Available at every meal, every restaurant. Clients who eat Indian bread adapt immediately.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/armenia/dish-dolma.jpg" alt="Armenian dolma" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-dolma.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Dolma</div>
+      <div class="dish-desc">Grape vine leaves stuffed with spiced rice and herbs (vegetarian) or minced meat. The herb-rice version is widely available and genuinely excellent. Similar in concept to Indian stuffed preparations — mild, flavourful, immediately approachable.</div>
+      <span class="dish-rating dr-flex">⚬ Ask for veg variant</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/armenia/dish-mshosh.jpg" alt="Mshosh lentil walnut salad" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-mshosh.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Mshosh</div>
+      <div class="dish-desc">A cold lentil and walnut salad, served as a mezze dish. One of the most naturally Indian-palate-friendly dishes in Armenia — the lentil base, walnut richness, and pomegranate tartness are all familiar flavour anchors. Reliably vegetarian.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/armenia/dish-eetch.jpg" alt="Eetch bulgur wheat salad" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-eetch.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Eetch</div>
+      <div class="dish-desc">A bulgur wheat salad with tomato, parsley, and lemon — similar to Middle Eastern tabbouleh. Light, fresh, and entirely vegetarian. A consistent hit with Indian clients as a side dish at any Armenian meal.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/armenia/dish-manti.jpg" alt="Manti Armenian dumplings" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-manti.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Manti</div>
+      <div class="dish-desc">Small Armenian dumplings, baked or steamed, served with yoghurt and sumac. The baked version has a satisfying crunch. For clients who eat meat, one of the most recommended Armenian dishes. Cheese-filled vegetarian variants available at some restaurants.</div>
+      <span class="dish-rating dr-flex">⚬ Ask for veg variant</span>
+    </div>
+
+    <div class="local-dish">
+      <img src="https://caravancompass.com/images/decks/armenia/dish-gata.jpg" alt="Gata Armenian sweet pastry" class="deck-img h-xs" style="margin-bottom:10px;border-radius:8px;" onerror="this.onerror=null;this.src='';this.alt='Image not found: dish-gata.jpg';this.style.cssText='display:flex;align-items:center;justify-content:center;font-size:11px;color:#a8978a;border:1.5px dashed #c9b8a8;border-radius:8px;';">
+      <div class="dish-name">Gata</div>
+      <div class="dish-desc">Armenia's signature sweet pastry — layers of dough filled with a buttery sweet filling, baked to a golden crust. Each region of Armenia has its own version. Widely available at bakeries and as a dessert. Comparable in comfort to Indian sweet breads — universally enjoyed by visiting Indian clients.</div>
+      <span class="dish-rating dr-veg">✓ Vegetarian</span>
+    </div>
+
+  </div>
+
+  <div class="food-tip">
+    <div class="food-tip-label">Ararat Brandy — Client Briefing Note</div>
+    <p>The Ararat cognac distillery in Yerevan is one of the most requested visits on any Armenia program — a touring and tasting experience that Indian clients consistently rate as a highlight. For non-drinkers, the tour itself (history, copper stills, barrel warehouses) is fully accessible and fascinating without the tasting component. We include this as a standard option on all Yerevan city programs and brief guides to accommodate both preferences within the same group.</p>
+  </div>
+
+</div>
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 10 — HOTELS ════════════════════════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div>
       <div class="section-title">Hotels We Work With</div>
-      <div class="section-sub">Contracted properties in Yerevan</div>
+      <div class="section-sub">Yerevan — full range across star categories</div>
     </div>
   </div>
 
   <div class="highlight">
-    <p><strong>Note for operators:</strong> Our Yerevan hotel contracting is in active build-out, in line with Armenia's place in our core three Caucasus destinations. Refer to our current supplier sheet (shared on request) for verified property names and confirmed rates by category — this section will be finalised as contracting closes.</p>
+    <p>All properties listed below are in Yerevan city centre or within easy reach of the main sightseeing circuit. Hotel availability and contracted rates vary by season and are confirmed at quotation stage. For the Tatev overnight extension, we use guesthouse-tier accommodation in Goris — options confirmed per program on request.</p>
   </div>
 
-  <p style="font-size:12px;color:var(--ink-soft);">We work across 4-star and 5-star categories in Yerevan city centre, plus guesthouse-tier accommodation in Goris for the Tatev overnight extension. Hotel availability and rates vary by season; we confirm current contracted rates in each individual quotation.</p>
+  <div class="hotel-grid">
+
+    <div class="hotel-tier">
+      <div class="hotel-tier-head">
+        <div class="hotel-tier-badge">5-Star</div>
+        <div class="hotel-tier-stars">★★★★★</div>
+      </div>
+      <div class="hotel-tier-body">
+        <div class="hotel-pill">The Alexander, a Luxury Collection Hotel</div>
+        <div class="hotel-pill">Armenia Marriott Hotel Yerevan</div>
+        <div class="hotel-pill">Grand Hotel Yerevan</div>
+        <div class="hotel-pill">Radisson Blu Hotel, Yerevan</div>
+        <div class="hotel-pill">Golden Palace Hotel Yerevan</div>
+        <div class="hotel-pill">National Hotel Yerevan</div>
+      </div>
+    </div>
+
+    <div class="hotel-tier">
+      <div class="hotel-tier-head">
+        <div class="hotel-tier-badge">4-Star</div>
+        <div class="hotel-tier-stars">★★★★</div>
+      </div>
+      <div class="hotel-tier-body">
+        <div class="hotel-pill">Courtyard by Marriott Yerevan</div>
+        <div class="hotel-pill">Holiday Inn Yerevan — Republic Square</div>
+        <div class="hotel-pill">Ramada Hotel &amp; Suites by Wyndham Yerevan</div>
+        <div class="hotel-pill">Ani Plaza Hotel</div>
+        <div class="hotel-pill">Best Western Plus Congress Hotel</div>
+        <div class="hotel-pill">DoubleTree by Hilton Yerevan City Centre</div>
+        <div class="hotel-pill">Opera Suite Hotel</div>
+        <div class="hotel-pill">Nova Hotel Yerevan</div>
+        <div class="hotel-pill">Imperial Palace Hotel Yerevan</div>
+        <div class="hotel-pill">Hyatt Place Yerevan</div>
+        <div class="hotel-pill">Sphera by Stellar Hotels</div>
+        <div class="hotel-pill">Republica Hotel Yerevan</div>
+      </div>
+    </div>
+
+    <div class="hotel-tier">
+      <div class="hotel-tier-head">
+        <div class="hotel-tier-badge">3-Star</div>
+        <div class="hotel-tier-stars">★★★</div>
+      </div>
+      <div class="hotel-tier-body">
+        <div class="hotel-pill">ibis Yerevan Center</div>
+        <div class="hotel-pill">Holiday Inn Express Yerevan</div>
+        <div class="hotel-pill">My Hotel Yerevan</div>
+        <div class="hotel-pill">Shirak Hotel</div>
+        <div class="hotel-pill">Cascade Hotel</div>
+        <div class="hotel-pill">14 Floor Hotel</div>
+      </div>
+      <div class="hotel-note">3-star category suits budget-conscious groups and student travel. All listed properties are in central Yerevan with reliable English-speaking front desks.</div>
+    </div>
+
+  </div>
+
+  <p style="font-size:12px;color:var(--ink-soft);">Our volume category is 4-star. For groups of 15 pax and above, 4-star properties typically offer better negotiated rates and group-friendly facilities (banquet rooms, group breakfast setups). 5-star is recommended for premium FIT, corporate heads, and incentive groups where the property itself is part of the sell. Specific hotel recommendations are made at RFQ stage based on your dates, group size, and budget.</p>
 </div>
 
 
@@ -1379,10 +1923,10 @@ strong{ color:var(--ink); font-weight:600; }
   <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
 </div>
 
-<!-- ══ SECTION 10 — BOOKING PROCESS ═══════════════════════════ -->
+<!-- ══ SECTION 11 — BOOKING PROCESS ══════════════════════════ -->
 <div class="page page-break">
   <div class="section-header">
-    <div class="section-num">10</div>
+    <div class="section-num">11</div>
     <div>
       <div class="section-title">How to Work With Us</div>
       <div class="section-sub">Booking process, payment terms, and policies</div>
@@ -1473,7 +2017,7 @@ strong{ color:var(--ink); font-weight:600; }
   <hr class="page-sep">
 
   <div class="section-header" style="margin-top:8px;">
-    <div class="section-num">11</div>
+    <div class="section-num">12</div>
     <div>
       <div class="section-title">Frequently Asked by Operators</div>
       <div class="section-sub">Honest answers to common pre-booking questions</div>
@@ -1505,6 +2049,96 @@ strong{ color:var(--ink); font-weight:600; }
   </div>
 </div>
 
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-brand">Caravan Compass DMC</div>
+  <div class="page-header-title">Armenia — B2B Operator Brief 2026</div>
+</div>
+
+<!-- ══ SECTION 13 — CLIENT OBJECTION HANDLER ═════════════════ -->
+<div class="page page-break">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div>
+      <div class="section-title">Handling Client Objections</div>
+      <div class="section-sub">Ready-to-use pivots for common sales conversations</div>
+    </div>
+  </div>
+
+  <p>Armenia requires more explanation upfront than Georgia or Baku — the visa complexity alone triggers hesitation. These are the objections that come up most in sales conversations, with honest responses you can use directly.</p>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Visa</span>
+      "The visa process sounds too complicated. My clients will just skip Armenia."
+    </div>
+    <div class="objection-a">
+      <p>The complexity sits on the operator's side, not the client's — and we handle it. What the client experiences is: providing standard travel documents to us, and receiving their visa. What we handle: identifying the correct pathway (Path A or Path B), issuing the invitation letter where needed (Path B), reviewing the document bundle before submission, and managing the timeline. For a Georgia + Armenia circuit, the Armenia visa facilitation is built into our standard service — the operator doesn't need to touch it.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Visa</span>
+      "I've heard Armenian visas get rejected for Indian clients. Is that true?"
+    </div>
+    <div class="objection-a">
+      <p>Rejections have happened — but the pattern is consistent: they occur almost entirely on incomplete Path B applications, specifically those missing the invitation letter or with bank statements that don't meet the requirements. The Armenia Embassy does not give rejection reasons, which makes incomplete applications especially costly. Our process removes this risk: we issue the invitation letter directly, pre-check every document in the bundle, and only submit when it's complete. We're transparent that we can't guarantee outcomes — no one can — but a complete, correctly filed application has a strong track record.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Awareness</span>
+      "My clients don't know what Armenia is. It'll be impossible to sell."
+    </div>
+    <div class="objection-a">
+      <p>Armenia is one of the oldest Christian nations in the world — that story resonates strongly with Indian clients of all backgrounds who have an interest in ancient civilisations. The visual story is equally strong: Garni Temple (a Hellenistic temple older than most European landmarks), Geghard Monastery carved into a cliff face, Khor Virap with Mount Ararat behind it. And for clients who have done Georgia, Armenia is a natural two-country extension — Tbilisi to Yerevan is a single overland day. The conversation starts with Georgia, Armenia is the add-on that sells itself.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Food</span>
+      "My clients are strict vegetarians. Will they be able to eat in Armenia?"
+    </div>
+    <div class="objection-a">
+      <p>Better than most people expect. Lavash (flatbread), dolma (herb-rice stuffed vine leaves), mshosh (lentil-walnut salad), eetch (bulgur wheat salad), and gata (sweet pastry) are all vegetarian and widely available. Yerevan has Indian restaurants for any meal where the group wants complete certainty. Armenian cuisine in general has a strong mezze culture — multiple small dishes — which is an immediately comfortable format for Indian palates. Strict Jain requires advance coordination at RFQ stage, but standard vegetarian is workable throughout the program.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Value</span>
+      "Is Armenia worth it as a standalone, or only as a Georgia add-on?"
+    </div>
+    <div class="objection-a">
+      <p>Both work, but honestly the Georgia + Armenia two-country circuit is the stronger commercial product for most Indian operators. As a standalone, Armenia runs best at 4–6 days and the visa lead time requirement makes it slightly less flexible than Georgia for short-notice bookings. As an extension from Georgia, it adds 3–4 days, a completely different visual and cultural register, and a two-country story — all on a single visa application cycle managed by us. For operators with a Georgia product already, Armenia is the natural next step.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Safety</span>
+      "Armenia had a conflict with Azerbaijan. Is it safe?"
+    </div>
+    <div class="objection-a">
+      <p>The 2023 ceasefire agreement and subsequent developments have significantly changed the situation, and the Nagorno-Karabakh conflict is geographically distant from Yerevan and the main tourist circuit. Yerevan, Garni, Geghard, Khor Virap, Lake Sevan, and Tatev are all well away from any border areas of concern. India's MEA does not advise against travel to Armenia. The country is genuinely safe for visitors — Yerevan in particular is a modern, café-dense, walkable city with a low crime rate and a notably warm attitude toward Indian visitors, partly owing to historical Silk Road connections.</p>
+    </div>
+  </div>
+
+  <div class="objection">
+    <div class="objection-q">
+      <span class="obj-tag">Tatev</span>
+      "Can we do Tatev as a day trip from Yerevan?"
+    </div>
+    <div class="objection-a">
+      <p>Technically possible, not recommended — and we won't quote it as a day trip without flagging this clearly. The one-way drive is 3.5–4.5 hours, which means a Tatev day trip from Yerevan involves 7–9 hours of driving plus sightseeing in one day. Clients arrive exhausted and miss the Vorotan gorge viewpoints and Khndzoresk cave village, which are best explored at a relaxed pace. We always quote Tatev with a Goris overnight and explain the reason — operators who understand this sell the upgrade without difficulty, because the reasoning is obvious once stated.</p>
+    </div>
+  </div>
+
+</div>
 
 <!-- ══ CTA SECTION ════════════════════════════════════════════ -->
 <div class="cta-section">
