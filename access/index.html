@@ -322,56 +322,64 @@ body::before{
 </div>
 
 <script>
-// ── ACCESS CODES ──────────────────────────────────────────────
-// Add or remove codes here at any time.
-// Keys must be UPPERCASE. Lookup is case-insensitive at check-time
-// because the entered value is uppercased before comparison.
-// Set status to "revoked" to disable a code without deleting its history.
-const VALID_CODES = {
-  "CC-2607-014-QF": { status: "active",  partner: "Asia Destination" },
-  "CC-2607-015-MK": { status: "revoked", partner: "Test Partner" }
-};
-// ─────────────────────────────────────────────────────────────
+// Your Supabase project's Edge Function endpoint
+const VERIFY_ENDPOINT = "https://onkmkdablrtttpgmpude.supabase.co/functions/v1/verify-access-code";
 
-function checkCode() {
+async function checkCode() {
   const input = document.getElementById('accessCode');
   const errorEl = document.getElementById('codeError');
   const btn = document.getElementById('enterBtn');
   const entered = input.value.trim().toUpperCase();
 
-  if (!entered) {
-    return;
-  }
+  if (!entered) return;
 
   btn.disabled = true;
+  btn.textContent = "Checking…";
 
-  const match = VALID_CODES[entered];
-  const valid = !!match && match.status === 'active';
+  try {
+    const res = await fetch(VERIFY_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code: entered })
+    });
 
-  if (valid) {
-    input.classList.remove('error');
-    input.classList.add('success');
-    errorEl.classList.remove('show');
+    const result = await res.json();
 
-    // Store access in sessionStorage so portal page doesn't bounce them
-    sessionStorage.setItem('cc_partner_access', 'granted');
-    sessionStorage.setItem('cc_partner_code', entered);
-
-    // Show success state after brief pause
-    setTimeout(() => {
-      document.getElementById('gateMain').style.display = 'none';
-      document.getElementById('gateSuccess').style.display = 'block';
-    }, 350);
-
-  } else {
-    input.classList.remove('success');
-    input.classList.add('error');
-    errorEl.classList.add('show');
-    input.value = '';
-    setTimeout(() => {
+    if (result.valid) {
       input.classList.remove('error');
-      btn.disabled = false;
-    }, 400);
+      input.classList.add('success');
+      errorEl.classList.remove('show');
+
+      sessionStorage.setItem('cc_partner_access', 'granted');
+      sessionStorage.setItem('cc_partner_name', result.partner_name || '');
+
+      // Personalize the success screen
+      const successHeading = document.querySelector('#gateSuccess h3');
+      const successPara = document.querySelector('#gateSuccess p');
+      if (result.partner_name) {
+        successHeading.textContent = `Welcome, ${result.partner_name}`;
+        successPara.textContent = "You're logged in to the Caravan Compass partner portal.";
+      }
+
+      setTimeout(() => {
+        document.getElementById('gateMain').style.display = 'none';
+        document.getElementById('gateSuccess').style.display = 'block';
+      }, 350);
+
+    } else {
+      input.classList.remove('success');
+      input.classList.add('error');
+      errorEl.classList.add('show');
+      input.value = '';
+      setTimeout(() => input.classList.remove('error'), 400);
+    }
+
+  } catch (err) {
+    errorEl.textContent = "Connection issue — please try again or contact ops@caravancompass.com";
+    errorEl.classList.add('show');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Enter →";
   }
 }
 </script>
