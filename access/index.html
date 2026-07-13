@@ -324,15 +324,10 @@ body::before{
 // ── ACCESS CODES ──────────────────────────────────────────────
 // Add or remove codes here at any time.
 // All codes are checked case-insensitively.
-const VALID_CODES = [
-  'AGENTCC26',
-  'CCOPS2026',
-  'GEORGIAB2B26',
-  'CARAVANB2B',
-  "CC-2607-014-QF": { status: "active", partner: "Asia Destination" },
-  "CC-2607-015-MK": { status: "Active", partner: "Test Partner" }
+const VALID_CODES = {
+  "CC-2607-014-QF": { status: "active", partner: "Agarwal Holidays" },
+  "CC-2607-015-MK": { status: "revoked", partner: "Test Partner" }
 };
-];
 // ─────────────────────────────────────────────────────────────
  
 function checkCode() {
