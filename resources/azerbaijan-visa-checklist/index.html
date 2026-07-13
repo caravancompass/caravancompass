@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azerbaijan ASAN e-Visa — Document Requirements | Caravan Compass</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+:root{
+  --flame:      #c2410c;
+  --flame-mid:  #9a3409;
+  --copper:     #9c6b3f;
+  --copper-pale:#fdf3e8;
+  --copper-border:#eacfaa;
+  --sand:       #f9f5ef;
+  --white:      #ffffff;
+  --ink:        #1a1714;
+  --ink-mid:    #3d3830;
+  --ink-soft:   #6b6460;
+  --border:     #e4ddd4;
+  --red:        #b91c1c;
+  --red-pale:   #fef2f2;
+  --red-border: #fecaca;
+  --green-pale: #f0fdf4;
+  --green-border:#bbf7d0;
+  --ink-black:  #1c1816;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--sand);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.6;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+/* ── COVER ── */
+.cover{
+  background:var(--ink-black);
+  padding:36px 44px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:'';
+  position:absolute;
+  top:-60px; right:-60px;
+  width:260px; height:260px;
+  border-radius:50%;
+  background:rgba(194,65,12,.15);
+  pointer-events:none;
+}
+.cover::after{
+  content:'';
+  position:absolute;
+  bottom:-40px; left:10%;
+  width:180px; height:180px;
+  border-radius:50%;
+  background:rgba(156,107,63,.08);
+  pointer-events:none;
+}
+
+.cover-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:28px;
+  position:relative;
+  z-index:1;
+}
+.logo-wrap{ display:flex; align-items:center; gap:14px; }
+.logo-img{ height:52px; width:auto; display:block; }
+.logo-fallback{
+  display:none; flex-direction:column; gap:2px;
+}
+.logo-fallback-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px; font-weight:700; color:var(--white);
+}
+.logo-fallback-tag{
+  font-size:9px; color:rgba(255,255,255,.4);
+  text-transform:uppercase; letter-spacing:.14em;
+}
+.cover-meta{ text-align:right; }
+.cover-meta-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.14em; color:rgba(255,255,255,.35); margin-bottom:3px;
+}
+.cover-meta-val{ font-size:12px; color:rgba(255,255,255,.65); }
+
+.cover-body{
+  position:relative; z-index:1;
+  display:flex; align-items:flex-end;
+  justify-content:space-between;
+  gap:24px; flex-wrap:wrap;
+}
+.cover-eyebrow{
+  font-size:10px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.16em;
+  color:var(--flame); margin-bottom:8px;
+}
+.cover-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:32px; font-weight:700; color:var(--white);
+  line-height:1.15; margin-bottom:10px;
+}
+.cover-desc{
+  font-size:13px; color:rgba(255,255,255,.55);
+  max-width:460px; line-height:1.6;
+}
+
+/* ── PRICING CARDS ── */
+.cover-pricing{
+  display:flex; flex-direction:column; gap:8px;
+  flex-shrink:0; align-self:flex-start;
+}
+.price-card{
+  border-radius:10px;
+  padding:12px 18px;
+  text-align:center;
+  min-width:130px;
+}
+.price-card.regular{
+  background:rgba(156,107,63,.25);
+  border:1px solid rgba(156,107,63,.4);
+}
+.price-card.urgent{
+  background:var(--flame);
+  border:1px solid rgba(255,255,255,.1);
+}
+.price-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; color:rgba(255,255,255,.6); margin-bottom:3px;
+}
+.price-amount{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px; font-weight:700; color:var(--white);
+  line-height:1;
+}
+.price-turnaround{
+  font-size:10px; color:rgba(255,255,255,.55); margin-top:3px;
+}
+.price-card.urgent .price-label{ color:rgba(255,255,255,.75); }
+.price-card.urgent .price-turnaround{ color:rgba(255,255,255,.7); }
+
+/* ── COVER FOOTER ── */
+.cover-footer{
+  background:var(--flame);
+  padding:11px 44px;
+  display:flex; gap:28px; flex-wrap:wrap; align-items:center;
+}
+.cover-footer-item{
+  display:flex; align-items:center; gap:6px;
+  font-size:11px; color:rgba(255,255,255,.8);
+}
+.cover-footer-item strong{ color:var(--white); font-weight:600; }
+
+/* ── PRINT BAR ── */
+.print-bar{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:10px 44px;
+  display:flex; align-items:center;
+  justify-content:space-between; gap:12px;
+}
+.print-note{ font-size:11px; color:var(--ink-soft); }
+.btn-print{
+  background:var(--ink-black); color:var(--white);
+  border:none; border-radius:8px;
+  padding:9px 18px; font-size:12px; font-weight:600;
+  font-family:'Inter',system-ui,sans-serif;
+  cursor:pointer; display:flex; align-items:center; gap:7px;
+  transition:background .15s;
+}
+.btn-print:hover{ background:var(--flame); }
+
+/* ── MAIN ── */
+.main{
+  max-width:840px;
+  margin:28px auto;
+  padding:0 24px 48px;
+  display:flex; flex-direction:column; gap:16px;
+}
+
+/* ── HIGHLIGHT STRIP ── */
+.highlight-strip{
+  background:var(--green-pale);
+  border:1px solid var(--green-border);
+  border-left:4px solid #16a34a;
+  border-radius:10px;
+  padding:14px 18px;
+  display:flex; gap:10px; align-items:flex-start;
+}
+.highlight-strip-text{ font-size:13px; color:var(--ink-mid); line-height:1.55; }
+.highlight-strip-text strong{ color:#14532d; }
+
+/* ── SECTION ── */
+.section{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.section-head{
+  background:var(--ink-black);
+  padding:13px 22px;
+  display:flex; align-items:center; gap:12px;
+}
+.section-num{
+  width:26px; height:26px; border-radius:50%;
+  background:var(--flame);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:var(--white);
+  flex-shrink:0;
+}
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:15px; font-weight:600; color:var(--white);
+}
+.section-sub{
+  font-size:10px; color:rgba(255,255,255,.45);
+  text-transform:uppercase; letter-spacing:.08em; margin-top:2px;
+}
+.section-body{ padding:18px 22px; }
+
+/* ── DOCUMENT LIST ── */
+.doc-list{ display:flex; flex-direction:column; }
+.doc-item{
+  display:grid;
+  grid-template-columns:26px 1fr;
+  gap:0 12px;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  align-items:flex-start;
+}
+.doc-item:last-child{ border-bottom:none; padding-bottom:0; }
+.doc-item:first-child{ padding-top:0; }
+.doc-num{
+  width:22px; height:22px; border-radius:50%;
+  background:var(--copper-pale);
+  border:1.5px solid var(--copper-border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:700; color:var(--copper);
+  flex-shrink:0; margin-top:1px;
+}
+.doc-item-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.doc-item-desc{ font-size:12px; color:var(--ink-mid); line-height:1.5; }
+.doc-item-desc em{ font-style:normal; font-weight:600; color:var(--copper); }
+
+/* ── WHAT WE NEED BOX ── */
+.what-we-need{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.need-item{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex; align-items:flex-start; gap:10px;
+}
+.need-icon{ font-size:18px; flex-shrink:0; margin-top:1px; }
+.need-text-label{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.need-text-desc{ font-size:11px; color:var(--ink-soft); line-height:1.45; }
+
+/* ── PRICING TABLE ── */
+.pricing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.pricing-tier{
+  border-radius:12px;
+  padding:22px 24px;
+  display:flex; flex-direction:column; gap:8px;
+}
+.pricing-tier.regular{
+  background:var(--sand);
+  border:1.5px solid var(--border);
+}
+.pricing-tier.urgent{
+  background:var(--ink-black);
+  border:1.5px solid var(--flame);
+}
+.tier-badge{
+  font-size:9px; font-weight:800; text-transform:uppercase;
+  letter-spacing:.14em; margin-bottom:4px;
+}
+.pricing-tier.regular .tier-badge{ color:var(--copper); }
+.pricing-tier.urgent .tier-badge{ color:var(--flame); }
+.tier-amount{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:34px; font-weight:700; line-height:1;
+}
+.pricing-tier.regular .tier-amount{ color:var(--ink); }
+.pricing-tier.urgent .tier-amount{ color:var(--white); }
+.tier-per{ font-size:11px; font-weight:600; }
+.pricing-tier.regular .tier-per{ color:var(--ink-soft); }
+.pricing-tier.urgent .tier-per{ color:rgba(255,255,255,.55); }
+.tier-turnaround{
+  font-size:12px; font-weight:700;
+  border-radius:6px;
+  padding:5px 10px;
+  display:inline-block;
+  margin-top:4px;
+}
+.pricing-tier.regular .tier-turnaround{
+  background:var(--copper-pale);
+  color:var(--copper);
+  border:1px solid var(--copper-border);
+}
+.pricing-tier.urgent .tier-turnaround{
+  background:var(--flame);
+  color:var(--white);
+}
+.tier-desc{ font-size:12px; line-height:1.5; margin-top:2px; }
+.pricing-tier.regular .tier-desc{ color:var(--ink-mid); }
+.pricing-tier.urgent .tier-desc{ color:rgba(255,255,255,.6); }
+
+/* ── PROCESS STEPS ── */
+.process-steps{ display:flex; flex-direction:column; gap:0; }
+.process-step{
+  display:grid;
+  grid-template-columns:32px 1fr;
+  gap:0 14px;
+  align-items:flex-start;
+  padding:10px 0;
+  border-bottom:1px solid var(--border);
+}
+.process-step:last-child{ border-bottom:none; padding-bottom:0; }
+.process-step:first-child{ padding-top:0; }
+.ps-num{
+  width:26px; height:26px; border-radius:50%;
+  background:var(--flame);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:var(--white);
+  flex-shrink:0; margin-top:1px;
+}
+.ps-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.ps-desc{ font-size:12px; color:var(--ink-mid); line-height:1.5; }
+
+/* ── ALERTS ── */
+.alert{
+  border-radius:10px; padding:15px 18px;
+  display:flex; gap:12px; align-items:flex-start;
+}
+.alert.alert-note{
+  background:var(--copper-pale);
+  border:1px solid var(--copper-border);
+  border-left:4px solid var(--copper);
+}
+.alert.alert-warn{
+  background:var(--red-pale);
+  border:1px solid var(--red-border);
+  border-left:4px solid var(--red);
+}
+.alert-icon{ font-size:15px; flex-shrink:0; margin-top:1px; }
+.alert-title{
+  font-size:11px; font-weight:800;
+  text-transform:uppercase; letter-spacing:.1em; margin-bottom:5px;
+}
+.alert.alert-note .alert-title{ color:var(--copper); }
+.alert.alert-warn .alert-title{ color:var(--red); }
+.alert-text{ font-size:12px; color:var(--ink-mid); line-height:1.6; }
+.alert-text strong{ color:var(--ink); }
+
+/* ── CONTACT FOOTER ── */
+.contact-footer{
+  background:var(--ink-black);
+  border-radius:14px;
+  padding:22px 28px;
+  display:flex; align-items:center;
+  justify-content:space-between; gap:20px; flex-wrap:wrap;
+}
+.contact-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.14em; color:rgba(255,255,255,.35); margin-bottom:5px;
+}
+.contact-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px; font-weight:700; color:var(--white); margin-bottom:8px;
+}
+.contact-lines{ display:flex; flex-direction:column; gap:2px; }
+.contact-line{ font-size:12px; color:rgba(255,255,255,.6); }
+.contact-line strong{ color:rgba(255,255,255,.9); font-weight:500; }
+.contact-badge{
+  background:var(--flame); color:var(--white);
+  border-radius:10px; padding:12px 20px;
+  text-align:center; flex-shrink:0;
+}
+.contact-badge-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; opacity:.8; margin-bottom:3px;
+}
+.contact-badge-val{ font-size:15px; font-weight:700; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .cover{ padding:28px 20px 24px; }
+  .cover-footer{ padding:10px 20px; gap:14px; }
+  .cover-pricing{ flex-direction:row; align-self:stretch; }
+  .price-card{ flex:1; }
+  .cover-body{ flex-direction:column; }
+  .print-bar{ padding:10px 20px; }
+  .main{ padding:0 12px 40px; margin-top:18px; }
+  .what-we-need{ grid-template-columns:1fr; }
+  .pricing-grid{ grid-template-columns:1fr; }
+  .contact-footer{ flex-direction:column; }
+  .contact-badge{ display:none; }
+}
+
+/* ── PRINT ── */
+@media print{
+  body{ background:white; }
+  .print-bar{ display:none !important; }
+  .contact-footer{ display:none !important; }
+  .cover-footer{ display:none !important; }
+  .main{ max-width:100%; margin:0; padding:16px; gap:12px; }
+  .section{ break-inside:avoid; box-shadow:none; }
+  .alert{ break-inside:avoid; }
+  .pricing-grid{ break-inside:avoid; }
+  @page{ margin:15mm 12mm; }
+  @page:first{ margin:0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="logo-wrap">
+      <img
+        src="https://caravancompass.com/images/Blue%20Minimalist%20Air%20Plane%20Travel%20Logo.png"
+        alt="Caravan Compass"
+        class="logo-img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="logo-fallback" style="display:none;">
+        <div class="logo-fallback-name">Caravan Compass</div>
+        <div class="logo-fallback-tag">Where Dreams Find Direction</div>
+      </div>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-label">Document Type</div>
+      <div class="cover-meta-val">Visa Application — Client Requirements</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-text">
+      <div class="cover-eyebrow">Azerbaijan ASAN e-Visa Service</div>
+      <div class="cover-title">Document<br>Requirements</div>
+      <div class="cover-desc">To process your Azerbaijan ASAN e-Visa application, we need just a few straightforward items from you. This is one of the simplest visa processes in the region — please arrange and share the below before we begin.</div>
+    </div>
+    <div class="cover-pricing">
+      <div class="price-card regular">
+        <div class="price-label">Regular Processing</div>
+        <div class="price-amount">USD 35</div>
+        <div class="price-turnaround">Within 3 working days</div>
+      </div>
+      <div class="price-card urgent">
+        <div class="price-label">Urgent Processing</div>
+        <div class="price-amount">USD 75</div>
+        <div class="price-turnaround">Within 3 hours</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COVER FOOTER STRIP -->
+<div class="cover-footer">
+  <div class="cover-footer-item">✉ <strong>ops@caravancompass.com</strong></div>
+  <div class="cover-footer-item">☎ <strong>+91 75208 16288</strong></div>
+  <div class="cover-footer-item">🌐 <strong>caravancompass.com</strong></div>
+  <div class="cover-footer-item">📍 Sector 44, Noida, 201303, Uttar Pradesh, India</div>
+</div>
+
+<!-- PRINT BAR -->
+<div class="print-bar">
+  <span class="print-note">Forward this page to your client, or save as PDF.</span>
+  <button class="btn-print" onclick="window.print()">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+    Save as PDF
+  </button>
+</div>
+
+<!-- ══ MAIN ════════════════════════════════════════════════════ -->
+<div class="main">
+
+  <!-- GOOD NEWS STRIP -->
+  <div class="highlight-strip">
+    <div style="font-size:16px;flex-shrink:0;">✅</div>
+    <div class="highlight-strip-text">
+      <strong>Good news:</strong> The Azerbaijan ASAN e-Visa is one of the most straightforward visa processes available to Indian passport holders. There are no bank statements, no ITR documents, no interview, and no embassy visit required. Just three simple items and we handle the rest.
+    </div>
+  </div>
+
+  <!-- SECTION 1 — WHAT WE NEED -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">1</div>
+      <div>
+        <div class="section-title">What We Need From You</div>
+        <div class="section-sub">Three items — that's all</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="what-we-need">
+
+        <div class="need-item">
+          <div class="need-icon">🛂</div>
+          <div>
+            <div class="need-text-label">Passport — Front &amp; Back Bio Pages</div>
+            <div class="need-text-desc">Clear scans of both the photo/data page and the back page of your passport. The scan must be legible — no shadows, no cut edges, full page in frame. JPEG or PDF accepted. Passport must have a minimum of 6 months validity remaining from your travel date.</div>
+          </div>
+        </div>
+
+        <div class="need-item">
+          <div class="need-icon">🏨</div>
+          <div>
+            <div class="need-text-label">Accommodation Details</div>
+            <div class="need-text-desc">Hotel name and address in Baku (or wherever you're staying on the first night). If you're booked through Caravan Compass, we will provide this. If you've booked accommodation independently, share the booking confirmation.</div>
+          </div>
+        </div>
+
+        <div class="need-item">
+          <div class="need-icon">💼</div>
+          <div>
+            <div class="need-text-label">Occupation</div>
+            <div class="need-text-desc">Your current occupation or job title as it should appear on the visa application — for example: "Business Owner", "Software Engineer", "Homemaker", "Retired". No documents required; just confirm what to enter.</div>
+          </div>
+        </div>
+
+        <div class="need-item" style="background:#f0fdf4;border-color:#bbf7d0;">
+          <div class="need-icon">⚡</div>
+          <div>
+            <div class="need-text-label" style="color:#14532d;">That's it</div>
+            <div class="need-text-desc" style="color:#166534;">No bank statements. No ITR. No salary slips. No travel insurance requirement. No cover letter. Once we have these three items, we handle the entire application process.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 — PRICING -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">2</div>
+      <div>
+        <div class="section-title">Processing Options &amp; Fees</div>
+        <div class="section-sub">Choose regular or urgent depending on your travel timeline</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="pricing-grid">
+
+        <div class="pricing-tier regular">
+          <div class="tier-badge">Regular Processing</div>
+          <div class="tier-amount">USD 35</div>
+          <div class="tier-per">per person</div>
+          <div class="tier-turnaround">⏱ Within 3 working days</div>
+          <div class="tier-desc">Suitable for most travelers. We recommend selecting regular processing if your travel date is at least 7 days away — this gives comfortable buffer for any unlikely delays.</div>
+        </div>
+
+        <div class="pricing-tier urgent">
+          <div class="tier-badge">Urgent Processing</div>
+          <div class="tier-amount">USD 75</div>
+          <div class="tier-per">per person</div>
+          <div class="tier-turnaround">⚡ Within 3 hours</div>
+          <div class="tier-desc">For last-minute travel or when your departure is within the next 3–4 days. Same document requirements — we expedite the submission and follow-up.</div>
+        </div>
+
+      </div>
+
+      <p style="font-size:12px;color:var(--ink-soft);margin-top:4px;">Fees are all-inclusive — no hidden charges. In the rare event of a rejection, we will advise on reapplication.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 3 — HOW IT WORKS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">3</div>
+      <div>
+        <div class="section-title">How the Process Works</div>
+        <div class="section-sub">From document submission to visa in hand</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="ps-num">1</div>
+          <div>
+            <div class="ps-title">Share your three documents with us</div>
+            <div class="ps-desc">Send the passport scans, accommodation details, and your occupation via WhatsApp or email. We'll confirm receipt and let you know which processing tier you've selected.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">2</div>
+          <div>
+            <div class="ps-title">We submit the application on the ASAN portal</div>
+            <div class="ps-desc">We handle the full submission on the official evisa.gov.az portal. You don't need to create an account or navigate the portal yourself.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">3</div>
+          <div>
+            <div class="ps-title">Visa is issued and shared with you</div>
+            <div class="ps-desc">Once approved, the e-Visa is issued as a PDF. We share it with you directly — <em>print it or save it digitally to present at the airport.</em> Both printout and digital copy are accepted at Heydar Aliyev Airport.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">4</div>
+          <div>
+            <div class="ps-title">Arrive in Baku — no further formalities</div>
+            <div class="ps-desc">Present your e-Visa and passport at immigration. Processing is typically smooth and quick. Transfer to city centre takes 25–30 minutes from Heydar Aliyev International Airport.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERT — WHAT TO CARRY AT THE AIRPORT -->
+  <div class="alert alert-note">
+    <div class="alert-icon">📋</div>
+    <div>
+      <div class="alert-title">What to Carry at the Airport</div>
+      <div class="alert-text">Have your <strong>e-Visa printout or PDF</strong> and <strong>passport</strong> accessible before reaching the immigration counter. Baku immigration officers are efficient — having your documents ready avoids any delays. Return flight tickets and accommodation confirmation may occasionally be asked for; keep them accessible on your phone.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-warn">
+    <div class="alert-icon">📋</div>
+    <div>
+      <div class="alert-title">Please Note</div>
+      <div class="alert-text">Visa decisions are made at the discretion of the State Migration Service of Azerbaijan. In the event of a visa refusal, fees paid to Caravan Compass for the application service are strictly non-refundable. Caravan Compass shall not be held responsible or liable for any visa rejection or related outcomes.</div>
+    </div>
+  </div>
+
+  <!-- CONTACT FOOTER -->
+  <div class="contact-footer">
+    <div>
+      <div class="contact-label">Questions about your application?</div>
+      <div class="contact-name">Get in touch with us</div>
+      <div class="contact-lines">
+        <div class="contact-line"><strong>Email:</strong> ops@caravancompass.com</div>
+        <div class="contact-line"><strong>Phone / WhatsApp:</strong> +91 75208 16288</div>
+        <div class="contact-line"><strong>Web:</strong> caravancompass.com</div>
+      </div>
+    </div>
+    <div class="contact-badge">
+      <div class="contact-badge-label">We respond within</div>
+      <div class="contact-badge-val">4 hours</div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
