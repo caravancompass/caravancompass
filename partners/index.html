@@ -87,7 +87,7 @@ body{
 .hub{width:88%;max-width:1180px;margin:48px auto 0;}
 .hub-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:16px;
   margin-bottom:56px;
 }
@@ -446,7 +446,7 @@ select{
  
 /* ── RESPONSIVE ── */
 @media(max-width:860px){
-  .hub-grid{grid-template-columns:1fr;}
+  .hub-grid{grid-template-columns:repeat(2,1fr);}
   .decks-grid{grid-template-columns:1fr;}
   .itin-preview-grid{grid-template-columns:1fr 1fr;}
   .quote-wrap{grid-template-columns:1fr;}
@@ -456,10 +456,108 @@ select{
   .nav{flex-direction:column;gap:12px;text-align:center;}
 }
 @media(max-width:540px){
+  .hub-grid{grid-template-columns:1fr 1fr;}
   .itin-preview-grid{grid-template-columns:1fr;}
   .visa-bar{grid-template-columns:1fr 1fr;}
 }
  
+/* ── RESOURCE CARDS ── */
+.resources-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-bottom:32px;
+}
+.resource-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--white);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:box-shadow .18s,transform .18s;
+}
+.resource-card:hover{
+  box-shadow:0 8px 28px rgba(11,61,46,.1);
+  transform:translateY(-2px);
+}
+.resource-card-top{
+  padding:20px 22px 16px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+.resource-icon{
+  width:40px;height:40px;
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+  flex-shrink:0;
+  background:var(--gold-pale);
+  border:1px solid #e8d4b4;
+}
+.resource-meta{flex:1;}
+.resource-dest-tag{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--gold);
+  margin-bottom:4px;
+}
+.resource-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:15px;font-weight:600;color:var(--forest);
+  margin-bottom:3px;
+}
+.resource-type{
+  font-size:10px;font-weight:600;
+  background:var(--cream);color:var(--ink-soft);
+  border:1px solid var(--border);
+  padding:2px 8px;border-radius:5px;
+  display:inline-block;
+}
+.resource-card-body{
+  padding:14px 22px;flex:1;
+  font-size:12px;color:var(--ink-mid);
+  line-height:1.6;
+}
+.resource-card-foot{
+  padding:12px 22px;
+  border-top:1px solid var(--border);
+  display:flex;gap:8px;
+}
+.btn-resource-view{
+  flex:1;
+  background:var(--forest);color:var(--white);
+  border:none;border-radius:7px;
+  padding:8px 14px;
+  font-size:12px;font-weight:700;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;text-align:center;
+  font-family:inherit;
+  transition:background .15s;
+}
+.btn-resource-view:hover{background:var(--forest-mid);}
+
+.resources-intro{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:18px 22px;
+  margin-bottom:24px;
+  font-size:13px;
+  color:var(--ink-mid);
+  line-height:1.6;
+}
+.resources-intro strong{color:var(--forest);}
+
+@media(max-width:860px){
+  .resources-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:540px){
+  .resources-grid{grid-template-columns:1fr;}
+}
+
 /* ── LIVE ITINERARY CARDS ── */
 .itin-live-grid{
   display:grid;
@@ -577,6 +675,11 @@ select{
       <div class="hub-icon"><span>✉</span></div>
       <div class="hub-card-title">Request a Quote</div>
       <div class="hub-card-desc">Send us your RFQ — dates, destination, pax count, hotel category. We respond within 4 hours with a detailed land-only quotation.</div>
+    </div>
+    <div class="hub-card" onclick="showPanel('resources', this)">
+      <div class="hub-icon"><span>📁</span></div>
+      <div class="hub-card-title">Visa &amp; Resources</div>
+      <div class="hub-card-desc">Document checklists, visa requirement guides, and client-ready briefing sheets for every destination we operate.</div>
     </div>
   </div>
  
@@ -752,7 +855,7 @@ select{
       </div>
       <button onclick="showPanel('quote', document.querySelectorAll('.hub-card')[2])" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:12px 24px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;">Request a Quote →</button>
     </div>
- 
+
   </div><!-- /panel-decks -->
  
  
@@ -938,7 +1041,91 @@ select{
     </div>
  
   </div><!-- /panel-quote -->
- 
+
+
+  <!-- ══ PANEL: VISA & RESOURCES ══ -->
+  <div class="panel" id="panel-resources">
+
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Visa &amp; Resources</div>
+        <div class="panel-note">Client-ready documents and visa briefing guides — open in browser or save as PDF to forward directly.</div>
+      </div>
+    </div>
+
+    <div class="resources-intro">
+      <strong>How to use these documents:</strong> Each resource opens as a branded HTML page with a "Save as PDF" button. Forward the link directly to your client, or save as a PDF and attach it to your pre-departure communications. Documents are updated as visa rules change — bookmark the links rather than saving static PDFs where possible.
+    </div>
+
+    <div class="resources-grid">
+
+      <!-- GEORGIA VISA CHECKLIST -->
+      <div class="resource-card">
+        <div class="resource-card-top">
+          <div class="resource-icon">🇬🇪</div>
+          <div class="resource-meta">
+            <div class="resource-dest-tag">Georgia · Visa</div>
+            <div class="resource-name">e-Visa Document Checklist</div>
+            <span class="resource-type">Client-Facing Document</span>
+          </div>
+        </div>
+        <div class="resource-card-body">
+          Complete document requirements for Indian passport holders applying for the Georgia e-Visa through Caravan Compass. Covers all required documents, photo specs, bank statement rules, dependent traveller guidelines, and the 24-hour submission window. Share directly with your client before we begin the application.
+        </div>
+        <div class="resource-card-foot">
+          <a href="/resources/georgia-visa-checklist/" target="_blank" class="btn-resource-view">Open Document →</a>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER — AZERBAIJAN -->
+      <div class="resource-card" style="opacity:.45;pointer-events:none;">
+        <div class="resource-card-top">
+          <div class="resource-icon">🇦🇿</div>
+          <div class="resource-meta">
+            <div class="resource-dest-tag">Azerbaijan · Visa</div>
+            <div class="resource-name">ASAN e-Visa Guide</div>
+            <span class="resource-type">Coming Soon</span>
+          </div>
+        </div>
+        <div class="resource-card-body">
+          Document requirements and application walkthrough for the Azerbaijan ASAN e-Visa for Indian passport holders. Coming soon.
+        </div>
+        <div class="resource-card-foot">
+          <a href="#" class="btn-resource-view" style="background:var(--ink-soft);">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER — ARMENIA -->
+      <div class="resource-card" style="opacity:.45;pointer-events:none;">
+        <div class="resource-card-top">
+          <div class="resource-icon">🇦🇲</div>
+          <div class="resource-meta">
+            <div class="resource-dest-tag">Armenia · Visa</div>
+            <div class="resource-name">Embassy Visa Guide</div>
+            <span class="resource-type">Coming Soon</span>
+          </div>
+        </div>
+        <div class="resource-card-body">
+          Document requirements for the Armenia embassy visa — Path A and Path B briefing for Indian passport holders, with our facilitation process explained. Coming soon.
+        </div>
+        <div class="resource-card-foot">
+          <a href="#" class="btn-resource-view" style="background:var(--ink-soft);">Coming Soon</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:8px;">
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:600;color:var(--forest);margin-bottom:4px;">Need a document we haven't listed yet?</div>
+        <div style="font-size:12.5px;color:var(--ink-soft);">Contact us and we'll share the relevant guide or walk you through the requirements directly.</div>
+      </div>
+      <a href="mailto:ops@caravancompass.com" style="background:var(--forest);color:var(--white);border:none;border-radius:10px;padding:11px 22px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;display:inline-block;">Email Us →</a>
+    </div>
+
+  </div><!-- /panel-resources -->
+
+
 </div><!-- /hub -->
  
 <!-- FOOTER -->
