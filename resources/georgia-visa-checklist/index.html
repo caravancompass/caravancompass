@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Georgia e-Visa — Document Requirement List | Caravan Compass</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+:root{
+  --forest:    #0b3d2e;
+  --forest-mid:#155c44;
+  --gold:      #b5712a;
+  --gold-pale: #fdf5e8;
+  --gold-border:#e8d0a4;
+  --cream:     #f9f6f0;
+  --white:     #ffffff;
+  --ink:       #1a1a18;
+  --ink-mid:   #3d3d38;
+  --ink-soft:  #7a7a72;
+  --border:    #e4e0d8;
+  --red:       #c0392b;
+  --red-pale:  #fdf0ee;
+  --red-border:#f0c4be;
+  --green-pale:#edf7f2;
+  --green-border:#b8dece;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.6;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+/* ── COVER / HEADER ── */
+.cover{
+  background:var(--forest);
+  padding:36px 44px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:'';
+  position:absolute;
+  top:-80px; right:-80px;
+  width:280px; height:280px;
+  border-radius:50%;
+  background:rgba(181,113,42,.10);
+  pointer-events:none;
+}
+.cover::after{
+  content:'';
+  position:absolute;
+  bottom:-50px; left:15%;
+  width:200px; height:200px;
+  border-radius:50%;
+  background:rgba(255,255,255,.03);
+  pointer-events:none;
+}
+
+.cover-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:28px;
+  position:relative;
+  z-index:1;
+}
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.logo-img{
+  height:52px;
+  width:auto;
+  display:block;
+}
+.logo-fallback{
+  display:none;
+  flex-direction:column;
+  gap:2px;
+}
+.logo-fallback-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--white);
+  letter-spacing:.02em;
+}
+.logo-fallback-tag{
+  font-size:9px;
+  color:rgba(255,255,255,.45);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+
+.cover-meta{
+  text-align:right;
+}
+.cover-meta-label{
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:rgba(255,255,255,.45);
+  margin-bottom:3px;
+}
+.cover-meta-val{
+  font-size:12px;
+  color:rgba(255,255,255,.75);
+}
+
+.cover-body{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.cover-text{}
+.cover-eyebrow{
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+.cover-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:32px;
+  font-weight:700;
+  color:var(--white);
+  line-height:1.15;
+  margin-bottom:10px;
+}
+.cover-desc{
+  font-size:13px;
+  color:rgba(255,255,255,.6);
+  max-width:460px;
+  line-height:1.6;
+}
+
+.cover-fee{
+  background:var(--gold);
+  border:none;
+  border-radius:12px;
+  padding:16px 24px;
+  text-align:center;
+  flex-shrink:0;
+  align-self:flex-start;
+}
+.cover-fee-label{
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:rgba(255,255,255,.7);
+  margin-bottom:4px;
+}
+.cover-fee-amount{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:26px;
+  font-weight:700;
+  color:var(--white);
+  line-height:1;
+}
+.cover-fee-sub{
+  font-size:10px;
+  color:rgba(255,255,255,.65);
+  margin-top:3px;
+}
+
+/* ── COVER FOOTER STRIP ── */
+.cover-footer{
+  background:var(--gold);
+  padding:11px 44px;
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.cover-footer-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  color:rgba(255,255,255,.8);
+}
+.cover-footer-item strong{
+  color:var(--white);
+  font-weight:600;
+}
+
+/* ── PRINT BUTTON BAR ── */
+.print-bar{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:10px 44px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.print-note{ font-size:11px; color:var(--ink-soft); }
+.btn-print{
+  background:var(--forest);
+  color:var(--white);
+  border:none;
+  border-radius:8px;
+  padding:9px 18px;
+  font-size:12px;
+  font-weight:600;
+  font-family:'Inter',system-ui,sans-serif;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  transition:background .15s;
+}
+.btn-print:hover{ background:var(--forest-mid); }
+
+/* ── MAIN CONTENT ── */
+.main{
+  max-width:840px;
+  margin:28px auto;
+  padding:0 24px 48px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* ── EXEMPT STRIP ── */
+.exempt-strip{
+  background:var(--green-pale);
+  border:1px solid var(--green-border);
+  border-left:4px solid #2e8b57;
+  border-radius:10px;
+  padding:14px 18px;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+.exempt-strip-text{ font-size:13px; color:var(--ink-mid); line-height:1.55; }
+.exempt-strip-text strong{ color:#1a4a2a; }
+
+/* ── SECTION ── */
+.section{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.section-head{
+  background:var(--forest);
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.section-num{
+  width:26px; height:26px;
+  border-radius:50%;
+  background:var(--gold);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:var(--white);
+  flex-shrink:0;
+}
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:15px; font-weight:600; color:var(--white);
+}
+.section-sub{
+  font-size:10px; color:rgba(255,255,255,.5);
+  text-transform:uppercase; letter-spacing:.08em; margin-top:2px;
+}
+.section-body{ padding:18px 22px; }
+
+/* ── DOCUMENT LIST ── */
+.doc-list{ display:flex; flex-direction:column; gap:0; }
+.doc-item{
+  display:grid;
+  grid-template-columns:26px 1fr;
+  gap:0 12px;
+  padding:11px 0;
+  border-bottom:1px solid var(--border);
+  align-items:flex-start;
+}
+.doc-item:last-child{ border-bottom:none; padding-bottom:0; }
+.doc-item:first-child{ padding-top:0; }
+.doc-num{
+  width:22px; height:22px;
+  border-radius:50%;
+  background:var(--gold-pale);
+  border:1.5px solid var(--gold-border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:700; color:var(--gold);
+  flex-shrink:0; margin-top:1px;
+}
+.doc-item-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.doc-item-desc{ font-size:12px; color:var(--ink-mid); line-height:1.5; }
+.doc-item-desc em{
+  font-style:normal; font-weight:600; color:var(--gold);
+}
+.doc-item-desc .note-red{
+  font-weight:600; color:var(--red);
+}
+
+/* ── PHOTO SECTION ── */
+.photo-grid{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  align-items:start;
+}
+.photo-frame{
+  background:var(--cream);
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:14px;
+  display:flex; flex-direction:column;
+  align-items:center; gap:8px;
+}
+.photo-icon{
+  width:66px; height:80px;
+  background:var(--forest);
+  border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:26px;
+  color:rgba(255,255,255,.45);
+  position:relative; overflow:hidden;
+}
+.photo-icon::after{
+  content:'';
+  position:absolute;
+  bottom:0; left:50%;
+  transform:translateX(-50%);
+  width:46px; height:28px;
+  border-radius:50% 50% 0 0;
+  background:rgba(255,255,255,.07);
+}
+.photo-dims{ font-size:10px; color:var(--ink-soft); text-align:center; line-height:1.5; }
+.photo-dims strong{ color:var(--forest); display:block; font-size:12px; }
+
+.photo-reqs{ display:flex; flex-direction:column; gap:0; }
+.photo-req{
+  display:flex; align-items:flex-start; gap:8px;
+  padding:7px 0; border-bottom:1px solid #f0ece6;
+}
+.photo-req:last-child{ border-bottom:none; }
+.photo-req-icon{ font-size:12px; flex-shrink:0; margin-top:1px; }
+.photo-req-text{ font-size:12px; color:var(--ink-mid); line-height:1.4; }
+
+/* ── GUIDELINES ── */
+.guidelines{ display:flex; flex-direction:column; gap:10px; }
+.guideline{
+  display:grid; grid-template-columns:22px 1fr;
+  gap:10px; align-items:flex-start;
+  padding:8px 0; border-bottom:1px solid var(--border);
+}
+.guideline:last-child{ border-bottom:none; padding-bottom:0; }
+.guideline:first-child{ padding-top:0; }
+.guideline-num{ font-size:11px; font-weight:700; color:var(--gold); margin-top:2px; }
+.guideline-text{ font-size:12px; color:var(--ink-mid); line-height:1.5; }
+.guideline-text strong{ color:var(--ink); }
+
+/* ── SUPPORTING DOCS GRID ── */
+.support-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:10px;
+}
+.support-item{
+  background:var(--cream);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:10px 14px;
+  display:flex; align-items:flex-start; gap:8px;
+}
+.support-dot{
+  width:6px; height:6px; border-radius:50%;
+  background:var(--gold); flex-shrink:0; margin-top:6px;
+}
+.support-text{ font-size:12px; color:var(--ink-mid); line-height:1.45; }
+.support-text strong{ color:var(--ink); font-weight:700; }
+
+/* ── DEPENDENT RULES ── */
+.dep-list{ display:flex; flex-direction:column; gap:0; }
+.dep-item{
+  display:grid; grid-template-columns:10px 1fr;
+  gap:10px; align-items:flex-start;
+  padding:9px 0; border-bottom:1px solid var(--border);
+}
+.dep-item:last-child{ border-bottom:none; padding-bottom:0; }
+.dep-item:first-child{ padding-top:0; }
+.dep-bullet{
+  width:6px; height:6px; border-radius:50%;
+  background:var(--forest); margin-top:8px; flex-shrink:0;
+}
+.dep-text{ font-size:13px; color:var(--ink-mid); line-height:1.5; }
+.dep-text strong{ color:var(--ink); }
+
+/* ── ALERTS ── */
+.alert{
+  border-radius:10px; padding:15px 18px;
+  display:flex; gap:12px; align-items:flex-start;
+}
+.alert.alert-warn{
+  background:var(--red-pale);
+  border:1px solid var(--red-border);
+  border-left:4px solid var(--red);
+}
+.alert.alert-note{
+  background:var(--gold-pale);
+  border:1px solid var(--gold-border);
+  border-left:4px solid var(--gold);
+}
+.alert-icon{ font-size:15px; flex-shrink:0; margin-top:1px; }
+.alert-title{
+  font-size:11px; font-weight:800;
+  text-transform:uppercase; letter-spacing:.1em; margin-bottom:5px;
+}
+.alert.alert-warn .alert-title{ color:var(--red); }
+.alert.alert-note .alert-title{ color:var(--gold); }
+.alert-text{ font-size:12px; color:var(--ink-mid); line-height:1.6; }
+.alert-text strong{ color:var(--ink); }
+
+/* ── CONTACT FOOTER ── */
+.contact-footer{
+  background:var(--forest);
+  border-radius:14px;
+  padding:22px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.contact-left{}
+.contact-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.14em; color:rgba(255,255,255,.4); margin-bottom:5px;
+}
+.contact-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px; font-weight:700; color:var(--white); margin-bottom:8px;
+}
+.contact-lines{ display:flex; flex-direction:column; gap:2px; }
+.contact-line{ font-size:12px; color:rgba(255,255,255,.65); }
+.contact-line strong{ color:rgba(255,255,255,.9); font-weight:500; }
+.contact-badge{
+  background:var(--gold);
+  color:var(--white);
+  border-radius:10px;
+  padding:12px 20px;
+  text-align:center; flex-shrink:0;
+}
+.contact-badge-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; opacity:.8; margin-bottom:3px;
+}
+.contact-badge-val{ font-size:15px; font-weight:700; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .cover{ padding:28px 20px 24px; }
+  .cover-footer{ padding:10px 20px; gap:14px; }
+  .cover-body{ flex-direction:column; align-items:flex-start; }
+  .cover-fee{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 18px;
+    border-radius:10px;
+    text-align:left;
+    align-self:stretch;
+  }
+  .cover-fee-label{ margin-bottom:0; }
+  .cover-fee-amount{ font-size:22px; }
+  .cover-fee-sub{ margin-top:0; margin-left:6px; }
+  .print-bar{ padding:10px 20px; }
+  .main{ padding:0 12px 40px; margin-top:18px; }
+  .photo-grid{ grid-template-columns:1fr; }
+  .photo-frame{ flex-direction:row; align-items:center; gap:16px; }
+  .support-grid{ grid-template-columns:1fr; }
+  .contact-footer{ flex-direction:column; }
+  .contact-badge{ display:none; }
+}
+
+/* ── PRINT ── */
+@media print{
+  body{ background:white; }
+  .print-bar{ display:none !important; }
+  .contact-footer{ display:none !important; }
+  .cover-footer{ display:none !important; }
+  .main{ max-width:100%; margin:0; padding:16px; gap:12px; }
+  .section{ break-inside:avoid; box-shadow:none; }
+  .alert{ break-inside:avoid; }
+  @page{ margin:15mm 12mm; }
+  @page:first{ margin:0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="logo-wrap">
+      <img
+        src="https://caravancompass.com/images/Blue%20Minimalist%20Air%20Plane%20Travel%20Logo.png"
+        alt="Caravan Compass"
+        class="logo-img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      >
+      <div class="logo-fallback" style="display:none;">
+        <div class="logo-fallback-name">Caravan Compass</div>
+        <div class="logo-fallback-tag">Where Dreams Find Direction</div>
+      </div>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-label">Document Type</div>
+      <div class="cover-meta-val">Visa Application — Client Requirements</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-text">
+      <div class="cover-eyebrow">Georgia e-Visa Service</div>
+      <div class="cover-title">Document<br>Requirements</div>
+      <div class="cover-desc">To process your Georgia e-Visa application, we require the following documents from you. Please arrange and share all items before we initiate the application.</div>
+    </div>
+    <div class="cover-fee">
+      <div class="cover-fee-label">All-Inclusive Fee</div>
+      <div class="cover-fee-amount">USD 55</div>
+      <div class="cover-fee-sub">per person</div>
+    </div>
+  </div>
+</div>
+
+<!-- COVER FOOTER STRIP -->
+<div class="cover-footer">
+  <div class="cover-footer-item">✉ <strong>ops@caravancompass.com</strong></div>
+  <div class="cover-footer-item">☎ <strong>+91 75208 16288</strong></div>
+  <div class="cover-footer-item">🌐 <strong>caravancompass.com</strong></div>
+  <div class="cover-footer-item">📍 Sector 44, Noida, 201303, Uttar Pradesh, India</div>
+</div>
+
+<!-- PRINT BAR -->
+<div class="print-bar">
+  <span class="print-note">Forward this page to your client, or save as PDF.</span>
+  <button class="btn-print" onclick="window.print()">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+    Save as PDF
+  </button>
+</div>
+
+<!-- ══ MAIN ════════════════════════════════════════════════════ -->
+<div class="main">
+
+  <!-- EXEMPT STRIP -->
+  <div class="exempt-strip">
+    <div style="font-size:16px;flex-shrink:0;">✅</div>
+    <div class="exempt-strip-text">
+      <strong>Visa-exempt check:</strong> If you hold a valid, current visa or residence permit issued by the <strong>US, UK, any Schengen country, UAE, or Saudi Arabia</strong>, you may be eligible to enter Georgia without an e-Visa. Please let us know and we will confirm your eligibility before proceeding.
+    </div>
+  </div>
+
+  <!-- SECTION 1 — DOCUMENTS WE NEED FROM YOU -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">1</div>
+      <div>
+        <div class="section-title">Documents We Need From You</div>
+        <div class="section-sub">Please arrange all items below and share them with us before we begin</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="doc-list">
+
+        <div class="doc-item">
+          <div class="doc-num">1</div>
+          <div>
+            <div class="doc-item-title">Passport-Sized Photograph</div>
+            <div class="doc-item-desc">White background, no expression. See Section 2 for full photo specifications — the Georgian e-Visa system has strict requirements and will reject non-compliant photos.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">2</div>
+          <div>
+            <div class="doc-item-title">Passport — Bio Page</div>
+            <div class="doc-item-desc">Scanned bio/data pages in PDF format. Passport must have a minimum of <em>6 months validity</em> from your intended date of travel to Georgia.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">3</div>
+          <div>
+            <div class="doc-item-title">Previous Sticker Visas</div>
+            <div class="doc-item-desc">Scanned copies of all previously obtained sticker visas. JPG or PDF format accepted.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">4</div>
+          <div>
+            <div class="doc-item-title">Last 3 Years ITR Acknowledgement</div>
+            <div class="doc-item-desc">Income Tax Return acknowledgement for the last 3 financial years, in PDF or JPG format. <span class="note-red">If ITR is not available, last 3 months' salary slips are required instead.</span></div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">5</div>
+          <div>
+            <div class="doc-item-title">Bank Statement — Last 6 Months</div>
+            <div class="doc-item-desc">System-generated statement covering 180 days from the date of application, showing a closing balance of <em>minimum ₹2 Lakhs per person.</em> See Section 3 for full requirements — this document has the most specific conditions.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">6</div>
+          <div>
+            <div class="doc-item-title">Travel Insurance</div>
+            <div class="doc-item-desc">Must cover the full period of your Georgia trip, from departure to return. Minimum health and accident coverage of 30,000 GEL (approximately USD 11,000) is required.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">7</div>
+          <div>
+            <div class="doc-item-title">Aadhar Card</div>
+            <div class="doc-item-desc">Required for Aadhar verification during the application. <em>Important:</em> you will receive an OTP on the mobile number linked to your Aadhar — please ensure the phone is accessible and working at the time we process your application.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">8</div>
+          <div>
+            <div class="doc-item-title">Flight Tickets</div>
+            <div class="doc-item-desc">Both onward and return tickets to/from Georgia, covering your travel dates.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">9</div>
+          <div>
+            <div class="doc-item-title">Hotel Voucher</div>
+            <div class="doc-item-desc">Accommodation confirmation for all nights of your stay, matching your travel dates. We will provide this as part of your Caravan Compass program.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">10</div>
+          <div>
+            <div class="doc-item-title">PAN Card</div>
+            <div class="doc-item-desc">Copy of your PAN Card.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 — PHOTO SPECS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">2</div>
+      <div>
+        <div class="section-title">Photo Specifications</div>
+        <div class="section-sub">Georgian e-Visa photo requirements — non-compliant photos will be rejected by the system</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="photo-grid">
+        <div class="photo-frame">
+          <div class="photo-icon">🧑</div>
+          <div class="photo-dims">
+            <strong>40 × 50 mm</strong>
+            Face width: 30–35 mm<br>
+            Top &amp; side margins: 5–10 mm
+          </div>
+        </div>
+        <div class="photo-reqs">
+          <div class="photo-req">
+            <div class="photo-req-icon">📅</div>
+            <div class="photo-req-text">Recent — taken within the last 6 months</div>
+          </div>
+          <div class="photo-req">
+            <div class="photo-req-icon">📸</div>
+            <div class="photo-req-text">Studio photo only — selfies and scanned photos are not accepted</div>
+          </div>
+          <div class="photo-req">
+            <div class="photo-req-icon">👁</div>
+            <div class="photo-req-text">Full face, front view, eyes open, no expression</div>
+          </div>
+          <div class="photo-req">
+            <div class="photo-req-icon">🎩</div>
+            <div class="photo-req-text">No head covering (religious coverings accepted)</div>
+          </div>
+          <div class="photo-req">
+            <div class="photo-req-icon">👓</div>
+            <div class="photo-req-text">Glasses allowed, but no glare on lenses</div>
+          </div>
+          <div class="photo-req">
+            <div class="photo-req-icon">⬜</div>
+            <div class="photo-req-text">White background, no patterns, no shadows</div>
+          </div>
+          <div class="photo-req">
+            <div class="photo-req-icon">🚫</div>
+            <div class="photo-req-text">No border or frame around the image</div>
+          </div>
+        </div>
+      </div>
+      <div class="alert alert-warn" style="margin-top:16px;">
+        <div class="alert-icon">⚠️</div>
+        <div>
+          <div class="alert-title">Please get a fresh studio photo</div>
+          <div class="alert-text">Do not use an existing passport photo taken for another country — dimensions and background requirements may differ. A photo that does not meet the above specifications will cause the application to be rejected and will need to be resubmitted.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 — BANK STATEMENT -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">3</div>
+      <div>
+        <div class="section-title">Bank Statement — What We Need</div>
+        <div class="section-sub">All five conditions must be met — this is the most commonly flagged document</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="guidelines">
+        <div class="guideline">
+          <div class="guideline-num">1</div>
+          <div class="guideline-text">You must be the <strong>account holder</strong> on the statement — statements from a family member's account are not accepted</div>
+        </div>
+        <div class="guideline">
+          <div class="guideline-num">2</div>
+          <div class="guideline-text"><strong>System-generated only</strong> — the statement must be downloaded directly from your bank's portal or app with no manual edits. Scanned physical statements are not accepted</div>
+        </div>
+        <div class="guideline">
+          <div class="guideline-num">3</div>
+          <div class="guideline-text">Closing balance must be a <strong>minimum of ₹2 Lakhs per applicant</strong> at the time we submit the application</div>
+        </div>
+        <div class="guideline">
+          <div class="guideline-num">4</div>
+          <div class="guideline-text">Must cover the <strong>last 180 days (6 months)</strong> from the date we submit the application — not from your travel date</div>
+        </div>
+        <div class="guideline">
+          <div class="guideline-num">5</div>
+          <div class="guideline-text">The balance must have been <strong>maintained steadily throughout the 6-month period</strong> — funds that appear to have been deposited immediately before the statement was generated will be flagged and may result in rejection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 — SUPPORTING DOCUMENTS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">4</div>
+      <div>
+        <div class="section-title">Supporting Documents</div>
+        <div class="section-sub">Provide where applicable to your situation</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="support-grid">
+        <div class="support-item">
+          <div class="support-dot"></div>
+          <div class="support-text"><strong>Marriage Certificate</strong><br>Required for dependent spouse applications</div>
+        </div>
+        <div class="support-item">
+          <div class="support-dot"></div>
+          <div class="support-text"><strong>Birth Certificate</strong><br>Required for dependent children applications</div>
+        </div>
+        <div class="support-item">
+          <div class="support-dot"></div>
+          <div class="support-text"><strong>Company Leave Letter / NOC</strong><br>Employer confirmation of approved leave for the travel period</div>
+        </div>
+        <div class="support-item">
+          <div class="support-dot"></div>
+          <div class="support-text"><strong>Last 3 Months Salary Slips</strong><br><span style="color:var(--red);font-weight:600;">Required if ITR is not available</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 — DEPENDENT TRAVELLERS -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">5</div>
+      <div>
+        <div class="section-title">If Someone in Your Group Is a Dependent Traveller</div>
+        <div class="section-sub">Applicable when a family member is sponsoring another person's application</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="dep-list">
+        <div class="dep-item">
+          <div class="dep-bullet"></div>
+          <div class="dep-text">Only a <strong>parent (father or mother) or spouse</strong> can sponsor a person's trip to Georgia — other relatives cannot act as sponsors</div>
+        </div>
+        <div class="dep-item">
+          <div class="dep-bullet"></div>
+          <div class="dep-text">The <strong>sponsor's name must appear on the applicant's passport</strong>, or the applicant's name must appear on the sponsor's passport</div>
+        </div>
+        <div class="dep-item">
+          <div class="dep-bullet"></div>
+          <div class="dep-text">If names are not on each other's passports, a <strong>proof of relationship</strong> is required: Marriage Certificate or Birth Certificate, system-generated with a QR code on the document</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRITICAL NOTE -->
+  <div class="alert alert-warn">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <div class="alert-title">Important — Please Share All Documents Before We Begin</div>
+      <div class="alert-text">Once we initiate the application, <strong>all documents must be submitted to the Georgian portal within 24 hours</strong> of payment — the system does not allow extensions. To avoid any delays or forfeitures, we ask that you send us all required documents in advance so we can review them before starting. Please do not share documents piecemeal after the process has begun.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-note">
+    <div class="alert-icon">📋</div>
+    <div>
+      <div class="alert-title">Please Note</div>
+      <div class="alert-text">Visa decisions are made solely at the discretion of the Ministry of Foreign Affairs of Georgia. In the event of a visa refusal, all fees paid are strictly non-refundable. Caravan Compass shall not be held responsible or liable for any visa rejection or related outcomes.</div>
+    </div>
+  </div>
+
+  <!-- CONTACT FOOTER -->
+  <div class="contact-footer">
+    <div class="contact-left">
+      <div class="contact-label">Questions about your documents?</div>
+      <div class="contact-name">Get in touch with us</div>
+      <div class="contact-lines">
+        <div class="contact-line"><strong>Email:</strong> ops@caravancompass.com</div>
+        <div class="contact-line"><strong>Phone:</strong> +91 75208 16288</div>
+        <div class="contact-line"><strong>Web:</strong> caravancompass.com</div>
+      </div>
+    </div>
+    <div class="contact-badge">
+      <div class="contact-badge-label">We respond within</div>
+      <div class="contact-badge-val">4 hours</div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
