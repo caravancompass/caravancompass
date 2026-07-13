@@ -10,7 +10,12 @@
       "price_from": "$599 pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 4 pax",
-      "tags": ["Winter", "Mountains", "Heritage", "Wine"],
+      "tags": [
+        "Winter",
+        "Mountains",
+        "Heritage",
+        "Wine"
+      ],
       "highlights": [
         "Kazbegi & Gergeti Trinity Church by 4x4",
         "Gudauri ski resort leisure",
@@ -29,7 +34,12 @@
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 2 pax",
-      "tags": ["Summer", "Mountains", "Black Sea", "Caves"],
+      "tags": [
+        "Summer",
+        "Mountains",
+        "Black Sea",
+        "Caves"
+      ],
       "highlights": [
         "Tbilisi Old Town, Narikala cable car & Mtatsminda",
         "Kazbegi & Gergeti Trinity Church by 4x4",
@@ -48,7 +58,12 @@
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 2 pax",
-      "tags": ["City", "Heritage", "Countryside", "Mountains"],
+      "tags": [
+        "City",
+        "Heritage",
+        "Countryside",
+        "Mountains"
+      ],
       "highlights": [
         "Icheri Sheher Old City & Maiden Tower (UNESCO)",
         "Ateshgah Hindu fire temple & Yanar Dag",
@@ -67,7 +82,12 @@
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 2 pax",
-      "tags": ["City", "Silk Road", "Mountains", "Heritage"],
+      "tags": [
+        "City",
+        "Silk Road",
+        "Mountains",
+        "Heritage"
+      ],
       "highlights": [
         "Baku Old City, Absheron & Gobustan",
         "Gabala — Nohur Lake & Tufandag cable car",
@@ -82,11 +102,16 @@
       "destination": "Almaty, Kazakhstan",
       "flag": "🇰🇿",
       "duration": "4 Nights / 5 Days",
-      "validity": "May-October 2026",
+      "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 2 pax",
-      "tags": ["Short Break", "Mountains", "City", "MICE"],
+      "tags": [
+        "Short Break",
+        "Mountains",
+        "City",
+        "MICE"
+      ],
       "highlights": [
         "Shymbulak cable car to 3,200m — snow & alpine views",
         "Kok-Tobe sunset panorama & alpine coaster",
@@ -101,11 +126,16 @@
       "destination": "Almaty, Kazakhstan",
       "flag": "🇰🇿",
       "duration": "6 Nights / 7 Days",
-      "validity": "May-October 2026",
+      "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
       "pax_basis": "Based on 2 pax",
-      "tags": ["Wilderness", "Lakes", "Canyon", "Culture"],
+      "tags": [
+        "Wilderness",
+        "Lakes",
+        "Canyon",
+        "Culture"
+      ],
       "highlights": [
         "Charyn Canyon — Valley of Castles hike",
         "Kaindy Lake sunken forest by 4x4",
@@ -113,6 +143,30 @@
         "Traditional nomad falconry show"
       ],
       "path": "/itineraries/almaty-wilderness/"
+    },
+    {
+      "id": "caucasus-ultimate",
+      "title": "Peaks, Palaces & Vineyards",
+      "destination": "Georgia + Azerbaijan",
+      "flag": "🇬🇪🇦🇿",
+      "duration": "8 Nights / 9 Days",
+      "validity": "May – Oct 2026",
+      "price_from": "$TBC pp",
+      "star": "4★",
+      "pax_basis": "Based on min 4 pax",
+      "tags": [
+        "Two-Country",
+        "Mountains",
+        "Wine",
+        "Heritage"
+      ],
+      "highlights": [
+        "Tbilisi, Kazbegi & Kakheti wine tasting",
+        "Baku Old City & Caspian Corniche",
+        "Ateshgah, Gobustan & Absheron Peninsula",
+        "Gabala — Nohur Lake & Tufandag cable car"
+      ],
+      "path": "/itineraries/caucasus-ultimate/"
     }
   ]
 }
