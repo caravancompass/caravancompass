@@ -9,7 +9,7 @@
       "validity": "Dec 2025 – Mar 2026",
       "price_from": "$599 pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
+      "pax_basis": "Based on min 4 pax",
       "tags": [
         "Winter",
         "Mountains",
@@ -33,7 +33,7 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 2 pax",
+      "pax_basis": "Based on min 4 pax",
       "tags": [
         "Summer",
         "Mountains",
@@ -55,9 +55,9 @@
       "flag": "🇦🇿",
       "duration": "4 Nights / 5 Days",
       "validity": "Year-Round 2026",
-      "price_from": "$TBC pp",
+      "price_from": "$310 pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 2 pax",
+      "pax_basis": "Based on min 4 pax",
       "tags": [
         "City",
         "Heritage",
@@ -81,7 +81,7 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 2 pax",
+      "pax_basis": "Based on min 4 pax",
       "tags": [
         "City",
         "Silk Road",
@@ -105,7 +105,7 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 2 pax",
+      "pax_basis": "Based on 4 pax",
       "tags": [
         "Short Break",
         "Mountains",
@@ -129,7 +129,7 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 2 pax",
+      "pax_basis": "Based on min 4 pax",
       "tags": [
         "Wilderness",
         "Lakes",
