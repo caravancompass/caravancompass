@@ -9,13 +9,8 @@
       "validity": "Dec 2025 – Mar 2026",
       "price_from": "$599 pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "Winter",
-        "Mountains",
-        "Heritage",
-        "Wine"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["Winter", "Mountains", "Heritage", "Wine"],
       "highlights": [
         "Kazbegi & Gergeti Trinity Church by 4x4",
         "Gudauri ski resort leisure",
@@ -33,13 +28,8 @@
       "validity": "Year-Round 2026",
       "price_from": "$350 pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "Heritage",
-        "Mountains",
-        "Wine",
-        "City"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["Heritage", "Mountains", "Wine", "City"],
       "highlights": [
         "Tbilisi Old Town & cable car to Narikala",
         "Mtskheta — Jvari Monastery & Svetitskhoveli Cathedral",
@@ -57,13 +47,8 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "Summer",
-        "Mountains",
-        "Black Sea",
-        "Caves"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["Summer", "Mountains", "Black Sea", "Caves"],
       "highlights": [
         "Tbilisi Old Town, Narikala cable car & Mtatsminda",
         "Kazbegi & Gergeti Trinity Church by 4x4",
@@ -81,13 +66,8 @@
       "validity": "Year-Round 2026",
       "price_from": "$310 pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "City",
-        "Heritage",
-        "Countryside",
-        "Mountains"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["City", "Heritage", "Countryside", "Mountains"],
       "highlights": [
         "Icheri Sheher Old City & Maiden Tower (UNESCO)",
         "Ateshgah Hindu fire temple & Yanar Dag",
@@ -105,13 +85,8 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "City",
-        "Silk Road",
-        "Mountains",
-        "Heritage"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["City", "Silk Road", "Mountains", "Heritage"],
       "highlights": [
         "Baku Old City, Absheron & Gobustan",
         "Gabala — Nohur Lake & Tufandag cable car",
@@ -129,13 +104,8 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "Short Break",
-        "Mountains",
-        "City",
-        "MICE"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["Short Break", "Mountains", "City", "MICE"],
       "highlights": [
         "Shymbulak cable car to 3,200m — snow & alpine views",
         "Kok-Tobe sunset panorama & alpine coaster",
@@ -153,13 +123,8 @@
       "validity": "Year-Round 2026",
       "price_from": "$TBC pp",
       "star": "4★ & 5★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "Wilderness",
-        "Lakes",
-        "Canyon",
-        "Culture"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["Wilderness", "Lakes", "Canyon", "Culture"],
       "highlights": [
         "Charyn Canyon — Valley of Castles hike",
         "Kaindy Lake sunken forest by 4x4",
@@ -177,13 +142,8 @@
       "validity": "May – Oct 2026",
       "price_from": "$TBC pp",
       "star": "4★",
-      "pax_basis": "Based on 4 pax",
-      "tags": [
-        "Two-Country",
-        "Mountains",
-        "Wine",
-        "Heritage"
-      ],
+      "pax_basis": "Based on min 4 pax",
+      "tags": ["Two-Country", "Mountains", "Wine", "Heritage"],
       "highlights": [
         "Tbilisi, Kazbegi & Kakheti wine tasting",
         "Baku Old City & Caspian Corniche",
