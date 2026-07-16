@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armenia Visa — Document Requirements | Caravan Compass</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+:root{
+  --terracotta:  #a3492f;
+  --terracotta-mid:#8a3a24;
+  --terracotta-pale:#fdf1ec;
+  --terracotta-border:#f0c8b8;
+  --apricot:     #c98a3e;
+  --apricot-pale:#fdf6ea;
+  --apricot-border:#ecd4ab;
+  --sand:        #faf6f1;
+  --white:       #ffffff;
+  --ink:         #1a1714;
+  --ink-mid:     #3d3830;
+  --ink-soft:    #6b6460;
+  --border:      #e6ddd4;
+  --ink-black:   #1c1815;
+  --red:         #b91c1c;
+  --red-pale:    #fef2f2;
+  --red-border:  #fecaca;
+  --green:       #16a34a;
+  --green-pale:  #f0fdf4;
+  --green-border:#bbf7d0;
+  --blue-pale:   #eff6ff;
+  --blue-border: #bfdbfe;
+  --blue:        #1d4ed8;
+}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--sand);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.6;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+/* ── COVER ── */
+.cover{
+  background:var(--ink-black);
+  padding:36px 44px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:'';
+  position:absolute;
+  top:-60px; right:-60px;
+  width:260px; height:260px;
+  border-radius:50%;
+  background:rgba(163,73,47,.16);
+  pointer-events:none;
+}
+.cover::after{
+  content:'';
+  position:absolute;
+  bottom:-40px; left:10%;
+  width:180px; height:180px;
+  border-radius:50%;
+  background:rgba(201,138,62,.07);
+  pointer-events:none;
+}
+.cover-top{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:28px; position:relative; z-index:1;
+}
+.logo-wrap{ display:flex; align-items:center; gap:14px; }
+.logo-img{ height:52px; width:auto; display:block; }
+.logo-fallback{ display:none; flex-direction:column; gap:2px; }
+.logo-fallback-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:18px; font-weight:700; color:var(--white);
+}
+.logo-fallback-tag{
+  font-size:9px; color:rgba(255,255,255,.4);
+  text-transform:uppercase; letter-spacing:.14em;
+}
+.cover-meta{ text-align:right; }
+.cover-meta-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.14em; color:rgba(255,255,255,.35); margin-bottom:3px;
+}
+.cover-meta-val{ font-size:12px; color:rgba(255,255,255,.65); }
+
+.cover-body{
+  position:relative; z-index:1;
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:24px; flex-wrap:wrap;
+}
+.cover-eyebrow{
+  font-size:10px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.16em;
+  color:var(--terracotta); margin-bottom:8px;
+}
+.cover-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:32px; font-weight:700; color:var(--white);
+  line-height:1.15; margin-bottom:10px;
+}
+.cover-desc{
+  font-size:13px; color:rgba(255,255,255,.55);
+  max-width:470px; line-height:1.6;
+}
+.cover-fee{
+  background:var(--terracotta);
+  border-radius:12px;
+  padding:16px 24px;
+  text-align:center;
+  flex-shrink:0; align-self:flex-start;
+}
+.cover-fee-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.12em; color:rgba(255,255,255,.7); margin-bottom:4px;
+}
+.cover-fee-amount{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:26px; font-weight:700; color:var(--white); line-height:1;
+}
+.cover-fee-sub{ font-size:10px; color:rgba(255,255,255,.7); margin-top:4px; }
+.cover-fee-tat{
+  font-size:10px; font-weight:700;
+  color:var(--white);
+  background:rgba(0,0,0,.2);
+  border-radius:5px;
+  padding:3px 8px;
+  margin-top:7px;
+  display:inline-block;
+}
+
+/* ── COVER FOOTER ── */
+.cover-footer{
+  background:var(--terracotta);
+  padding:11px 44px;
+  display:flex; gap:28px; flex-wrap:wrap; align-items:center;
+}
+.cover-footer-item{
+  display:flex; align-items:center; gap:6px;
+  font-size:11px; color:rgba(255,255,255,.8);
+}
+.cover-footer-item strong{ color:var(--white); font-weight:600; }
+
+/* ── PRINT BAR ── */
+.print-bar{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:10px 44px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+.print-note{ font-size:11px; color:var(--ink-soft); }
+.btn-print{
+  background:var(--ink-black); color:var(--white);
+  border:none; border-radius:8px;
+  padding:9px 18px; font-size:12px; font-weight:600;
+  font-family:'Inter',system-ui,sans-serif;
+  cursor:pointer; display:flex; align-items:center; gap:7px;
+  transition:background .15s;
+}
+.btn-print:hover{ background:var(--terracotta); }
+
+/* ── MAIN ── */
+.main{
+  max-width:860px; margin:28px auto;
+  padding:0 24px 48px;
+  display:flex; flex-direction:column; gap:16px;
+}
+
+/* ── PATH SELECTOR — signature element ── */
+.path-selector{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.path-selector-head{
+  background:var(--ink-black);
+  padding:16px 24px;
+}
+.path-selector-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px; font-weight:600; color:var(--white); margin-bottom:3px;
+}
+.path-selector-sub{
+  font-size:11.5px; color:rgba(255,255,255,.5); line-height:1.5;
+}
+.path-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.path{
+  padding:22px 24px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.path.path-a{
+  background:var(--green-pale);
+  border-right:1px solid var(--border);
+}
+.path.path-b{
+  background:var(--white);
+}
+.path-badge{
+  font-size:9px; font-weight:800; text-transform:uppercase;
+  letter-spacing:.14em;
+  padding:4px 10px; border-radius:5px;
+  display:inline-block; align-self:flex-start;
+}
+.path.path-a .path-badge{ background:var(--green); color:var(--white); }
+.path.path-b .path-badge{ background:var(--terracotta); color:var(--white); }
+.path-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px; font-weight:600; color:var(--ink);
+  line-height:1.25;
+}
+.path-who{
+  font-size:12px; color:var(--ink-mid); line-height:1.55;
+}
+.path-who strong{ color:var(--ink); }
+.path-verdict{
+  font-size:11px; font-weight:700;
+  border-radius:6px; padding:6px 10px;
+  margin-top:2px;
+}
+.path.path-a .path-verdict{
+  background:var(--white);
+  border:1px solid var(--green-border);
+  color:#14532d;
+}
+.path.path-b .path-verdict{
+  background:var(--terracotta-pale);
+  border:1px solid var(--terracotta-border);
+  color:var(--terracotta);
+}
+
+/* ── SECTION ── */
+.section{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.section-head{
+  background:var(--ink-black);
+  padding:13px 22px;
+  display:flex; align-items:center; gap:12px;
+}
+.section-num{
+  width:26px; height:26px; border-radius:50%;
+  background:var(--terracotta);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:var(--white); flex-shrink:0;
+}
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:15px; font-weight:600; color:var(--white);
+}
+.section-sub{
+  font-size:10px; color:rgba(255,255,255,.45);
+  text-transform:uppercase; letter-spacing:.08em; margin-top:2px;
+}
+.section-body{ padding:18px 22px; }
+
+/* Path-tagged section heads */
+.section-head.head-a{ background:#14532d; }
+.section-head.head-a .section-num{ background:var(--green); }
+.section-head.head-b{ background:var(--terracotta-mid); }
+.section-head.head-b .section-num{ background:var(--apricot); }
+
+/* ── DOC LIST ── */
+.doc-list{ display:flex; flex-direction:column; }
+.doc-item{
+  display:grid; grid-template-columns:26px 1fr;
+  gap:0 12px; padding:12px 0;
+  border-bottom:1px solid var(--border);
+  align-items:flex-start;
+}
+.doc-item:last-child{ border-bottom:none; padding-bottom:0; }
+.doc-item:first-child{ padding-top:0; }
+.doc-num{
+  width:22px; height:22px; border-radius:50%;
+  background:var(--apricot-pale);
+  border:1.5px solid var(--apricot-border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:700; color:var(--apricot);
+  flex-shrink:0; margin-top:1px;
+}
+.doc-item-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.doc-item-desc{ font-size:12px; color:var(--ink-mid); line-height:1.5; }
+.doc-item-desc em{ font-style:normal; font-weight:600; color:var(--terracotta); }
+
+/* ── PASSPORT RULES ── */
+.passport-rules{
+  background:var(--red-pale);
+  border:1px solid var(--red-border);
+  border-left:4px solid var(--red);
+  border-radius:10px;
+  padding:16px 20px;
+  margin-top:16px;
+}
+.passport-rules-title{
+  font-size:11px; font-weight:800; text-transform:uppercase;
+  letter-spacing:.1em; color:var(--red); margin-bottom:10px;
+}
+.passport-rules ul{
+  margin:0; padding-left:18px;
+  display:flex; flex-direction:column; gap:6px;
+}
+.passport-rules li{ font-size:12.5px; color:var(--ink-mid); line-height:1.55; }
+.passport-rules li strong{ color:var(--ink); }
+
+/* ── ELIGIBLE COUNTRIES ── */
+.country-block{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px 18px;
+  margin-bottom:12px;
+}
+.country-block-label{
+  font-size:10px; font-weight:800; text-transform:uppercase;
+  letter-spacing:.1em; color:var(--ink-soft); margin-bottom:8px;
+}
+.country-pills{ display:flex; flex-wrap:wrap; gap:6px; }
+.country-pill{
+  font-size:11.5px; font-weight:600;
+  background:var(--white);
+  border:1px solid var(--border);
+  color:var(--ink-mid);
+  padding:4px 10px; border-radius:6px;
+}
+.country-pill.rp-only{
+  background:var(--apricot-pale);
+  border-color:var(--apricot-border);
+  color:var(--apricot);
+}
+
+/* ── FORM DATA GRID ── */
+.form-data-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:8px;
+}
+.fd-item{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:10px 14px;
+}
+.fd-label{ font-size:12px; font-weight:700; color:var(--ink); margin-bottom:1px; }
+.fd-note{ font-size:11px; color:var(--ink-soft); line-height:1.4; }
+
+/* ── PHOTO SPECS ── */
+.photo-specs{
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.photo-spec{
+  background:var(--sand);
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:7px 12px;
+  font-size:11.5px;
+  color:var(--ink-mid);
+  display:flex; align-items:center; gap:6px;
+}
+
+/* ── PROCESS ── */
+.process-steps{ display:flex; flex-direction:column; }
+.process-step{
+  display:grid; grid-template-columns:32px 1fr;
+  gap:0 14px; align-items:flex-start;
+  padding:11px 0; border-bottom:1px solid var(--border);
+}
+.process-step:last-child{ border-bottom:none; padding-bottom:0; }
+.process-step:first-child{ padding-top:0; }
+.ps-num{
+  width:26px; height:26px; border-radius:50%;
+  background:var(--terracotta);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:var(--white);
+  flex-shrink:0; margin-top:1px;
+}
+.ps-title{ font-size:13px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.ps-desc{ font-size:12px; color:var(--ink-mid); line-height:1.5; }
+
+/* ── RED FLAGS ── */
+.redflags{
+  background:var(--white);
+  border:2px solid var(--red);
+  border-radius:14px;
+  overflow:hidden;
+}
+.redflags-head{
+  background:var(--red);
+  padding:14px 22px;
+  display:flex; align-items:center; gap:10px;
+}
+.redflags-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:16px; font-weight:600; color:var(--white);
+}
+.redflags-sub{
+  font-size:10px; color:rgba(255,255,255,.7);
+  text-transform:uppercase; letter-spacing:.08em; margin-top:2px;
+}
+.redflags-body{ padding:18px 22px; }
+.redflag{
+  display:grid; grid-template-columns:20px 1fr;
+  gap:0 12px; align-items:flex-start;
+  padding:11px 0; border-bottom:1px solid var(--border);
+}
+.redflag:last-child{ border-bottom:none; padding-bottom:0; }
+.redflag:first-child{ padding-top:0; }
+.rf-icon{ font-size:14px; margin-top:1px; }
+.rf-title{ font-size:13px; font-weight:700; color:var(--red); margin-bottom:2px; }
+.rf-desc{ font-size:12px; color:var(--ink-mid); line-height:1.55; }
+.rf-desc strong{ color:var(--ink); }
+
+/* ── ALERTS ── */
+.alert{
+  border-radius:10px; padding:15px 18px;
+  display:flex; gap:12px; align-items:flex-start;
+}
+.alert.alert-note{
+  background:var(--apricot-pale);
+  border:1px solid var(--apricot-border);
+  border-left:4px solid var(--apricot);
+}
+.alert.alert-info{
+  background:var(--blue-pale);
+  border:1px solid var(--blue-border);
+  border-left:4px solid var(--blue);
+}
+.alert-icon{ font-size:15px; flex-shrink:0; margin-top:1px; }
+.alert-title{
+  font-size:11px; font-weight:800;
+  text-transform:uppercase; letter-spacing:.1em; margin-bottom:5px;
+}
+.alert.alert-note .alert-title{ color:var(--apricot); }
+.alert.alert-info .alert-title{ color:var(--blue); }
+.alert-text{ font-size:12px; color:var(--ink-mid); line-height:1.6; }
+.alert-text strong{ color:var(--ink); }
+
+/* ── CONTACT FOOTER ── */
+.contact-footer{
+  background:var(--ink-black);
+  border-radius:14px;
+  padding:22px 28px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:20px; flex-wrap:wrap;
+}
+.contact-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.14em; color:rgba(255,255,255,.35); margin-bottom:5px;
+}
+.contact-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:17px; font-weight:700; color:var(--white); margin-bottom:8px;
+}
+.contact-lines{ display:flex; flex-direction:column; gap:2px; }
+.contact-line{ font-size:12px; color:rgba(255,255,255,.6); }
+.contact-line strong{ color:rgba(255,255,255,.9); font-weight:500; }
+.contact-badge{
+  background:var(--terracotta); color:var(--white);
+  border-radius:10px; padding:12px 20px;
+  text-align:center; flex-shrink:0;
+}
+.contact-badge-label{
+  font-size:9px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; opacity:.8; margin-bottom:3px;
+}
+.contact-badge-val{ font-size:15px; font-weight:700; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .cover{ padding:28px 20px 24px; }
+  .cover-footer{ padding:10px 20px; gap:14px; }
+  .cover-body{ flex-direction:column; align-items:flex-start; }
+  .cover-fee{
+    width:100%; display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap; gap:8px;
+    padding:14px 18px; text-align:left; align-self:stretch;
+  }
+  .cover-fee-label{ margin-bottom:0; }
+  .cover-fee-sub{ margin-top:0; }
+  .cover-fee-tat{ margin-top:0; }
+  .print-bar{ padding:10px 20px; }
+  .main{ padding:0 12px 40px; margin-top:18px; }
+  .path-grid{ grid-template-columns:1fr; }
+  .path.path-a{ border-right:none; border-bottom:1px solid var(--border); }
+  .form-data-grid{ grid-template-columns:1fr; }
+  .contact-footer{ flex-direction:column; }
+  .contact-badge{ display:none; }
+}
+
+/* ── PRINT ── */
+@media print{
+  body{ background:white; }
+  .print-bar,.contact-footer,.cover-footer{ display:none !important; }
+  .main{ max-width:100%; margin:0; padding:16px; gap:12px; }
+  .section,.path-selector,.redflags,.alert{ break-inside:avoid; box-shadow:none; }
+  @page{ margin:15mm 12mm; }
+  @page:first{ margin:0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="logo-wrap">
+      <img
+        src="https://caravancompass.com/images/Blue%20Minimalist%20Air%20Plane%20Travel%20Logo.png"
+        alt="Caravan Compass"
+        class="logo-img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="logo-fallback" style="display:none;">
+        <div class="logo-fallback-name">Caravan Compass</div>
+        <div class="logo-fallback-tag">Where Dreams Find Direction</div>
+      </div>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-label">Document Type</div>
+      <div class="cover-meta-val">Visa Application — Client Requirements</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-text">
+      <div class="cover-eyebrow">Armenia Visitor Visa Service · Single Entry · 21 Days</div>
+      <div class="cover-title">Document<br>Requirements</div>
+      <div class="cover-desc">Armenia has the most demanding visa process of our destinations. Read this document carefully — the requirements differ depending on your existing visa history, and the rules on passport validity catch people out. We handle the application; you provide the documents below.</div>
+    </div>
+    <div class="cover-fee">
+      <div class="cover-fee-label">All-Inclusive Fee</div>
+      <div class="cover-fee-amount">USD 25</div>
+      <div class="cover-fee-sub">per person</div>
+      <div class="cover-fee-tat">⏱ 3 working days</div>
+    </div>
+  </div>
+</div>
+
+<div class="cover-footer">
+  <div class="cover-footer-item">✉ <strong>ops@caravancompass.com</strong></div>
+  <div class="cover-footer-item">☎ <strong>+91 75208 16288</strong></div>
+  <div class="cover-footer-item">🌐 <strong>caravancompass.com</strong></div>
+  <div class="cover-footer-item">📍 Sector 44, Noida, 201303, Uttar Pradesh, India</div>
+</div>
+
+<div class="print-bar">
+  <span class="print-note">Forward this page to your client, or save as PDF.</span>
+  <button class="btn-print" onclick="window.print()">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+    Save as PDF
+  </button>
+</div>
+
+<!-- ══ MAIN ════════════════════════════════════════════════════ -->
+<div class="main">
+
+  <!-- ── PATH SELECTOR ── -->
+  <div class="path-selector">
+    <div class="path-selector-head">
+      <div class="path-selector-title">First — which path applies to you?</div>
+      <div class="path-selector-sub">Armenia has two routes. Which one you're on depends entirely on whether you already hold a visa or residence permit from one of a specific list of countries. Check this before doing anything else — it changes what you need to provide.</div>
+    </div>
+    <div class="path-grid">
+
+      <div class="path path-a">
+        <span class="path-badge">Path A — The Shortcut</span>
+        <div class="path-name">You hold a qualifying visa or residence permit</div>
+        <div class="path-who">If you have a <strong>valid current visa or residence permit</strong> from the EU/Schengen, USA, UK, Canada, Australia, New Zealand, South Korea, Japan, or Russia — or a <strong>residence permit</strong> from the UAE, Saudi Arabia, Kuwait, Qatar, Bahrain, or Oman — you qualify for the simplified route.</div>
+        <div class="path-verdict">✓ Far fewer documents. No invitation letter, no bank statement needed.</div>
+      </div>
+
+      <div class="path path-b">
+        <span class="path-badge">Path B — The Standard Route</span>
+        <div class="path-name">You don't hold any of the above</div>
+        <div class="path-who">This applies to <strong>most Indian leisure travellers.</strong> You'll need an invitation letter and proof of financial means in addition to the basics. <strong>We provide the invitation letter</strong> as part of our service — you do not need to arrange this yourself.</div>
+        <div class="path-verdict">More documents required — see Section 3.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── SECTION 1 — ALWAYS REQUIRED ── -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">1</div>
+      <div>
+        <div class="section-title">Required From Everyone — Both Paths</div>
+        <div class="section-sub">These three items are mandatory regardless of which path you're on</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="doc-list">
+
+        <div class="doc-item">
+          <div class="doc-num">1</div>
+          <div>
+            <div class="doc-item-title">Facial Photograph</div>
+            <div class="doc-item-desc">A recent passport-style photo. Accepted formats: JPG, PNG, or BMP. Maximum dimensions 6000 × 6000 pixels, maximum file size 6MB. Plain background, full face, front view, eyes open, neutral expression.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">2</div>
+          <div>
+            <div class="doc-item-title">Passport Scan — Bio Page</div>
+            <div class="doc-item-desc">A clear scan of the passport data page. Accepted formats: JPG, PNG, BMP, or PDF (max 6MB). <em>Your passport must meet three specific conditions</em> — see the box below. These are strict and are the most common reason for a rejected application.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">3</div>
+          <div>
+            <div class="doc-item-title">Travel / Medical Insurance</div>
+            <div class="doc-item-desc">Mandatory on both paths — this is not optional. The policy must cover the full period of your stay in Armenia. Submit the policy document as a PDF or image file.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="passport-rules">
+        <div class="passport-rules-title">⚠ Passport Conditions — Check These Before Applying</div>
+        <ul>
+          <li>Passport must be valid for <strong>at least 3 months after your intended departure date from Armenia</strong></li>
+          <li>Passport must have <strong>at least 2 completely blank pages</strong> — no visas, stamps, or markings on them</li>
+          <li>Passport must have been <strong>issued no more than 10 years ago</strong> — this rule catches people out. An older passport, even if still within its validity period, can be grounds for rejection.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 2 — PATH A ── -->
+  <div class="section">
+    <div class="section-head head-a">
+      <div class="section-num">2</div>
+      <div>
+        <div class="section-title">Path A — If You Hold a Qualifying Visa or Permit</div>
+        <div class="section-sub">The simplified route — significantly fewer documents</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <p style="font-size:13px;color:var(--ink-mid);margin-bottom:14px;">In addition to the three items in Section 1, you only need to provide a scan of your qualifying visa or residence permit. <strong style="color:var(--ink);">No invitation letter. No bank statement. No employment certificate.</strong></p>
+
+      <div class="country-block">
+        <div class="country-block-label">Valid Visa <span style="font-weight:600;text-transform:none;letter-spacing:0;">or</span> Residence Permit accepted from:</div>
+        <div class="country-pills">
+          <span class="country-pill">EU / Schengen states</span>
+          <span class="country-pill">United States</span>
+          <span class="country-pill">United Kingdom</span>
+          <span class="country-pill">Canada</span>
+          <span class="country-pill">Australia</span>
+          <span class="country-pill">New Zealand</span>
+          <span class="country-pill">South Korea</span>
+          <span class="country-pill">Japan</span>
+          <span class="country-pill">Russian Federation</span>
+        </div>
+      </div>
+
+      <div class="country-block">
+        <div class="country-block-label">Residence Permit only <span style="font-weight:600;text-transform:none;letter-spacing:0;">(a visa alone is not sufficient for these):</span></div>
+        <div class="country-pills">
+          <span class="country-pill rp-only">United Arab Emirates</span>
+          <span class="country-pill rp-only">Saudi Arabia</span>
+          <span class="country-pill rp-only">Kuwait</span>
+          <span class="country-pill rp-only">Qatar</span>
+          <span class="country-pill rp-only">Bahrain</span>
+          <span class="country-pill rp-only">Oman</span>
+        </div>
+      </div>
+
+      <div class="alert alert-info" style="margin-top:6px;">
+        <div class="alert-icon">💡</div>
+        <div>
+          <div class="alert-title">Worth checking carefully</div>
+          <div class="alert-text">The visa or permit must be <strong>currently valid</strong> — an expired US or Schengen visa does not qualify you for Path A. If you're unsure whether your document qualifies, send us a scan and we will confirm which path applies to you before you gather anything else.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 3 — PATH B ── -->
+  <div class="section">
+    <div class="section-head head-b">
+      <div class="section-num">3</div>
+      <div>
+        <div class="section-title">Path B — The Standard Route</div>
+        <div class="section-sub">Applies to most Indian travellers — additional documents required</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <p style="font-size:13px;color:var(--ink-mid);margin-bottom:14px;">In addition to the three items in Section 1, the following are required:</p>
+
+      <div class="doc-list">
+
+        <div class="doc-item">
+          <div class="doc-num">1</div>
+          <div>
+            <div class="doc-item-title">Return Air Ticket Reservation</div>
+            <div class="doc-item-desc">Confirmed booking showing both onward travel to Armenia and return travel out of Armenia, covering the dates of your intended stay.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">2</div>
+          <div>
+            <div class="doc-item-title">Invitation Letter — <em>We provide this</em></div>
+            <div class="doc-item-desc">The invitation letter must come from a party with a registered interest in your visit to Armenia. <strong>Caravan Compass arranges and provides this letter as part of the USD 25 service fee</strong> — you do not need to source it, and there is no additional charge. This is the single most common point of failure on Armenia applications; we handle it directly so it isn't one.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">3</div>
+          <div>
+            <div class="doc-item-title">Proof of Financial Means</div>
+            <div class="doc-item-desc">Any one of the following is acceptable: a <strong>bank statement for the last 3 months</strong>, a <strong>certificate of employment stating your salary</strong>, or a <strong>work contract</strong>. A bank statement is the most commonly accepted — if you're providing one, ensure it's system-generated and shows a healthy, consistently maintained balance.</div>
+          </div>
+        </div>
+
+        <div class="doc-item">
+          <div class="doc-num">4</div>
+          <div>
+            <div class="doc-item-title">Hotel Reservation</div>
+            <div class="doc-item-desc">Accommodation confirmation covering all nights of your stay. If you're travelling on a Caravan Compass program, we provide this.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="alert alert-note" style="margin-top:14px;">
+        <div class="alert-icon">📎</div>
+        <div>
+          <div class="alert-title">Additional supporting documents help</div>
+          <div class="alert-text">Armenia's system explicitly recommends attaching <strong>any additional documents that support the purpose of your visit.</strong> If you have anything relevant — previous international travel history, property documents, a letter explaining your itinerary — send it to us. A well-supported application is materially more likely to be approved, and there is no downside to including more.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 4 — INFORMATION WE NEED ── -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">4</div>
+      <div>
+        <div class="section-title">Information We Need From You</div>
+        <div class="section-sub">Details for the application form — no documents needed, just accurate information</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <p style="font-size:13px;color:var(--ink-mid);margin-bottom:14px;">Beyond the documents, we need the following details to complete your application. <strong style="color:var(--ink);">Every detail must match your passport exactly</strong> — including your middle name, if your passport shows one.</p>
+
+      <div class="form-data-grid">
+        <div class="fd-item">
+          <div class="fd-label">Full name as per passport</div>
+          <div class="fd-note">Given name, surname, and middle name if it appears on your passport</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Passport number &amp; dates</div>
+          <div class="fd-note">Number, date of issue, and expiry date</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Date of birth</div>
+          <div class="fd-note">Format used is dd/mm/yyyy</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Place of birth</div>
+          <div class="fd-note">City and country as shown on your passport</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Nationality</div>
+          <div class="fd-note">As shown on your passport</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Occupation</div>
+          <div class="fd-note">Your current job title or occupation — no document needed</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Residential address &amp; phone</div>
+          <div class="fd-note">Your home address in India and a contact number</div>
+        </div>
+        <div class="fd-item">
+          <div class="fd-label">Address &amp; phone in Armenia</div>
+          <div class="fd-note">Hotel address and phone — we provide this if booked with us</div>
+        </div>
+        <div class="fd-item" style="grid-column:1/-1;background:var(--red-pale);border-color:var(--red-border);">
+          <div class="fd-label" style="color:var(--red);">Criminal conviction declaration</div>
+          <div class="fd-note" style="color:var(--ink-mid);">The application form asks directly whether you have ever been convicted of any offence or crime. This must be answered truthfully. If the answer is yes, tell us in advance so we can advise you properly — a false declaration is far more damaging than a disclosed one.</div>
+        </div>
+      </div>
+
+      <div class="alert alert-note" style="margin-top:14px;">
+        <div class="alert-icon">👶</div>
+        <div>
+          <div class="alert-title">Travelling with a minor?</div>
+          <div class="alert-text">If any traveller in your group is a minor, <strong>the parent's passport must also be attached</strong> to that application. Let us know at the outset if this applies so we can request the correct documents from you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 5 — HOW IT WORKS ── -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-num">5</div>
+      <div>
+        <div class="section-title">How the Process Works</div>
+        <div class="section-sub">From document submission to visa in hand</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="ps-num">1</div>
+          <div>
+            <div class="ps-title">Tell us which path you're on</div>
+            <div class="ps-desc">Send us a scan of your passport and any existing visas or residence permits. We'll confirm within a few hours whether you qualify for Path A or need to go via Path B, and tell you exactly what to gather.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">2</div>
+          <div>
+            <div class="ps-title">Send us your complete document bundle</div>
+            <div class="ps-desc">Share everything at once rather than piecemeal. We review every document before submission and flag anything that could cause a problem — this pre-check is where most rejections get prevented.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">3</div>
+          <div>
+            <div class="ps-title">We arrange the invitation letter (Path B)</div>
+            <div class="ps-desc">If you're on Path B, we produce and attach the invitation letter. This is included in the USD 25 fee and requires nothing from you.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">4</div>
+          <div>
+            <div class="ps-title">We submit and track the application</div>
+            <div class="ps-desc">We handle submission and monitor the application. <strong>Standard processing is 3 working days.</strong> We will keep you updated on progress.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">5</div>
+          <div>
+            <div class="ps-title">Visa issued and shared with you</div>
+            <div class="ps-desc">Once approved, the visa is issued for <strong>single entry, valid for a 21-day stay.</strong> We share it with you directly — carry a printout and a digital copy for immigration at Zvartnots Airport.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RED FLAGS ── -->
+  <div class="redflags">
+    <div class="redflags-head">
+      <div>
+        <div class="redflags-title">Read This Before You Apply</div>
+        <div class="redflags-sub">Honest warnings — we would rather you know now than be surprised later</div>
+      </div>
+    </div>
+    <div class="redflags-body">
+
+      <div class="redflag">
+        <div class="rf-icon">⚠️</div>
+        <div>
+          <div class="rf-title">Rejections happen, and no reason is given</div>
+          <div class="rf-desc">The Armenian authorities <strong>do not provide clarifications or comments in the event of a rejection.</strong> You will not be told what went wrong. This is stated openly by the Embassy of Armenia. It means a rejected application cannot be diagnosed and corrected with confidence — only resubmitted with a stronger document bundle.</div>
+        </div>
+      </div>
+
+      <div class="redflag">
+        <div class="rf-icon">💸</div>
+        <div>
+          <div class="rf-title">Fees are non-refundable on rejection</div>
+          <div class="rf-desc">If the application is refused, <strong>the USD 25 fee is not refunded.</strong> This is standard across visa services and reflects the fact that the work is done regardless of outcome. We will advise on whether a reapplication is worthwhile, but a second application means a second fee.</div>
+        </div>
+      </div>
+
+      <div class="redflag">
+        <div class="rf-icon">📅</div>
+        <div>
+          <div class="rf-title">Apply early — do not leave this to the last minute</div>
+          <div class="rf-desc">Standard processing is 3 working days, <strong>but we strongly recommend applying at least 3–4 weeks before travel.</strong> This gives room to reapply if something goes wrong. Clients who apply a week before departure and are refused have no runway left, and non-refundable flights become a real financial loss.</div>
+        </div>
+      </div>
+
+      <div class="redflag">
+        <div class="rf-icon">🛂</div>
+        <div>
+          <div class="rf-title">The 10-year passport rule catches people out</div>
+          <div class="rf-desc">Your passport must have been <strong>issued within the last 10 years.</strong> Some older passports remain technically valid past this point but will not be accepted. <strong>Check your passport's issue date now</strong> — if it's approaching or past 10 years, renew it before applying, not after a rejection.</div>
+        </div>
+      </div>
+
+      <div class="redflag">
+        <div class="rf-icon">📄</div>
+        <div>
+          <div class="rf-title">Incomplete applications are the main cause of failure</div>
+          <div class="rf-desc">In our experience, the overwhelming majority of Armenia refusals are on <strong>incomplete Path B applications</strong> — typically missing the invitation letter or with weak financial documentation. This is precisely why we review every bundle before submission and provide the invitation letter ourselves. A complete, well-supported application has a strong track record.</div>
+        </div>
+      </div>
+
+      <div class="redflag">
+        <div class="rf-icon">⚖️</div>
+        <div>
+          <div class="rf-title">No guarantee can be given — by anyone</div>
+          <div class="rf-desc">Visa decisions rest solely with the Republic of Armenia's authorities. <strong>No agent, DMC, or visa service can guarantee an Armenian visa approval</strong>, and you should be sceptical of anyone who claims otherwise. What we can do is submit the strongest possible application and be honest with you about the risks — which is what this page is for.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── DISCLAIMER ── -->
+  <div class="alert alert-note">
+    <div class="alert-icon">📋</div>
+    <div>
+      <div class="alert-title">Please Note</div>
+      <div class="alert-text">Visa decisions are made solely at the discretion of the relevant authorities of the Republic of Armenia. In the event of a visa refusal, all fees paid are strictly non-refundable, and no reasons for refusal will be provided by the authorities. Caravan Compass shall not be held responsible or liable for any visa rejection or related outcomes. Visa validity as stated: single entry, 21-day stay.</div>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ── -->
+  <div class="contact-footer">
+    <div>
+      <div class="contact-label">Not sure which path applies to you?</div>
+      <div class="contact-name">Send us your passport — we'll confirm</div>
+      <div class="contact-lines">
+        <div class="contact-line"><strong>Email:</strong> ops@caravancompass.com</div>
+        <div class="contact-line"><strong>Phone / WhatsApp:</strong> +91 75208 16288</div>
+        <div class="contact-line"><strong>Web:</strong> caravancompass.com</div>
+      </div>
+    </div>
+    <div class="contact-badge">
+      <div class="contact-badge-label">We respond within</div>
+      <div class="contact-badge-val">4 hours</div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
