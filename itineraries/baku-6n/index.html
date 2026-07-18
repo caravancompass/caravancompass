@@ -20,7 +20,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 .btn-back:hover{color:var(--white);}
 .print-note{font-size:10px;color:rgba(255,255,255,.45);max-width:200px;line-height:1.4;}
 .doc{width:90%;max-width:820px;margin:32px auto 60px;background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(11,61,46,.1);}
-.cover{position:relative;min-height:480px;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.70) 100%),url('https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=900&q=80') center/cover no-repeat;display:flex;flex-direction:column;justify-content:flex-end;padding:48px 48px 40px;}
+.cover{position:relative;min-height:480px;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.70) 100%),url('https://caravancompass.com/images/decks/baku/hero-icheri-sheher.jpg') center/cover no-repeat;display:flex;flex-direction:column;justify-content:flex-end;padding:48px 48px 40px;}
 .cover-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;}
 .cover-title{font-family:'Playfair Display',Georgia,serif;font-size:48px;font-weight:700;color:var(--white);line-height:1.1;margin-bottom:6px;}
 .cover-sub{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:32px;}
@@ -43,6 +43,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 .day{padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start;}
 .day:last-child{border-bottom:none;}
 .day-img-placeholder{width:100%;aspect-ratio:4/3;border-radius:12px;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);display:flex;align-items:center;justify-content:center;color:var(--forest);font-size:28px;}
+.day-img{width:100%;aspect-ratio:4/3;border-radius:12px;object-fit:cover;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);display:block;}
 .day-num{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:4px;}
 .day-title{font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:600;color:var(--forest);margin-bottom:14px;}
 .day-bullets{list-style:none;padding:0;margin:0 0 14px;}
@@ -152,7 +153,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 
   <div class="days">
     <div class="day">
-      <div class="day-img-placeholder">✈</div>
+      <img src="https://caravancompass.com/images/decks/baku/hero-flame-towers.jpg" alt="Flame Towers, Baku" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: hero-flame-towers.jpg';">
       <div>
         <div class="day-num">Day 1</div>
         <div class="day-title">Arrival in Baku</div>
@@ -166,7 +167,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🏛</div>
+      <img src="https://caravancompass.com/images/decks/baku/hero-icheri-sheher.jpg" alt="Icheri Sheher — Walled Old City, Baku" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: hero-icheri-sheher.jpg';">
       <div>
         <div class="day-num">Day 2</div>
         <div class="day-title">Baku City Tour</div>
@@ -181,7 +182,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🌋</div>
+      <img src="https://caravancompass.com/images/decks/baku/region-gobustan.jpg" alt="Gobustan rock carvings and mud volcanoes" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: region-gobustan.jpg';">
       <div>
         <div class="day-num">Day 3</div>
         <div class="day-title">Absheron Peninsula &amp; Gobustan</div>
@@ -196,7 +197,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">⛰</div>
+      <img src="https://caravancompass.com/images/decks/baku/region-tufandag.jpg" alt="Tufandag cable car, Gabala" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: region-tufandag.jpg';">
       <div>
         <div class="day-num">Day 4</div>
         <div class="day-title">Gabala Day Trip</div>
@@ -211,7 +212,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🏯</div>
+      <img src="https://caravancompass.com/images/decks/baku/region-sheki-palace.jpg" alt="Sheki Khan's Summer Palace" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: region-sheki-palace.jpg';">
       <div>
         <div class="day-num">Day 5</div>
         <div class="day-title">Sheki — Silk Road City</div>
@@ -226,7 +227,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
     </div>
 
     <div class="day">
-      <div class="day-img-placeholder">🎨</div>
+      <img src="https://caravancompass.com/images/decks/baku/region-baku-oldcity.jpg" alt="Baku Old City" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: region-baku-oldcity.jpg';">
       <div>
         <div class="day-num">Day 6</div>
         <div class="day-title">Return to Baku</div>
@@ -239,7 +240,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
     </div>
 
     <div class="day" style="border-bottom:none;">
-      <div class="day-img-placeholder">🛫</div>
+      <img src="https://caravancompass.com/images/decks/baku/hero-flame-towers.jpg" alt="Flame Towers, Baku" class="day-img" onerror="this.onerror=null;this.style.cssText='width:100%;aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8f0ea,#d4e4d8);color:#0b3d2e;font-size:12px;';this.alt='Image not found: hero-flame-towers.jpg';">
       <div>
         <div class="day-num">Day 7</div>
         <div class="day-title">Departure from Baku</div>
